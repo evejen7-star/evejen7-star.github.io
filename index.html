@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Портфолио лендингов - Евгений</title>
+<meta name="description" content="Портфолио одностраничных сайтов: адаптивная вёрстка, рабочие калькуляторы, онлайн-запись и формы.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Портфолио лендингов - Евгений">
+<meta property="og:description" content="Одностраничные сайты для малого бизнеса: адаптивная вёрстка, рабочие калькуляторы, онлайн-запись и формы.">
+<meta property="og:url" content="https://evejen7-star.github.io/">
+<meta property="og:image" content="https://evejen7-star.github.io/assets/thumbs/beauty-lab.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f2;
+    --surface: #ffffff;
+    --text: #1d1d1f;
+    --muted: #5f6368;
+    --line: #e6e3dc;
+    --accent: #3b5bdb;
+    --accent-soft: #e8edff;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.55;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+  header.top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 0;
+  }
+  .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .top nav a { margin-left: 22px; text-decoration: none; color: var(--muted); font-weight: 500; }
+  .top nav a:hover { color: var(--text); }
+
+  .hero { padding: 56px 0 40px; max-width: 760px; }
+  .eyebrow {
+    display: inline-block; padding: 6px 12px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent);
+    font-size: 13px; font-weight: 700; letter-spacing: 0.02em;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 5vw, 56px); line-height: 1.08; letter-spacing: -0.03em;
+    margin: 18px 0 16px;
+  }
+  .hero p { font-size: 18px; color: var(--muted); margin: 0; }
+  .facts { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 30px; }
+  .facts b { display: block; font-size: 26px; letter-spacing: -0.02em; }
+  .facts span { color: var(--muted); font-size: 14px; }
+
+  .grid {
+    display: grid; gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    padding: 24px 0 72px;
+  }
+  .card {
+    display: flex; flex-direction: column;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    overflow: hidden; text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(29, 29, 31, .10); }
+  .thumb { aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--line); background: #eee; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .body { padding: 18px 20px 20px; display: flex; flex-direction: column; flex: 1; }
+  .niche { font-size: 13px; color: var(--muted); font-weight: 600; }
+  .card h2 { font-size: 20px; margin: 4px 0 8px; letter-spacing: -0.01em; }
+  .card p { margin: 0 0 14px; color: var(--muted); font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+  .tag { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: #f1efe9; }
+  .open { margin-top: 14px; font-weight: 700; color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 28px 0 40px;
+    display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; color: var(--muted); font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 0 16px; }
+    .top nav a { margin-left: 14px; }
+    .hero { padding: 32px 0 24px; }
+    .hero p { font-size: 16px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="./">evejen7<span>.</span>star</a>
+    <nav>
+      <a href="#works">Работы</a>
+      <a href="https://github.com/evejen7-star">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <span class="eyebrow">Фронтенд-разработчик · лендинги</span>
+    <h1>Одностраничные сайты, в которых всё работает по-настоящему</h1>
+    <p>Привет, я Евгений. Учусь фронтенд-разработке и собираю лендинги для малого бизнеса: адаптивная вёрстка, рабочие калькуляторы, онлайн-запись и формы - без конструкторов и «декоративных» кнопок.</p>
+    <div class="facts">
+      <div><b>8</b><span>проектов</span></div>
+      <div><b>HTML · CSS · JS</b><span>без конструкторов</span></div>
+      <div><b>RU / EN</b><span>языки сайтов</span></div>
+    </div>
+  </section>
+
+  <section id="works" class="grid">
+    <a class="card" href="beauty-lab/">
+      <div class="thumb"><img src="assets/thumbs/beauty-lab.png" alt="Лендинг Beauty Lab" loading="lazy"></div>
+      <div class="body">
+        <span class="niche">Салон красоты · Волгоград</span>
+        <h2>Beauty Lab</h2>
+        <p>Онлайн-запись к конкретному мастеру на конкретное время, цены без «от».</p>
+        <div class="tags"><span class="tag">Онлайн-запись</span><span class="tag">Светлая и тёмная тема</span></div>
+        <span class="open">Открыть сайт →</span>
+      </div>
+    </a>
+
+    <a class="card" href="anapa-house-builder/">
+      <div class="thumb"><img src="assets/thumbs/anapa-house-builder.png" alt="Лендинг АнапаДом" loading="lazy"></div>
+      <div class="body">
+        <span class="niche">Строительство домов · Анапа</span>
+        <h2>АнапаДом</h2>
+        <p>Строительная компания: расчёт стоимости дома онлайн за 30 секунд.</p>
+        <div class="tags"><span class="tag">Калькулятор</span><span class="tag">Заявка</span></div>
+        <span class="open">Открыть сайт →</span>
+      </div>
+    </a>
+
+    <a class="card" href="zatochka-ru/">
+      <div class="thumb"><img src="assets/thumbs/zatochka-ru.png" alt="Лендинг Заточка.ру" loading="lazy"></div>
+      <div class="body">
+        <span class="niche">Заточка ножей · Москва</span>
+        <h2>Заточка.ру</h2>
+        <p>Интерактивное сравнение кромки «до и после» и вызов курьера за ножами.</p>
+        <div class="tags"><span class="tag">Слайдер до/после</span><span class="tag">Тёмный дизайн</span></div>
+        <span class="open">Открыть сайт →</span>
+      </div>
+    </a>
+
+    <a class="card" href="glubina/">
+      <div class="thumb"><img src="assets/thumbs/glubina.png" alt="Лендинг Глубина" loading="lazy"></div>
+      <div class="body">
+        <span class="niche">Приложение для концентрации</span>
+        <h2>Глубина</h2>
+        <p>Лендинг сервиса фокус-сессий с работающим таймером прямо на странице.</p>
+        <div class="tags"><span class="tag">Таймер</span><span class="tag">Тарифы</span></div>
+        <span class="open">Открыть сайт →</span>
+      </div>
+    </a>
+
+    <a class="card" href="evacuator24/">
+      <div class="thumb"><img src="assets/thumbs/evacuator24.png" alt="Лендинг Эвакуатор24" loading="lazy"></div>
+      <div class="body">
+        <span class="niche">Эвакуация автомобилей 24/7</span>
+        <h2>Эвакуатор24</h2>
+        <p>Подача от 20 минут, звонок в один клик, услуги и цены на одном экране.</p>
+        <div class="tags"><span class="tag">Звонок в один клик</span><span class="tag">Цены</span></div>
+        <span class="open">Открыть сайт →</span>
+      </div>
+    </a>
+
+    <a class="card" href="kidsontrip/">
+      <div class="thumb"><img src="assets/thumbs/kidsontrip.png" alt="Лендинг KidsOnTrip" loading="lazy"></div>
+      <div class="body">
+        <span class="niche">Детские лагеря и поездки</span>
+        <h2>KidsOnTrip</h2>
+        <p>Языковые и спортивные смены для детей 7-17 лет плюс отдельная страница лагеря на Мальте.</p>
+        <div class="tags"><span class="tag">2 страницы</span><span class="tag">Программы</span></div>
+        <span class="open">Открыть сайт →</span>
+      </div>
+    </a>
+
+    <a class="card" href="stonebridge-demolition/">
+      <div class="thumb"><img src="assets/thumbs/stonebridge-demolition.png" alt="Лендинг Stonebridge Demolition" loading="lazy"></div>
+      <div class="body">
+        <span class="niche">Демонтаж · Лондон</span>
+        <h2>Stonebridge Demolition</h2>
+        <p>Англоязычный лендинг подрядчика по демонтажу с отдельной русской версией.</p>
+        <div class="tags"><span class="tag">EN / RU</span><span class="tag">Заявка на расчёт</span></div>
+        <span class="open">Открыть сайт →</span>
+      </div>
+    </a>
+
+    <a class="card" href="flower-shop-case/">
+      <div class="thumb"><img src="assets/thumbs/flower-shop-case.png" alt="Кейс цветочного магазина" loading="lazy"></div>
+      <div class="body">
+        <span class="niche">Маркетинговый кейс · Минск</span>
+        <h2>Кейс цветочного магазина</h2>
+        <p>Страница-разбор: 127 продаж на 12 000+ BYN за 14 дней после аудита рекламы.</p>
+        <div class="tags"><span class="tag">Кейс</span><span class="tag">Цифры и графики</span></div>
+        <span class="open">Открыть сайт →</span>
+      </div>
+    </a>
+  </section>
+
+  <footer>
+    <span>© 2026 Евгений · evejen7-star</span>
+    <a href="https://github.com/evejen7-star">github.com/evejen7-star</a>
+  </footer>
+</div>
+</body>
+</html>

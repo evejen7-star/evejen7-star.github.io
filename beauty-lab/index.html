@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Beauty Lab - салон красоты с точной онлайн-записью, Волгоград</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Beauty Lab - салон красоты полного цикла в Красноармейском районе Волгограда. Точная онлайн-запись на конкретное время к конкретному мастеру, цены без «от».">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<style>
+  :root{
+    --color-bg: #fff8f6;
+    --color-bg-soft: #fff1ef;
+    --color-surface: #ffffff;
+    --color-surface-alt: #fff5f3;
+    --color-text: #2c1e22;
+    --color-text-muted: #7c6670;
+    --color-border: rgba(44, 30, 34, 0.1);
+    --color-accent: #ff5a79;
+    --color-accent-dark: #e13f60;
+    --color-accent-light: #ffe1e8;
+    --color-accent-soft: rgba(255, 90, 121, 0.12);
+    --color-accent-2: #ffb199;
+    --color-success: #2f9e6a;
+    --color-success-soft: rgba(47, 158, 106, 0.12);
+    --radius-s: 10px;
+    --radius-m: 16px;
+    --radius-l: 26px;
+    --shadow-card: 0 14px 34px rgba(44, 30, 34, 0.08);
+    --shadow-card-hover: 0 18px 40px rgba(44, 30, 34, 0.14);
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --container: 1180px;
+    --header-h: 76px;
+    color-scheme: light;
+  }
+
+  [data-theme="dark"]{
+    --color-bg: #1c1417;
+    --color-bg-soft: #241a1e;
+    --color-surface: #2a1e22;
+    --color-surface-alt: #32242a;
+    --color-text: #f8ecee;
+    --color-text-muted: #c7aeb6;
+    --color-border: rgba(248, 236, 238, 0.12);
+    --color-accent: #ff6f8e;
+    --color-accent-dark: #ff88a3;
+    --color-accent-light: #452a33;
+    --color-accent-soft: rgba(255, 111, 142, 0.18);
+    --color-accent-2: #ffb199;
+    --shadow-card: 0 14px 34px rgba(0, 0, 0, 0.35);
+    --shadow-card-hover: 0 18px 44px rgba(0, 0, 0, 0.45);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+
+  body{
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition: background .25s ease, color .25s ease;
+  }
+
+  img, svg{ display: block; max-width: 100%; }
+  a{ color: inherit; text-decoration: none; }
+  ul{ margin: 0; padding: 0; list-style: none; }
+  button{ font-family: inherit; cursor: pointer; }
+  input{ font-family: inherit; }
+
+  .container{ width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+  h1, h2, h3, h4{ font-family: var(--font-heading); font-weight: 600; margin: 0 0 16px; line-height: 1.18; color: var(--color-text); }
+
+  .eyebrow{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--color-accent-dark);
+    background: var(--color-accent-soft);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+
+  .section{ padding: 88px 0; }
+  .section-alt{ background: var(--color-surface-alt); }
+
+  .section-head{ max-width: 680px; margin: 0 auto 44px; text-align: center; }
+  .section-head h2{ font-size: clamp(28px, 4vw, 38px); }
+  .section-lead{ color: var(--color-text-muted); font-size: 16px; margin: 0; }
+  .section-head.align-left{ text-align: left; margin-left: 0; }
+
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 15.5px;
+    border: 2px solid transparent;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+    white-space: nowrap;
+  }
+  .btn-primary{ background: var(--color-accent); color: #fff; box-shadow: 0 12px 24px rgba(255, 90, 121, .32); }
+  .btn-primary:hover{ background: var(--color-accent-dark); transform: translateY(-1px); }
+  .btn-primary:disabled{ background: #d9b9c1; box-shadow: none; cursor: not-allowed; transform: none; }
+  .btn-secondary{ background: transparent; color: var(--color-text); border-color: var(--color-border); }
+  .btn-secondary:hover{ border-color: var(--color-accent); color: var(--color-accent-dark); }
+  .btn-block{ width: 100%; }
+  .btn-small{ padding: 10px 20px; font-size: 14px; }
+
+  /* Header */
+  header.site-header{
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .header-inner{ height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+  .logo{ font-family: var(--font-heading); font-weight: 700; font-size: 22px; color: var(--color-text); flex-shrink: 0; }
+  .logo span{ color: var(--color-accent); }
+  nav.main-nav{ display: flex; align-items: center; gap: 30px; }
+  nav.main-nav a{ font-size: 15px; font-weight: 600; color: var(--color-text); opacity: .82; }
+  nav.main-nav a:hover{ opacity: 1; color: var(--color-accent-dark); }
+  .header-actions{ display: flex; align-items: center; gap: 14px; }
+
+  .theme-toggle{
+    width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--color-border);
+    background: var(--color-surface); display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .theme-toggle svg{ width: 20px; height: 20px; stroke: var(--color-text); }
+  .theme-toggle .icon-moon{ display: none; }
+  [data-theme="dark"] .theme-toggle .icon-sun{ display: none; }
+  [data-theme="dark"] .theme-toggle .icon-moon{ display: block; }
+
+  .nav-toggle{
+    display: none; width: 42px; height: 42px; border-radius: 12px; border: 1px solid var(--color-border);
+    background: var(--color-surface); flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  }
+  .nav-toggle span{ width: 20px; height: 2px; background: var(--color-text); border-radius: 2px; transition: transform .2s ease, opacity .2s ease; }
+  .nav-toggle.is-open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.is-open span:nth-child(2){ opacity: 0; }
+  .nav-toggle.is-open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+
+  /* Hero */
+  .hero{ padding: 64px 0 96px; }
+  .hero-grid{ display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+  .hero h1{ font-size: clamp(32px, 4.4vw, 48px); letter-spacing: -.01em; }
+  .hero-sub{ font-size: 18px; color: var(--color-text-muted); max-width: 560px; margin: 0 0 32px; }
+  .hero-actions{ display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
+  .hero-micro{ font-size: 14px; color: var(--color-text-muted); display: flex; align-items: center; gap: 8px; }
+  .hero-micro .dot{ width: 8px; height: 8px; border-radius: 50%; background: var(--color-success); flex-shrink: 0; box-shadow: 0 0 0 4px var(--color-success-soft); }
+
+  .hero-visual{
+    background: linear-gradient(160deg, var(--color-accent-light), var(--color-surface) 60%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-l);
+    padding: 28px;
+    box-shadow: var(--shadow-card);
+  }
+  .hero-visual-head{ display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .hero-visual-head h3{ margin: 0; font-size: 17px; }
+  .hero-visual-head .badge{ font-size: 12px; font-weight: 800; color: var(--color-accent-dark); background: var(--color-surface); border: 1px solid var(--color-accent-soft); padding: 4px 10px; border-radius: 999px; }
+  #heroSlots{ display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+  .hero-slot{
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-s);
+    padding: 12px 16px; font-size: 14.5px;
+  }
+  .hero-slot .time{ font-weight: 800; color: var(--color-accent-dark); }
+  .hero-slot .who{ color: var(--color-text-muted); }
+  .hero-visual-foot{ font-size: 13px; color: var(--color-text-muted); border-top: 1px dashed var(--color-border); padding-top: 14px; }
+
+  /* Services */
+  .services-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  details.price-card{ background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-m); padding: 4px 26px; box-shadow: var(--shadow-card); min-width: 0; }
+  details.price-card summary{ list-style: none; cursor: pointer; padding: 22px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  details.price-card summary::-webkit-details-marker{ display: none; }
+  details.price-card summary::after{ content: '+'; font-size: 24px; color: var(--color-accent); flex-shrink: 0; transition: transform .2s ease; }
+  details.price-card[open] summary::after{ transform: rotate(45deg); }
+  .price-card-head{ display: flex; flex-direction: column; gap: 4px; }
+  .price-card-head h3{ font-size: 19px; margin: 0; }
+  .price-card-head .price-meta{ font-size: 13.5px; font-weight: 600; color: var(--color-text-muted); }
+  .price-card-body{ padding-bottom: 22px; }
+  .price-card .table-scroll{ overflow-x: auto; }
+  .price-card table{ width: 100%; border-collapse: collapse; }
+  .price-card th{ text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--color-text-muted); padding-bottom: 8px; font-weight: 700; }
+  .price-card th:last-child, .price-card td.price{ text-align: right; }
+  .price-card td{ padding: 12px 0; border-top: 1px solid var(--color-border); font-size: 14.5px; vertical-align: top; }
+  .price-card td.price{ font-weight: 800; color: var(--color-accent-dark); padding-left: 12px; }
+  .price-card td.duration{ color: var(--color-text-muted); padding-right: 12px; }
+  .price-note{ margin-top: 14px; font-size: 13.5px; color: var(--color-text-muted); background: var(--color-accent-soft); border-radius: var(--radius-s); padding: 12px 14px; }
+  .price-note a{ color: var(--color-accent-dark); font-weight: 700; border-bottom: 1px solid currentColor; }
+
+  /* Masters */
+  .masters-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .master-card{ background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-m); padding: 26px; box-shadow: var(--shadow-card); text-align: center; transition: box-shadow .2s ease, transform .2s ease; min-width: 0; }
+  .master-card:hover{ box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+  .master-avatar{
+    width: 68px; height: 68px; border-radius: 50%; margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-family: var(--font-heading); font-weight: 700; font-size: 22px;
+  }
+  .master-card h3{ font-size: 18px; margin-bottom: 4px; }
+  .master-role{ font-size: 14px; color: var(--color-accent-dark); font-weight: 700; margin-bottom: 2px; }
+  .master-exp{ font-size: 13px; color: var(--color-text-muted); margin-bottom: 14px; }
+  .master-desc{ font-size: 14px; color: var(--color-text-muted); text-align: left; line-height: 1.6; }
+
+  /* Booking widget */
+  .booking-widget{ background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-l); padding: 36px; box-shadow: var(--shadow-card); }
+  .booking-grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .booking-col{ background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-m); padding: 22px; display: flex; flex-direction: column; min-width: 0; }
+  .booking-col h3{ font-size: 16px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .step-num{ width: 26px; height: 26px; border-radius: 50%; background: var(--color-accent); color: #fff; font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font-body); }
+  .field-label{ display: block; font-size: 12.5px; font-weight: 700; color: var(--color-text-muted); margin: 14px 0 6px; text-transform: uppercase; letter-spacing: .03em; }
+  .field-label:first-of-type{ margin-top: 0; }
+  select, .text-input{
+    width: 100%; padding: 12px 14px; border-radius: var(--radius-s); border: 1px solid var(--color-border);
+    background: var(--color-surface); color: var(--color-text); font-size: 14.5px; font-family: inherit;
+  }
+  select:focus, .text-input:focus{ outline: 2px solid var(--color-accent); outline-offset: 1px; }
+  .field-hint{ font-size: 13.5px; color: var(--color-text-muted); margin: 0 0 12px; }
+
+  .chip-group{ display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip{
+    padding: 9px 14px; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface);
+    font-size: 13.5px; font-weight: 700; color: var(--color-text);
+  }
+  .chip.is-active{ background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+
+  .service-summary{
+    margin-top: 16px; background: var(--color-surface); border: 1px dashed var(--color-accent-soft); border-radius: var(--radius-s);
+    padding: 14px; font-size: 14px;
+  }
+  .service-summary .row{ display: flex; justify-content: space-between; margin-bottom: 4px; }
+  .service-summary .row:last-child{ margin-bottom: 0; }
+  .service-summary .label{ color: var(--color-text-muted); }
+  .service-summary .value{ font-weight: 800; color: var(--color-accent-dark); }
+
+  .master-options{ display: flex; flex-direction: column; gap: 10px; }
+  .master-option{
+    display: flex; align-items: center; gap: 12px; text-align: left;
+    background: var(--color-surface); border: 1.5px solid var(--color-border); border-radius: var(--radius-s);
+    padding: 12px; width: 100%;
+  }
+  .master-option .avatar-sm{
+    width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+    color: #fff; font-weight: 700; font-size: 13px; display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-heading);
+  }
+  .master-option .name{ font-weight: 700; font-size: 14.5px; }
+  .master-option .role{ font-size: 12.5px; color: var(--color-text-muted); }
+  .master-option.is-selected{ border-color: var(--color-accent); background: var(--color-accent-soft); }
+
+  .day-tabs{ display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 14px; }
+  .day-tab{
+    flex-shrink: 0; padding: 9px 13px; border-radius: var(--radius-s); border: 1px solid var(--color-border);
+    background: var(--color-surface); font-size: 13px; font-weight: 700; text-align: center; line-height: 1.3;
+  }
+  .day-tab .dow{ display: block; text-transform: capitalize; }
+  .day-tab.is-active{ background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+  .day-tab .count{ display: block; font-size: 11px; font-weight: 600; opacity: .75; margin-top: 2px; }
+
+  .time-slots{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .time-slot{
+    padding: 10px 6px; border-radius: var(--radius-s); border: 1px solid var(--color-border); background: var(--color-surface);
+    font-size: 13.5px; font-weight: 700; text-align: center;
+  }
+  .time-slot.is-selected{ background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+  .time-slots-empty{ font-size: 13.5px; color: var(--color-text-muted); padding: 10px 2px; }
+
+  .booking-note{ font-size: 13.5px; color: var(--color-text-muted); text-align: center; margin: 22px 0 0; }
+
+  .booking-confirm{ margin-top: 28px; border-top: 1px solid var(--color-border); padding-top: 26px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
+  .booking-selected{
+    background: var(--color-accent-soft); border-radius: var(--radius-m); padding: 18px 20px; font-size: 14.5px;
+    color: var(--color-text); min-height: 76px; display: flex; align-items: center;
+  }
+  .booking-selected strong{ color: var(--color-accent-dark); }
+  .booking-form{ display: flex; flex-direction: column; gap: 12px; }
+  .field-note{ font-size: 12.5px; color: var(--color-text-muted); margin: 4px 0 0; }
+  .booking-success{
+    margin-top: 16px; background: var(--color-success-soft); border: 1px solid rgba(47,158,106,.3); color: #1f6e4b;
+    border-radius: var(--radius-m); padding: 18px 20px; font-size: 14.5px; display: flex; gap: 12px; align-items: flex-start;
+  }
+  [data-theme="dark"] .booking-success{ color: #8fe3ba; }
+  .booking-success svg{ width: 22px; height: 22px; flex-shrink: 0; stroke: currentColor; margin-top: 1px; }
+
+  /* Reviews */
+  .reviews-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .review-card{ background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-m); padding: 24px; box-shadow: var(--shadow-card); min-width: 0; }
+  .review-quote{ font-size: 15px; line-height: 1.65; margin: 0 0 16px; color: var(--color-text); }
+  .review-meta{ font-size: 13px; color: var(--color-text-muted); border-top: 1px dashed var(--color-border); padding-top: 12px; }
+  .review-meta strong{ color: var(--color-text); }
+
+  /* FAQ */
+  .faq-list{ max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+  details.faq-item{ background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-m); padding: 4px 22px; }
+  details.faq-item summary{ padding: 18px 0; font-weight: 700; font-size: 15.5px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  details.faq-item summary::-webkit-details-marker{ display: none; }
+  details.faq-item summary::after{ content: '+'; font-size: 22px; color: var(--color-accent); flex-shrink: 0; transition: transform .2s ease; }
+  details.faq-item[open] summary::after{ transform: rotate(45deg); }
+  details.faq-item p{ margin: 0 0 20px; color: var(--color-text-muted); font-size: 14.5px; line-height: 1.7; }
+
+  /* Contacts */
+  .contacts-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+  .contact-list{ display: flex; flex-direction: column; gap: 18px; }
+  .contact-item{ display: flex; gap: 14px; align-items: flex-start; }
+  .contact-item .icon{ width: 40px; height: 40px; border-radius: 50%; background: var(--color-accent-soft); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-item .icon svg{ width: 18px; height: 18px; stroke: var(--color-accent-dark); }
+  .contact-item .label{ font-size: 12.5px; text-transform: uppercase; letter-spacing: .03em; color: var(--color-text-muted); font-weight: 700; margin-bottom: 3px; }
+  .contact-item .value{ font-size: 15.5px; font-weight: 600; }
+  .contact-item .value a{ color: var(--color-accent-dark); }
+  .messenger-links{ display: flex; gap: 10px; margin-top: 4px; }
+
+  .map-box{
+    background: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--radius-l);
+    padding: 26px; height: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 18px;
+  }
+  .map-placeholder{
+    height: 200px; border-radius: var(--radius-m); border: 1px dashed var(--color-accent-soft);
+    background:
+      radial-gradient(circle at 30% 30%, var(--color-accent-light), transparent 60%),
+      repeating-linear-gradient(45deg, var(--color-surface) 0 18px, var(--color-surface-alt) 18px 36px);
+    display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px;
+    color: var(--color-text-muted); font-size: 13.5px;
+  }
+  .map-note{ font-size: 14px; color: var(--color-text-muted); }
+
+  /* Footer */
+  footer.site-footer{ background: var(--color-text); color: #fdf1f3; padding: 48px 0 24px; }
+  [data-theme="dark"] footer.site-footer{ background: #120c0e; }
+  .footer-inner{ display: flex; justify-content: space-between; flex-wrap: wrap; gap: 28px; padding-bottom: 28px; border-bottom: 1px solid rgba(253, 241, 243, .15); }
+  .footer-logo{ font-family: var(--font-heading); font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+  .footer-logo span{ color: var(--color-accent-2); }
+  .footer-col p, .footer-col div{ font-size: 14px; color: rgba(253, 241, 243, .72); line-height: 1.8; }
+  .footer-nav{ display: flex; flex-direction: column; gap: 8px; }
+  .footer-nav a{ font-size: 14px; color: rgba(253, 241, 243, .8); }
+  .footer-nav a:hover{ color: #fff; }
+  .footer-bottom{ padding-top: 20px; font-size: 13px; color: rgba(253, 241, 243, .5); text-align: center; }
+
+  /* Responsive */
+  @media (max-width: 960px){
+    nav.main-nav{ position: fixed; top: var(--header-h); left: 0; right: 0; background: var(--color-bg); border-bottom: 1px solid var(--color-border);
+      flex-direction: column; align-items: flex-start; padding: 18px 24px 24px; gap: 16px; transform: translateY(-8px); opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; }
+    nav.main-nav.is-open{ opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .nav-toggle{ display: flex; }
+    .hero-grid{ grid-template-columns: 1fr; }
+    .services-grid{ grid-template-columns: 1fr; }
+    .masters-grid{ grid-template-columns: repeat(2, 1fr); }
+    .booking-grid{ grid-template-columns: 1fr; }
+    .booking-confirm{ grid-template-columns: 1fr; }
+    .reviews-grid{ grid-template-columns: 1fr; }
+    .contacts-grid{ grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 600px){
+    .section{ padding: 56px 0; }
+    .hero{ padding: 36px 0 56px; }
+    .header-inner{ height: 64px; }
+    :root{ --header-h: 64px; }
+    .masters-grid{ grid-template-columns: 1fr; }
+    .hero-actions{ flex-direction: column; align-items: stretch; }
+    .hero-actions .btn{ width: 100%; }
+    .time-slots{ grid-template-columns: repeat(2, 1fr); }
+    .booking-widget{ padding: 22px; }
+    .price-card{ padding: 20px 18px 16px; }
+    .header-actions{ gap: 8px; }
+    .header-actions .btn-primary{ padding: 10px 16px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Beauty<span>Lab</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#services">Услуги</a>
+        <a href="#masters">Мастера</a>
+        <a href="#booking">Онлайн-запись</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#booking" class="btn btn-primary btn-small">Записаться</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"></circle><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"></path></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"></path></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Салон красоты в Красноармейском районе Волгограда - для занятых женщин 25-45 лет</span>
+          <h1>Beauty Lab - салон красоты, где запись день в день не превращается в очередь</h1>
+          <p class="hero-sub">Вы работаете и цените своё время - поэтому у нас онлайн-запись на точное время к конкретному мастеру: маникюр, ресницы, брови, стрижки, окрашивание и уход за лицом. Цены без «от» - вы видите итоговую сумму и длительность до визита, а не после.</p>
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-primary">Записаться на удобное время</a>
+            <a href="#services" class="btn btn-secondary">Посмотреть цены на услуги</a>
+          </div>
+          <div class="hero-micro"><span class="dot"></span>Свободные окна сегодня и завтра - актуальное время в виджете записи ниже.</div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-visual-head">
+            <h3>Ближайшие свободные окна</h3>
+            <span class="badge" id="heroDateBadge">сегодня</span>
+          </div>
+          <div id="heroSlots"><!-- заполняется JS --></div>
+          <div class="hero-visual-foot" id="heroFoot">Загружаем свободное время…</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги и цены -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Услуги и цены</span>
+          <h2>Фиксированная цена и время приёма</h2>
+          <p class="section-lead">Показываем точно, без «от» и доплат на месте.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <details class="price-card" open>
+            <summary>
+              <span class="price-card-head">
+                <h3>Маникюр</h3>
+                <span class="price-meta">4 услуги · 400-2 600 ₽</span>
+              </span>
+            </summary>
+            <div class="price-card-body">
+              <div class="table-scroll"><table>
+                <thead><tr><th>Услуга</th><th>Время</th><th>Цена</th></tr></thead>
+                <tbody>
+                  <tr><td>Маникюр классический (обрезной, без покрытия)</td><td class="duration">60 мин</td><td class="price">1 600 ₽</td></tr>
+                  <tr><td>Маникюр аппаратный (без покрытия)</td><td class="duration">70 мин</td><td class="price">1 900 ₽</td></tr>
+                  <tr><td>Маникюр с покрытием гель-лак (1 цвет)</td><td class="duration">90 мин</td><td class="price">2 600 ₽</td></tr>
+                  <tr><td>Снятие старого гель-лака (при записи на новое покрытие)</td><td class="duration">20 мин</td><td class="price">400 ₽</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </details>
+
+          <details class="price-card">
+            <summary>
+              <span class="price-card-head">
+                <h3>Педикюр</h3>
+                <span class="price-meta">3 услуги · 2 800-3 800 ₽</span>
+              </span>
+            </summary>
+            <div class="price-card-body">
+              <div class="table-scroll"><table>
+                <thead><tr><th>Услуга</th><th>Время</th><th>Цена</th></tr></thead>
+                <tbody>
+                  <tr><td>Педикюр классический, без покрытия</td><td class="duration">80 мин</td><td class="price">2 800 ₽</td></tr>
+                  <tr><td>Педикюр аппаратный, без покрытия</td><td class="duration">90 мин</td><td class="price">3 200 ₽</td></tr>
+                  <tr><td>Педикюр с покрытием гель-лак</td><td class="duration">110 мин</td><td class="price">3 800 ₽</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </details>
+
+          <details class="price-card">
+            <summary>
+              <span class="price-card-head">
+                <h3>Ресницы и брови</h3>
+                <span class="price-meta">6 услуг · 900-3 400 ₽</span>
+              </span>
+            </summary>
+            <div class="price-card-body">
+              <div class="table-scroll"><table>
+                <thead><tr><th>Услуга</th><th>Время</th><th>Цена</th></tr></thead>
+                <tbody>
+                  <tr><td>Наращивание ресниц, классика 1D</td><td class="duration">120 мин</td><td class="price">2 800 ₽</td></tr>
+                  <tr><td>Наращивание ресниц, объём 2D-3D</td><td class="duration">130 мин</td><td class="price">3 400 ₽</td></tr>
+                  <tr><td>Коррекция наращённых ресниц (до 3 недель после наращивания)</td><td class="duration">80 мин</td><td class="price">1 800 ₽</td></tr>
+                  <tr><td>Коррекция формы бровей + укладка</td><td class="duration">30 мин</td><td class="price">900 ₽</td></tr>
+                  <tr><td>Окрашивание бровей хной</td><td class="duration">40 мин</td><td class="price">1 200 ₽</td></tr>
+                  <tr><td>Ламинирование бровей</td><td class="duration">50 мин</td><td class="price">1 800 ₽</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </details>
+
+          <details class="price-card">
+            <summary>
+              <span class="price-card-head">
+                <h3>Стрижки и укладки</h3>
+                <span class="price-meta">3 услуги · 1 500-2 200 ₽</span>
+              </span>
+            </summary>
+            <div class="price-card-body">
+              <div class="table-scroll"><table>
+                <thead><tr><th>Услуга</th><th>Время</th><th>Цена</th></tr></thead>
+                <tbody>
+                  <tr><td>Женская стрижка (с учётом мытья головы)</td><td class="duration">50 мин</td><td class="price">2 200 ₽</td></tr>
+                  <tr><td>Мужская стрижка</td><td class="duration">40 мин</td><td class="price">1 500 ₽</td></tr>
+                  <tr><td>Укладка феном или на плойку</td><td class="duration">40 мин</td><td class="price">1 800 ₽</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </details>
+
+          <details class="price-card">
+            <summary>
+              <span class="price-card-head">
+                <h3>Окрашивание волос</h3>
+                <span class="price-meta">3 услуги · 3 500-10 500 ₽</span>
+              </span>
+            </summary>
+            <div class="price-card-body">
+              <div class="table-scroll"><table>
+                <thead><tr><th>Услуга</th><th>Время (к / с / д)</th><th>Цена (к / с / д)</th></tr></thead>
+                <tbody>
+                  <tr><td>Тонирование</td><td class="duration">90 / 100 / 120 мин</td><td class="price">3 500 / 4 200 / 5 000 ₽</td></tr>
+                  <tr><td>Окрашивание в один тон</td><td class="duration">100 / 120 / 150 мин</td><td class="price">4 500 / 5 500 / 6 800 ₽</td></tr>
+                  <tr><td>Мелирование или балаяж</td><td class="duration">150 / 180 / 210 мин</td><td class="price">6 500 / 8 200 / 10 500 ₽</td></tr>
+                </tbody>
+              </table></div>
+              <p class="price-note">Точная цена зависит от длины и густоты волос: короткие / средние / длинные. Выберите длину волос в <a href="#booking">виджете онлайн-записи</a> - итоговая сумма и время пересчитаются сразу.</p>
+            </div>
+          </details>
+
+          <details class="price-card">
+            <summary>
+              <span class="price-card-head">
+                <h3>Косметология лица</h3>
+                <span class="price-meta">3 услуги · 2 500-3 200 ₽</span>
+              </span>
+            </summary>
+            <div class="price-card-body">
+              <div class="table-scroll"><table>
+                <thead><tr><th>Услуга</th><th>Время</th><th>Цена</th></tr></thead>
+                <tbody>
+                  <tr><td>Механическая чистка лица</td><td class="duration">60 мин</td><td class="price">3 200 ₽</td></tr>
+                  <tr><td>Ультразвуковая чистка лица</td><td class="duration">50 мин</td><td class="price">2 800 ₽</td></tr>
+                  <tr><td>Уходовая процедура (увлажнение или пилинг)</td><td class="duration">45 мин</td><td class="price">2 500 ₽</td></tr>
+                </tbody>
+              </table></div>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Мастера -->
+    <section id="masters" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Мастера</span>
+          <h2>Мастера, к которым можно записаться напрямую</h2>
+          <p class="section-lead">В виджете записи вы выбираете не просто услугу, а конкретного специалиста и его свободное окно.</p>
+        </div>
+
+        <div class="masters-grid">
+          <div class="master-card">
+            <div class="master-avatar">АС</div>
+            <h3>Анна Соколова</h3>
+            <div class="master-role">Мастер маникюра и педикюра</div>
+            <div class="master-exp">Стаж 9 лет</div>
+            <p class="master-desc">Специализация: аппаратный маникюр, сложные покрытия гель-лак, безопасная работа с кутикулой при чувствительной коже. Проходит ежегодное обучение по актуальным техникам укрепления ногтя.</p>
+          </div>
+          <div class="master-card">
+            <div class="master-avatar">МВ</div>
+            <h3>Мария Величко</h3>
+            <div class="master-role">Лешмейкер, бровист</div>
+            <div class="master-exp">Стаж 6 лет</div>
+            <p class="master-desc">Специализация: объёмное наращивание ресниц 2D-3D, коррекция формы бровей под тип лица, ламинирование. Работает только с гипоаллергенными материалами - принимает клиентов с чувствительными глазами.</p>
+          </div>
+          <div class="master-card">
+            <div class="master-avatar">ДК</div>
+            <h3>Дарья Ковалёва</h3>
+            <div class="master-role">Парикмахер-стилист</div>
+            <div class="master-exp">Стаж 12 лет</div>
+            <p class="master-desc">Специализация: женские и мужские стрижки, окрашивание сложными техниками (балаяж, шатуш), восстановление волос после осветления. Ранее работала в салоне на Аллее Героев в центре Волгограда.</p>
+          </div>
+          <div class="master-card">
+            <div class="master-avatar">ОП</div>
+            <h3>Ольга Прохорова</h3>
+            <div class="master-role">Косметолог</div>
+            <div class="master-exp">Стаж 8 лет</div>
+            <p class="master-desc">Специализация: механическая и ультразвуковая чистка лица, уходовые протоколы для проблемной и возрастной кожи. Медицинское образование, подбирает уход с учётом противопоказаний.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Онлайн-запись -->
+    <section id="booking" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Онлайн-запись</span>
+          <h2>Запись онлайн за 3 шага</h2>
+          <p class="section-lead">Выберите услугу, мастера и время - подтверждение придёт в SMS и мессенджер сразу после записи.</p>
+        </div>
+
+        <div class="booking-widget">
+          <div class="booking-grid">
+
+            <div class="booking-col" id="stepService">
+              <h3><span class="step-num">1</span>Выберите услугу</h3>
+              <label class="field-label" for="categorySelect">Категория услуги</label>
+              <select id="categorySelect"></select>
+
+              <label class="field-label" for="serviceSelect">Конкретная услуга</label>
+              <select id="serviceSelect"></select>
+
+              <div id="hairLengthField" hidden>
+                <label class="field-label">Длина волос</label>
+                <div class="chip-group" id="hairLengthChips">
+                  <button type="button" class="chip" data-length="short">Короткие</button>
+                  <button type="button" class="chip" data-length="medium">Средние</button>
+                  <button type="button" class="chip" data-length="long">Длинные</button>
+                </div>
+              </div>
+
+              <div class="service-summary" id="serviceSummary"></div>
+            </div>
+
+            <div class="booking-col" id="stepMaster">
+              <h3><span class="step-num">2</span>Ваш мастер</h3>
+              <p class="field-hint" id="masterHint">За этой услугой закреплён профильный специалист - нажмите, чтобы подтвердить и увидеть его свободное время</p>
+              <div class="master-options" id="masterOptions"></div>
+            </div>
+
+            <div class="booking-col" id="stepTime">
+              <h3><span class="step-num">3</span>Выберите свободное время</h3>
+              <p class="field-hint">Свободные окна на ближайшие 7 дней</p>
+              <div class="day-tabs" id="dayTabs"></div>
+              <div class="time-slots" id="timeSlots"></div>
+            </div>
+
+          </div>
+
+          <p class="booking-note">Список мастеров и времени в шагах 2 и 3 обновляется автоматически в зависимости от вашего выбора - показываем только реально свободные слоты.</p>
+
+          <div class="booking-confirm">
+            <div>
+              <div class="booking-selected" id="bookingSelectedSummary">Сначала выберите услугу, мастера и время выше.</div>
+              <div class="booking-success" id="bookingSuccess" hidden>
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+                <span id="bookingSuccessText"></span>
+              </div>
+            </div>
+            <form class="booking-form" id="bookingForm">
+              <input class="text-input" type="text" id="clientName" placeholder="Имя" required autocomplete="name">
+              <input class="text-input" type="tel" id="clientPhone" placeholder="Телефон" required autocomplete="tel">
+              <p class="field-note">Имя и телефон - для подтверждения записи</p>
+              <button type="submit" class="btn btn-primary btn-block" id="confirmBtn" disabled>Подтвердить запись</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Отзывы</span>
+          <h2>Что говорят те, кто уже был</h2>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <p class="review-quote">«Записалась на 19:00 после работы через сайт - зашла ровно в своё время, без ожидания в холле. Гель-лак держится третью неделю без сколов.»</p>
+            <div class="review-meta"><strong>Анна К.</strong> - маникюр с покрытием гель-лак у Анны Соколовой, 14 сентября 2026</div>
+          </div>
+          <div class="review-card">
+            <p class="review-quote">«Раньше наращивала в другом салоне, было ощущение тяжести к вечеру. У Марии ресницы даже к концу дня не чувствуются, а цена в записи совпала с чеком на кассе.»</p>
+            <div class="review-meta"><strong>Виктория С.</strong> - наращивание ресниц, объём 2D, у Марии Величко, 8 сентября 2026</div>
+          </div>
+          <div class="review-card">
+            <p class="review-quote">«Волосы средней длины, взяли 8 200 ₽, как и было указано при записи. Процедура заняла 3 часа, как и обещали - никаких сюрпризов по времени.»</p>
+            <div class="review-meta"><strong>Елена П.</strong> - окрашивание балаяж у Дарьи Ковалёвой, 21 августа 2026</div>
+          </div>
+          <div class="review-card">
+            <p class="review-quote">«Пришла с закрытыми порами и покраснениями. Ольга сразу сказала, что механическую чистку в этот раз делать не будет из-за раздражения, предложила ультразвук. Кожа спокойная уже на следующий день.»</p>
+            <div class="review-meta"><strong>Мария Т.</strong> - ультразвуковая чистка лица у Ольги Прохоровой, 30 августа 2026</div>
+          </div>
+          <div class="review-card">
+            <p class="review-quote">«Записала сына на 16:30 в субботу, боялась, что придётся ждать в очереди с ребёнком - зашли день в день ровно по записи, отдельного окна ждать не пришлось.»</p>
+            <div class="review-meta"><strong>Ирина Д.</strong> - мужская стрижка для сына у Дарьи Ковалёвой, 5 сентября 2026</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Частые вопросы</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Можно ли перенести или отменить запись?</summary>
+            <p>Да, через личный кабинет на сайте или по телефону не позднее чем за 3 часа до визита. При более позднем переносе первого раза - без штрафа, при повторных опозданиях без предупреждения возможна предоплата за следующую запись.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Есть ли парковка у салона?</summary>
+            <p>Да, бесплатная парковка во дворе дома на 6 машиномест, вход со стороны детской площадки. Если мест нет - есть парковка вдоль проспекта Героев Сталинграда в 100 метрах от входа.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Как можно оплатить - картой, наличными, переводом?</summary>
+            <p>Принимаем банковские карты, наличные и перевод по номеру телефона через СБП на месте. Онлайн-предоплата при записи не требуется, кроме услуг окрашивания дороже 6 000 ₽ - для них нужна предоплата 1 000 ₽.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Что взять с собой на первый визит?</summary>
+            <p>Ничего специального - все материалы и инструменты салона одноразовые или проходят стерилизацию. Для окрашивания волос возьмите с собой фото желаемого результата, если оно у вас есть - это ускорит консультацию мастера.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Действует ли скидка для новых клиентов?</summary>
+            <p>Да, скидка 15% на первую услугу маникюра, педикюра или чистки лица при записи через сайт. Скидка не суммируется с другими акциями и не действует на наращивание ресниц и окрашивание волос.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Что будет, если я опоздаю на запись?</summary>
+            <p>Мастер ждёт 10 минут. При опоздании больше 10 минут время процедуры может быть сокращено, чтобы не сдвигать запись следующего клиента, либо мы предложим перенести визит на ближайшее свободное окно в этот же день.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="section">
+      <div class="container">
+        <div class="section-head" style="margin-bottom:36px;">
+          <span class="eyebrow">Контакты</span>
+          <h2>Как нас найти</h2>
+        </div>
+        <div class="contacts-grid">
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span>
+              <div>
+                <div class="label">Адрес</div>
+                <div class="value">г. Волгоград, Красноармейский р-н, пр-кт Героев Сталинграда, д. 48</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></span>
+              <div>
+                <div class="label">Остановка</div>
+                <div class="value">«Проспект Героев Сталинграда» - 5 минут пешком</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"></rect><path d="M8 2v4M16 2v4M3 9h18"></path></svg></span>
+              <div>
+                <div class="label">Часы работы</div>
+                <div class="value">Ежедневно, без выходных, 9:00-21:00</div>
+                <div style="font-size:13px;color:var(--color-text-muted);margin-top:2px;">Последняя запись - за 90 минут до закрытия</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"></path></svg></span>
+              <div>
+                <div class="label">Телефон</div>
+                <div class="value"><a href="tel:+78442000000">+7 (8442) 00-00-00</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.6L3 20l1-5.4A8.5 8.5 0 1 1 21 11.5z"></path></svg></span>
+              <div>
+                <div class="label">Мессенджеры</div>
+                <div class="value">+7 (900) 000-00-00 - @beautylab_demo</div>
+                <div class="messenger-links">
+                  <a class="btn btn-secondary btn-small" href="https://t.me/beautylab_demo" target="_blank" rel="noopener">Telegram</a>
+                  <a class="btn btn-secondary btn-small" href="https://wa.me/79000000000" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-box">
+            <div>
+              <div class="map-placeholder">Карта: пр-кт Героев Сталинграда, д. 48 (остановка «Проспект Героев Сталинграда», 5 минут пешком)</div>
+              <p class="map-note">Вход со двора, со стороны детской площадки - домофон, квартира/офис 1Н.</p>
+            </div>
+            <a class="btn btn-primary btn-block" id="routeBtn" href="#" target="_blank" rel="noopener">Построить маршрут</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="footer-logo">Beauty<span>Lab</span></div>
+          <div>пр-кт Героев Сталинграда, д. 48<br>Красноармейский р-н, Волгоград<br>Ежедневно, 9:00-21:00</div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-logo" style="font-size:15px;">Навигация</div>
+          <nav class="footer-nav">
+            <a href="#services">Услуги и цены</a>
+            <a href="#masters">Мастера</a>
+            <a href="#booking">Онлайн-запись</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+        </div>
+        <div class="footer-col">
+          <div class="footer-logo" style="font-size:15px;">Связь</div>
+          <div>+7 (8442) 00-00-00<br>Telegram / WhatsApp: +7 (900) 000-00-00<br>@beautylab_demo</div>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Beauty Lab. Салон красоты полного цикла в Красноармейском районе Волгограда.</div>
+    </div>
+  </footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Тема ---------- */
+  var root = document.documentElement;
+  var themeToggle = document.getElementById('themeToggle');
+  var storedTheme = localStorage.getItem('beautylab-theme');
+  if (storedTheme === 'dark') root.setAttribute('data-theme', 'dark');
+  themeToggle.addEventListener('click', function(){
+    var isDark = root.getAttribute('data-theme') === 'dark';
+    if (isDark) { root.removeAttribute('data-theme'); localStorage.setItem('beautylab-theme', 'light'); }
+    else { root.setAttribute('data-theme', 'dark'); localStorage.setItem('beautylab-theme', 'dark'); }
+  });
+
+  /* ---------- Мобильное меню ---------- */
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('is-open');
+    navToggle.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mainNav.classList.remove('is-open');
+      navToggle.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  /* ---------- Данные: услуги и мастера ---------- */
+  var MASTERS = {
+    anna:  { name: 'Анна Соколова',   role: 'Мастер маникюра и педикюра', initials: 'АС' },
+    maria: { name: 'Мария Величко',   role: 'Лешмейкер, бровист',         initials: 'МВ' },
+    darya: { name: 'Дарья Ковалёва',  role: 'Парикмахер-стилист',         initials: 'ДК' },
+    olga:  { name: 'Ольга Прохорова', role: 'Косметолог',                 initials: 'ОП' }
+  };
+
+  var SERVICES = [
+    { id:'manicure-classic',  category:'Маникюр', name:'Маникюр классический (обрезной, без покрытия)', duration:60, price:1600, masters:['anna'] },
+    { id:'manicure-hardware', category:'Маникюр', name:'Маникюр аппаратный (без покрытия)', duration:70, price:1900, masters:['anna'] },
+    { id:'manicure-gel',      category:'Маникюр', name:'Маникюр с покрытием гель-лак (1 цвет)', duration:90, price:2600, masters:['anna'] },
+    { id:'manicure-removal',  category:'Маникюр', name:'Снятие старого гель-лака (при записи на новое покрытие)', duration:20, price:400, masters:['anna'] },
+
+    { id:'pedicure-classic',  category:'Педикюр', name:'Педикюр классический, без покрытия', duration:80, price:2800, masters:['anna'] },
+    { id:'pedicure-hardware', category:'Педикюр', name:'Педикюр аппаратный, без покрытия', duration:90, price:3200, masters:['anna'] },
+    { id:'pedicure-gel',      category:'Педикюр', name:'Педикюр с покрытием гель-лак', duration:110, price:3800, masters:['anna'] },
+
+    { id:'lash-classic',     category:'Ресницы и брови', name:'Наращивание ресниц, классика 1D', duration:120, price:2800, masters:['maria'] },
+    { id:'lash-volume',      category:'Ресницы и брови', name:'Наращивание ресниц, объём 2D-3D', duration:130, price:3400, masters:['maria'] },
+    { id:'lash-correction',  category:'Ресницы и брови', name:'Коррекция наращённых ресниц (до 3 недель после наращивания)', duration:80, price:1800, masters:['maria'] },
+    { id:'brow-correction',  category:'Ресницы и брови', name:'Коррекция формы бровей + укладка', duration:30, price:900, masters:['maria'] },
+    { id:'brow-henna',       category:'Ресницы и брови', name:'Окрашивание бровей хной', duration:40, price:1200, masters:['maria'] },
+    { id:'brow-lamination',  category:'Ресницы и брови', name:'Ламинирование бровей', duration:50, price:1800, masters:['maria'] },
+
+    { id:'haircut-woman', category:'Стрижки и укладки', name:'Женская стрижка (с учётом мытья головы)', duration:50, price:2200, masters:['darya'] },
+    { id:'haircut-man',   category:'Стрижки и укладки', name:'Мужская стрижка', duration:40, price:1500, masters:['darya'] },
+    { id:'styling',       category:'Стрижки и укладки', name:'Укладка феном или на плойку', duration:40, price:1800, masters:['darya'] },
+
+    { id:'color-toning',   category:'Окрашивание волос', name:'Тонирование', hairLength:true,
+      duration:{ short:90, medium:100, long:120 }, price:{ short:3500, medium:4200, long:5000 }, masters:['darya'] },
+    { id:'color-single',   category:'Окрашивание волос', name:'Окрашивание в один тон', hairLength:true,
+      duration:{ short:100, medium:120, long:150 }, price:{ short:4500, medium:5500, long:6800 }, masters:['darya'] },
+    { id:'color-balayage', category:'Окрашивание волос', name:'Мелирование или балаяж', hairLength:true,
+      duration:{ short:150, medium:180, long:210 }, price:{ short:6500, medium:8200, long:10500 }, masters:['darya'] },
+
+    { id:'face-mechanical', category:'Косметология лица', name:'Механическая чистка лица', duration:60, price:3200, masters:['olga'] },
+    { id:'face-ultrasound', category:'Косметология лица', name:'Ультразвуковая чистка лица', duration:50, price:2800, masters:['olga'] },
+    { id:'face-care',       category:'Косметология лица', name:'Уходовая процедура (увлажнение или пилинг)', duration:45, price:2500, masters:['olga'] }
+  ];
+
+  var CATEGORIES = ['Маникюр', 'Педикюр', 'Ресницы и брови', 'Стрижки и укладки', 'Окрашивание волос', 'Косметология лица'];
+  var LENGTH_LABEL = { short: 'короткие волосы', medium: 'средние волосы', long: 'длинные волосы' };
+  var WORK_START = 9 * 60;   // 09:00 в минутах
+  var WORK_END = 21 * 60;    // 21:00 в минутах
+  var LEAD_MINUTES = 60;     // минимум за час до старта для записи "сегодня"
+
+  function formatPrice(n){ return n.toLocaleString('ru-RU') + ' ₽'; }
+  function formatMinutes(m){
+    var h = Math.floor(m / 60), mm = m % 60;
+    return (h < 10 ? '0' + h : h) + ':' + (mm < 10 ? '0' + mm : mm);
+  }
+  function getService(id){ return SERVICES.filter(function(s){ return s.id === id; })[0]; }
+  function serviceDuration(service, length){ return service.hairLength ? service.duration[length] : service.duration; }
+  function servicePrice(service, length){ return service.hairLength ? service.price[length] : service.price; }
+  function sameDay(a, b){ return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate(); }
+
+  /* Детерминированный псевдослучайный генератор (mulberry32) на основе строки-сида */
+  function hashString(str){
+    var h = 2166136261;
+    for (var i = 0; i < str.length; i++){
+      h ^= str.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return h >>> 0;
+  }
+  function mulberry32(seed){
+    return function(){
+      seed |= 0; seed = (seed + 0x6D2B79F5) | 0;
+      var t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+  function slotRandom(masterId, dateKey, minutes){
+    var seed = hashString(masterId + '|' + dateKey + '|' + minutes);
+    return mulberry32(seed)();
+  }
+
+  function dateKey(d){
+    return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+  }
+
+  /* Свободные слоты для мастера в конкретный день при заданной длительности услуги (мин) */
+  function getFreeSlots(masterId, date, duration){
+    var slots = [];
+    var isToday = sameDay(date, new Date());
+    var now = new Date();
+    var nowMinutes = now.getHours() * 60 + now.getMinutes();
+    var key = dateKey(date);
+    for (var m = WORK_START; m + duration <= WORK_END; m += 30){
+      if (isToday && m < nowMinutes + LEAD_MINUTES) continue;
+      var r = slotRandom(masterId, key, m);
+      if (r >= 0.45) slots.push(m); // ~55% окон свободны
+    }
+    return slots;
+  }
+
+  function nextDays(count){
+    var days = [];
+    var base = new Date();
+    base.setHours(0,0,0,0);
+    for (var i = 0; i < count; i++){
+      var d = new Date(base);
+      d.setDate(base.getDate() + i);
+      days.push(d);
+    }
+    return days;
+  }
+
+  var DAYS = nextDays(7);
+  var WEEKDAY_FMT = new Intl.DateTimeFormat('ru-RU', { weekday: 'short' });
+  var DATE_FMT = new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'short' });
+
+  function dayLabel(d, index){
+    if (index === 0) return 'Сегодня';
+    if (index === 1) return 'Завтра';
+    var wd = WEEKDAY_FMT.format(d).replace('.', '');
+    return wd.charAt(0).toUpperCase() + wd.slice(1);
+  }
+
+  /* ---------- Состояние виджета записи ---------- */
+  var state = { serviceId: null, hairLength: 'medium', masterId: null, dayIndex: null, slotMinutes: null };
+
+  var categorySelect = document.getElementById('categorySelect');
+  var serviceSelect = document.getElementById('serviceSelect');
+  var hairLengthField = document.getElementById('hairLengthField');
+  var hairLengthChips = document.getElementById('hairLengthChips');
+  var serviceSummary = document.getElementById('serviceSummary');
+  var masterOptions = document.getElementById('masterOptions');
+  var dayTabs = document.getElementById('dayTabs');
+  var timeSlotsEl = document.getElementById('timeSlots');
+  var bookingSelectedSummary = document.getElementById('bookingSelectedSummary');
+  var confirmBtn = document.getElementById('confirmBtn');
+  var bookingForm = document.getElementById('bookingForm');
+  var bookingSuccess = document.getElementById('bookingSuccess');
+  var bookingSuccessText = document.getElementById('bookingSuccessText');
+
+  CATEGORIES.forEach(function(cat){
+    var opt = document.createElement('option');
+    opt.value = cat; opt.textContent = cat;
+    categorySelect.appendChild(opt);
+  });
+
+  function populateServicesForCategory(category){
+    serviceSelect.innerHTML = '';
+    SERVICES.filter(function(s){ return s.category === category; }).forEach(function(s){
+      var opt = document.createElement('option');
+      opt.value = s.id; opt.textContent = s.name;
+      serviceSelect.appendChild(opt);
+    });
+    state.serviceId = serviceSelect.value;
+    onServiceChange();
+  }
+
+  categorySelect.addEventListener('change', function(){
+    populateServicesForCategory(categorySelect.value);
+  });
+  serviceSelect.addEventListener('change', function(){
+    state.serviceId = serviceSelect.value;
+    onServiceChange();
+  });
+  hairLengthChips.addEventListener('click', function(e){
+    var btn = e.target.closest('.chip');
+    if (!btn) return;
+    state.hairLength = btn.getAttribute('data-length');
+    updateHairLengthChips();
+    onServiceDetailsChange();
+  });
+
+  function updateHairLengthChips(){
+    hairLengthChips.querySelectorAll('.chip').forEach(function(chip){
+      chip.classList.toggle('is-active', chip.getAttribute('data-length') === state.hairLength);
+    });
+  }
+
+  function onServiceChange(){
+    var service = getService(state.serviceId);
+    hairLengthField.hidden = !service.hairLength;
+    if (service.hairLength){ state.hairLength = 'medium'; updateHairLengthChips(); }
+    renderMasterOptions(service);
+    onServiceDetailsChange();
+  }
+
+  function onServiceDetailsChange(){
+    var service = getService(state.serviceId);
+    var duration = serviceDuration(service, state.hairLength);
+    var price = servicePrice(service, state.hairLength);
+    var lengthPart = service.hairLength ? ' · ' + LENGTH_LABEL[state.hairLength] : '';
+    serviceSummary.innerHTML =
+      '<div class="row"><span class="label">Услуга</span><span class="value">' + service.name + lengthPart + '</span></div>' +
+      '<div class="row"><span class="label">Длительность</span><span class="value">' + duration + ' мин</span></div>' +
+      '<div class="row"><span class="label">Цена</span><span class="value">' + formatPrice(price) + '</span></div>';
+    renderDayTabs();
+    renderTimeSlots();
+    updateBookingSummary();
+  }
+
+  function renderMasterOptions(service){
+    masterOptions.innerHTML = '';
+    service.masters.forEach(function(mid){
+      var m = MASTERS[mid];
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'master-option' + (state.masterId === mid ? ' is-selected' : '');
+      btn.innerHTML =
+        '<span class="avatar-sm">' + m.initials + '</span>' +
+        '<span><span class="name">' + m.name + '</span><br><span class="role">' + m.role + '</span></span>';
+      btn.addEventListener('click', function(){ selectMaster(mid); });
+      masterOptions.appendChild(btn);
+    });
+    // автоматически выбираем мастера (в данных на каждую услугу - свой специалист)
+    selectMaster(service.masters[0]);
+  }
+
+  function selectMaster(mid){
+    state.masterId = mid;
+    masterOptions.querySelectorAll('.master-option').forEach(function(btn, i){
+      var service = getService(state.serviceId);
+      btn.classList.toggle('is-selected', service.masters[i] === mid);
+    });
+    state.slotMinutes = null;
+    renderDayTabs();
+    renderTimeSlots();
+    updateBookingSummary();
+  }
+
+  function renderDayTabs(){
+    var service = getService(state.serviceId);
+    var duration = serviceDuration(service, state.hairLength);
+    dayTabs.innerHTML = '';
+    var firstAvailable = null;
+    DAYS.forEach(function(d, i){
+      var free = state.masterId ? getFreeSlots(state.masterId, d, duration) : [];
+      if (free.length && firstAvailable === null) firstAvailable = i;
+      var tab = document.createElement('button');
+      tab.type = 'button';
+      tab.className = 'day-tab';
+      tab.innerHTML = '<span class="dow">' + dayLabel(d, i) + '</span><span>' + DATE_FMT.format(d) + '</span><span class="count">' + (free.length ? free.length + ' окон' : 'нет окон') + '</span>';
+      tab.addEventListener('click', function(){ state.dayIndex = i; state.slotMinutes = null; renderDayTabs(); renderTimeSlots(); updateBookingSummary(); });
+      dayTabs.appendChild(tab);
+    });
+    if (state.dayIndex === null || state.dayIndex === undefined){
+      state.dayIndex = firstAvailable !== null ? firstAvailable : 0;
+    }
+    Array.prototype.forEach.call(dayTabs.children, function(tab, i){
+      tab.classList.toggle('is-active', i === state.dayIndex);
+    });
+  }
+
+  function renderTimeSlots(){
+    var service = getService(state.serviceId);
+    var duration = serviceDuration(service, state.hairLength);
+    var date = DAYS[state.dayIndex];
+    var free = state.masterId ? getFreeSlots(state.masterId, date, duration) : [];
+    timeSlotsEl.innerHTML = '';
+    if (!free.length){
+      var msg = document.createElement('div');
+      msg.className = 'time-slots-empty';
+      msg.textContent = 'Нет свободных окон в этот день - выберите другой день выше.';
+      timeSlotsEl.appendChild(msg);
+      return;
+    }
+    free.forEach(function(minutes){
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'time-slot' + (state.slotMinutes === minutes ? ' is-selected' : '');
+      btn.textContent = formatMinutes(minutes);
+      btn.addEventListener('click', function(){
+        state.slotMinutes = minutes;
+        renderTimeSlots();
+        updateBookingSummary();
+      });
+      timeSlotsEl.appendChild(btn);
+    });
+  }
+
+  function updateBookingSummary(){
+    var service = getService(state.serviceId);
+    var master = MASTERS[state.masterId];
+    var ready = state.masterId && state.slotMinutes !== null && state.slotMinutes !== undefined;
+    if (ready){
+      var duration = serviceDuration(service, state.hairLength);
+      var price = servicePrice(service, state.hairLength);
+      var lengthPart = service.hairLength ? ' (' + LENGTH_LABEL[state.hairLength] + ')' : '';
+      var date = DAYS[state.dayIndex];
+      bookingSelectedSummary.innerHTML =
+        '<span><strong>' + service.name + lengthPart + '</strong><br>' +
+        'Мастер: ' + master.name + '<br>' +
+        'Когда: ' + dayLabel(date, state.dayIndex).toLowerCase() + ', ' + DATE_FMT.format(date) + ' в ' + formatMinutes(state.slotMinutes) + '<br>' +
+        'Длительность ' + duration + ' мин · Цена ' + formatPrice(price) + '</span>';
+      confirmBtn.disabled = false;
+    } else {
+      bookingSelectedSummary.textContent = 'Сначала выберите услугу, мастера и время выше.';
+      confirmBtn.disabled = true;
+    }
+  }
+
+  bookingForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (confirmBtn.disabled) return;
+    var service = getService(state.serviceId);
+    var master = MASTERS[state.masterId];
+    var date = DAYS[state.dayIndex];
+    var lengthPart = service.hairLength ? ' (' + LENGTH_LABEL[state.hairLength] + ')' : '';
+    var whenText = dayLabel(date, state.dayIndex).toLowerCase() + ', ' + DATE_FMT.format(date) + ' в ' + formatMinutes(state.slotMinutes);
+    bookingSuccessText.textContent = 'Готово. Вы записаны на «' + service.name + lengthPart + '» к ' + master.name + ' на ' + whenText + '. Ждём вас за 5 минут до начала.';
+    bookingSuccess.hidden = false;
+    confirmBtn.textContent = 'Запись подтверждена';
+    confirmBtn.disabled = true;
+    document.getElementById('clientName').disabled = true;
+    document.getElementById('clientPhone').disabled = true;
+  });
+
+  /* ---------- Инициализация виджета ---------- */
+  categorySelect.value = CATEGORIES[0];
+  populateServicesForCategory(CATEGORIES[0]);
+
+  /* ---------- Ближайшие окна в hero ---------- */
+  function renderHeroSlots(){
+    var heroSlots = document.getElementById('heroSlots');
+    var heroFoot = document.getElementById('heroFoot');
+    var today = DAYS[0];
+    var candidates = [];
+    Object.keys(MASTERS).forEach(function(mid){
+      getFreeSlots(mid, today, 60).forEach(function(minutes){
+        candidates.push({ minutes: minutes, masterId: mid });
+      });
+    });
+    candidates.sort(function(a, b){ return a.minutes - b.minutes; });
+    var top = candidates.slice(0, 3);
+    heroSlots.innerHTML = '';
+    if (!top.length){
+      heroFoot.textContent = 'На сегодня свободных окон не осталось - в виджете записи ниже доступно время на ближайшие 7 дней.';
+      return;
+    }
+    top.forEach(function(c){
+      var row = document.createElement('div');
+      row.className = 'hero-slot';
+      row.innerHTML = '<span class="time">' + formatMinutes(c.minutes) + '</span><span class="who">' + MASTERS[c.masterId].name + '</span>';
+      heroSlots.appendChild(row);
+    });
+    heroFoot.textContent = 'Свободных окон сегодня: ' + candidates.length + '. Полный список - в виджете записи ниже.';
+  }
+  renderHeroSlots();
+
+  /* ---------- Маршрут до салона ---------- */
+  var address = 'Волгоград, проспект Героев Сталинграда, 48';
+  document.getElementById('routeBtn').href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(address);
+
+})();
+</script>
+
+</body>
+</html>

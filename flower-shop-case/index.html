@@ -1,0 +1,1010 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Кейс цветочного магазина</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Как цветочный магазин в Минске получил 127 продаж на 12 000+ BYN за 14 дней после аудита рекламного кабинета и пересборки рекламы. Разбор цифр, изменений и системы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg:#EEF0E1;
+    --bg-soft:#E3E8D2;
+    --surface:#FBFCF6;
+    --surface-2:#FFFFFF;
+    --ink:#1E2E20;
+    --ink-soft:#4A5B4C;
+    --ink-faint:#7C8B79;
+    --accent:#A6506C;
+    --accent-dark:#7C3C52;
+    --accent-soft:#F0DCE3;
+    --green-mid:#3E6350;
+    --green-line: rgba(30,46,32,0.14);
+    --shadow: 0 20px 44px -22px rgba(20,34,22,0.38);
+    --radius: 18px;
+    --font-display:'Unbounded', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-body: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    --maxw: 1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-padding-top: 84px;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--font-body);
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block; max-width:100%;}
+  a{color:inherit;}
+  ul,ol{padding-left:1.2em;}
+  li{margin:0.35em 0;}
+  strong{font-weight:700; color:var(--ink);}
+
+  h1,h2,h3,h4{
+    font-family:var(--font-display);
+    color:var(--ink);
+    margin:0 0 0.5em;
+    line-height:1.15;
+    letter-spacing:-0.01em;
+  }
+  h1{font-weight:800;}
+  h2{font-weight:700;}
+  h3{font-weight:600;}
+
+  .container{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  .section{
+    padding:64px 0;
+    scroll-margin-top: 84px;
+  }
+  .section-alt{background:var(--bg-soft);}
+  .section-head{
+    max-width: 760px;
+    margin-bottom: 36px;
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--font-display);
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--green-mid);
+    background:rgba(62,99,80,0.1);
+    border:1px solid rgba(62,99,80,0.25);
+    border-radius:999px;
+    padding:6px 14px;
+    margin-bottom:16px;
+  }
+  .section h2{
+    font-size:clamp(1.5rem, 3vw, 2.15rem);
+  }
+  .lede{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    max-width:640px;
+  }
+
+  .reveal{ opacity:1; transform:none; }
+  .js .reveal{ opacity:0; transform:translateY(28px); }
+  @media (prefers-reduced-motion: no-preference){
+    .js .reveal{ transition: opacity 0.7s ease, transform 0.7s ease; }
+    html{ scroll-behavior:smooth; }
+  }
+  .js .reveal.is-visible{ opacity:1; transform:none; }
+
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(238,240,225,0.88);
+    backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--green-line);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:14px 24px;
+    max-width:var(--maxw);
+    margin:0 auto;
+  }
+  .brandmark{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:0.95rem;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .brandmark svg{width:26px; height:26px; flex:none;}
+  .niche-tag{
+    font-size:0.72rem;
+    color:var(--ink-soft);
+    border-left:1px solid var(--green-line);
+    padding-left:10px;
+    line-height:1.3;
+    display:none;
+  }
+  @media (min-width:720px){
+    .niche-tag{display:block;}
+  }
+
+  .main-nav{
+    display:none;
+    align-items:center;
+    gap:2px;
+    flex:1;
+    justify-content:flex-start;
+    min-width:0;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .main-nav::-webkit-scrollbar{ display:none; }
+  .main-nav a{
+    font-size:0.85rem;
+    font-weight:500;
+    color:var(--ink-soft);
+    text-decoration:none;
+    white-space:nowrap;
+    padding:8px 12px;
+    border-radius:999px;
+    transition: background .15s ease, color .15s ease;
+  }
+  .main-nav a:hover{ background:rgba(30,46,32,0.08); color:var(--ink); }
+  .main-nav a.active{ background:var(--accent-soft); color:var(--accent-dark); font-weight:600; }
+  @media (min-width:680px){
+    .main-nav{ display:flex; }
+    .niche-tag{ display:none; }
+  }
+  @media (min-width:680px) and (max-width:1150px){
+    .main-nav a{ font-size:0.74rem; padding:6px 8px; }
+    .brandmark-text{ display:none; }
+    .header-inner .btn-ghost{ font-size:0.8rem; padding:9px 14px; }
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:0.9rem;
+    text-decoration:none;
+    border-radius:999px;
+    padding:12px 22px;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn:active{ transform:translateY(0); }
+  .btn-primary{
+    background:var(--accent);
+    color:#FBF2F4;
+    box-shadow:0 12px 24px -10px rgba(124,60,82,0.55);
+  }
+  .btn-primary:hover{ background:var(--accent-dark); }
+  .btn-ghost{
+    background:transparent;
+    border-color: var(--green-line);
+    color:var(--ink);
+    font-size:0.85rem;
+    padding:10px 18px;
+  }
+  .btn-ghost:hover{ background:rgba(30,46,32,0.06); }
+  .btn-lg{
+    font-size:1rem;
+    padding:16px 30px;
+  }
+  .btn-block{ width:100%; }
+
+  .hero{
+    padding:52px 0 56px;
+  }
+  .hero-kicker{
+    display:inline-block;
+    font-size:0.78rem;
+    letter-spacing:0.03em;
+    color:var(--green-mid);
+    background:rgba(62,99,80,0.10);
+    border:1px solid rgba(62,99,80,0.25);
+    border-radius:999px;
+    padding:7px 16px;
+    margin-bottom:20px;
+    font-weight:600;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 5vw, 3.4rem);
+    max-width:16ch;
+    margin-bottom:18px;
+  }
+  .hero .subtitle{
+    font-size:clamp(1.05rem, 2vw, 1.25rem);
+    color:var(--ink-soft);
+    max-width:640px;
+    margin-bottom:22px;
+    font-weight:500;
+  }
+  .hero .lead-text p{
+    max-width:640px;
+    color:var(--ink-soft);
+  }
+  .hero .lead-list{
+    max-width:600px;
+    color:var(--ink-soft);
+  }
+  .hero-actions{
+    margin-top:28px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    align-items:center;
+  }
+  .hero-note{
+    font-size:0.85rem;
+    color:var(--ink-faint);
+  }
+
+  .chain{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px;
+    margin:22px 0 26px;
+  }
+  .chain-step{
+    font-family:var(--font-display);
+    font-weight:600;
+    font-size:0.95rem;
+    background:var(--surface-2);
+    border:1px solid var(--green-line);
+    border-radius:12px;
+    padding:10px 16px;
+    color:var(--ink);
+  }
+  .chain-arrow{
+    color:var(--accent);
+    font-size:1.1rem;
+    font-weight:700;
+  }
+
+  .problem-list{
+    list-style:none;
+    padding:0;
+    margin:0 0 28px;
+    display:grid;
+    gap:14px;
+  }
+  .problem-list li{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    background:var(--surface);
+    border:1px solid var(--green-line);
+    border-radius:14px;
+    padding:16px 18px;
+    margin:0;
+  }
+  .problem-num{
+    font-family:var(--font-display);
+    font-weight:800;
+    color:var(--accent);
+    font-size:1.1rem;
+    flex:none;
+    width:1.6em;
+  }
+  .note-card{
+    border-left:3px solid var(--green-mid);
+    background:var(--surface);
+    border-radius:0 14px 14px 0;
+    padding:18px 22px;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin-top:24px;
+  }
+
+  .change-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+  }
+  .change-card{
+    background:var(--surface);
+    border:1px solid var(--green-line);
+    border-radius:var(--radius);
+    padding:26px 24px;
+  }
+  .change-badge{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:1.6rem;
+    color:var(--accent);
+    opacity:0.55;
+    margin-bottom:10px;
+    display:block;
+  }
+  .change-card h3{ font-size:1.1rem; margin-bottom:8px; }
+  .change-card p{ color:var(--ink-soft); margin:0; font-size:0.97rem; }
+
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:16px;
+    margin:8px 0 28px;
+  }
+  .stat-tile{
+    background:var(--surface-2);
+    border:1px solid var(--green-line);
+    border-radius:var(--radius);
+    padding:22px 18px;
+    text-align:left;
+    box-shadow:var(--shadow);
+  }
+  .stat-num{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(1.7rem, 3vw, 2.3rem);
+    color:var(--accent);
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .stat-label{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    line-height:1.35;
+  }
+  .stat-note{
+    font-size:0.92rem;
+    color:var(--ink-faint);
+    font-style:italic;
+    margin: 6px 0 22px;
+  }
+
+  .card-grid-3{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  .scenario-card{
+    background:var(--surface);
+    border:1px solid var(--green-line);
+    border-left:4px solid var(--green-mid);
+    border-radius:14px;
+    padding:22px 20px;
+  }
+  .scenario-card.is-warn{ border-left-color:#B08A3A; }
+  .scenario-card.is-risk{ border-left-color:var(--accent); }
+  .scenario-card h4{
+    font-family:var(--font-display);
+    font-size:1rem;
+    margin-bottom:8px;
+    color:var(--ink);
+  }
+  .scenario-card p{ margin:0; color:var(--ink-soft); font-size:0.95rem; }
+
+  .bonus-card{
+    background:var(--surface);
+    border:1px solid var(--green-line);
+    border-radius:14px;
+    padding:22px 20px;
+  }
+  .bonus-card .bonus-tag{
+    display:inline-block;
+    font-family:var(--font-display);
+    font-size:0.72rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--accent-dark);
+    background:var(--accent-soft);
+    border-radius:999px;
+    padding:5px 12px;
+    margin-bottom:10px;
+  }
+  .bonus-card h4{ font-size:1.02rem; margin-bottom:8px; }
+  .bonus-card p{ margin:0; color:var(--ink-soft); font-size:0.95rem; }
+
+  .req-list{
+    list-style:none;
+    padding:0;
+    display:grid;
+    gap:12px;
+    margin:0 0 20px;
+  }
+  .req-list li{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    background:var(--surface);
+    border:1px solid var(--green-line);
+    border-radius:12px;
+    padding:14px 16px;
+  }
+  .req-num{
+    font-family:var(--font-display);
+    font-weight:700;
+    color:var(--green-mid);
+    flex:none;
+  }
+  .check-list{
+    list-style:none;
+    padding:0;
+    display:grid;
+    gap:10px;
+    margin:0 0 20px;
+  }
+  .check-list li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    color:var(--ink-soft);
+  }
+  .check-list li::before{
+    content:"✓";
+    color:var(--green-mid);
+    font-weight:700;
+    flex:none;
+  }
+
+  .value-table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--surface-2);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    margin-bottom:22px;
+  }
+  .value-table th, .value-table td{
+    padding:16px 20px;
+    text-align:left;
+    border-bottom:1px solid var(--green-line);
+    font-size:0.97rem;
+  }
+  .value-table th{
+    font-family:var(--font-display);
+    font-size:0.78rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    background:var(--bg-soft);
+  }
+  .value-table td.price{
+    text-align:right;
+    font-family:var(--font-display);
+    font-weight:700;
+    white-space:nowrap;
+  }
+  .value-table tr.total td{
+    font-weight:800;
+    border-bottom:none;
+    font-size:1.05rem;
+  }
+  .value-flip{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:18px;
+    background:var(--accent-soft);
+    border-radius:var(--radius);
+    padding:24px 26px;
+    margin-bottom:10px;
+  }
+  .value-flip .old-price{
+    font-family:var(--font-display);
+    font-weight:700;
+    font-size:1.3rem;
+    color:var(--ink-faint);
+    text-decoration:line-through;
+  }
+  .value-flip .arrow-to{ color:var(--accent-dark); font-size:1.2rem; }
+  .value-flip .new-price{
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:1.5rem;
+    color:var(--accent-dark);
+  }
+  .value-flip .slots{
+    margin-left:auto;
+    font-size:0.85rem;
+    color:var(--accent-dark);
+    font-weight:600;
+  }
+
+  .guarantee-box{
+    background:var(--surface);
+    border:1px solid var(--green-line);
+    border-radius:var(--radius);
+    padding:28px 26px;
+  }
+
+  .final-cta{
+    background:var(--ink);
+    color:#EFEFE6;
+    border-radius: 28px;
+    padding:48px 36px;
+    text-align:center;
+  }
+  .final-cta h2{ color:#F6F4EC; }
+  .final-cta p{ color:rgba(239,239,230,0.78); max-width:560px; margin:0 auto 26px; }
+  .final-cta .btn-primary{
+    box-shadow:0 16px 32px -12px rgba(166,80,108,0.65);
+  }
+  #audit-message{
+    margin:22px auto 0;
+    max-width:520px;
+    background:rgba(239,239,230,0.08);
+    border:1px solid rgba(239,239,230,0.22);
+    border-radius:14px;
+    padding:18px 20px;
+    font-size:0.95rem;
+    color:#F6F4EC;
+    text-align:left;
+  }
+  #audit-message strong{ color:#F6F4EC; }
+
+  footer.page-footer{
+    text-align:center;
+    padding:28px 24px 40px;
+    font-size:0.82rem;
+    color:var(--ink-faint);
+  }
+
+  .divider{
+    display:flex;
+    justify-content:center;
+    margin:0;
+    opacity:0.6;
+  }
+  .divider svg{ width:120px; height:18px; }
+
+  @media (max-width:980px){
+    .change-grid{ grid-template-columns:repeat(2, 1fr); gap:16px; }
+    .stat-grid{ grid-template-columns:repeat(2, 1fr); }
+    .card-grid-3{ grid-template-columns:repeat(2, 1fr); }
+    .section{ padding:52px 0; }
+  }
+
+  @media (max-width:640px){
+    .header-inner{ padding:12px 16px; }
+    .container{ padding:0 18px; }
+    .section{ padding:44px 0; }
+    .hero{ padding:36px 0 40px; }
+    .change-grid{ grid-template-columns:1fr; }
+    .stat-grid{ grid-template-columns:repeat(2, 1fr); gap:12px; }
+    .card-grid-3{ grid-template-columns:1fr; }
+    .value-table th, .value-table td{ padding:12px 14px; font-size:0.9rem; }
+    .final-cta{ padding:36px 20px; border-radius:20px; }
+    .value-flip{ flex-direction:column; align-items:flex-start; }
+    .value-flip .slots{ margin-left:0; }
+  }
+
+  @media (max-width:420px){
+    .stat-grid{ grid-template-columns:repeat(2, 1fr); gap:10px; }
+    .stat-tile{ padding:16px 14px; }
+    .hero h1{ max-width:none; }
+    .header-inner{ padding:12px 14px; gap:8px; }
+    .brandmark-text{ display:none; }
+    .header-inner .btn-ghost{ font-size:0.78rem; padding:9px 16px; white-space:nowrap; }
+    .btn{ white-space:normal; text-align:center; }
+    .btn-lg{ width:100%; padding:16px 20px; font-size:0.95rem; }
+  }
+</style>
+
+<noscript>
+  <style>
+    .reveal{ opacity:1 !important; transform:none !important; }
+  </style>
+</noscript>
+
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <div class="brandmark">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 21c0-5 3-7 3-11a3 3 0 1 0-6 0c0 4 3 6 3 11Z" fill="#3E6350"/>
+        <path d="M12 12c-3-1-5-4-4-7 3 0 6 2 6 5" fill="#A6506C" opacity="0.85"/>
+      </svg>
+      <span class="brandmark-text">Разбор рекламного кейса</span>
+    </div>
+    <nav class="main-nav" aria-label="Навигация по разделам кейса">
+      <a href="#problem">Проблема</a>
+      <a href="#changes">Решение</a>
+      <a href="#results">Результаты</a>
+      <a href="#offer">Оффер</a>
+      <a href="#bonuses">Бонусы</a>
+      <a href="#value">Цена</a>
+      <a href="#guarantee">Гарантия</a>
+    </nav>
+    <a href="#cta" class="btn btn-ghost">Бесплатный аудит</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="hero">
+    <div class="container">
+      <span class="hero-kicker reveal">Для владельцев цветочного бизнеса в Беларуси</span>
+      <h1 class="reveal">127 продаж на 12 000+ BYN за 14 дней</h1>
+      <p class="subtitle reveal">Как цветочный магазин в Минске получил такой результат - после аудита рекламного кабинета и пересборки рекламы практически с нуля</p>
+      <div class="lead-text reveal">
+        <p>До начала работы магазин уже запускал рекламу, но не было понятной связи между расходами, обращениями и реальными продажами. Деньги списывались. Клики считались. Посты продвигались. Не было ответа только на главный вопрос: сколько реальных продаж приносит реклама и сколько денег магазин зарабатывает с вложенного бюджета?</p>
+        <p>Если у вас похожая ситуация, ниже - коротко и по цифрам:</p>
+      </div>
+      <ul class="lead-list reveal">
+        <li>что обнаружилось в рекламном кабинете;</li>
+        <li>какие четыре изменения внесли;</li>
+        <li>какой результат получили;</li>
+        <li>почему после этого владелец доверил ещё два магазина.</li>
+      </ul>
+      <div class="hero-actions reveal">
+        <a href="#cta" class="btn btn-primary btn-lg">Получить бесплатный аудит</a>
+        <span class="hero-note">5 бесплатных мест в начале октября</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt reveal" id="problem">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Аудит</span>
+        <h2>В рекламном кабинете была активность. Но не было системы</h2>
+        <p class="lede">Аудит показал три основные проблемы:</p>
+      </div>
+
+      <ol class="problem-list">
+        <li><span class="problem-num">01</span><span>Большая часть кампаний была запущена с неподходящими целями.</span></li>
+        <li><span class="problem-num">02</span><span>Продвигались однотипные посты и креативы.</span></li>
+        <li><span class="problem-num">03</span><span>Заявки, продажи и стоимость привлечённого покупателя не фиксировались.</span></li>
+      </ol>
+
+      <p>Отчёты показывали клики, охваты и потраченный бюджет - но магазин не видел путь денег:</p>
+
+      <div class="chain">
+        <span class="chain-step">Реклама</span><span class="chain-arrow">→</span>
+        <span class="chain-step">заявка</span><span class="chain-arrow">→</span>
+        <span class="chain-step">продажа</span><span class="chain-arrow">→</span>
+        <span class="chain-step">выручка</span>
+      </div>
+
+      <p>В такой ситуации бессмысленно просто менять объявления или увеличивать бюджет: невозможно улучшать то, что невозможно измерить. А увеличивать бюджет - значит только быстрее терять деньги.</p>
+      <p>Поэтому кампании не «подкручивали» - рекламную систему пересобрали практически с нуля.</p>
+
+      <p class="note-card">Это был первый проект в цветочной нише, но к тому моменту - почти шесть лет опыта и более 200 проектов. Не было цели найти секретную настройку для цветочных магазинов - была цель выстроить систему, в которой каждое решение проверяется цифрами.</p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="changes">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Что сделали</span>
+        <h2>Четыре изменения, которые повлияли на результат</h2>
+      </div>
+
+      <div class="change-grid">
+        <div class="change-card">
+          <span class="change-badge">01</span>
+          <h3>Оцифровали рекламу</h3>
+          <p>Начали фиксировать каждое обращение и каждую продажу. Магазин впервые увидел: сколько заявок приносит реклама, сколько стоит одна заявка, сколько заявок превращается в продажи, сколько стоит привлечение одного покупателя и какую выручку приносит рекламный бюджет. Вместо ощущений - конкретные показатели.</p>
+        </div>
+        <div class="change-card">
+          <span class="change-badge">02</span>
+          <h3>Полностью пересобрали рекламные кампании</h3>
+          <p>Изменили цели, структуру, настройки и аудитории. Вместо всего ассортимента - конкретные позиции, на которых магазин мог сфокусироваться прямо сейчас. У каждой кампании появилась понятная задача: не просто клик, а обращение и заказ.</p>
+        </div>
+        <div class="change-card">
+          <span class="change-badge">03</span>
+          <h3>Переделали предложения и рекламные креативы</h3>
+          <p>Проанализировали рекламу конкурентов и выбрали первые форматы для тестов. Рекламу выстроили вокруг конкретных цветов, конкретных поводов, разных сегментов аудитории и понятных причин заказать сейчас. Перестали рекламировать просто «цветочный магазин» - начали рекламировать конкретную причину купить цветы.</p>
+        </div>
+        <div class="change-card">
+          <span class="change-badge">04</span>
+          <h3>Проверили, что происходит после клика</h3>
+          <p>Хорошая реклама ещё не гарантирует продажу: человек может зайти в Instagram и не понять предложение, написать в Direct и не получить ответа, увидеть цену и уйти. Поэтому параллельно подготовили рекомендации по упаковке Instagram-аккаунта, представлению ассортимента, обработке входящих сообщений и перепискам с покупателями. Работа шла не только над рекламой, но и над всем маршрутом человека до покупки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt reveal" id="results">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Цифры</span>
+        <h2>Результаты за 14 дней</h2>
+        <p class="lede"><strong>Уточнение:</strong> это не первые 14 дней знакомства с проектом - к этому моменту аудит уже был проведён, первые гипотезы протестированы, а система учёта заявок и продаж настроена.</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-tile"><div class="stat-num">$615</div><div class="stat-label">вложено в рекламу</div></div>
+        <div class="stat-tile"><div class="stat-num">573</div><div class="stat-label">заявки получено</div></div>
+        <div class="stat-tile"><div class="stat-num">~$1</div><div class="stat-label">цена одной заявки</div></div>
+        <div class="stat-tile"><div class="stat-num">127</div><div class="stat-label">продаж совершено</div></div>
+        <div class="stat-tile"><div class="stat-num">~$5</div><div class="stat-label">цена одной продажи</div></div>
+        <div class="stat-tile"><div class="stat-num">$3 800</div><div class="stat-label">выручка</div></div>
+        <div class="stat-tile"><div class="stat-num">22%</div><div class="stat-label">заявок превратились в продажи</div></div>
+        <div class="stat-tile"><div class="stat-num">×6,2</div><div class="stat-label">выручка превысила расходы на рекламу (ROAS)</div></div>
+      </div>
+
+      <p class="stat-note"><strong>Оговорка автора:</strong> речь именно о выручке, а не о чистой прибыли магазина.</p>
+
+      <p>Главное изменение заключалось не только в стоимости заявки - рекламу наконец начали оценивать по продажам и деньгам в кассе, а не по кликам, охватам и красивым отчётам.</p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="system">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Проверка на повторяемость</span>
+        <h2>Один хороший результат можно получить случайно. Повторить его - уже система</h2>
+      </div>
+      <p>После результата первого магазина владелец доверил ещё две точки. Использовали тот же подход: аудит → конкретные предложения → новые креативы → учёт заявок и продаж.</p>
+      <p>Позже два магазина временно передали другому агентству. В течение следующего месяца рекламные расходы выросли, а продажи снизились. После прямого сравнения результатов оба магазина вернулись. С тех пор сотрудничество продолжается уже два с половиной года.</p>
+      <p>Один успешный период может оказаться совпадением. Но результат в нескольких магазинах и возвращение клиента после сравнения с другим подрядчиком - уже закономерность.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt reveal" id="seasonality">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Проверка вне праздников</span>
+        <h2>Праздники дают всплеск. Система должна продавать в остальные дни</h2>
+      </div>
+      <p>14 февраля и 8 Марта спрос на цветы разогрет календарём - ошибки в рекламе легко не заметить, покупатели всё равно ищут букеты. Настоящая проверка рекламной системы начинается между праздниками.</p>
+      <p>В апреле и мае провели серию аудитов других цветочных магазинов. <strong>В 8 из 10 проектов</strong> после внедрения изменений удалось улучшить рекламный результат. В двух случаях одной рекламы оказалось недостаточно - ограничение было в предложении, упаковке профиля или обработке заявок.</p>
+      <p>Сегодня под контролем реклама <strong>шести</strong> цветочных магазинов, из них <strong>три</strong> - постоянные проекты, суммарно около <strong>4 000 заявок в месяц</strong>. Один из проектов открывает новую точку, а даже небольшой магазин из этой тройки делает от <strong>40 000 BYN</strong> выручки в месяц. Ещё с тремя магазинами работа идёт около полугода, результаты продолжают усиливаться.</p>
+      <p class="note-card">Не каждой проблеме нужен новый таргетолог или больший бюджет. Сначала нужно понять, где именно магазин теряет покупателей и деньги.</p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="offer">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Оффер · 5 мест в начале октября</span>
+        <h2>Не вкладывайте в рекламу ещё $500, пока не поймёте, что происходит с текущим бюджетом</h2>
+        <p class="lede">В начале октября - пять бесплатных аудитов рекламы цветочных магазинов лично от автора.</p>
+      </div>
+      <p>Аудит подойдёт, если реклама уже запускалась и в кабинете есть история кампаний, которую можно проанализировать.</p>
+
+      <div class="card-grid-3">
+        <div class="scenario-card">
+          <h4>Если реклама окупается</h4>
+          <p>Покажу, что можно усилить, не ломая работающую систему.</p>
+        </div>
+        <div class="scenario-card is-warn">
+          <h4>Если результаты постоянно меняются</h4>
+          <p>Найду этапы, на которых теряются заявки и деньги.</p>
+        </div>
+        <div class="scenario-card is-risk">
+          <h4>Если реклама не окупается</h4>
+          <p>Определю, находится ли проблема в рекламном кабинете или одной рекламой ситуацию не исправить.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt reveal" id="requirements">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">С вашей стороны</span>
+        <h2>Что потребуется от вас</h2>
+        <p class="lede">Около пяти минут:</p>
+      </div>
+      <ol class="req-list">
+        <li><span class="req-num">1.</span><span>Одним голосовым сообщением описать текущую ситуацию.</span></li>
+        <li><span class="req-num">2.</span><span>Рассказать, что сейчас происходит с заявками и продажами.</span></li>
+        <li><span class="req-num">3.</span><span>Предоставить доступ к рекламному кабинету только на просмотр и анализ.</span></li>
+      </ol>
+      <p>Никаких изменений в кабинете не вносится. Данные магазина, рекламные показатели и информация о продажах остаются конфиденциальными.</p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="deliverables">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Что вы получите</span>
+        <h2>Что вы получите в течение двух рабочих дней</h2>
+      </div>
+      <p>Это не созвон, после которого скажут «нужно протестировать новые аудитории и креативы». Вы получите персональный PDF-разбор проекта. Внутри:</p>
+      <ul class="check-list">
+        <li>скриншоты из рекламного кабинета с комментариями;</li>
+        <li>разбор целей, настроек, бюджетов и рекламных объявлений;</li>
+        <li>объяснение, что уже работает и что не нужно менять;</li>
+        <li>места, в которых сейчас могут теряться деньги;</li>
+        <li>минимум три конкретные точки роста;</li>
+        <li>рекомендации в порядке приоритета;</li>
+        <li>понятная последовательность дальнейших действий.</li>
+      </ul>
+      <p>При необходимости добавляются обезличенные примеры из действующих проектов. PDF остаётся у клиента без ограничения по времени.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt reveal" id="bonuses">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Дополнительно</span>
+        <h2>Три бонуса</h2>
+      </div>
+      <div class="card-grid-3">
+        <div class="bonus-card">
+          <span class="bonus-tag">Бонус №1</span>
+          <h4>Активная реклама конкурентов</h4>
+          <p>Соберу действующие объявления цветочных магазинов вашего города: какие предложения, цветы, услуги, креативы, тексты и цены используют конкуренты.</p>
+        </div>
+        <div class="bonus-card">
+          <span class="bonus-tag">Бонус №2</span>
+          <h4>Упаковка Instagram</h4>
+          <p>Проверю, понимает ли новый посетитель: что можно заказать, почему выбрать именно этот магазин, как быстро оформить заказ, вызывает ли профиль доверие.</p>
+        </div>
+        <div class="bonus-card">
+          <span class="bonus-tag">Бонус №3</span>
+          <h4>Переписки с потенциальными покупателями</h4>
+          <p>По присланным примерам отмечу: где человек теряет интерес, как преподносится цена, насколько быстро подводят к заказу, на каком этапе чаще всего заканчивается диалог.</p>
+        </div>
+      </div>
+      <p style="margin-top:24px;">Дешёвая заявка, которая не превратилась в продажу, всё равно остаётся дорогой. Проверяются четыре направления:</p>
+      <div class="chain">
+        <span class="chain-step">Реклама</span><span class="chain-arrow">→</span>
+        <span class="chain-step">конкуренты</span><span class="chain-arrow">→</span>
+        <span class="chain-step">Instagram</span><span class="chain-arrow">→</span>
+        <span class="chain-step">переписки</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="value">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Оффер-стек</span>
+        <h2>Общая ценность разбора - $177. Для пяти цветочных магазинов - бесплатно</h2>
+      </div>
+
+      <table class="value-table">
+        <thead>
+          <tr><th>Направление анализа</th><th>Обычная стоимость</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Персональный аудит рекламного кабинета</td><td class="price">$100</td></tr>
+          <tr><td>Анализ активной рекламы конкурентов</td><td class="price">$19</td></tr>
+          <tr><td>Разбор упаковки Instagram</td><td class="price">$29</td></tr>
+          <tr><td>Разбор переписок</td><td class="price">$29</td></tr>
+          <tr class="total"><td>Итого</td><td class="price">$177</td></tr>
+        </tbody>
+      </table>
+
+      <div class="value-flip">
+        <span class="old-price">$177</span>
+        <span class="arrow-to">→</span>
+        <span class="new-price">Бесплатно</span>
+        <span class="slots">5 мест · начало октября</span>
+      </div>
+
+      <p>Для пяти цветочных магазинов в начале октября - бесплатно.</p>
+      <p>Бесплатно не значит поверхностно: каждый аудит собирается вручную с глубоким погружением в ситуацию магазина. Именно поэтому в серии будет только <strong>пять проектов</strong>. После пятого подтверждённого магазина набор закроется.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt reveal" id="guarantee">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Честно</span>
+        <h2>Что я гарантирую</h2>
+      </div>
+      <div class="guarantee-box">
+        <p>Не обещаю 127 продаж только за факт проведения аудита - на результат влияют не только настройки рекламы, но и ассортимент, цены, предложение, контент и работа с входящими заявками. Обещать конкретные продажи до анализа бизнеса было бы нечестно.</p>
+        <p>Но после аудита будут:</p>
+        <ul class="check-list">
+          <li>конкретные точки роста;</li>
+          <li>понимание, где сейчас могут теряться деньги;</li>
+          <li>рекомендации с примерами и скриншотами;</li>
+          <li>последовательность дальнейших действий;</li>
+          <li>честный вывод, способна ли реклама улучшить ситуацию или проблема находится за пределами рекламного кабинета.</li>
+        </ul>
+        <p style="margin-bottom:0;">Никаких обязательств после получения аудита нет.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="cta">
+    <div class="container">
+      <div class="final-cta">
+        <h2>Как получить бесплатный аудит</h2>
+        <p>Нажмите кнопку ниже. Отправьте слово «АУДИТ» в телеграм. После этого - два коротких уточняющих вопроса и подтверждение, можно ли включить магазин в эту серию. После пятого подтверждённого проекта форма закрывается.</p>
+        <button type="button" class="btn btn-primary btn-lg" id="audit-btn">Получить бесплатный PDF-аудит</button>
+        <div id="audit-message" role="status" hidden>
+          <strong>Отлично.</strong> Напишите слово «АУДИТ» в Telegram - дальше два коротких уточняющих вопроса и подтверждение, что магазин попадает в серию из 5 бесплатных аудитов. После пятого подтверждённого проекта набор закрывается.
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="page-footer">
+  Аудит рекламного кабинета цветочных магазинов · Беларусь · демонстрационный кейс
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var reduceMotion = false;
+  try {
+    reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  } catch (err) { reduceMotion = false; }
+
+  document.documentElement.classList.add('js');
+
+  var revealItems = document.querySelectorAll('.reveal');
+
+  function showAll() {
+    for (var i = 0; i < revealItems.length; i++) {
+      revealItems[i].classList.add('is-visible');
+    }
+  }
+
+  if (!('IntersectionObserver' in window) || reduceMotion) {
+    showAll();
+  } else {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    revealItems.forEach(function (el) { observer.observe(el); });
+  }
+
+  var navLinks = document.querySelectorAll('.main-nav a');
+  if (navLinks.length && 'IntersectionObserver' in window) {
+    var linkByHash = {};
+    navLinks.forEach(function (link) { linkByHash[link.getAttribute('href')] = link; });
+
+    var navObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = linkByHash['#' + entry.target.id];
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(function (l) { l.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    Object.keys(linkByHash).forEach(function (hash) {
+      var section = document.querySelector(hash);
+      if (section) navObserver.observe(section);
+    });
+  }
+
+  var auditBtn = document.getElementById('audit-btn');
+  var auditMessage = document.getElementById('audit-message');
+
+  if (auditBtn && auditMessage) {
+    auditBtn.addEventListener('click', function () {
+      auditMessage.hidden = false;
+      auditMessage.scrollIntoView({
+        behavior: reduceMotion ? 'auto' : 'smooth',
+        block: 'center'
+      });
+    });
+  }
+})();
+</script>
+
+</body></html>

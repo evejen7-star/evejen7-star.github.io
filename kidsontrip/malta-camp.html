@@ -1,0 +1,919 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Лагерь на Мальте</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Языковой лагерь на Мальте для детей 10–14 лет: английский язык, море и остров, где английский - государственный язык. Даты, цены, программа и заявка.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --color-bg: #F4FAF9;
+  --color-bg-alt: #FFF3DC;
+  --color-bg-deep: #0E3A46;
+  --color-surface: #FFFFFF;
+  --color-navy: #123C4D;
+  --color-text: #22343A;
+  --color-text-soft: #4B5E64;
+  --color-muted: #93A3A6;
+  --color-border: #DCEAE7;
+
+  --color-coral: #FF6B54;
+  --color-coral-dark: #E14E38;
+  --color-coral-soft: #FFE4DC;
+
+  --color-turquoise: #159A96;
+  --color-turquoise-dark: #0E7370;
+  --color-turquoise-soft: #DBF3F1;
+
+  --color-sand: #FFC978;
+  --color-sand-soft: #FFEBC9;
+
+  --color-white: #FFFFFF;
+
+  --font-heading: 'Baloo 2', 'Segoe UI Rounded', 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif;
+  --font-body: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Roboto, Arial, sans-serif;
+
+  --radius-s: 10px;
+  --radius-m: 18px;
+  --radius-l: 28px;
+
+  --shadow-card: 0 10px 30px rgba(15, 58, 66, 0.10);
+  --shadow-card-hover: 0 16px 40px rgba(15, 58, 66, 0.16);
+
+  --header-h: 76px;
+  --container-w: 1160px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; }
+button { font-family: inherit; }
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+  margin: 0 0 0.5em;
+  line-height: 1.2;
+  font-weight: 700;
+}
+p { margin: 0 0 1em; }
+.container {
+  width: 100%;
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+section { padding: 72px 0; }
+.section-alt { background: var(--color-bg-alt); }
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-turquoise-dark);
+  background: var(--color-turquoise-soft);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.section-head { max-width: 760px; margin: 0 auto 44px; text-align: center; }
+.section-head h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+.section-head p { color: var(--color-text-soft); font-size: 1.05rem; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--color-coral); color: #fff; padding: 10px 16px;
+  z-index: 200; border-radius: 0 0 8px 0;
+}
+.skip-link:focus { left: 0; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .hero-actions .btn,
+  .final-cta .btn {
+    white-space: normal;
+    width: 100%;
+  }
+}
+.btn-primary {
+  background: var(--color-coral);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 107, 84, 0.35);
+}
+.btn-primary:hover { background: var(--color-coral-dark); transform: translateY(-2px); }
+.btn-secondary {
+  background: var(--color-white);
+  color: var(--color-turquoise-dark);
+  border: 2px solid var(--color-turquoise);
+}
+.btn-secondary:hover { background: var(--color-turquoise-soft); transform: translateY(-2px); }
+.btn-block { width: 100%; }
+.btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid var(--color-turquoise-dark);
+  outline-offset: 2px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(244, 250, 249, 0.92);
+  backdrop-filter: saturate(160%) blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+  gap: 12px;
+}
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  flex-shrink: 0;
+}
+.logo span { color: var(--color-coral); }
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.site-nav a { color: var(--color-text); padding: 6px 2px; border-bottom: 2px solid transparent; }
+.site-nav a:hover { color: var(--color-turquoise-dark); border-bottom-color: var(--color-turquoise); }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.header-cta {
+  padding: 11px 18px;
+  font-size: 0.92rem;
+  box-shadow: 0 6px 16px rgba(255, 107, 84, 0.3);
+}
+.header-cta .cta-short { display: none; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-s);
+  padding: 8px;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--color-navy);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .site-nav {
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 14px 20px 20px;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 12px 24px rgba(15, 58, 66, 0.12);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+  }
+  .site-nav.is-open { max-height: 320px; opacity: 1; }
+  .site-nav a { width: 100%; padding: 10px 4px; }
+  .nav-toggle { display: flex; }
+}
+
+@media (max-width: 420px) {
+  .header-cta .cta-full { display: none; }
+  .header-cta .cta-short { display: inline; }
+  .header-cta { padding: 10px 14px; font-size: 0.86rem; }
+  .logo { font-size: 1.08rem; }
+}
+
+.reveal { opacity: 1; transform: none; }
+.reveal.reveal-init {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.reveal-init.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal.reveal-init { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+.final-cta {
+  background: linear-gradient(135deg, var(--color-turquoise-dark), var(--color-bg-deep));
+  color: #fff;
+  border-radius: var(--radius-l);
+  padding: 56px 40px;
+  text-align: center;
+  margin: 0 20px;
+  max-width: var(--container-w);
+  margin-inline: auto;
+}
+.final-cta h2 { color: #fff; }
+.final-cta p { color: rgba(255,255,255,0.85); max-width: 560px; margin: 0 auto 24px; }
+
+.site-footer {
+  background: var(--color-bg-deep);
+  color: rgba(255,255,255,0.75);
+  padding: 48px 0 28px;
+  margin-top: 40px;
+  font-size: 0.92rem;
+}
+.site-footer .logo { color: #fff; margin-bottom: 10px; display: inline-block; }
+.site-footer .disclaimer {
+  max-width: 720px;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.84rem;
+  margin-top: 16px;
+}
+.footer-nav { display: flex; gap: 20px; flex-wrap: wrap; margin: 18px 0; }
+.footer-nav a { color: rgba(255,255,255,0.75); }
+.footer-nav a:hover { color: #fff; }
+
+.breadcrumbs {
+  padding: 18px 0 0;
+  font-size: 0.88rem;
+  color: var(--color-text-soft);
+}
+.breadcrumbs a { color: var(--color-turquoise-dark); }
+.breadcrumbs a:hover { text-decoration: underline; }
+.breadcrumbs .sep { margin: 0 6px; color: var(--color-muted); }
+
+.landing-hero {
+  padding: 26px 0 60px;
+  background: linear-gradient(180deg, var(--color-turquoise-soft), var(--color-bg) 80%);
+}
+.landing-hero h1 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); max-width: 900px; }
+.landing-hero .tag-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.tag-pill {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.84rem;
+  color: var(--color-turquoise-dark);
+  font-weight: 600;
+}
+
+.intro p { color: var(--color-text-soft); font-size: 1.03rem; max-width: 820px; }
+
+.included-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.included-item {
+  display: flex; gap: 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-m);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-card);
+}
+.included-item .icon {
+  flex-shrink: 0; width: 40px; height: 40px; border-radius: 12px;
+  background: var(--color-coral-soft); color: var(--color-coral-dark);
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.included-item h4 { font-size: 0.98rem; margin-bottom: 4px; }
+.included-item p { font-size: 0.9rem; color: var(--color-text-soft); margin-bottom: 0; }
+@media (max-width: 760px) { .included-grid { grid-template-columns: 1fr; } }
+
+.pricing-note {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  font-style: italic;
+  max-width: 700px;
+  margin: 18px auto 0;
+}
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.price-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-m);
+  border: 2px solid var(--color-border);
+  padding: 26px 22px;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.price-card:hover { border-color: var(--color-turquoise); transform: translateY(-4px); }
+.price-card .price-name { font-family: var(--font-heading); color: var(--color-turquoise-dark); font-size: 0.86rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+.price-card .price-dates { font-size: 1.05rem; font-weight: 600; color: var(--color-navy); margin-bottom: 4px; }
+.price-card .price-duration { font-size: 0.86rem; color: var(--color-muted); margin-bottom: 16px; }
+.price-card .price-amount { font-family: var(--font-heading); font-size: 1.6rem; color: var(--color-coral-dark); }
+@media (max-width: 900px) { .price-grid { grid-template-columns: 1fr; } }
+
+.faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 18px 22px;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+}
+.faq-question .plus {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--color-turquoise-soft);
+  color: var(--color-turquoise-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+.faq-item.is-open .faq-question .plus { transform: rotate(45deg); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-answer-inner { padding: 0 22px 18px; color: var(--color-text-soft); font-size: 0.95rem; }
+.faq-item.is-open .faq-answer { max-height: 400px; }
+
+.application-form {
+  background: var(--color-surface);
+  border-radius: var(--radius-l);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field.full { grid-column: 1 / -1; }
+.form-field label { font-size: 0.88rem; font-weight: 600; color: var(--color-navy); }
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: inherit;
+  font-size: 0.98rem;
+  padding: 12px 14px;
+  border-radius: var(--radius-s);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--color-turquoise);
+  outline: none;
+}
+.form-field textarea { resize: vertical; min-height: 90px; }
+.form-note { font-size: 0.8rem; color: var(--color-muted); margin-top: 14px; }
+.form-submit { margin-top: 22px; }
+@media (max-width: 620px) {
+  .application-form { padding: 26px 20px; }
+  .form-grid { grid-template-columns: 1fr; }
+}
+
+.form-success {
+  display: none;
+  background: var(--color-turquoise-soft);
+  border: 1.5px solid var(--color-turquoise);
+  color: var(--color-turquoise-dark);
+  border-radius: var(--radius-m);
+  padding: 20px 22px;
+  font-weight: 600;
+  align-items: center;
+  gap: 12px;
+}
+.form-success.is-visible { display: flex; }
+.form-success .icon { font-size: 1.4rem; }
+.application-form.is-submitted form { display: none; }
+
+.landing-final-cta { text-align: center; }
+
+.text-center { text-align: center; }
+.mt-lg { margin-top: 40px; }
+</style>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Kids<span>OnTrip</span></a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+      <a href="index.html#hero">Главная</a>
+      <a href="#main">Направления / Лагерь на Мальте</a>
+      <a href="index.html#how-it-works">Как это работает</a>
+      <a href="#application-form">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#application-form" class="btn btn-primary header-cta">
+        <span class="cta-full">Оставить заявку</span>
+        <span class="cta-short">Заявка</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню навигации">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <nav class="breadcrumbs container" aria-label="Хлебные крошки">
+    <a href="index.html">Главная</a>
+    <span class="sep">→</span>
+    <a href="index.html#destinations">Направления</a>
+    <span class="sep">→</span>
+    <span aria-current="page">Летний языковой лагерь на Мальте (10–14 лет)</span>
+  </nav>
+
+  <section class="landing-hero">
+    <div class="container">
+      <span class="eyebrow">Пилотная программа</span>
+      <h1>Летний языковой лагерь на Мальте для детей 10–14 лет: английский язык, море и остров, который сам говорит по-английски</h1>
+      <div class="tag-row">
+        <span class="tag-pill">🌍 10–14 лет</span>
+        <span class="tag-pill">🗣 Английский язык</span>
+        <span class="tag-pill">📍 Сент-Джулианс, Мальта</span>
+        <span class="tag-pill">📅 14 дней</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro reveal" aria-labelledby="intro-heading">
+    <div class="container">
+      <h2 id="intro-heading" class="visually-hidden">Вступление</h2>
+      <p>Мальта - один из немногих островов Средиземноморья, где английский язык - государственный, а не просто «язык для туристов». Это значит, что ваш ребёнок будет практиковать язык не только на уроках, а буквально везде: в кафе, на экскурсии, в разговоре с местными сверстниками. Именно поэтому программа построена не как «языковая школа с морем рядом», а как погружение, где занятия естественно продолжаются за пределами класса.</p>
+      <p>Программа подходит детям 10–14 лет с любым уровнем английского - от начального до продвинутого: группы формируются по результатам входного тестирования, а не по возрасту, поэтому ребёнок учится в компании со схожим уровнем языка. Особенно программа подойдёт тем, кто уже проходил школьную программу английского, но никогда не использовал язык «живьём», а также детям, которые любят активный формат обучения - с играми, квестами и командными заданиями, а не только за партой.</p>
+      <p>Отличие этой программы от типичного «языкового лагеря за границей» - конкретика в организации: группа делится на подгруппы не более 12 человек на одного преподавателя языка, а на одного сопровождающего от KidsOnTrip приходится не более 6 детей - это прописано в программе, а не обещано абстрактно. Резиденция лагеря находится в Сент-Джулианс, в 10 минутах пешком от набережной, что позволяет совмещать занятия в классе с реальной языковой средой без долгих переездов.</p>
+    </div>
+  </section>
+
+  <section class="included section-alt reveal" aria-labelledby="included-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Программа</span>
+        <h2 id="included-heading">Что входит в программу</h2>
+      </div>
+      <div class="included-grid">
+        <div class="included-item">
+          <div class="icon" aria-hidden="true">🏠</div>
+          <div>
+            <h4>Проживание</h4>
+            <p>Резиденция лагеря в Сент-Джулианс, комнаты на 3–4 человека, раздельно по полу, с воспитателем на этаже.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="icon" aria-hidden="true">🍽</div>
+          <div>
+            <h4>Питание</h4>
+            <p>Трёхразовое, шведский стол, меню согласовывается с учётом аллергий и особенностей питания при регистрации.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="icon" aria-hidden="true">📚</div>
+          <div>
+            <h4>Языковые занятия</h4>
+            <p>20 академических часов английского в неделю, группы до 12 человек, преподаватели - носители языка или сертифицированные педагоги (CELTA/TESOL).</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="icon" aria-hidden="true">🗺</div>
+          <div>
+            <h4>Экскурсионная программа</h4>
+            <p>4 экскурсии за смену: Валлетта (столица, объект ЮНЕСКО), Мдина («Тихий город»), Голубая лагуна (остров Комино), пляжный день в Меллихе.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="icon" aria-hidden="true">🎲</div>
+          <div>
+            <h4>Активности внутри лагеря</h4>
+            <p>Квесты на английском, командные спортивные игры, вечерние тематические мероприятия, творческие мастер-классы.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="icon" aria-hidden="true">🧑‍🏫</div>
+          <div>
+            <h4>Сопровождение</h4>
+            <p>Руководитель группы от KidsOnTrip едет вместе с детьми от вылета до возвращения, находится с группой на всех экскурсиях и мероприятиях.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="icon" aria-hidden="true">🚐</div>
+          <div>
+            <h4>Трансфер</h4>
+            <p>Встреча и проводы в аэропорту Мальты, трансфер до резиденции и обратно.</p>
+          </div>
+        </div>
+        <div class="included-item">
+          <div class="icon" aria-hidden="true">🩺</div>
+          <div>
+            <h4>Страховка</h4>
+            <p>Медицинская страховка на весь период поездки, включая экстренную эвакуацию.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing reveal" aria-labelledby="pricing-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Даты и цены</span>
+        <h2 id="pricing-heading">Смены на лето</h2>
+      </div>
+      <div class="price-grid">
+        <div class="price-card">
+          <div class="price-name">Смена 1</div>
+          <div class="price-dates">8 – 21 июня</div>
+          <div class="price-duration">14 дней</div>
+          <div class="price-amount">от 148 000 ₽</div>
+        </div>
+        <div class="price-card">
+          <div class="price-name">Смена 2</div>
+          <div class="price-dates">6 – 19 июля</div>
+          <div class="price-duration">14 дней</div>
+          <div class="price-amount">от 156 000 ₽</div>
+        </div>
+        <div class="price-card">
+          <div class="price-name">Смена 3</div>
+          <div class="price-dates">3 – 16 августа</div>
+          <div class="price-duration">14 дней</div>
+          <div class="price-amount">от 152 000 ₽</div>
+        </div>
+      </div>
+      <p class="pricing-note">В стоимость включены авиаперелёт из Москвы, проживание, питание, занятия, экскурсионная программа, трансфер и страховка. Даты и цены - иллюстративные, приведены для демонстрации структуры лендинга. Демо-цифры для примера портфолио, не актуальный прайс.</p>
+    </div>
+  </section>
+
+  <section class="safety section-alt reveal" aria-labelledby="safety-landing-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Безопасность</span>
+        <h2 id="safety-landing-heading">Безопасность на этой программе</h2>
+      </div>
+      <div class="safety-list" style="max-width:820px;margin:0 auto;">
+        <div class="safety-item">
+          <div class="icon" aria-hidden="true">👥</div>
+          <div>
+            <h4>Соотношение сопровождающих к детям</h4>
+            <p>Не более 1 взрослого от KidsOnTrip на 6 детей, дополнительно на занятиях - не более 12 детей на 1 преподавателя.</p>
+          </div>
+        </div>
+        <div class="safety-item">
+          <div class="icon" aria-hidden="true">🩹</div>
+          <div>
+            <h4>Медицинская поддержка</h4>
+            <p>В резиденции лагеря дежурит медицинский работник, у руководителя группы есть аптечка первой помощи и контакты ближайшей клиники.</p>
+          </div>
+        </div>
+        <div class="safety-item">
+          <div class="icon" aria-hidden="true">💬</div>
+          <div>
+            <h4>Связь с родителями</h4>
+            <p>Координатор группы отправляет короткий отчёт с фото каждый день в общий чат для родителей смены, у детей есть возможность звонить домой по расписанию (обычно раз в 2–3 дня), а также в любой момент по запросу через координатора.</p>
+          </div>
+        </div>
+        <div class="safety-item">
+          <div class="icon" aria-hidden="true">🌙</div>
+          <div>
+            <h4>Круглосуточное присутствие взрослых</h4>
+            <p>В резиденции дежурит воспитатель на этаже, ночной дежурный сотрудник лагеря доступен по всей территории.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq reveal" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Частые вопросы</span>
+        <h2 id="faq-heading">Частые вопросы (FAQ)</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Как формируются группы для занятий?</span>
+            <span class="plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              При регистрации ребёнок проходит короткое онлайн-тестирование уровня английского. По его результатам формируются учебные группы до 12 человек - так на занятиях оказываются дети со схожим уровнем языка, а не просто одного возраста.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Что взять с собой ребёнку?</span>
+            <span class="plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              За 2–3 недели до поездки мы высылаем подробный чек-лист: одежда по сезону и для экскурсий, купальные принадлежности, средства от солнца, необходимые лекарства с инструкцией для сопровождающего, копия документов. Список формируется с учётом конкретных дат смены и погоды.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Нужна ли виза и какие документы нужны для поездки?</span>
+            <span class="plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Мальта входит в Шенгенскую зону, поэтому для граждан РФ требуется шенгенская виза. Мы предоставляем список документов и приглашение от лагеря для визового центра; сбор и подачу документов родители организуют самостоятельно, но координатор консультирует по срокам и требованиям.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Что происходит, если ребёнок заболеет во время поездки?</span>
+            <span class="plus" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Руководитель группы и медицинский работник резиденции оценивают состояние ребёнка на месте. При необходимости ребёнка сопровождают в местную клинику, расходы покрываются страховкой. Родители получают информацию от координатора сразу после обращения к врачу, независимо от степени серьёзности ситуации.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="application section-alt reveal" id="application-form-section" aria-labelledby="application-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Заявка</span>
+        <h2 id="application-heading">Оставить заявку на «Летний языковой лагерь на Мальте, 10–14 лет»</h2>
+      </div>
+
+      <div class="application-form">
+        <div class="form-success" id="form-success" tabindex="-1">
+          <span class="icon" aria-hidden="true">✅</span>
+          <span>Спасибо! Заявка отправлена (демо-режим) - в реальном проекте здесь координатор свяжется с вами в течение одного рабочего дня.</span>
+        </div>
+
+        <form id="application-form" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="parent-name">Имя родителя</label>
+              <input type="text" id="parent-name" name="parent-name" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="parent-contact">Телефон / Email</label>
+              <input type="text" id="parent-contact" name="parent-contact" autocomplete="tel" placeholder="+7 ... или email@example.com" required>
+            </div>
+            <div class="form-field">
+              <label for="child-info">Имя и возраст ребёнка</label>
+              <input type="text" id="child-info" name="child-info" placeholder="Например, Анна, 12 лет" required>
+            </div>
+            <div class="form-field">
+              <label for="shift">Выбранная смена</label>
+              <select id="shift" name="shift" required>
+                <option value="" disabled selected>Выберите смену</option>
+                <option value="shift-1">Смена 1 · 8–21 июня</option>
+                <option value="shift-2">Смена 2 · 6–19 июля</option>
+                <option value="shift-3">Смена 3 · 3–16 августа</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="comment">Комментарий</label>
+              <textarea id="comment" name="comment" placeholder="Вопросы, уровень английского ребёнка, особые пожелания"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block form-submit">Отправить заявку →</button>
+          <p class="form-note">Это демонстрационная форма портфолио: данные никуда не отправляются и не сохраняются, отправка имитируется на стороне браузера.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="container">
+      <div class="final-cta landing-final-cta">
+        <h2>Место в группе подтверждается после входного тестирования - чем раньше заявка, тем больше выбор смены</h2>
+        <p>Оставьте заявку сейчас, и координатор свяжется с вами, чтобы подобрать смену и ответить на вопросы про эту конкретную программу.</p>
+        <a href="#application-form" class="btn btn-primary">Оставить заявку на программу →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span class="logo">Kids<span>OnTrip</span></span>
+    <p>KidsOnTrip - детские образовательные и оздоровительные поездки.</p>
+    <nav class="footer-nav" aria-label="Навигация в футере">
+      <a href="index.html#hero">Главная</a>
+      <a href="#main">Лагерь на Мальте</a>
+      <a href="index.html#how-it-works">Как это работает</a>
+      <a href="#application-form">Оставить заявку</a>
+    </nav>
+    <p class="disclaimer">Этот сайт - демонстрационный кейс (портфолио), подготовленный по учебному брифу. Указанные цены, статистика и отзывы носят иллюстративный характер и не отражают реальные данные какой-либо компании.</p>
+  </div>
+</footer>
+
+<noscript>
+  <style>.reveal{opacity:1 !important;transform:none !important;}</style>
+</noscript>
+
+<script>
+(function () {
+  'use strict';
+
+  function initNavToggle() {
+    var toggle = document.getElementById('nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+  }
+
+  function initScrollReveal() {
+    var items = document.querySelectorAll('.reveal');
+    if (!items.length) return;
+
+    var prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+
+    items.forEach(function (el) { el.classList.add('reveal-init'); });
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+    );
+
+    items.forEach(function (el) { observer.observe(el); });
+  }
+
+  function initFaqAccordion() {
+    var faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
+
+    faqItems.forEach(function (item) {
+      var question = item.querySelector('.faq-question');
+      var answer = item.querySelector('.faq-answer');
+      if (!question || !answer) return;
+
+      question.addEventListener('click', function () {
+        var isOpen = item.classList.contains('is-open');
+
+        faqItems.forEach(function (other) {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            var otherQuestion = other.querySelector('.faq-question');
+            if (otherQuestion) otherQuestion.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        item.classList.toggle('is-open', !isOpen);
+        question.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+  }
+
+  function initApplicationForm() {
+    var form = document.getElementById('application-form');
+    if (!form) return;
+
+    var wrapper = form.closest('.application-form');
+    var successBox = document.getElementById('form-success');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      if (wrapper) wrapper.classList.add('is-submitted');
+      if (successBox) {
+        successBox.classList.add('is-visible');
+        successBox.setAttribute('role', 'status');
+        successBox.focus({ preventScroll: true });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initNavToggle();
+    initScrollReveal();
+    initFaqAccordion();
+    initApplicationForm();
+  });
+})();
+</script>
+
+</body></html>

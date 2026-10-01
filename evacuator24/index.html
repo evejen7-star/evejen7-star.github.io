@@ -1,0 +1,941 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Эвакуатор24</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    color-scheme: dark;
+    --bg: #101114;
+    --bg-alt: #17181c;
+    --card: #1d1f24;
+    --card-border: #2a2d33;
+    --text: #f2f3f5;
+    --muted: #a3a7ae;
+    --accent: #ff6a1a;
+    --accent-dark: #e2570e;
+    --accent-soft: rgba(255, 106, 26, 0.12);
+    --radius: 16px;
+    --container: 1140px;
+    --header-h: 76px;
+  }
+
+  *, *::before, *::after{ box-sizing: border-box; }
+
+  html{
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h);
+  }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+
+  img, svg{ display:block; max-width:100%; }
+
+  a{ color: inherit; text-decoration: none; }
+
+  ul{ margin:0; padding:0; list-style:none; }
+
+  .container{
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section{ padding: 96px 0; }
+
+  h1,h2,h3{ margin: 0 0 16px; line-height: 1.2; }
+
+  h2.section-title{
+    font-size: clamp(28px, 4vw, 40px);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .section-title span{ color: var(--accent); }
+
+  .section-lead{
+    text-align: center;
+    color: var(--muted);
+    max-width: 620px;
+    margin: 0 auto 56px;
+    font-size: 17px;
+  }
+
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 32px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #14151a;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    box-shadow: 0 8px 24px var(--accent-soft);
+  }
+  .btn:hover{ background: var(--accent-dark); transform: translateY(-2px); }
+  .btn:active{ transform: translateY(0); }
+
+  .btn-outline{
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--card-border);
+    box-shadow: none;
+  }
+  .btn-outline:hover{ background: var(--card); border-color: var(--accent); color: var(--accent); }
+
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    background: rgba(16,17,20,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  .header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .logo{
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: .2px;
+    white-space: nowrap;
+  }
+  .logo span{ color: var(--accent); }
+
+  nav.main-nav{
+    display: flex;
+    gap: 24px;
+  }
+  nav.main-nav a{
+    color: var(--muted);
+    font-size: 15px;
+    transition: color .2s ease;
+  }
+  nav.main-nav a:hover{ color: var(--text); }
+
+  .header-cta{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .phone-link{
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  .header-cta .btn{ padding: 12px 22px; font-size: 14px; }
+
+  @media (max-width: 900px){
+    nav.main-nav{ display: none; }
+  }
+  @media (max-width: 600px){
+    .phone-link{ display: none; }
+    .header-cta .btn{ padding: 10px 16px; font-size: 13px; }
+    .logo{ font-size: 17px; }
+  }
+
+  #hero{
+    display: flex;
+    align-items: center;
+    padding-top: calc(var(--header-h) + 72px);
+    padding-bottom: 72px;
+    background:
+      radial-gradient(ellipse at 15% 20%, rgba(255,106,26,0.16), transparent 55%),
+      radial-gradient(ellipse at 85% 80%, rgba(255,106,26,0.08), transparent 50%),
+      linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+    position: relative;
+  }
+
+  .hero-grid{
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero-eyebrow{
+    display: inline-block;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero-title{
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+  }
+  .hero-title .accent{ color: var(--accent); }
+
+  .hero-sub{
+    color: var(--muted);
+    font-size: clamp(16px, 2vw, 19px);
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+
+  .hero-actions{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero-phone{
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 800;
+  }
+  .hero-phone small{
+    display:block;
+    color: var(--muted);
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  .hero-art{
+    aspect-ratio: 1 / 1;
+    max-width: 420px;
+    justify-self: center;
+    border-radius: 32px;
+    background: linear-gradient(145deg, var(--card), var(--bg-alt));
+    border: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns: 1fr; text-align: center; }
+    .hero-sub{ margin-left:auto; margin-right:auto; }
+    .hero-actions{ justify-content: center; }
+    .hero-art{ margin-top: 24px; max-width: 300px; }
+  }
+
+  .grid{
+    display: grid;
+    gap: 24px;
+  }
+  .grid-3{ grid-template-columns: repeat(3, 1fr); }
+  .grid-6{ grid-template-columns: repeat(3, 1fr); }
+  .grid-4{ grid-template-columns: repeat(4, 1fr); }
+
+  @media (max-width: 900px){
+    .grid-3{ grid-template-columns: repeat(2, 1fr); }
+    .grid-6{ grid-template-columns: repeat(2, 1fr); }
+    .grid-4{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px){
+    .grid-3, .grid-6, .grid-4{ grid-template-columns: 1fr; }
+  }
+
+  .card{
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  }
+  .card:hover{
+    transform: translateY(-4px);
+    border-color: rgba(255,106,26,0.5);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.35);
+  }
+
+  .card-icon{
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .card h3{ font-size: 19px; }
+  .card p{ margin: 0; color: var(--muted); font-size: 15px; }
+
+  .price-card{
+    text-align: center;
+    position: relative;
+  }
+  .price-card.featured{
+    border-color: var(--accent);
+    background: linear-gradient(180deg, var(--card) 0%, #201812 100%);
+  }
+  .price-card.featured::before{
+    content: "Популярно";
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #14151a;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 999px;
+  }
+  .price-title{
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .price-value{
+    font-size: clamp(26px, 4vw, 34px);
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+  .price-note{ color: var(--muted); font-size: 14px; }
+  .price-footnote{
+    text-align: center;
+    color: var(--muted);
+    margin-top: 32px;
+    font-size: 15px;
+  }
+
+  .about-box{
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 44px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--muted);
+  }
+  .about-box b{ color: var(--text); }
+
+  .timeline{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .timeline::before{
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 6%;
+    right: 6%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--card-border));
+  }
+  .step{
+    position: relative;
+    text-align: center;
+  }
+  .step-num{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 2;
+  }
+  .step h3{ font-size: 17px; margin-bottom: 8px; }
+  .step p{ color: var(--muted); font-size: 14px; margin:0; }
+
+  @media (max-width: 900px){
+    .timeline{ grid-template-columns: repeat(2, 1fr); }
+    .timeline::before{ display: none; }
+  }
+  @media (max-width: 600px){
+    .timeline{ grid-template-columns: 1fr; }
+  }
+
+  .adv-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .adv-icon{
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }
+  .adv-item p{ margin: 0; font-size: 16px; }
+
+  .faq-list{
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .faq-item{
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    margin-bottom: 14px;
+    background: var(--card);
+    overflow: hidden;
+  }
+  .faq-question{
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+  }
+  .faq-question .plus{
+    flex: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: transform .25s ease;
+  }
+  .faq-item.open .plus{ transform: rotate(45deg); }
+  .faq-answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+  .faq-answer-inner{
+    padding: 0 26px 22px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .contacts-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+  .contact-card{
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 32px 20px;
+  }
+  .contact-card .label{
+    color: var(--muted);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 10px;
+  }
+  .contact-card .value{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .contact-card .value.accent{ color: var(--accent); }
+  @media (max-width: 900px){
+    .contacts-grid{ grid-template-columns: 1fr; }
+  }
+
+  .form-wrap{
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    padding: 44px;
+  }
+  .form-title{
+    text-align: center;
+    font-size: clamp(22px, 3vw, 28px);
+    margin-bottom: 28px;
+  }
+  .form-row{ margin-bottom: 18px; }
+  .form-row label{
+    display: block;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .form-row input,
+  .form-row textarea{
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: var(--text);
+    font-size: 15px;
+    font-family: inherit;
+    transition: border-color .2s ease;
+  }
+  .form-row input:focus,
+  .form-row textarea:focus{
+    outline: none;
+    border-color: var(--accent);
+  }
+  .form-row textarea{ resize: vertical; min-height: 96px; }
+
+  .form-submit{ width: 100%; margin-top: 8px; }
+  .form-disclaimer{
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 16px;
+  }
+
+  .form-success{
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+  .form-success .check{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 20px;
+  }
+  .form-success h3{ margin-bottom: 8px; }
+  .form-success p{ color: var(--muted); margin:0; }
+
+  .form-wrap.submitted form{ display: none; }
+  .form-wrap.submitted .form-success{ display: block; }
+
+  footer{
+    padding: 32px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--card-border);
+  }
+
+  .reveal{
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.visible{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity: 1; transform: none; transition: none; }
+    .card, .btn{ transition: none; }
+  }
+</style>
+<noscript><style>.reveal{ opacity: 1 !important; transform: none !important; }</style></noscript>
+
+<header>
+  <div class="container header-inner">
+    <a href="#hero" class="logo">Эвакуатор<span>24</span></a>
+    <nav class="main-nav">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#about">О компании</a>
+      <a href="#process">Как проходит</a>
+      <a href="#advantages">Преимущества</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+79000000000" class="phone-link">+7 (900) 000-00-00</a>
+      <a href="#order-form" class="btn">Вызвать эвакуатор</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section id="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-eyebrow">Эвакуатор 24/7</span>
+        <h1 class="hero-title">Эвакуатор 24/7 — <span class="accent">подача от 20 минут</span></h1>
+        <p class="hero-sub">Приедем, погрузим и доставим ваш автомобиль без лишних вопросов и наценок.</p>
+        <div class="hero-actions">
+          <a href="#order-form" class="btn">Вызвать эвакуатор</a>
+          <div class="hero-phone">
+            <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+            <small>Звонок бесплатный, круглосуточно</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg width="180" height="180" viewBox="0 0 24 24" fill="none" stroke="#ff6a1a" stroke-width="1.2">
+          <path d="M3 16h13l2-5h2l1 3v2h-2M3 16v-3h11l2 3M3 16a2 2 0 1 0 4 0 2 2 0 1 0-4 0M14 16a2 2 0 1 0 4 0 2 2 0 1 0-4 0M6 10l1-3h6l2 3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title reveal">Наши <span>услуги</span></h2>
+      <p class="section-lead reveal">Работаем с любыми ситуациями - от обычной поломки до сложной погрузки после ДТП.</p>
+      <div class="grid grid-6">
+        <div class="card reveal">
+          <div class="card-icon">01</div>
+          <h3>Эвакуация после поломки</h3>
+          <p>Забираем машину, которая не заводится, где бы вы ни находились.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">02</div>
+          <h3>Эвакуация после ДТП</h3>
+          <p>Аккуратно грузим повреждённый автомобиль и доставляем на ремонт или стоянку.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">03</div>
+          <h3>Перевозка автомобилей</h3>
+          <p>Транспортировка легковых машин на короткие и длинные расстояния.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">04</div>
+          <h3>Перевозка внедорожников и кроссоверов</h3>
+          <p>Техника рассчитана на увеличенный вес и габариты авто.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">05</div>
+          <h3>Межгород</h3>
+          <p>Доставим автомобиль в другой город без пересадок и перегрузок.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">06</div>
+          <h3>Сложная погрузка</h3>
+          <p>Работаем со спущенными и заблокированными колёсами, авто после ДТП.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices">
+    <div class="container">
+      <h2 class="section-title reveal">Цены <span>без сюрпризов</span></h2>
+      <div class="grid grid-3">
+        <div class="card price-card reveal">
+          <div class="price-title">Легковой автомобиль</div>
+          <div class="price-value">от 1500 ₽</div>
+          <div class="price-note">По городу</div>
+        </div>
+        <div class="card price-card featured reveal">
+          <div class="price-title">Кроссовер / внедорожник</div>
+          <div class="price-value">от 2000 ₽</div>
+          <div class="price-note">По городу</div>
+        </div>
+        <div class="card price-card reveal">
+          <div class="price-title">Межгород</div>
+          <div class="price-value">от 50 ₽/км</div>
+          <div class="price-note">Любое расстояние</div>
+        </div>
+      </div>
+      <p class="price-footnote reveal">Точная цена - до выезда, без сюрпризов.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title reveal">О <span>компании</span></h2>
+      <div class="about-box reveal">
+        <p>Работаем на рынке эвакуации <b>более 8 лет</b> и принимаем заявки круглосуточно, включая праздники. Грузим аккуратно, с учётом типа привода и повреждений автомобиля. Стоимость называем до выезда и не меняем по дороге.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="container">
+      <h2 class="section-title reveal">Как проходит <span>работа</span></h2>
+      <p class="section-lead reveal">Четыре простых шага от заявки до доставки автомобиля.</p>
+      <div class="timeline">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h3>Заявка</h3>
+          <p>Оставляете номер и адрес.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <h3>Расчёт стоимости</h3>
+          <p>Называем цену до выезда.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <h3>Выезд эвакуатора</h3>
+          <p>Водитель едет к вам.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <h3>Доставка автомобиля</h3>
+          <p>Привозим машину по указанному адресу.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="advantages">
+    <div class="container">
+      <h2 class="section-title reveal">Наши <span>преимущества</span></h2>
+      <div class="grid grid-3">
+        <div class="adv-item reveal">
+          <div class="adv-icon">✓</div>
+          <p>Подача эвакуатора от 20–30 минут</p>
+        </div>
+        <div class="adv-item reveal">
+          <div class="adv-icon">✓</div>
+          <p>Работаем круглосуточно, 24/7</p>
+        </div>
+        <div class="adv-item reveal">
+          <div class="adv-icon">✓</div>
+          <p>Опытные водители-эвакуаторщики</p>
+        </div>
+        <div class="adv-item reveal">
+          <div class="adv-icon">✓</div>
+          <p>Собственная техника, без посредников</p>
+        </div>
+        <div class="adv-item reveal">
+          <div class="adv-icon">✓</div>
+          <p>Без скрытых доплат</p>
+        </div>
+        <div class="adv-item reveal">
+          <div class="adv-icon">✓</div>
+          <p>Аккуратная перевозка любых авто</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Частые <span>вопросы</span></h2>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Сколько ждать эвакуатор?
+            <span class="plus">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">В среднем 20–30 минут в зависимости от вашего района.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Меняется ли цена после приезда эвакуатора?
+            <span class="plus">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Нет, озвученная при заявке цена фиксируется до выезда и не меняется.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Что делать, если машина не заводится или заблокированы колёса?
+            <span class="plus">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Ничего специально делать не нужно - наша техника и водители готовы к погрузке в любом состоянии автомобиля.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            Вы работаете ночью и в выходные?
+            <span class="plus">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Да, принимаем заявки и выезжаем круглосуточно, без выходных.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="container">
+      <h2 class="section-title reveal">Контакты</h2>
+      <div class="contacts-grid">
+        <div class="contact-card reveal">
+          <div class="label">Телефон</div>
+          <div class="value accent"><a href="tel:+79000000000">+7 (900) 000-00-00</a></div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="label">Мессенджеры</div>
+          <div class="value">Telegram · WhatsApp</div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="label">Режим работы</div>
+          <div class="value">Круглосуточно, без выходных</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order-form">
+    <div class="container">
+      <div class="form-wrap reveal" id="formWrap">
+        <h2 class="form-title">Оставьте заявку - перезвоним и назовём цену</h2>
+        <form id="orderForm" novalidate>
+          <div class="form-row">
+            <label for="f-name">Имя</label>
+            <input type="text" id="f-name" name="name" placeholder="Как к вам обращаться" required>
+          </div>
+          <div class="form-row">
+            <label for="f-phone">Телефон</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="form-row">
+            <label for="f-from">Откуда забрать</label>
+            <input type="text" id="f-from" name="from" placeholder="Адрес или ориентир" required>
+          </div>
+          <div class="form-row">
+            <label for="f-to">Куда доставить</label>
+            <input type="text" id="f-to" name="to" placeholder="Адрес доставки" required>
+          </div>
+          <div class="form-row">
+            <label for="f-comment">Комментарий к ситуации</label>
+            <textarea id="f-comment" name="comment" placeholder="Опишите ситуацию: не заводится, ДТП, заблокированы колёса и т.д."></textarea>
+          </div>
+          <button type="submit" class="btn form-submit">Отправить заявку</button>
+          <p class="form-disclaimer">Отправляя заявку, вы соглашаетесь на обработку данных для связи с вами</p>
+        </form>
+        <div class="form-success">
+          <div class="check">✓</div>
+          <h3>Заявка отправлена</h3>
+          <p>Мы свяжемся с вами в ближайшее время и назовём точную цену.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    Эвакуатор24 · Эвакуация автомобилей 24/7 · Демо-макет
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var header = document.querySelector("header");
+  document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    link.addEventListener("click", function(e){
+      var id = link.getAttribute("href");
+      if (!id || id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var headerHeight = header ? header.offsetHeight : 0;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight + 1;
+      window.scrollTo({ top: top, behavior: "smooth" });
+    });
+  });
+
+  document.querySelectorAll(".faq-item").forEach(function(item){
+    var question = item.querySelector(".faq-question");
+    var answer = item.querySelector(".faq-answer");
+
+    question.addEventListener("click", function(){
+      var isOpen = item.classList.contains("open");
+
+      document.querySelectorAll(".faq-item.open").forEach(function(openItem){
+        if (openItem !== item){
+          openItem.classList.remove("open");
+          openItem.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+          openItem.querySelector(".faq-answer").style.maxHeight = null;
+        }
+      });
+
+      if (isOpen){
+        item.classList.remove("open");
+        question.setAttribute("aria-expanded", "false");
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add("open");
+        question.setAttribute("aria-expanded", "true");
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+
+  var form = document.getElementById("orderForm");
+  var formWrap = document.getElementById("formWrap");
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    formWrap.classList.add("submitted");
+    form.reset();
+  });
+
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -60px 0px" });
+
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add("visible"); });
+  }
+})();
+</script>
+
+</body></html>

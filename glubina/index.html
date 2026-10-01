@@ -1,0 +1,589 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Глубина</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root {
+    --bg: #EEF0EC;
+    --surface: #FFFFFF;
+    --surface-2: #E3E7DF;
+    --ink: #1E241F;
+    --ink-soft: #4B5850;
+    --muted: #7C877E;
+    --line: #D2D8CC;
+    --accent: #34513B;
+    --accent-soft: #C7D6C0;
+    --accent-tint: #E7EEE1;
+    --warn: #A8602F;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141713;
+      --surface: #1B1F1A;
+      --surface-2: #232821;
+      --ink: #E9ECE4;
+      --ink-soft: #B8C0B2;
+      --muted: #808C81;
+      --line: #333A31;
+      --accent: #8FB89A;
+      --accent-soft: #33443A;
+      --accent-tint: #202822;
+      --warn: #D68A57;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141713;
+    --surface: #1B1F1A;
+    --surface-2: #232821;
+    --ink: #E9ECE4;
+    --ink-soft: #B8C0B2;
+    --muted: #808C81;
+    --line: #333A31;
+    --accent: #8FB89A;
+    --accent-soft: #33443A;
+    --accent-tint: #202822;
+    --warn: #D68A57;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Work Sans", -apple-system, sans-serif;
+    line-height: 1.5;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; text-wrap: balance; margin: 0; }
+  .mono { font-family: "JetBrains Mono", "Courier New", monospace; font-variant-numeric: tabular-nums; }
+  a { color: inherit; }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- header ---------- */
+  header.top {
+    padding-block: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .logo {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .logo .dot { color: var(--accent); }
+  nav.top-links { display: flex; gap: 28px; font-size: 0.92rem; color: var(--ink-soft); }
+  nav.top-links a { text-decoration: none; }
+  nav.top-links a:hover { color: var(--ink); }
+  .btn {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 0.92rem;
+    border: none;
+    border-radius: 3px;
+    padding: 11px 20px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn-primary { background: var(--accent); color: var(--accent-tint); }
+  .btn-primary:hover { transform: translateY(-1px); }
+  .btn-primary:focus-visible, .btn-ghost:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    padding-block: 64px 56px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero p.lead {
+    margin-top: 20px;
+    max-width: 46ch;
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+  }
+  .hero-cta { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; align-items: center; }
+  .hero-note { font-size: 0.84rem; color: var(--muted); margin-top: 14px; }
+
+  /* timer demo card */
+  .timer-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 28px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .timer-card .eyebrow { display: flex; justify-content: space-between; align-items: center; }
+  .timer-card .eyebrow .live { display: flex; align-items: center; gap: 6px; }
+  .timer-card .eyebrow .live-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--warn);
+  }
+  .timer-card .eyebrow .live-dot.running { background: var(--accent); animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+  @media (prefers-reduced-motion: reduce) { .timer-card .eyebrow .live-dot.running { animation: none; } }
+
+  .timer-face {
+    margin-top: 18px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+  }
+  .timer-face .num {
+    font-size: 4.4rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .timer-ring-wrap { display: flex; justify-content: center; margin-top: 6px; }
+  .timer-track { width: 100%; height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; margin-top: 20px; }
+  .timer-fill { height: 100%; background: var(--accent); width: 0%; transition: width 1s linear; }
+  .session-label {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .timer-controls { display: flex; gap: 10px; justify-content: center; margin-top: 22px; }
+  .timer-controls button {
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.86rem;
+    font-weight: 500;
+    padding: 9px 16px;
+    border-radius: 3px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .timer-controls button.primary { background: var(--accent); color: var(--accent-tint); border-color: var(--accent); }
+  .timer-controls button:hover { border-color: var(--accent); }
+  .stack-log { margin-top: 20px; border-top: 1px solid var(--line); padding-top: 14px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .stack-log .chip {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.72rem;
+    background: var(--accent-tint);
+    color: var(--accent);
+    padding: 3px 8px;
+    border-radius: 3px;
+  }
+  .stack-log .chip.empty { background: transparent; color: var(--muted); border: 1px dashed var(--line); }
+
+  /* ---------- section shells ---------- */
+  section { padding-block: 58px; }
+  section.band { border-top: 1px solid var(--line); }
+  .section-head { max-width: 60ch; margin-bottom: 38px; }
+  .section-head h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-top: 10px; }
+  .section-head p { color: var(--ink-soft); margin-top: 12px; font-size: 1rem; }
+
+  /* method / how it works — real numbered sequence */
+  .method { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .method-step {
+    padding: 26px 22px;
+    background: var(--surface);
+    border-right: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .method-step:last-child { border-right: none; }
+  .method-step .n { font-family: "JetBrains Mono", monospace; color: var(--muted); font-size: 0.8rem; }
+  .method-step h3 { font-size: 1.02rem; font-weight: 500; font-family: "Work Sans", sans-serif; }
+  .method-step p { font-size: 0.88rem; color: var(--ink-soft); margin: 0; }
+  .method-step .dur { margin-top: auto; font-family: "JetBrains Mono", monospace; font-size: 0.78rem; color: var(--accent); padding-top: 8px; }
+
+  /* feature grid */
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .feature { background: var(--surface); padding: 26px 24px; display: flex; flex-direction: column; gap: 10px; }
+  .feature h3 { font-size: 1.05rem; font-weight: 500; font-family: "Work Sans", sans-serif; }
+  .feature p { font-size: 0.9rem; color: var(--ink-soft); margin: 0; }
+  .feature .metric { font-family: "JetBrains Mono", monospace; font-size: 1.6rem; color: var(--accent); }
+
+  /* stats strip */
+  .stats { display: flex; gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .stat { flex: 1; padding: 26px 20px; border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: none; }
+  .stat .v { font-family: "JetBrains Mono", monospace; font-size: 1.9rem; color: var(--accent); }
+  .stat .l { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+
+  /* pricing */
+  .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .plan { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 16px; }
+  .plan.highlight { border-color: var(--accent); position: relative; }
+  .plan.highlight::before {
+    content: "чаще всего выбирают";
+    position: absolute; top: -11px; left: 24px;
+    background: var(--accent); color: var(--accent-tint);
+    font-family: "JetBrains Mono", monospace; font-size: 0.66rem; letter-spacing: 0.04em;
+    padding: 3px 9px; border-radius: 99px; text-transform: uppercase;
+  }
+  .plan h3 { font-family: "Work Sans", sans-serif; font-weight: 500; font-size: 1.05rem; }
+  .plan .price { font-family: "JetBrains Mono", monospace; font-size: 1.8rem; }
+  .plan .price span { font-size: 0.85rem; color: var(--muted); font-family: "Work Sans", sans-serif; }
+  .plan ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; font-size: 0.88rem; color: var(--ink-soft); }
+  .plan ul li::before { content: "— "; color: var(--accent); }
+  .plan .btn { margin-top: auto; text-align: center; }
+
+  /* faq */
+  .faq-item { border-top: 1px solid var(--line); padding-block: 18px; }
+  .faq-item summary { cursor: pointer; font-weight: 500; display: flex; justify-content: space-between; gap: 12px; list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; color: var(--accent); font-family: "JetBrains Mono", monospace; }
+  .faq-item[open] summary::after { content: "−"; }
+  .faq-item p { color: var(--ink-soft); margin-top: 10px; font-size: 0.92rem; max-width: 62ch; }
+
+  /* final cta */
+  .cta-band {
+    background: var(--accent);
+    color: var(--accent-tint);
+    border-radius: 8px;
+    padding: 46px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .cta-band h2 { color: var(--accent-tint); font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
+  .cta-band p { color: var(--accent-soft); margin-top: 8px; max-width: 42ch; }
+  .cta-band .btn-primary { background: var(--accent-tint); color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-block: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 0.84rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; padding-block: 44px 40px; }
+    nav.top-links { display: none; }
+    .method { grid-template-columns: 1fr 1fr; }
+    .method-step { border-right: none; border-bottom: 1px solid var(--line); }
+    .method-step:nth-child(2n) { border-right: none; }
+    .features { grid-template-columns: 1fr; }
+    .pricing { grid-template-columns: 1fr; }
+    .stats { flex-direction: column; }
+    .stat { border-right: none; border-bottom: 1px solid var(--line); }
+  }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="logo">глубина<span class="dot">.</span></div>
+    <nav class="top-links">
+      <a href="#method">Метод</a>
+      <a href="#features">Возможности</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <button class="btn btn-primary" id="hdr-cta">Начать бесплатно</button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Таймер глубокой работы</p>
+      <h1>Один честный час <em>без переключений</em> в день ценнее восьми с уведомлениями.</h1>
+      <p class="lead">Глубина — таймер и журнал фокус-сессий для тех, кто работает головой: разработчиков, аналитиков, писателей. Никаких геймификаций и стриков — только сессия, пауза и трезвая статистика в конце недели.</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" id="hero-cta">Запустить первую сессию</button>
+        <button class="btn btn-ghost" id="hero-demo">Смотреть как это работает</button>
+      </div>
+      <p class="hero-note">Бесплатно для одной сессии в день. Карта не нужна.</p>
+    </div>
+
+    <div class="timer-card">
+      <div class="eyebrow">
+        <span>Сессия · Глубокая работа</span>
+        <span class="live"><span class="live-dot" id="live-dot"></span><span id="live-text">пауза</span></span>
+      </div>
+      <div class="timer-face"><span class="num mono" id="timer-display">25:00</span></div>
+      <div class="timer-track"><div class="timer-fill" id="timer-fill"></div></div>
+      <p class="session-label" id="session-label">Сессия 1 из 4 · следующая пауза 5 мин</p>
+      <div class="timer-controls">
+        <button class="primary" id="timer-start">Старт</button>
+        <button id="timer-reset">Сброс</button>
+        <button id="timer-skip">Пропустить</button>
+      </div>
+      <div class="stack-log" id="stack-log">
+        <span class="chip empty">завершённых сегодня пока нет</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="method">
+    <div class="section-head">
+      <p class="eyebrow">Метод</p>
+      <h2>Четыре шага, а не список функций</h2>
+      <p>В основе — классический цикл фокус-сессий, адаптированный под работу с кодом и текстом: без резкого обрыва потока в середине задачи.</p>
+    </div>
+    <div class="method">
+      <div class="method-step">
+        <span class="n">01</span>
+        <h3>Назначить намерение</h3>
+        <p>Одна строка: что именно будет сделано за сессию. Не «поработать над проектом», а «дописать миграцию БД».</p>
+        <span class="dur">30 сек</span>
+      </div>
+      <div class="method-step">
+        <span class="n">02</span>
+        <h3>Сессия без выхода</h3>
+        <p>Уведомления системы гасятся на время таймера. Досрочный выход фиксируется в журнале как есть, без штрафов.</p>
+        <span class="dur">25–50 мин</span>
+      </div>
+      <div class="method-step">
+        <span class="n">03</span>
+        <h3>Пауза с телом</h3>
+        <p>Короткий экран паузы предлагает встать: вода, окно, растяжка. Не лента новостей.</p>
+        <span class="dur">5–10 мин</span>
+      </div>
+      <div class="method-step">
+        <span class="n">04</span>
+        <h3>Разбор недели</h3>
+        <p>По воскресеньям — короткая сводка: в какие часы фокус держался дольше всего и что чаще всего прерывало.</p>
+        <span class="dur">3 мин</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="features">
+    <div class="section-head">
+      <p class="eyebrow">Возможности</p>
+      <h2>Сделано для рабочего цикла, а не для мотивации</h2>
+      <p>Меньше механик вовлечения, больше данных, на которые можно опереться при планировании следующей недели.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <span class="metric">92%</span>
+        <h3>Гибкие интервалы</h3>
+        <p>От классических 25 минут до полуторачасовых блоков — таймер подстраивается под тип задачи, а не наоборот.</p>
+      </div>
+      <div class="feature">
+        <span class="metric">0</span>
+        <h3>Уведомлений во время сессии</h3>
+        <p>На macOS, Windows и в браузере Глубина включает системный «не беспокоить» на время фокуса и возвращает как было.</p>
+      </div>
+      <div class="feature">
+        <span class="metric">7 дн</span>
+        <h3>Журнал прерываний</h3>
+        <p>Каждый досрочный выход помечается причиной в один клик — звонок, вопрос коллеги, желание проверить почту.</p>
+      </div>
+      <div class="feature">
+        <span class="metric">CSV</span>
+        <h3>Экспорт данных</h3>
+        <p>Полная история сессий выгружается в таблицу — для тех, кто хочет считать сам, а не верить готовым графикам.</p>
+      </div>
+      <div class="feature">
+        <span class="metric">3</span>
+        <h3>Профиля ритма</h3>
+        <p>«Спринт», «Марафон» и «Восстановление» — разная длина сессий и пауз под разные периоды нагрузки.</p>
+      </div>
+      <div class="feature">
+        <span class="metric">1 клик</span>
+        <h3>Календарь и трекер задач</h3>
+        <p>Сессия привязывается к задаче из Linear, Jira или Notion — без ввода вручную, если уже открыта карточка.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat"><div class="v mono">41 мин</div><div class="l">средняя длина сессии без прерывания</div></div>
+    <div class="stat"><div class="v mono">3.2</div><div class="l">завершённых сессий в рабочий день</div></div>
+    <div class="stat"><div class="v mono">-64%</div><div class="l">переключений между вкладками за сессию</div></div>
+  </div>
+
+  <section id="pricing">
+    <div class="section-head">
+      <p class="eyebrow">Тарифы</p>
+      <h2>Один платный план, без ступенек ради ступенек</h2>
+      <p>Личное использование бесплатно всегда. Команда — это общая статистика фокуса, а не контроль присутствия.</p>
+    </div>
+    <div class="pricing">
+      <div class="plan">
+        <h3>Личный</h3>
+        <div class="price">0 ₽<span> / навсегда</span></div>
+        <ul>
+          <li>1 сессия в день</li>
+          <li>Базовый журнал за 7 дней</li>
+          <li>Профиль «Спринт»</li>
+        </ul>
+        <button class="btn btn-ghost">Начать</button>
+      </div>
+      <div class="plan highlight">
+        <h3>Профи</h3>
+        <div class="price">390 ₽<span> / в месяц</span></div>
+        <ul>
+          <li>Сессии без ограничений</li>
+          <li>Полная история и экспорт CSV</li>
+          <li>Все профили ритма</li>
+          <li>Интеграции с Linear, Jira, Notion</li>
+        </ul>
+        <button class="btn btn-primary">Оформить</button>
+      </div>
+      <div class="plan">
+        <h3>Команда</h3>
+        <div class="price">290 ₽<span> / за место</span></div>
+        <ul>
+          <li>Всё из тарифа «Профи»</li>
+          <li>Недельная сводка фокуса по команде</li>
+          <li>Без индивидуального рейтинга</li>
+        </ul>
+        <button class="btn btn-ghost">Запросить доступ</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="faq">
+    <div class="section-head">
+      <p class="eyebrow">Вопросы</p>
+      <h2>Прежде чем начать</h2>
+    </div>
+    <details class="faq-item" open>
+      <summary>Чем это отличается от обычного помидорного таймера?</summary>
+      <p>Таймер — только часть. Журнал прерываний и недельная сводка показывают не «сколько сессий», а когда именно фокус реально держится, чтобы планировать сложные задачи на эти часы.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Работает ли без интернета?</summary>
+      <p>Да, таймер и журнал работают локально. Синхронизация между устройствами и экспорт CSV требуют подключения раз в сутки.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Можно ли отключить звук в конце сессии?</summary>
+      <p>Да, в настройках можно выбрать тихий визуальный сигнал вместо звука — актуально для open space и звонков.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Что происходит с данными команды?</summary>
+      <p>Руководитель видит только агрегированную сводку («в среднем 3.1 сессии в день»), но не сессии конкретного человека — это принципиальное ограничение продукта, а не настройка.</p>
+    </details>
+  </section>
+
+  <section>
+    <div class="cta-band">
+      <div>
+        <h2>Первая сессия — сегодня, а не с понедельника</h2>
+        <p>25 минут, одно намерение, без карты и регистрации через рабочую почту.</p>
+      </div>
+      <button class="btn btn-primary" id="final-cta">Запустить таймер</button>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Глубина</span>
+    <span>Контакт: <span class="mono">team@glubina.app</span></span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var WORK = 25 * 60, BREAK = 5 * 60;
+  var timeLeft = WORK, running = false, onBreak = false, sessionCount = 0, ticker = null;
+
+  var display = document.getElementById('timer-display');
+  var fill = document.getElementById('timer-fill');
+  var label = document.getElementById('session-label');
+  var liveDot = document.getElementById('live-dot');
+  var liveText = document.getElementById('live-text');
+  var startBtn = document.getElementById('timer-start');
+  var resetBtn = document.getElementById('timer-reset');
+  var skipBtn = document.getElementById('timer-skip');
+  var log = document.getElementById('stack-log');
+
+  function fmt(s) {
+    var m = Math.floor(s / 60), r = s % 60;
+    return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+  }
+
+  function render() {
+    display.textContent = fmt(timeLeft);
+    var total = onBreak ? BREAK : WORK;
+    var pct = 100 - (timeLeft / total) * 100;
+    fill.style.width = pct + '%';
+    label.textContent = onBreak
+      ? 'Пауза · сессия ' + Math.min(sessionCount + 1, 4) + ' из 4'
+      : 'Сессия ' + Math.min(sessionCount + 1, 4) + ' из 4 · следующая пауза 5 мин';
+    liveText.textContent = running ? (onBreak ? 'пауза-отдых' : 'в фокусе') : 'на паузе';
+    liveDot.classList.toggle('running', running);
+    startBtn.textContent = running ? 'Стоп' : (timeLeft === (onBreak ? BREAK : WORK) ? 'Старт' : 'Продолжить');
+  }
+
+  function addChip() {
+    if (log.querySelector('.chip.empty')) log.innerHTML = '';
+    var chip = document.createElement('span');
+    chip.className = 'chip';
+    chip.textContent = '#' + sessionCount + ' · 25 мин';
+    log.appendChild(chip);
+  }
+
+  function tick() {
+    timeLeft -= 1;
+    if (timeLeft <= 0) {
+      if (!onBreak) { sessionCount += 1; addChip(); onBreak = true; timeLeft = BREAK; }
+      else { onBreak = false; timeLeft = WORK; }
+    }
+    render();
+  }
+
+  function start() {
+    running = true;
+    ticker = setInterval(tick, 1000);
+    render();
+  }
+  function stop() {
+    running = false;
+    clearInterval(ticker);
+    render();
+  }
+
+  startBtn.addEventListener('click', function () { running ? stop() : start(); });
+  resetBtn.addEventListener('click', function () {
+    stop(); onBreak = false; timeLeft = WORK; render();
+  });
+  skipBtn.addEventListener('click', function () {
+    if (!onBreak) { sessionCount += 1; addChip(); onBreak = true; timeLeft = BREAK; }
+    else { onBreak = false; timeLeft = WORK; }
+    render();
+  });
+
+  ['hdr-cta', 'hero-cta', 'final-cta'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) el.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (!running) start();
+    });
+  });
+  var demoBtn = document.getElementById('hero-demo');
+  if (demoBtn) demoBtn.addEventListener('click', function () {
+    document.getElementById('method').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  render();
+})();
+</script>
+
+</body></html>
