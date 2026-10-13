@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Заточка.ру - заточка ножей с курьером в Москве, от 350 ₽</title>
+<meta name="description" content="Заточка кухонных ножей вручную на японских водных камнях. Курьер забирает ножи и возвращает за 3 дня. Москва, в пределах МКАД, от 350 ₽ за нож.">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Заточка.ру">
+<meta property="og:title" content="Заточка.ру - заточка кухонных ножей с курьером в Москве">
+<meta property="og:description" content="Игорь Нефёдов точит ножи вручную на японских водных камнях. Курьер забирает и возвращает за 3 дня. От 350 ₽ за нож.">
+<meta property="og:image:alt" content="Нож лежит на водном камне под углом 17 градусов">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%2312171A'/%3E%3Cpath d='M16 16L32 16A16 16 0 0 1 31.3 20.68Z' fill='%2319C2DD'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- запасная строка, если ось opsz не подтянется: family=Inter:wght@400..600 -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600&display=swap" rel="stylesheet">
+<script>document.documentElement.className = 'js';</script>
+<style>
+:root {
+  /* основа */
+  --bg: #FFFFFF;
+  --surface: #F3F6F7;
+  --ink: #12171A;
+  --muted: #5B666C;
+  --line: #E2E7EA;
+  --line-strong: #7C898F;
+  /* краска */
+  --accent: #19C2DD;
+  --accent-hover: #0FA9C4;
+  --accent-press: #0D93AC;
+  --accent-ink: #12171A;
+  --accent-deep: #00687D;
+  /* вспомогательные тона */
+  --tint: #E3F7FA;
+  --tint-strong: #BFEFF7;
+  --steel: #D8DEE2;
+  --ink-hover: #2B343A;
+  --ink-press: #000000;
+  /* только внутри главной иллюстрации */
+  --ill-air: #2A3A42;
+  --ill-slab: #172126;
+  --ill-grain: #2A3A42;
+  --ill-steel: #E4ECEF;
+  --ill-steel-sh: #A9B9C0;
+  --ill-white: #FFFFFF;
+
+  --focus: #12171A;
+  --font: "Inter", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  --r-pill: 999px;
+  --pad: 20px;
+  --hdr-h: 56px;
+  color-scheme: light;
+}
+@media (min-width: 768px) { :root { --pad: 32px; } }
+@media (min-width: 1024px) { :root { --hdr-h: 64px; } }
+@media (max-width: 359px) { :root { --pad: 16px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { font-family: var(--font); font-optical-sizing: auto; -webkit-text-size-adjust: 100%; scroll-padding-top: 72px; scroll-behavior: auto; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-size: 1rem; line-height: 1.55; }
+h1, h2, h3, p, dl, dd, ul, ol, figure, blockquote { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+img, svg { display: block; max-width: 100%; }
+button, input { font: inherit; color: inherit; }
+a { color: inherit; }
+.num, .spec dd, .total__sum, .tariff__price { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.no-js .js-only { display: none !important; }
+.js .no-js-only { display: none !important; }
+.nb { white-space: nowrap; }
+
+.skip { position: absolute; left: 16px; top: -100px; z-index: 100; background: var(--ink); color: var(--bg); padding: 12px 20px; border-radius: var(--r-pill); font-weight: 600; text-decoration: none; }
+.skip:focus { top: 12px; }
+
+.wrap { max-width: 1200px; margin-inline: auto; padding-inline: var(--pad); }
+
+/* типографика */
+h1 { font-size: clamp(1.75rem, 1.35rem + 1.7vw, 2.75rem); font-weight: 600; line-height: 1.12; letter-spacing: -0.025em; max-width: 24ch; text-wrap: balance; }
+h2 { font-size: clamp(1.375rem, 1.15rem + 1vw, 1.75rem); font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; text-wrap: balance; }
+h3 { font-size: 1.0625rem; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+.lead { font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem); line-height: 1.5; max-width: 56ch; }
+p { max-width: 62ch; }
+.muted { color: var(--muted); }
+.fine { font-size: .875rem; line-height: 1.45; color: var(--muted); }
+@media (max-width: 767px) { p { hyphens: auto; } }
+.big { font-size: clamp(2.5rem, 1.8rem + 3vw, 4rem); font-weight: 600; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+
+/* кнопки-пилюли */
+.btn, .btn-line, .btn-ink {
+  display: inline-flex; align-items: center; justify-content: center; position: relative;
+  min-height: 48px; padding: 0 24px; border-radius: var(--r-pill);
+  font: 600 1rem/1 var(--font); text-decoration: none; text-align: center; cursor: pointer;
+  border: 1px solid transparent; transition: background-color .1s, color .1s, border-color .1s;
+}
+.btn { background: var(--accent); color: var(--accent-ink); }
+.btn:hover { background: var(--accent-hover); }
+.btn:active { background: var(--accent-press); }
+.btn-line { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+.btn-line:hover { border-color: var(--ink); background: var(--surface); }
+.btn-line:active { background: var(--line); }
+.btn-ink { background: var(--ink); color: var(--bg); }
+.btn-ink:hover { background: var(--ink-hover); }
+.btn-ink:active { background: var(--ink-press); }
+.link { color: var(--accent-deep); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.link:hover { text-decoration-thickness: 2px; }
+.link { display: inline-block; padding-block: 12px; margin-block: -12px; }
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 599px) { .btns .btn, .btns .btn-line { width: 100%; } }
+@media (max-width: 479px) { .tariff__act .btn, .tariff__act .btn-line { width: 100%; } }
+#hero-call { white-space: nowrap; }
+@media (max-width: 359px) { #hero-call { padding-inline: 12px; } }
+
+/* аватары-инициалы */
+.av { --s: 40px; display: inline-grid; place-items: center; flex: none; width: var(--s); height: var(--s); border-radius: var(--r-pill); font-size: calc(var(--s) * .4); font-weight: 600; line-height: 1; }
+.av--1 { background: var(--tint-strong); color: var(--ink); }
+.av--2 { background: var(--steel); color: var(--ink); }
+.av--3 { background: var(--accent); color: var(--ink); }
+.av--4 { background: var(--ink); color: var(--bg); }
+.avs { display: flex; }
+.avs .av { --s: 28px; box-shadow: 0 0 0 2px var(--bg); }
+.avs { gap: 4px; }
+.tag { display: inline-flex; align-items: center; height: 28px; padding: 0 12px; border-radius: var(--r-pill); background: var(--accent); color: var(--ink); font-size: .875rem; font-weight: 500; }
+
+/* таблица-спецификация */
+.spec__row { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding-block: 14px; min-height: 52px; border-top: 1px solid var(--line); }
+.spec__row:last-child { border-bottom: 1px solid var(--line); }
+.spec dt { font-size: .9375rem; line-height: 1.4; color: var(--muted); }
+.spec dd { font-size: .9375rem; line-height: 1.4; font-weight: 500; color: var(--ink); text-align: right; min-width: 0; }
+.spec dd span { display: block; }
+.spec { max-width: 720px; }
+.spec .free { color: var(--accent-deep); font-weight: 600; }
+
+/* шапка */
+.hdr { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid var(--line); }
+.hdr__in { display: flex; align-items: center; gap: 8px; height: var(--hdr-h); }
+.brand { display: inline-flex; align-items: center; gap: 8px; margin-right: auto; text-decoration: none; font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); white-space: nowrap; min-height: 44px; }
+.brand svg { flex: none; }
+.mk-ink { fill: var(--ink); }
+.mk-acc { fill: var(--accent); }
+.hdr__cta { min-height: 40px; padding: 0 16px; font-size: .9375rem; white-space: nowrap; }
+.hdr__cta::after { content: ""; position: absolute; inset: -2px; }
+/* правая часть шапки: пилюля и (от 1280 px) телефон. Ниже 1280 px обёртка не создаёт блок, телефон скрыт */
+.hdr__r { display: contents; }
+.hdr__phone { display: none; }
+.burger { position: relative; flex: none; width: 44px; height: 44px; padding: 0; border: 0; border-radius: var(--r-pill); background: transparent; cursor: pointer; }
+.burger span { position: absolute; left: 10px; right: 10px; height: 2px; border-radius: 2px; background: var(--ink); transition: transform .16s, top .16s; }
+.burger span:nth-child(1) { top: 16px; }
+.burger span:nth-child(2) { top: 26px; }
+.burger[aria-expanded="true"] span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+.burger[aria-expanded="true"] span:nth-child(2) { top: 21px; transform: rotate(-45deg); }
+.nav { display: none; }
+@media (max-width: 359px) {
+  .hdr__in { gap: 6px; }
+  .brand { font-size: .9375rem; gap: 6px; }
+  .brand svg { width: 28px; height: 28px; }
+  .hdr__cta { padding: 0 12px; font-size: .875rem; }
+}
+.menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--line); max-height: calc(100vh - var(--hdr-h)); max-height: calc(100dvh - var(--hdr-h)); overflow: auto; }
+.menu.is-open { display: block; animation: menuIn .16s ease-out; }
+@keyframes menuIn { from { max-height: 0; } }
+.menu a { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 56px; padding: 8px var(--pad); border-top: 1px solid var(--line); text-decoration: none; }
+.menu li:first-child a { border-top: 0; }
+.menu a:hover { background: var(--surface); }
+.menu__n { font-size: 1.0625rem; font-weight: 500; color: var(--ink); }
+.menu__v { font-size: .875rem; color: var(--muted); text-align: right; }
+.menu a[aria-current="true"]::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--ink); }
+@media (min-width: 1024px) {
+  .hdr__in { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; }
+  .brand { margin-right: 0; justify-self: start; }
+  .nav { display: flex; justify-self: center; }
+  .nav a { position: relative; display: flex; align-items: center; height: var(--hdr-h); padding: 0 12px; font-size: .875rem; font-weight: 500; line-height: 1; color: var(--muted); text-decoration: none; }
+  .nav a:hover { color: var(--ink); }
+  .nav a[aria-current="true"] { color: var(--ink); }
+  .nav a[aria-current="true"]::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: -1px; height: 2px; background: var(--ink); }
+  .hdr__cta { justify-self: end; min-height: 40px; }
+  .burger, .menu { display: none !important; }
+}
+@media (min-width: 1280px) {
+  .hdr__r { display: flex; align-items: center; justify-self: end; gap: 20px; }
+  .hdr__phone { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 4px; font-size: .9375rem; font-weight: 500; line-height: 1; white-space: nowrap; color: var(--ink); text-decoration: none; font-variant-numeric: tabular-nums; }
+  .hdr__phone:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+}
+/* планшет (768-1023px): вместо бургера - горизонтальная полоса разделов под шапкой.
+   Это тот же <nav id="menu">, он внутри липкой шапки, поэтому прилипает вместе с ней. Без JS полоса видна. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  html { scroll-padding-top: 120px; }
+  .burger { display: none !important; }
+  .menu { display: block; position: relative; top: auto; max-height: none; overflow-x: auto; overflow-y: hidden; border-top: 1px solid var(--line); border-bottom: 0; padding-inline: calc(var(--pad) - 12px); scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; animation: none; }
+  .menu::-webkit-scrollbar { display: none; }
+  .menu ul { display: flex; width: max-content; min-width: 100%; }
+  .menu li:first-child a { border-top: 0; }
+  .menu a { flex: none; justify-content: center; min-height: 48px; padding: 0 12px; border-top: 0; white-space: nowrap; }
+  .menu__n { font-size: .9375rem; color: var(--muted); }
+  .menu__v { display: none; }
+  .menu a:hover .menu__n, .menu a[aria-current="true"] .menu__n { color: var(--ink); }
+  .menu a[aria-current="true"]::before { display: none; }
+  .menu a[aria-current="true"]::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 0; height: 2px; background: var(--ink); }
+  .menu a:focus-visible { outline-offset: -3px; }
+}
+
+/* первый экран */
+.hero { padding-block: 20px 28px; }
+.eyebrow { font-size: .9375rem; font-weight: 500; color: var(--muted); margin-bottom: 8px; }
+.hero__row { display: grid; gap: 16px; margin-top: 16px; }
+.hero__act { display: grid; gap: 14px; align-content: start; }
+.rating { display: flex; align-items: center; gap: 12px; }
+.rating .fine { color: var(--muted); }
+.hero__more { justify-self: start; display: inline-flex; align-items: center; min-height: 44px; margin-top: -8px; font-size: 1rem; font-weight: 500; line-height: 1.3; color: var(--accent-deep); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.hero__more:hover { text-decoration-thickness: 2px; }
+@media (max-width: 767px) {
+  /* запас сцены под первым экраном на 375x812 (минимум 120 px): отступы уплотнены после добавления ссылки */
+  .hero { padding-block: 20px 24px; }
+  .hero__act { gap: 12px; }
+}
+@media (min-width: 768px) {
+  .hero { padding-block: 32px 40px; }
+  .hero__row { gap: 24px; margin-top: 20px; }
+}
+@media (min-width: 1024px) {
+  .hero { padding-block: 40px 48px; }
+  .hero__row { grid-template-columns: repeat(12, 1fr); gap: 32px; margin-top: 24px; }
+  .hero__lead { grid-column: 1 / 6; }
+  .hero__act { grid-column: 7 / 13; gap: 20px; }
+}
+/* 1024-1139 px: две кнопки не помещаются в 6 колонок, даём блоку действий 7 колонок */
+@media (min-width: 1024px) and (max-width: 1139px) {
+  .hero__lead { grid-column: 1 / 6; }
+  .hero__act { grid-column: 6 / 13; }
+}
+
+/* сцена */
+/* телефон (до 767px): кадр 580x310 из сцены 1440x560 - x 450-1030, y 205-515.
+   В кадре острие (560,380), дуга, подпись 17° и большой кусок клинка. Сцена не перерисована,
+   меняется только кадрирование: svg увеличен и сдвинут внутри контейнера с overflow:hidden.
+   Проценты (ширина и отступы) считаются от ширины контейнера, поэтому кадр масштабируется с экраном. */
+.scene { margin: 0; overflow: hidden; aspect-ratio: 580 / 310; background: var(--ill-air); }
+.scene svg { width: 248.276%; max-width: none; height: auto; aspect-ratio: 1440 / 560; margin: -35.345% 0 0 -77.586%; }
+@media (min-width: 768px) {
+  .scene { height: clamp(380px, 40vw, 560px); aspect-ratio: auto; overflow: visible; }
+  .scene svg { width: 100%; max-width: 100%; height: 100%; aspect-ratio: auto; margin: 0; }
+}
+.ill-air { fill: var(--ill-air); }
+.ill-slab { fill: var(--ill-slab); }
+.ill-dot { fill: var(--ill-grain); }
+.ill-steel { fill: var(--ill-steel); }
+.ill-steel-sh { fill: var(--ill-steel-sh); }
+.ill-acc { fill: var(--accent); }
+.ill-film { opacity: .55; }
+.ill-men, .ill-drop { opacity: .9; }
+.ill-arc { fill: none; stroke: var(--accent); stroke-width: 2; }
+.ill-txt { fill: var(--ill-white); font-family: var(--font); font-weight: 600; font-size: 30px; }
+.blade { transform-origin: 0 0; animation: settle .9s .15s cubic-bezier(.2, .7, .2, 1) both; }
+@keyframes settle { from { transform: rotate(-40deg); } to { transform: rotate(-17deg); } }
+.angle-mark { animation: fade .2s 1.05s both; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.js .scene:not(.is-in) .blade, .js .scene:not(.is-in) .angle-mark { animation-play-state: paused; }
+
+.poster { padding-block: 48px 64px; }
+.poster__cap { max-width: 640px; margin-inline: auto; text-align: center; }
+.poster__cap p { margin-inline: auto; }
+.poster__rub { font-size: .9375rem; color: var(--muted); }
+.poster__name { font-size: 1.25rem; font-weight: 600; line-height: 1.3; margin-top: 4px; }
+.poster__desc { margin-top: 12px; }
+.poster__meta { font-size: .875rem; color: var(--muted); margin-top: 12px; }
+.poster .spec { max-width: 640px; margin: 48px auto 0; }
+@media (min-width: 1024px) { .poster { padding-block: 48px 96px; } }
+
+/* секции */
+.sec { border-top: 1px solid var(--line); padding-block: 64px; }
+@media (min-width: 768px) { .sec { padding-block: 80px; } }
+@media (min-width: 1024px) { .sec { padding-block: 96px; } }
+.sec__grid { display: grid; gap: 24px; }
+.sec__head { display: grid; gap: 12px; align-content: start; }
+.sec__head h2 { max-width: 20ch; }
+.sec__head p { color: var(--muted); }
+.sec__head .fine { max-width: 40ch; }
+@media (min-width: 1024px) {
+  .sec__grid { grid-template-columns: repeat(12, 1fr); gap: 32px; }
+  .sec__head { grid-column: 1 / 5; position: sticky; top: 88px; align-self: start; }
+  .sec__body { grid-column: 5 / 13; }
+}
+.sec__body { min-width: 0; }
+
+/* процесс */
+.proc { max-width: 720px; }
+.proc__row { display: grid; grid-template-columns: 28px minmax(0, 1fr) 80px; column-gap: 16px; row-gap: 6px; padding-block: 20px; border-top: 1px solid var(--line); align-items: start; }
+.proc__row:last-child { border-bottom: 1px solid var(--line); }
+.proc__n { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--line-strong); border-radius: var(--r-pill); font-size: .875rem; font-weight: 600; }
+.proc__d { font-size: .9375rem; font-weight: 500; text-align: right; line-height: 28px; white-space: nowrap; }
+.proc__p { grid-column: 2 / 4; font-size: .9375rem; color: var(--muted); }
+.proc__row h3 { line-height: 28px; font-size: 1.0625rem; }
+@media (min-width: 768px) { .proc__row { grid-template-columns: 28px minmax(0, 1fr) 112px; } }
+
+/* мастер */
+.master__who { display: flex; align-items: center; gap: 16px; }
+.master__who .av { --s: 72px; }
+.master__name { font-size: 1.25rem; font-weight: 600; line-height: 1.25; }
+.master__role { font-size: .9375rem; color: var(--muted); }
+.master__txt { display: grid; gap: 16px; margin-block: 24px 32px; }
+@media (min-width: 768px) { .master__who .av { --s: 96px; } .master__who { gap: 24px; } }
+
+/* углы */
+.tool { display: grid; gap: 24px; }
+.tool__svg { width: 100%; max-width: 440px; }
+.ind { display: grid; gap: 16px; align-content: start; }
+.ind__num { font-size: 3.5rem; font-weight: 600; line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.ind .spec { max-width: none; }
+.ind__hint { min-height: 2.9em; }
+@media (min-width: 640px) { .tool { grid-template-columns: 3fr 2fr; gap: 32px; align-items: start; } .ind__num { font-size: clamp(3.5rem, 2.4rem + 2vw, 4rem); } }
+.wedge { fill: var(--ink); }
+.tip { fill: var(--accent); }
+.stone { fill: var(--surface); }
+.stone-line { stroke: var(--line-strong); stroke-width: 1.5; }
+.axis { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.cmp { fill: none; stroke: var(--line-strong); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.arc { fill: none; stroke: var(--ink); stroke-width: 2; }
+.lead-l { stroke: var(--ink); stroke-width: 1; }
+.svg-t { fill: var(--ink); font-family: var(--font); font-weight: 600; font-size: 32px; }
+
+.ctrl { margin-top: 32px; max-width: 720px; }
+.range { --p: 0; --fill: calc(14px + (100% - 28px) * var(--p)); -webkit-appearance: none; appearance: none; display: block; width: 100%; height: 44px; margin: 0; background: transparent; cursor: pointer; }
+.range:focus { outline: none; }
+.range::-webkit-slider-runnable-track { height: 4px; border-radius: var(--r-pill); background: linear-gradient(to right, var(--ink) var(--fill), var(--line-strong) var(--fill)); }
+.range::-moz-range-track { height: 4px; border-radius: var(--r-pill); background: linear-gradient(to right, var(--ink) var(--fill), var(--line-strong) var(--fill)); }
+.range::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; box-sizing: border-box; width: 28px; height: 28px; margin-top: -12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--ink); }
+.range::-moz-range-thumb { box-sizing: border-box; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); border: 2px solid var(--ink); }
+.range:hover::-webkit-slider-thumb { background: var(--accent-hover); }
+.range:hover::-moz-range-thumb { background: var(--accent-hover); }
+.range:focus-visible::-webkit-slider-thumb { outline: 3px solid var(--focus); outline-offset: 3px; }
+.range:focus-visible::-moz-range-thumb { outline: 3px solid var(--focus); outline-offset: 3px; }
+.ticks { position: relative; height: 22px; font-size: .875rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ticks span { position: absolute; top: 0; left: calc(14px + (100% - 28px) * var(--p)); transform: translateX(-50%); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.chip { min-height: 44px; padding: 0 20px; border-radius: var(--r-pill); border: 1px solid var(--line-strong); background: transparent; font: 600 1rem/1 var(--font); color: var(--ink); cursor: pointer; transition: background-color .1s, color .1s, border-color .1s; }
+.chip:hover { border-color: var(--ink); background: var(--surface); }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.ctrl__hint { margin-top: 16px; font-size: .9375rem; color: var(--muted); }
+.ctrl__legend { margin-top: 12px; }
+.nojs-list { margin-top: 16px; font-size: .9375rem; }
+
+.grain { margin-top: 64px; }
+.grain details { max-width: 720px; border-top: 1px solid var(--line); }
+.grain details:not([open]) { border-bottom: 1px solid var(--line); }
+.grain summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; margin-inline: -12px; padding: 16px 12px; list-style: none; cursor: pointer; transition: background-color .1s; }
+.grain summary::-webkit-details-marker { display: none; }
+.grain summary:hover { background: var(--surface); }
+.grain h3 { font-size: 1.1875rem; }
+.grain details[open] .faq__i::after { display: none; }
+.grain details > p { margin-top: 0; color: var(--muted); }
+.stones { margin-top: 24px; max-width: 720px; }
+.stone-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: "s n v" "u u u"; column-gap: 16px; row-gap: 4px; align-items: center; padding-block: 14px; border-top: 1px solid var(--line); }
+.stone-row:last-child { border-bottom: 1px solid var(--line); }
+.stone-row__s { grid-area: s; display: flex; align-items: center; gap: 12px; }
+.stone-row__s svg { width: 80px; height: 28px; }
+.stone-row__no { grid-area: n; font-size: 1.0625rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.stone-row__v { grid-area: v; text-align: right; }
+.stone-row__v b { display: block; font-size: .9375rem; font-weight: 500; line-height: 1.4; }
+.stone-row__v span { display: block; font-size: .875rem; color: var(--muted); }
+.stone-row__u { grid-area: u; font-size: .875rem; color: var(--muted); }
+.grain-dot { fill: var(--line-strong); }
+@media (min-width: 768px) {
+  .stone-row { grid-template-columns: 96px 72px minmax(0, 1fr) 150px; grid-template-areas: "s n u v"; }
+  .stone-row__s { display: contents; }
+  .stone-row__s svg { grid-area: s; width: 96px; }
+}
+
+/* калькулятор */
+.calc { max-width: 720px; }
+.calc__row { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; border-top: 1px solid var(--line); }
+.calc__label { font-size: .9375rem; color: var(--muted); }
+.step { display: flex; align-items: center; gap: 8px; }
+.step__btn { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border-radius: var(--r-pill); border: 1px solid var(--line-strong); background: transparent; color: var(--ink); cursor: pointer; transition: background-color .1s, border-color .1s; }
+.step__btn:hover:not(:disabled) { border-color: var(--ink); background: var(--surface); }
+.step__btn:disabled { border-color: var(--line); color: var(--muted); cursor: not-allowed; }
+.step__n { min-width: 3ch; text-align: center; font-size: 1.25rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.ico { fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.calc__slider { padding-bottom: 8px; }
+.calc__group { margin-top: 16px; }
+.calc__group .calc__label { display: block; margin-bottom: 8px; }
+.radio { display: flex; align-items: center; gap: 14px; min-height: 56px; margin-inline: -12px; padding-inline: 12px; border-top: 1px solid var(--line); cursor: pointer; transition: background-color .1s; }
+.radio:last-child { border-bottom: 1px solid var(--line); }
+.radio:hover, .radio[aria-checked="true"] { background: var(--surface); }
+.radio__dot { display: grid; place-items: center; flex: none; width: 22px; height: 22px; border-radius: 50%; border: 2px solid var(--line-strong); }
+.radio[aria-checked="true"] .radio__dot { border-color: var(--ink); }
+.radio[aria-checked="true"] .radio__dot::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--ink); }
+.radio__name { flex: 1; font-weight: 500; }
+.radio[aria-checked="true"] .radio__name { font-weight: 600; }
+.radio__price { font-weight: 500; font-variant-numeric: tabular-nums; }
+.calc__line { margin-top: 24px; }
+.calc__line + .fine, .calc__fine { margin-top: 12px; }
+.total { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 24px; padding: 16px; background: var(--tint); }
+.total__l { font-size: .9375rem; color: var(--muted); }
+.total__r { text-align: right; }
+.total__sum { display: block; min-width: 7ch; font-size: clamp(2.5rem, 1.8rem + 3vw, 4rem); font-weight: 600; line-height: 1; letter-spacing: -0.03em; white-space: nowrap; }
+.total__expr { display: block; margin-top: 8px; font-size: .9375rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.sub { margin-top: 16px; font-size: .9375rem; max-width: 62ch; }
+.sub[hidden] { display: none; }
+.calc__cta { margin-top: 24px; display: none; }
+.calc__bar { position: sticky; bottom: 0; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 24px calc(var(--pad) * -1) 0; padding: 12px var(--pad) calc(12px + env(safe-area-inset-bottom)); background: var(--bg); border-top: 1px solid var(--line-strong); }
+.calc__bar-sum { min-width: 0; }
+.calc__bar-sum .num { display: block; font-size: 1.75rem; font-weight: 600; line-height: 1.1; letter-spacing: -0.02em; white-space: nowrap; }
+.calc__bar-sum .fine { display: block; }
+.calc__bar .btn { flex: none; padding: 0 20px; }
+@media (min-width: 768px) {
+  .calc__bar { display: none; }
+  .calc__cta { display: block; }
+}
+
+/* тарифы */
+.sec--wide h2 { max-width: 20ch; }
+.tariffs { display: grid; gap: 48px; margin-top: 40px; }
+.tariff { display: flex; flex-direction: column; border-top: 1px solid var(--line); padding-top: 24px; }
+.tariff--main { border-top: 2px solid var(--ink); }
+.tariff__slot { display: none; min-height: 28px; margin-bottom: 12px; }
+.tariff__slot.has { display: block; }
+.tariff__price { margin-top: 12px; font-size: 2.5rem; font-weight: 600; line-height: 1; letter-spacing: -0.03em; }
+.tariff__unit { margin-top: 8px; font-size: .9375rem; color: var(--muted); }
+.tariff .spec { margin-top: 24px; }
+.tariff__group { margin-top: 24px; }
+.tariff__sub { margin-bottom: 8px; }
+.tariff .tariff__group .spec, .tariff .spec--rest { margin-top: 0; }
+.tariff__group .spec__row:last-child { border-bottom: 0; }
+.spec--rest .spec__row:first-child { border-top: 0; }
+.tariff__act { margin-top: auto; padding-top: 24px; }
+@media (min-width: 1024px) {
+  .tariffs { grid-template-columns: repeat(3, 1fr); }
+  .tariff__slot { display: block; }
+}
+
+/* отзывы */
+.score { display: flex; align-items: center; gap: 16px; }
+.score__n { font-size: 3rem; font-weight: 600; line-height: 1; letter-spacing: -0.03em; }
+@media (min-width: 768px) { .score__n { font-size: 4rem; } }
+.score__t { font-size: .875rem; color: var(--muted); max-width: 26ch; }
+.rev__src { margin-top: 12px; }
+.revs { margin-top: 32px; max-width: 720px; }
+.rev { display: grid; gap: 12px; padding-block: 24px; border-top: 1px solid var(--line); }
+.rev:last-child { border-bottom: 1px solid var(--line); }
+.rev__who { display: flex; align-items: center; gap: 12px; }
+.rev__name { font-size: .9375rem; font-weight: 600; line-height: 1.3; }
+.rev__sub { font-size: .875rem; color: var(--muted); line-height: 1.4; }
+.rev blockquote { font-size: 1rem; line-height: 1.55; max-width: 60ch; }
+@media (min-width: 768px) {
+  .rev { grid-template-columns: 224px 1fr; gap: 24px; }
+  .rev blockquote { font-size: 1.0625rem; }
+}
+
+/* вопросы */
+.faq { max-width: 720px; border-bottom: 1px solid var(--line); }
+.faq details { border-top: 1px solid var(--line); }
+.faq summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; margin-inline: -12px; padding: 16px 12px; list-style: none; cursor: pointer; font-size: 1.0625rem; font-weight: 600; line-height: 1.3; transition: background-color .1s; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:hover { background: var(--surface); }
+.faq__i { position: relative; flex: none; width: 20px; height: 20px; }
+.faq__i::before, .faq__i::after { content: ""; position: absolute; left: 1px; right: 1px; top: 9px; height: 2px; border-radius: 2px; background: var(--ink); }
+.faq__i::after { transform: rotate(90deg); }
+.faq details[open] .faq__i::after { display: none; }
+.faq__a { padding-bottom: 24px; }
+
+/* контакты */
+.cbtns { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 32px; }
+@media (max-width: 479px) { .cbtns .btn, .cbtns .btn-line { width: 100%; } }
+.contacts { max-width: 720px; }
+.crow { display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "l l" "v b"; gap: 4px 12px; align-items: center; padding-block: 12px; min-height: 68px; border-top: 1px solid var(--line); }
+.crow:last-child { border-bottom: 1px solid var(--line); }
+.crow dt { grid-area: l; font-size: .9375rem; color: var(--muted); }
+.crow dd { text-align: left; }
+.crow__v { grid-area: v; min-width: 0; font-weight: 500; }
+.crow__val { display: inline-flex; align-items: center; min-height: 44px; font-size: 1.125rem; font-weight: 500; line-height: 1.35; overflow-wrap: break-word; color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: var(--line-strong); text-underline-offset: 4px; }
+.crow__val:hover { text-decoration-thickness: 2px; text-decoration-color: var(--ink); }
+.crow__hint { display: block; margin-top: 4px; font-size: .875rem; font-weight: 400; line-height: 1.45; color: var(--muted); }
+.crow__act { grid-area: b; position: relative; display: flex; align-items: center; gap: 8px; }
+.copied { position: absolute; right: 0; top: 100%; z-index: 2; width: max-content; max-width: 200px; margin-top: 2px; padding: 2px 0 2px 6px; background: var(--bg); font-size: .875rem; line-height: 1.3; text-align: right; color: var(--muted); }
+.copied:empty { display: none; }
+@media (min-width: 768px) { .copied { right: 52px; top: 50%; transform: translateY(-50%); margin-top: 0; max-width: 240px; } }
+.copy { display: grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0; border-radius: var(--r-pill); border: 1px solid var(--line-strong); background: transparent; color: var(--ink); cursor: pointer; transition: background-color .1s, color .1s, border-color .1s; }
+.copy:hover { border-color: var(--ink); background: var(--surface); }
+.copy .ico-ok { display: none; }
+.copy.is-done { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.copy.is-done .ico-copy { display: none; }
+.copy.is-done .ico-ok { display: block; }
+.cond { margin-top: 32px; }
+.cond__notes { display: grid; gap: 8px; margin-top: 16px; }
+@media (min-width: 768px) {
+  .crow { grid-template-columns: 200px minmax(0, 1fr) auto; grid-template-areas: "l v b"; gap: 12px 16px; }
+  .crow dd.crow__v { text-align: right; }
+  .crow__val { font-size: 1.25rem; }
+}
+
+/* подвал */
+.foot { background: #E9EEF0; border-top: 1px solid var(--line); padding: 48px 0 calc(48px + env(safe-area-inset-bottom)); }
+.foot__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0 24px; font-size: .875rem; color: var(--muted); }
+.foot__links { display: flex; gap: 8px; }
+.foot__links a { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 8px; color: var(--muted); text-decoration: none; }
+.foot__links a:last-child { margin-right: -8px; }
+.foot__links a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.foot__txt { display: grid; gap: 4px; margin-top: 12px; font-size: .875rem; color: var(--muted); }
+.foot__demo { margin-top: 16px; font-size: .875rem; color: var(--ink); font-weight: 500; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; }
+  .blade { transform: rotate(-17deg); }
+  .menu.is-open { animation: none; }
+  .burger span { transition: none; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="#top" aria-label="Заточка.ру, в начало страницы">
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle class="mk-ink" cx="16" cy="16" r="16"/><path class="mk-acc" d="M16 16 L32 16 A16 16 0 0 1 31.30 20.68 Z"/></svg>
+      <span>Заточка.ру</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#process">Процесс</a>
+      <a href="#master">Мастер</a>
+      <a href="#angles">Углы</a>
+      <a href="#calc">Цена</a>
+      <a href="#pricing">Тарифы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="hdr__r">
+      <a class="btn hdr__cta" id="hdr-cta" href="#contact" aria-label="Цена по фото: перейти к контактам">Цена по фото</a>
+      <a class="hdr__phone num" id="hdr-phone" href="tel:+79991234567" aria-label="Позвонить Игорю по телефону +7 999 123-45-67">+7&nbsp;999&nbsp;123-45-67</a>
+    </div>
+    <button class="burger js-only" id="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню разделов"><span></span><span></span></button>
+  </div>
+  <nav class="menu" id="menu" aria-label="Разделы">
+    <ul>
+      <li><a href="#process"><span class="menu__n">Процесс</span><span class="menu__v">5 этапов</span></a></li>
+      <li><a href="#master"><span class="menu__n">Мастер</span><span class="menu__v">Игорь Нефёдов</span></a></li>
+      <li><a href="#angles"><span class="menu__n">Углы</span><span class="menu__v">12-22°</span></a></li>
+      <li><a href="#calc"><span class="menu__n">Цена</span><span class="menu__v">калькулятор</span></a></li>
+      <li><a href="#pricing"><span class="menu__n">Тарифы</span><span class="menu__v">от 350&nbsp;₽</span></a></li>
+      <li><a href="#reviews"><span class="menu__n">Отзывы</span><span class="menu__v">4.9</span></a></li>
+      <li><a href="#faq"><span class="menu__n">Вопросы</span><span class="menu__v">9 вопросов</span></a></li>
+      <li><a href="#contact"><span class="menu__n">Контакты</span><span class="menu__v">Telegram, VK, телефон</span></a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- Первый экран -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <p class="eyebrow">Заточка кухонных ножей с курьером в Москве</p>
+    <h1>Курьер заберёт тупые ножи и вернёт острыми за 3&nbsp;дня</h1>
+    <div class="hero__row">
+      <p class="lead hero__lead">Курьер заберёт ножи, мастер заточит их вручную на японских водных камнях и вернёт за 3&nbsp;дня.</p>
+      <div class="hero__act">
+        <div class="btns">
+          <a class="btn" id="hero-cta" href="#contact">Узнать цену по фото</a>
+          <a class="btn-line" id="hero-call" href="tel:+79991234567" aria-label="Позвонить Игорю по телефону +7 999 123-45-67">Позвонить +7&nbsp;999&nbsp;123-45-67</a>
+        </div>
+        <div class="rating">
+          <div class="avs" aria-hidden="true"><span class="av av--1">МС</span><span class="av av--2">АЛ</span><span class="av av--3">ОК</span></div>
+          <p class="fine">Оценка 4.9, 214 отзывов за 2025 год</p>
+        </div>
+        <p class="fine">От 350&nbsp;₽ за нож. Цену назовём по фото или по телефону. Забор и доставка в пределах МКАД - бесплатно от 3 ножей, при 1-2 ножах платная.</p>
+        <a class="hero__more" href="#process">Как проходит заточка</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Сцена, подпись, сводка -->
+<section id="scene" aria-label="Нож на водном камне и сводка условий">
+  <figure class="scene" id="scene-fig">
+    <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Срез клинка: нож лежит на водном камне под углом 17° к камню" focusable="false">
+      <title>Нож на водном камне</title>
+      <desc>Тёмный камень с каплями воды, на нём клинок. Голубая дуга и отметка 17° показывают угол между клинком и камнем.</desc>
+      <defs>
+        <pattern id="hexgrain" width="14" height="24.249" patternUnits="userSpaceOnUse">
+          <circle class="ill-dot" cx="0" cy="0" r="1.4"/><circle class="ill-dot" cx="14" cy="0" r="1.4"/>
+          <circle class="ill-dot" cx="0" cy="24.249" r="1.4"/><circle class="ill-dot" cx="14" cy="24.249" r="1.4"/>
+          <circle class="ill-dot" cx="7" cy="12.124" r="1.4"/>
+        </pattern>
+      </defs>
+      <rect class="ill-air" x="0" y="0" width="1440" height="380"/>
+      <rect class="ill-slab" x="0" y="380" width="1440" height="180"/>
+      <rect x="0" y="380" width="1440" height="180" fill="url(#hexgrain)"/>
+      <rect class="ill-acc ill-film" x="0" y="373" width="1440" height="7"/>
+      <path class="ill-acc ill-men" d="M532 380 Q555 380 560 369 L560 380 Z"/>
+      <path class="ill-acc ill-men" d="M588 380 Q565 380 560 369 L560 380 Z"/>
+      <circle class="ill-acc ill-drop" cx="300" cy="352" r="6"/>
+      <circle class="ill-acc ill-drop" cx="372" cy="364" r="4"/>
+      <circle class="ill-acc ill-drop" cx="1210" cy="358" r="5"/>
+      <circle class="ill-acc ill-drop" cx="1262" cy="368" r="3"/>
+      <g transform="translate(560 380)">
+        <g class="blade" transform="rotate(-17)">
+          <polygon class="ill-steel" points="0,0 58.88,18 1000,18 1000,-18 58.88,-18"/>
+          <rect class="ill-steel-sh" x="58.88" y="12" width="941.12" height="6"/>
+          <polygon class="ill-acc" points="0,0 38.25,11.7 38.25,-11.7"/>
+        </g>
+      </g>
+      <g class="angle-mark">
+        <path class="ill-arc" d="M771.57 380 A150 150 0 0 0 765.02 336.14"/>
+        <text class="ill-txt" x="806" y="360">17°</text>
+      </g>
+    </svg>
+  </figure>
+
+  <div class="wrap poster">
+    <div class="poster__cap">
+      <p class="poster__rub">Срез кромки</p>
+      <p class="poster__name">Нож на камне #1000, угол 17°</p>
+      <p class="poster__desc">Так мастер видит кромку: поперечный срез клинка. Угол задаёт, насколько тонкой и прочной будет кромка.</p>
+      <p class="poster__meta">Вручную, четыре камня: от #400 до #6000</p>
+    </div>
+    <dl class="spec">
+      <div class="spec__row"><dt>Город</dt><dd>Москва, в пределах МКАД</dd></div>
+      <div class="spec__row"><dt>Срок</dt><dd>3 дня</dd></div>
+      <div class="spec__row"><dt>Цена</dt><dd>от 350&nbsp;₽ за нож</dd></div>
+      <div class="spec__row"><dt>Угол заточки</dt><dd>от 12° до 22°, подбираем под нож</dd></div>
+      <div class="spec__row"><dt>Камни</dt><dd>водные, 4 штуки, от #400 до #6000</dd></div>
+      <div class="spec__row"><dt>Забор и доставка</dt><dd>бесплатно от 3 ножей</dd></div>
+      <div class="spec__row"><dt>Курьер</dt><dd>окно 2 часа, время согласуем</dd></div>
+      <div class="spec__row"><dt>Оплата</dt><dd>при возврате, по QR-коду СБП</dd></div>
+      <div class="spec__row"><dt>Режим</dt><dd>Пн-Сб, 10:00-20:00</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- Процесс -->
+<section class="sec" id="process" aria-labelledby="process-title">
+  <div class="wrap sec__grid">
+    <div class="sec__head">
+      <h2 id="process-title">Пять этапов от фото до острого ножа</h2>
+      <p>Что происходит с ножом от фото до возврата и сколько занимает каждый этап. Весь путь - 3 дня.</p>
+    </div>
+    <div class="sec__body">
+      <ol class="proc">
+        <li class="proc__row"><span class="proc__n num" aria-hidden="true">1</span><h3>Фото ножа и диагностика</h3><span class="proc__d num">5 мин</span><p class="proc__p">Вы присылаете фото кромки в Telegram или VK. Мастер смотрит исходный угол и степень затупления и называет цену до заказа.</p></li>
+        <li class="proc__row"><span class="proc__n num" aria-hidden="true">2</span><h3>Забор курьером</h3><span class="proc__d num">15-30 мин</span><p class="proc__p">Курьер приезжает в течение двух часов, время согласовано заранее. Упаковывает ножи в защитный чехол, оформляет акт приёма-передачи и фиксирует сколы.</p></li>
+        <li class="proc__row"><span class="proc__n num" aria-hidden="true">3</span><h3>Выравнивание на камне #400</h3><span class="proc__d num">10-20 мин</span><p class="proc__p">Убираем сколы и выравниваем кромку на грубом камне. Только если нож этого требует.</p></li>
+        <li class="proc__row"><span class="proc__n num" aria-hidden="true">4</span><h3>Заточка на #1000, #3000 и #6000</h3><span class="proc__d num">20-35 мин</span><p class="proc__p">На #1000 формируем рабочую кромку под нужный угол. На #3000 снимаем заусенец - тонкий загнутый край металла. На #6000 доводим кромку до гладкости.</p></li>
+        <li class="proc__row"><span class="proc__n num" aria-hidden="true">5</span><h3>Проверка и возврат</h3><span class="proc__d num">1 день</span><p class="proc__p">Проверяем кромку на томатной кожуре и бумаге, присылаем фото результата в чат. Курьер возвращает ножи в том же чехле, вы проверяете заточку и платите по QR-коду СБП.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Мастер -->
+<section class="sec" id="master" aria-labelledby="master-title">
+  <div class="wrap sec__grid">
+    <div class="sec__head">
+      <h2 id="master-title">Ножи точит один мастер - Игорь Нефёдов</h2>
+      <p>Заявки не уходят случайным подрядчикам: каждый нож проходит через один и тот же набор камней и одни и те же руки.</p>
+    </div>
+    <div class="sec__body">
+      <div class="master__who">
+        <span class="av av--1" role="img" aria-label="Инициалы мастера Игоря Нефёдова">ИН</span>
+        <div>
+          <h3 class="master__name">Игорь Нефёдов</h3>
+          <p class="master__role">основатель и точильщик</p>
+        </div>
+      </div>
+      <div class="master__txt">
+        <p>Точит ножи с 2013 года. Начинал подмастерьем в Ворсме - старом центре ножевого промысла в Нижегородской области. Затем три года отвечал за состояние ножей в поварском цехе сети ресторанов в Москве. В 2018 году открыл частную практику.</p>
+        <p>Если заказов станет больше, мы возьмём второго мастера открыто: с именем и фото на этой странице.</p>
+      </div>
+      <dl class="spec">
+        <div class="spec__row"><dt>Точит ножи с</dt><dd>2013 года</dd></div>
+        <div class="spec__row"><dt>Частная практика</dt><dd>с 2018 года</dd></div>
+        <div class="spec__row"><dt>Статус</dt><dd>самозанятый, чек в «Мой налог»</dd></div>
+        <div class="spec__row"><dt>Заточено ножей</dt><dd>около 7&nbsp;400</dd></div>
+        <div class="spec__row"><dt>Кухонь на подписке</dt><dd>38</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- Углы и зерно -->
+<section class="sec" id="angles" aria-labelledby="angles-title">
+  <div class="wrap sec__grid">
+    <div class="sec__head">
+      <h2 id="angles-title">Какой угол заточки подходит вашему ножу</h2>
+      <p>Разным ножам нужен разный угол: это вопрос стали и задачи, а не вкуса мастера. Двигайте ползунок от 12° до 22° и смотрите, как меняется кромка.</p>
+      <div class="fine">
+        <p>«На сторону» - под каким углом одна сторона лезвия лежит на камне.</p>
+        <p>«Общий угол» - обе стороны вместе, то есть угол самой кромки. Он вдвое больше.</p>
+        <p>Например, 17° на сторону - это 34° общий угол.</p>
+      </div>
+    </div>
+    <div class="sec__body">
+      <div class="tool">
+        <svg class="tool__svg" id="angle-svg" viewBox="0 0 520 340" role="img" aria-label="Разрез клинка. Угол заточки 17 градусов на сторону, общий угол 34 градуса" focusable="false">
+          <rect class="stone" x="0" y="290" width="520" height="50"/>
+          <line class="stone-line" x1="0" y1="290" x2="520" y2="290"/>
+          <polygon class="wedge" id="a-wedge" points="201.91,24 201.91,100 260,290 318.09,100 318.09,24"/>
+          <polygon class="tip" id="a-tip" points="260,290 253.57,268.96 266.43,268.96"/>
+          <polygon class="cmp" points="209.09,24 209.09,100 260,290 310.91,100 310.91,24"/>
+          <polygon class="cmp" points="190.85,24 190.85,100 260,290 329.15,100 329.15,24"/>
+          <line class="axis" x1="260" y1="24" x2="260" y2="290"/>
+          <path class="arc" id="a-arc" d="M260 140 A150 150 0 0 1 303.86 146.55"/>
+          <line class="lead-l" id="a-lead1" x1="303.86" y1="146.55" x2="346" y2="139"/>
+          <text class="svg-t" id="a-t1" x="352" y="150">17°</text>
+          <line class="lead-l" id="a-lead2" x1="213.84" y1="139" x2="176" y2="139"/>
+          <text class="svg-t" id="a-t2" x="168" y="150" text-anchor="end">34°</text>
+        </svg>
+        <div class="ind" id="ind" aria-live="polite">
+          <div class="ind__num" id="ind-num">17°</div>
+          <dl class="spec">
+            <div class="spec__row"><dt>На сторону</dt><dd id="ind-a">17°</dd></div>
+            <div class="spec__row"><dt>Общий угол</dt><dd id="ind-2a">34°</dd></div>
+            <div class="spec__row"><dt>Подходит</dt><dd id="ind-fit">шеф-нож</dd></div>
+          </dl>
+          <p class="fine ind__hint" id="ind-hint">Основной угол для поварского ножа.</p>
+        </div>
+      </div>
+
+      <div class="ctrl">
+        <div class="js-only">
+          <input class="range" id="angle" type="range" min="12" max="22" step="1" value="17" aria-label="Угол заточки на сторону" aria-valuetext="17 градусов на сторону, шеф-нож" style="--p:.5">
+          <div class="ticks" aria-hidden="true"><span style="--p:0">12</span><span style="--p:.5">17</span><span style="--p:1">22</span></div>
+          <div class="chips" role="group" aria-label="Стандартные углы">
+            <button class="chip" type="button" data-angle="15" aria-pressed="false" aria-label="Угол 15 градусов на сторону">15°</button>
+            <button class="chip" type="button" data-angle="17" aria-pressed="true" aria-label="Угол 17 градусов на сторону">17°</button>
+            <button class="chip" type="button" data-angle="20" aria-pressed="false" aria-label="Угол 20 градусов на сторону">20°</button>
+          </div>
+        </div>
+        <p class="nojs-list no-js-only">15° - сантоку, японская сталь. 17° - шеф-нож. 20° - универсальный, овощной.</p>
+        <p class="ctrl__hint">Чем меньше угол, тем тоньше кромка: режет легче, но быстрее выкрашивается. Чем больше угол, тем кромка прочнее.</p>
+        <p class="fine ctrl__legend">Пунктир - контуры 15° и 20° для сравнения</p>
+      </div>
+
+      <div class="grain">
+        <details id="grain-d" open>
+        <summary><h3>Камни по порядку: от #400 до #6000</h3><span class="faq__i" aria-hidden="true"></span></summary>
+        <p>Число - зернистость камня: чем оно больше, тем мельче зерно. #400 нужен не каждому ножу, только если есть сколы.</p>
+        <ul class="stones">
+          <li class="stone-row">
+            <div class="stone-row__s"><svg viewBox="0 0 96 28" role="img" aria-label="Образец зерна #400: крупные точки" focusable="false"><defs><pattern id="g400" width="10" height="17.32" patternUnits="userSpaceOnUse"><circle class="grain-dot" cx="0" cy="0" r="2.6"/><circle class="grain-dot" cx="10" cy="0" r="2.6"/><circle class="grain-dot" cx="0" cy="17.32" r="2.6"/><circle class="grain-dot" cx="10" cy="17.32" r="2.6"/><circle class="grain-dot" cx="5" cy="8.66" r="2.6"/></pattern></defs><rect width="96" height="28" fill="url(#g400)"/></svg></div>
+            <span class="stone-row__no">#400</span>
+            <span class="stone-row__u">Убирает сколы и выравнивает кромку.</span>
+            <div class="stone-row__v"><b>черновая</b><span>грубое</span></div>
+          </li>
+          <li class="stone-row">
+            <div class="stone-row__s"><svg viewBox="0 0 96 28" role="img" aria-label="Образец зерна #1000: точки средней величины" focusable="false"><defs><pattern id="g1000" width="7" height="12.124" patternUnits="userSpaceOnUse"><circle class="grain-dot" cx="0" cy="0" r="1.7"/><circle class="grain-dot" cx="7" cy="0" r="1.7"/><circle class="grain-dot" cx="0" cy="12.124" r="1.7"/><circle class="grain-dot" cx="7" cy="12.124" r="1.7"/><circle class="grain-dot" cx="3.5" cy="6.062" r="1.7"/></pattern></defs><rect width="96" height="28" fill="url(#g1000)"/></svg></div>
+            <span class="stone-row__no">#1000</span>
+            <span class="stone-row__u">Формирует рабочую кромку под нужный угол.</span>
+            <div class="stone-row__v"><b>рабочая кромка</b><span>среднее</span></div>
+          </li>
+          <li class="stone-row">
+            <div class="stone-row__s"><svg viewBox="0 0 96 28" role="img" aria-label="Образец зерна #3000: мелкие точки" focusable="false"><defs><pattern id="g3000" width="4.6" height="7.967" patternUnits="userSpaceOnUse"><circle class="grain-dot" cx="0" cy="0" r="1.1"/><circle class="grain-dot" cx="4.6" cy="0" r="1.1"/><circle class="grain-dot" cx="0" cy="7.967" r="1.1"/><circle class="grain-dot" cx="4.6" cy="7.967" r="1.1"/><circle class="grain-dot" cx="2.3" cy="3.983" r="1.1"/></pattern></defs><rect width="96" height="28" fill="url(#g3000)"/></svg></div>
+            <span class="stone-row__no">#3000</span>
+            <span class="stone-row__u">Снимает заусенец - тонкий загнутый край металла.</span>
+            <div class="stone-row__v"><b>снятие заусенца</b><span>тонкое</span></div>
+          </li>
+          <li class="stone-row">
+            <div class="stone-row__s"><svg viewBox="0 0 96 28" role="img" aria-label="Образец зерна #6000: очень мелкие точки" focusable="false"><defs><pattern id="g6000" width="3.2" height="5.543" patternUnits="userSpaceOnUse"><circle class="grain-dot" cx="0" cy="0" r="0.75"/><circle class="grain-dot" cx="3.2" cy="0" r="0.75"/><circle class="grain-dot" cx="0" cy="5.543" r="0.75"/><circle class="grain-dot" cx="3.2" cy="5.543" r="0.75"/><circle class="grain-dot" cx="1.6" cy="2.771" r="0.75"/></pattern></defs><rect width="96" height="28" fill="url(#g6000)"/></svg></div>
+            <span class="stone-row__no">#6000</span>
+            <span class="stone-row__u">Доводит кромку до гладкости, нож режет чище.</span>
+            <div class="stone-row__v"><b>зеркальная доводка</b><span>полировальное</span></div>
+          </li>
+        </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Калькулятор -->
+<section class="sec" id="calc" aria-labelledby="calc-title">
+  <div class="wrap sec__grid">
+    <div class="sec__head">
+      <h2 id="calc-title">Посчитайте стоимость заточки</h2>
+      <p>Выберите, сколько у вас ножей и какого они типа. Сумма считается сразу.</p>
+    </div>
+    <div class="sec__body">
+      <div class="calc">
+        <div class="calc__row">
+          <span class="calc__label" id="count-label">Количество ножей</span>
+          <div class="step">
+            <button class="step__btn" id="minus" type="button" aria-label="Убавить количество ножей"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg></button>
+            <span class="step__n" id="count">4</span>
+            <button class="step__btn" id="plus" type="button" aria-label="Добавить нож"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5v14"/></svg></button>
+          </div>
+        </div>
+        <div class="calc__slider">
+          <input class="range" id="count-range" type="range" min="1" max="15" step="1" value="4" aria-label="Количество ножей, от 1 до 15" aria-valuetext="4 ножа" style="--p:.2143">
+          <div class="ticks" aria-hidden="true"><span style="--p:0">1</span><span style="--p:.2857">5</span><span style="--p:.6429">10</span><span style="--p:1">15</span></div>
+        </div>
+
+        <div class="calc__group">
+          <span class="calc__label" aria-hidden="true">Тип ножа</span>
+          <div class="radios" id="types" role="radiogroup" aria-label="Тип ножа">
+            <div class="radio" role="radio" aria-checked="true" tabindex="0" data-type="kitchen" data-price="350"><span class="radio__dot"></span><span class="radio__name">Кухонный нож</span><span class="radio__price">350&nbsp;₽</span></div>
+            <div class="radio" role="radio" aria-checked="false" tabindex="-1" data-type="chef" data-price="550"><span class="radio__dot"></span><span class="radio__name">Шеф-нож</span><span class="radio__price">550&nbsp;₽</span></div>
+            <div class="radio" role="radio" aria-checked="false" tabindex="-1" data-type="santoku" data-price="700"><span class="radio__dot"></span><span class="radio__name">Сантоку и японские ножи</span><span class="radio__price">700&nbsp;₽</span></div>
+          </div>
+        </div>
+
+        <dl class="spec calc__line">
+          <div class="spec__row"><dt>Забор и доставка</dt><dd id="deliv" class="free">бесплатно</dd></div>
+        </dl>
+        <p class="fine calc__fine" id="deliv-note">В пределах МКАД.</p>
+
+        <dl class="spec calc__line">
+          <div class="spec__row"><dt>Нож со сколом</dt><dd>+150-250&nbsp;₽</dd></div>
+        </dl>
+        <p class="fine calc__fine">Скол убираем на камне #400. Это дольше, поэтому нож со сколом дороже. Размер доплаты Игорь называет по фото, до выезда курьера.</p>
+
+        <div class="total">
+          <span class="total__l">Итого за заточку</span>
+          <div class="total__r"><span class="total__sum" data-total>1&nbsp;400&nbsp;₽</span><span class="total__expr" data-expr>4&nbsp;×&nbsp;350&nbsp;₽</span></div>
+        </div>
+
+        <p class="sub" id="sub-line">
+          <span id="sub-text">Подписка «Кухня раз в квартал»: 1&nbsp;490&nbsp;₽ за визит, до 5 ножей любого типа. Выгодна, если разовая заточка выходит дороже.</span>
+          <a class="link" href="#pricing">Условия подписки</a>
+        </p>
+
+        <div class="calc__cta"><a class="btn" href="#contact">Узнать цену по фото</a></div>
+        <p class="fine calc__fine">Окончательную цену Игорь называет по фото, до выезда курьера. Фото ножа пришлите в Telegram или VK.</p>
+
+        <div class="calc__bar">
+          <div class="calc__bar-sum"><span class="num" data-total>1&nbsp;400&nbsp;₽</span><span class="fine" data-expr>4&nbsp;×&nbsp;350&nbsp;₽</span></div>
+          <a class="btn" href="#contact">Цена по фото</a>
+        </div>
+        <div class="sr-only" id="calc-live" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Тарифы -->
+<section class="sec sec--wide" id="pricing" aria-labelledby="pricing-title">
+  <div class="wrap">
+    <h2 id="pricing-title">Разовая заточка или подписка на кухню</h2>
+    <div class="tariffs">
+      <article class="tariff">
+        <div class="tariff__slot"></div>
+        <h3>Разово</h3>
+        <p class="tariff__price">от 350&nbsp;₽</p>
+        <p class="tariff__unit">за нож</p>
+        <div class="tariff__group" role="group" aria-labelledby="once-sub">
+          <p class="fine tariff__sub" id="once-sub">Цена за нож</p>
+          <dl class="spec">
+            <div class="spec__row"><dt>Кухонный нож</dt><dd>350&nbsp;₽</dd></div>
+            <div class="spec__row"><dt>Шеф-нож</dt><dd>550&nbsp;₽</dd></div>
+            <div class="spec__row"><dt>Сантоку и японские ножи</dt><dd>700&nbsp;₽</dd></div>
+          </dl>
+        </div>
+        <dl class="spec spec--rest">
+          <div class="spec__row"><dt>Оплата</dt><dd>при возврате ножей, по QR-коду СБП</dd></div>
+          <div class="spec__row"><dt>Забор и доставка</dt><dd>бесплатно от 3 ножей</dd></div>
+          <div class="spec__row"><dt>Возврат</dt><dd>за 3 дня</dd></div>
+        </dl>
+        <div class="tariff__act"><a class="btn-line" href="#contact">Узнать цену по фото</a></div>
+      </article>
+      <article class="tariff tariff--main">
+        <div class="tariff__slot has"><span class="tag">оптимально для семьи</span></div>
+        <h3>Кухня раз в квартал</h3>
+        <p class="tariff__price">1&nbsp;490&nbsp;₽</p>
+        <p class="tariff__unit">за визит</p>
+        <dl class="spec">
+          <div class="spec__row"><dt>Ножей за визит</dt><dd>до 5, любого типа</dd></div>
+          <div class="spec__row"><dt>Периодичность</dt><dd>раз в квартал</dd></div>
+          <div class="spec__row"><dt>Забор</dt><dd>приоритетный, без ожидания</dd></div>
+          <div class="spec__row"><dt>Напоминание</dt><dd>когда пора точить снова</dd></div>
+        </dl>
+        <div class="tariff__act"><a class="btn" href="#contact">Оформить подписку в чате</a></div>
+      </article>
+      <article class="tariff">
+        <div class="tariff__slot"></div>
+        <h3>Для ресторана</h3>
+        <p class="tariff__price">по счёту</p>
+        <p class="tariff__unit">от 20 ножей</p>
+        <dl class="spec">
+          <div class="spec__row"><dt>Выезд</dt><dd>мастер приезжает на кухню</dd></div>
+          <div class="spec__row"><dt>Документы</dt><dd>акт выполненных работ</dd></div>
+          <div class="spec__row"><dt>День</dt><dd>фиксированный день недели</dd></div>
+        </dl>
+        <div class="tariff__act"><a class="btn-line" href="#contact">Обсудить условия</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+<section class="sec" id="reviews" aria-labelledby="reviews-title">
+  <div class="wrap sec__grid">
+    <div class="sec__head">
+      <h2 id="reviews-title">Что говорят те, кто уже отдавал ножи</h2>
+    </div>
+    <div class="sec__body">
+      <div class="score">
+        <span class="score__n num" role="img" aria-label="Средняя оценка 4.9">4.9</span>
+        <p class="score__t">средняя оценка, 214 отзывов за 2025 год</p>
+      </div>
+      <p class="fine rev__src">Источник: <a class="link" href="https://yandex.ru/maps/213/moscow/search/%D0%B7%D0%B0%D1%82%D0%BE%D1%87%D0%BA%D0%B0%20%D0%BD%D0%BE%D0%B6%D0%B5%D0%B9/" target="_blank" rel="noopener noreferrer">Яндекс Карты</a> и Телеграм-чат клиентов</p>
+      <ul class="revs">
+        <li class="rev">
+          <div class="rev__who"><span class="av av--1" aria-hidden="true">МС</span><div><p class="rev__name">Мария Соколова</p><p class="rev__sub">домашний повар, Хамовники<br>первый заказ</p></div></div>
+          <blockquote>Предупредили, что на кончике есть скол и заточка займёт больше времени - не стали делать вид, что его не было. В итоге всё как договаривались, без сюрпризов в цене.</blockquote>
+        </li>
+        <li class="rev">
+          <div class="rev__who"><span class="av av--2" aria-hidden="true">АЛ</span><div><p class="rev__name">Артём Лущинский</p><p class="rev__sub">шеф-повар<br>ресторан «Тонкий край»</p></div></div>
+          <blockquote>Отдаём на заточку 12 ножей поварского цеха. После заточки на #6000 кромка у сантоку держится почти три месяца при ежедневной нагрузке - раньше точили сами и хватало на пару недель.</blockquote>
+        </li>
+        <li class="rev">
+          <div class="rev__who"><span class="av av--3" aria-hidden="true">ОК</span><div><p class="rev__name">Ольга Ким</p><p class="rev__sub">коллекционер японских ножей</p></div></div>
+          <blockquote>Отдавала Aogami-нож с опаской. Вернули с углом 14°, ровно как договаривались на созвоне, без единой лишней царапины на клинке.</blockquote>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Вопросы -->
+<section class="sec" id="faq" aria-labelledby="faq-title">
+  <div class="wrap sec__grid">
+    <div class="sec__head">
+      <h2 id="faq-title">Вопросы перед первой заточкой</h2>
+    </div>
+    <div class="sec__body">
+      <div class="faq">
+        <details open>
+          <summary>Не испортите ли лезвие болгаркой?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Нет, болгарку мы не используем. Точим вручную только водными камнями от #400 до #6000. Это медленнее, зато сталь не перегревается и закалка кромки не меняется.</p>
+        </details>
+        <details>
+          <summary>У меня дорогой нож из японской стали. Вы с такими работаете?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Да. Для японской стали, например VG-10 или Aogami, берём угол 12-15° на сторону вместо обычных 17-20°. Угол согласуем с вами по фото ножа, до заказа.</p>
+        </details>
+        <details>
+          <summary>Что, если на ноже скол?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Скол убираем на камне #400. Это дольше и стоит на 150-250&nbsp;₽ дороже. О доплате Игорь предупреждает до начала работы, а не после.</p>
+        </details>
+        <details>
+          <summary>Как быстро тупится нож после вашей заточки?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Если вы правите нож дома на мусате (стальной стержень для правки), рабочая кромка держится 2-4 месяца. Срок зависит от того, как часто вы готовите и на какой доске режете: на деревянной и пластиковой кромка тупится медленнее, чем на стеклянной.</p>
+        </details>
+        <details>
+          <summary>Как оплатить заточку?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Платите при возврате ножей, после того как проверили заточку: по QR-коду СБП. СБП - это перевод через приложение вашего банка: наведите камеру на QR-код и подтвердите сумму. Получатель - Игорь Нефёдов, самозанятый. Чек из приложения «Мой налог» придёт в чат.</p>
+        </details>
+        <details>
+          <summary>Когда приедет курьер?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Курьер приезжает в течение двух часов, время согласуем с вами в чате или по телефону. Например, 10:00-12:00, 12:00-14:00, 16:00-18:00 или 18:00-20:00. Курьер ездит Пн-Сб с 10:00 до 20:00, в воскресенье выходной.</p>
+        </details>
+        <details>
+          <summary>Как передать ножи, если никого нет дома?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Договоримся заранее. Ножи можно передать консьержу или соседу либо оставить на ресепшене: напишите Игорю в Telegram или VK или позвоните. Курьер оформит акт приёма и пришлёт в чат фото упаковки.</p>
+        </details>
+        <details>
+          <summary>Можно ли заказать по телефону?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Да. Если у вас нет Telegram или VK, позвоните по номеру <a class="link nb" href="tel:+79991234567">+7&nbsp;999&nbsp;123-45-67</a> в рабочее время, Пн-Сб с 10:00 до 20:00. Опишите ножи: сколько их, какого типа и есть ли сколы. Игорь назовёт предварительную цену, а окончательную подтвердит при передаче ножей курьеру, после осмотра. Если цена вас не устроит, ножи остаются у вас.</p>
+        </details>
+        <details>
+          <summary>Как сфотографировать нож для оценки?<span class="faq__i" aria-hidden="true"></span></summary>
+          <p class="faq__a">Положите нож на светлую ровную поверхность. Снимите лезвие сбоку и кромку крупным планом при дневном свете: хватит одного общего снимка всех ножей и крупного снимка кромки самых тупых или со сколами. Если не получается, напишите Игорю, он подскажет.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Контакты -->
+<section class="sec" id="contact" aria-labelledby="contact-title">
+  <div class="wrap sec__grid">
+    <div class="sec__head">
+      <h2 id="contact-title">Пришлите фото ножа - Игорь назовёт цену</h2>
+      <p>Формы на сайте нет. Фото ножа можно прислать в Telegram или VK, а если мессенджеров нет - позвонить: по описанию ножей Игорь назовёт предварительную цену.</p>
+    </div>
+    <div class="sec__body">
+      <div class="cbtns">
+        <a class="btn" href="https://t.me/igor_zatochka" target="_blank" rel="noopener noreferrer" aria-label="Написать Игорю в Telegram">Написать в Telegram</a>
+        <a class="btn-line" href="tel:+79991234567" aria-label="Позвонить Игорю по телефону +7 999 123-45-67">Позвонить</a>
+      </div>
+      <dl class="spec contacts">
+        <div class="crow">
+          <dt>Telegram</dt>
+          <dd class="crow__v"><a class="crow__val" href="https://t.me/igor_zatochka" target="_blank" rel="noopener noreferrer">@igor_zatochka</a><span class="crow__hint">Пришлите фото кромки. Цену назовём обычно в течение часа в рабочее время.</span></dd>
+          <dd class="crow__act"><span class="copied" aria-hidden="true"></span><button class="copy js-only" type="button" data-copy="@igor_zatochka" aria-label="Скопировать Telegram" title="Скопировать"><svg class="ico ico-copy" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15.5V6a2 2 0 0 1 2-2h8.5"/></svg><svg class="ico ico-ok" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></dd>
+        </div>
+        <div class="crow">
+          <dt>VK</dt>
+          <dd class="crow__v"><a class="crow__val" href="https://vk.com/igor_zatochka" target="_blank" rel="noopener noreferrer">vk.com/igor_zatochka</a><span class="crow__hint">То же, что в Telegram: фото кромки в личные сообщения.</span></dd>
+          <dd class="crow__act"><span class="copied" aria-hidden="true"></span><button class="copy js-only" type="button" data-copy="vk.com/igor_zatochka" aria-label="Скопировать VK" title="Скопировать"><svg class="ico ico-copy" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15.5V6a2 2 0 0 1 2-2h8.5"/></svg><svg class="ico ico-ok" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></dd>
+        </div>
+        <div class="crow">
+          <dt>Телефон</dt>
+          <dd class="crow__v"><a class="crow__val num" href="tel:+79991234567">+7 999 123-45-67</a><span class="crow__hint">Игорь берёт трубку сам. По описанию ножей (сколько, какого типа, есть ли сколы) он назовёт предварительную цену.</span></dd>
+          <dd class="crow__act"><span class="copied" aria-hidden="true"></span><button class="copy js-only" type="button" data-copy="+7 999 123-45-67" aria-label="Скопировать телефон" title="Скопировать"><svg class="ico ico-copy" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15.5V6a2 2 0 0 1 2-2h8.5"/></svg><svg class="ico ico-ok" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></dd>
+        </div>
+        <div class="crow">
+          <dt>E-mail</dt>
+          <dd class="crow__v"><a class="crow__val" href="mailto:hello@zatochka.ru">hello@zatochka.ru</a><span class="crow__hint">Для ресторанов и вопросов по акту выполненных работ.</span></dd>
+          <dd class="crow__act"><span class="copied" aria-hidden="true"></span><button class="copy js-only" type="button" data-copy="hello@zatochka.ru" aria-label="Скопировать e-mail" title="Скопировать"><svg class="ico ico-copy" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15.5V6a2 2 0 0 1 2-2h8.5"/></svg><svg class="ico ico-ok" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></button></dd>
+        </div>
+      </dl>
+      <div class="sr-only" id="copy-live" aria-live="polite"></div>
+
+      <dl class="spec cond">
+        <div class="spec__row"><dt>Забор и доставка</dt><dd>Москва, в пределах МКАД</dd></div>
+        <div class="spec__row"><dt>Бесплатно</dt><dd>от 3 ножей</dd></div>
+        <div class="spec__row"><dt>При 1-2 ножах</dt><dd>платная, цену назовёт мастер до заказа</dd></div>
+        <div class="spec__row"><dt>Режим</dt><dd>Пн-Сб, 10:00-20:00</dd></div>
+        <div class="spec__row"><dt>Окно курьера</dt><dd>2 часа, время согласуем в чате или по телефону</dd></div>
+        <div class="spec__row"><dt>Ответ</dt><dd>в Telegram и VK обычно до 60 мин</dd></div>
+        <div class="spec__row"><dt>Воскресенье</dt><dd>выходной</dd></div>
+      </dl>
+      <div class="cond__notes">
+        <p class="fine">Забор и доставка в пределах МКАД - бесплатно от 3 ножей. При 1-2 ножах доставка платная, стоимость мастер назовёт до заказа.</p>
+        <p class="fine">Курьер приезжает по адресу, который вы укажете в Telegram, VK или по телефону. Приёма в мастерской нет.</p>
+        <p class="fine">Если вас нет дома, ножи можно передать консьержу или соседу либо оставить на ресепшене - договоримся заранее. Курьер оформит акт приёма и пришлёт в чат фото упаковки.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__row">
+      <span>© 2026 Заточка.ру, Игорь Нефёдов</span>
+      <div class="foot__links">
+        <a href="https://t.me/igor_zatochka" target="_blank" rel="noopener noreferrer" aria-label="Написать Игорю в Telegram">Telegram</a>
+        <a href="https://vk.com/igor_zatochka" target="_blank" rel="noopener noreferrer" aria-label="Написать Игорю в VK">VK</a>
+      </div>
+    </div>
+    <div class="foot__txt">
+      <p>Москва, в пределах МКАД. Пн-Сб, 10:00-20:00, воскресенье - выходной.</p>
+      <p>Ножи забирает курьер. Приёма в мастерской нет.</p>
+    </div>
+    <p class="foot__demo">Учебный демо-проект. Имя мастера, телефон, соцсети, отзывы и цены вымышлены.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var NB = ' ';
+  function $(s, r) { return (r || document).querySelector(s); }
+  function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+  function reduced() { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
+  function plural(n, one, few, many) {
+    var a = n % 10, b = n % 100;
+    if (a === 1 && b !== 11) return one;
+    if (a >= 2 && a <= 4 && (b < 12 || b > 14)) return few;
+    return many;
+  }
+  function fmt(n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, NB); }
+  function rub(n) { return fmt(n) + NB + '₽'; }
+  function r2(n) { return Math.round(n * 100) / 100; }
+
+  /* ---------- сцена: анимация стартует, когда сцена попала в экран ---------- */
+  var scene = $('#scene-fig');
+  if (scene) {
+    if ('IntersectionObserver' in window && !reduced()) {
+      var sio = new IntersectionObserver(function (es) {
+        if (es[0].isIntersecting) { scene.classList.add('is-in'); sio.disconnect(); }
+      }, { threshold: 0.15 });
+      sio.observe(scene);
+    } else {
+      scene.classList.add('is-in');
+    }
+  }
+
+  /* ---------- бургер-меню ---------- */
+  var burger = $('#burger'), menu = $('#menu'), hdr = $('.hdr');
+  function setMenu(open, back) {
+    menu.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Закрыть меню разделов' : 'Открыть меню разделов');
+    if (!open && back) burger.focus();
+  }
+  function isOpen() { return menu.classList.contains('is-open'); }
+  burger.addEventListener('click', function () { setMenu(!isOpen(), false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && isOpen()) { setMenu(false, true); }
+  });
+  document.addEventListener('click', function (e) {
+    if (isOpen() && !hdr.contains(e.target)) setMenu(false, false);
+  });
+  $$('a', menu).forEach(function (a) { a.addEventListener('click', function () { setMenu(false, false); }); });
+  document.addEventListener('focusin', function (e) {
+    if (isOpen() && !hdr.contains(e.target)) setMenu(false, false);
+  });
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(min-width: 768px)'); /* с 768 px бургер скрыт: полоса (768-1023) или строка в шапке (от 1024) */
+    var onMq = function () { if (mq.matches && isOpen()) setMenu(false, false); };
+    if (mq.addEventListener) mq.addEventListener('change', onMq); else if (mq.addListener) mq.addListener(onMq);
+  }
+
+  /* ---------- текущий раздел ---------- */
+  var ids = ['process', 'master', 'angles', 'calc', 'pricing', 'reviews', 'faq', 'contact'];
+  var links = $$('.nav a, .menu a');
+  var stripMq = window.matchMedia ? window.matchMedia('(min-width: 768px) and (max-width: 1023px)') : null;
+  function mark(id) {
+    links.forEach(function (a) {
+      if (id && a.getAttribute('href') === '#' + id) {
+        a.setAttribute('aria-current', 'true');
+        /* полоса на планшете может прокручиваться: подводим текущий пункт в видимую часть (только полоса, не страница) */
+        if (stripMq && stripMq.matches && menu.contains(a) && menu.scrollWidth > menu.clientWidth) {
+          var l = a.offsetLeft, w = a.offsetWidth, v = menu.clientWidth;
+          if (l < menu.scrollLeft || l + w > menu.scrollLeft + v) menu.scrollLeft = l - (v - w) / 2;
+        }
+      } else a.removeAttribute('aria-current');
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var cur = null;
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (en.isIntersecting) { cur = en.target.id; mark(cur); }
+        else if (cur === en.target.id) { cur = null; mark(null); }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ids.forEach(function (id) { var el = document.getElementById(id); if (el) io.observe(el); });
+  }
+
+  /* ---------- угломер ---------- */
+  var FIT = {
+    12: ['японская сталь, тонкая кромка', 'Самая тонкая кромка в диапазоне. Для твёрдой японской стали.', 1],
+    13: ['подберём по фото', 'Между 12° и 15°. Угол согласуем по фото ножа.', 0],
+    14: ['подберём по фото', 'Между 12° и 15°. Угол согласуем по фото ножа.', 0],
+    15: ['сантоку, японская сталь', 'Тонкая кромка для сантоку и японских ножей.', 1],
+    16: ['подберём по фото', 'Между 15° и 17°. Угол согласуем по фото ножа.', 0],
+    17: ['шеф-нож', 'Основной угол для поварского ножа.', 1],
+    18: ['подберём по фото', 'Между 17° и 20°. Угол согласуем по фото ножа.', 0],
+    19: ['подберём по фото', 'Между 17° и 20°. Угол согласуем по фото ножа.', 0],
+    20: ['универсальный, овощной', 'Прочная кромка для универсальных и овощных ножей.', 1],
+    21: ['подберём по фото', 'Больше 20°. Угол согласуем по фото ножа.', 0],
+    22: ['подберём по фото', 'Верхняя граница ползунка. Угол согласуем по фото ножа.', 0]
+  };
+  function deg(n) { return n + ' ' + plural(n, 'градус', 'градуса', 'градусов'); }
+  var slider = $('#angle');
+  if (slider) {
+    var elW = $('#a-wedge'), elT = $('#a-tip'), elArc = $('#a-arc'), elL1 = $('#a-lead1'), elL2 = $('#a-lead2');
+    var elT1 = $('#a-t1'), elT2 = $('#a-t2'), svg = $('#angle-svg');
+    var chips = $$('.chip[data-angle]');
+    var live = { num: $('#ind-num'), a: $('#ind-a'), a2: $('#ind-2a'), fit: $('#ind-fit'), hint: $('#ind-hint') };
+    var renderAngle = function (a) {
+      var r = a * Math.PI / 180, s = Math.sin(r), c = Math.cos(r), w = 190 * Math.tan(r);
+      elW.setAttribute('points', [260 - w, 24, 260 - w, 100, 260, 290, 260 + w, 100, 260 + w, 24].map(r2).reduce(function (acc, v, i) { return acc + (i % 2 ? ',' : (i ? ' ' : '')) + v; }, ''));
+      elT.setAttribute('points', '260,290 ' + r2(260 - 22 * s) + ',' + r2(290 - 22 * c) + ' ' + r2(260 + 22 * s) + ',' + r2(290 - 22 * c));
+      var ex = 260 + 150 * s, ey = 290 - 150 * c;
+      elArc.setAttribute('d', 'M260 140 A150 150 0 0 1 ' + r2(ex) + ' ' + r2(ey));
+      elL1.setAttribute('x1', r2(ex)); elL1.setAttribute('y1', r2(ey));
+      elT1.textContent = a + '°';
+      var lx = 260 - w * (290 - 139) / 190;
+      elL2.setAttribute('x1', r2(lx));
+      elT2.textContent = (2 * a) + '°';
+      var f = FIT[a];
+      live.num.textContent = a + '°';
+      live.a.textContent = a + '°';
+      live.a2.textContent = (2 * a) + '°';
+      live.fit.textContent = f[0];
+      live.fit.style.color = f[2] ? '' : 'var(--muted)';
+      live.hint.textContent = f[1];
+      slider.setAttribute('aria-valuetext', deg(a) + ' на сторону, ' + f[0]);
+      slider.style.setProperty('--p', (a - 12) / 10);
+      svg.setAttribute('aria-label', 'Разрез клинка. Угол заточки ' + deg(a) + ' на сторону, общий угол ' + deg(2 * a));
+      chips.forEach(function (ch) { ch.setAttribute('aria-pressed', Number(ch.getAttribute('data-angle')) === a ? 'true' : 'false'); });
+    };
+    slider.addEventListener('input', function () { renderAngle(Number(slider.value)); });
+    chips.forEach(function (ch) {
+      ch.addEventListener('click', function () {
+        slider.value = ch.getAttribute('data-angle');
+        renderAngle(Number(slider.value));
+      });
+    });
+    renderAngle(Number(slider.value));
+  }
+
+  /* ---------- таблица зерна: раскрыта от 700 px, закрыта уже, пока пользователь не нажимал сам ---------- */
+  var grainD = $('#grain-d');
+  if (grainD && window.matchMedia) {
+    var grainTouched = false;
+    var grainMq = window.matchMedia('(min-width: 700px)');
+    var grainSet = function () { if (!grainTouched) grainD.open = grainMq.matches; };
+    $('summary', grainD).addEventListener('click', function () { grainTouched = true; });
+    if (grainMq.addEventListener) grainMq.addEventListener('change', grainSet); else if (grainMq.addListener) grainMq.addListener(grainSet);
+    grainSet();
+  }
+
+  /* ---------- калькулятор ---------- */
+  var cRange = $('#count-range');
+  if (cRange) {
+    var n = 4, price = 350;
+    var cNum = $('#count'), minus = $('#minus'), plus = $('#plus');
+    var radios = $$('#types .radio');
+    var deliv = $('#deliv'), delivNote = $('#deliv-note');
+    var subLine = $('#sub-line'), subText = $('#sub-text');
+    var totals = $$('[data-total]'), exprs = $$('[data-expr]');
+    var liveEl = $('#calc-live'), liveTimer = 0;
+    var SUB = 1490;
+    var renderCalc = function () {
+      var sum = n * price;
+      cNum.textContent = n;
+      cRange.value = n;
+      cRange.style.setProperty('--p', (n - 1) / 14);
+      cRange.setAttribute('aria-valuetext', n + ' ' + plural(n, 'нож', 'ножа', 'ножей'));
+      if (n <= 1 && document.activeElement === minus) plus.focus();
+      if (n >= 15 && document.activeElement === plus) minus.focus();
+      minus.disabled = n <= 1;
+      plus.disabled = n >= 15;
+      if (n >= 3) {
+        deliv.textContent = 'бесплатно'; deliv.className = 'free';
+        delivNote.textContent = 'В пределах МКАД.';
+      } else {
+        deliv.textContent = 'платная'; deliv.className = '';
+        delivNote.textContent = 'Доставка в итог не входит. Стоимость мастер назовёт до заказа.';
+      }
+      totals.forEach(function (t) { t.textContent = rub(sum); });
+      exprs.forEach(function (t) { t.textContent = n + NB + '×' + NB + rub(price); });
+      if (n > 5) {
+        subLine.hidden = true;
+      } else {
+        subLine.hidden = false;
+        /* А: сумма больше 1 490 - сравнение; Б: нейтральный текст. Если текст не изменился, не перерисовываем. */
+        var subNew = sum > SUB
+          ? 'По подписке выйдет ' + rub(SUB) + ' вместо ' + rub(sum) + ': на ' + rub(sum - SUB) + ' дешевле.'
+          : 'Подписка «Кухня раз в квартал»: ' + rub(SUB) + ' за визит, до 5 ножей любого типа. Выгодна, если разовая заточка выходит дороже.';
+        if (subText.textContent !== subNew) subText.textContent = subNew;
+      }
+      clearTimeout(liveTimer);
+      liveTimer = setTimeout(function () {
+        liveEl.textContent = 'Итого за заточку: ' + sum + ' ₽. ' + n + ' по ' + price + ' ₽.';
+      }, 500);
+    };
+    minus.addEventListener('click', function () { if (n > 1) { n--; renderCalc(); } });
+    plus.addEventListener('click', function () { if (n < 15) { n++; renderCalc(); } });
+    cRange.addEventListener('input', function () { n = Number(cRange.value); renderCalc(); });
+
+    var pick = function (i, focus) {
+      radios.forEach(function (r, j) {
+        r.setAttribute('aria-checked', i === j ? 'true' : 'false');
+        r.tabIndex = i === j ? 0 : -1;
+      });
+      price = Number(radios[i].getAttribute('data-price'));
+      if (focus) radios[i].focus();
+      renderCalc();
+    };
+    radios.forEach(function (r, i) {
+      r.addEventListener('click', function () { pick(i, false); });
+      r.addEventListener('keydown', function (e) {
+        var k = e.key, j = -1;
+        if (k === 'ArrowDown' || k === 'ArrowRight') j = (i + 1) % radios.length;
+        else if (k === 'ArrowUp' || k === 'ArrowLeft') j = (i - 1 + radios.length) % radios.length;
+        else if (k === 'Home') j = 0;
+        else if (k === 'End') j = radios.length - 1;
+        else if (k === ' ' || k === 'Enter') { e.preventDefault(); pick(i, false); return; }
+        if (j >= 0) { e.preventDefault(); pick(j, true); }
+      });
+    });
+    renderCalc();
+  }
+
+  /* ---------- копирование контактов ---------- */
+  var copyLive = $('#copy-live');
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext) {
+      return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
+    }
+    return Promise.resolve(legacyCopy(text));
+  }
+  $$('.copy').forEach(function (btn) {
+    var status = btn.parentNode.querySelector('.copied');
+    var timer = 0;
+    btn.addEventListener('click', function () {
+      copyText(btn.getAttribute('data-copy')).then(function (ok) {
+        var msg = ok ? 'Скопировано' : 'Не удалось скопировать - выделите значение вручную';
+        btn.classList.toggle('is-done', ok);
+        status.textContent = msg;
+        copyLive.textContent = '';
+        setTimeout(function () { copyLive.textContent = msg; }, 30);
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+          btn.classList.remove('is-done');
+          status.textContent = '';
+        }, ok ? 1400 : 4000);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
