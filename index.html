@@ -9,7 +9,12 @@
 <meta property="og:title" content="Портфолио лендингов - Евгений">
 <meta property="og:description" content="Одностраничные сайты для малого бизнеса: адаптивная вёрстка, рабочие калькуляторы, онлайн-запись и формы.">
 <meta property="og:url" content="https://evejen7-star.github.io/">
-<meta property="og:image" content="https://evejen7-star.github.io/assets/thumbs/beauty-lab.png">
+<meta property="og:image" content="https://evejen7-star.github.io/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" type="image/svg+xml" href="assets/logo/logo-em-blue.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -39,8 +44,9 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 22px 0;
   }
-  .logo { font-weight: 800; font-size: 18px; letter-spacing: -0.02em; text-decoration: none; }
-  .logo span { color: var(--accent); }
+  .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; letter-spacing: -0.02em; text-decoration: none; }
+  .logo img { width: 36px; height: 36px; display: block; }
+  .logo span span { color: var(--accent); }
   .top nav a { margin-left: 22px; text-decoration: none; color: var(--muted); font-weight: 500; }
   .top nav a:hover { color: var(--text); }
 
@@ -98,7 +104,7 @@
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="logo" href="./">evejen7<span>.</span>star</a>
+    <a class="logo" href="./" aria-label="evejen7.star - на главную"><img src="assets/logo/logo-em-blue.svg" alt="" width="36" height="36"><span>evejen7<span>.</span>star</span></a>
     <nav>
       <a href="#works">Работы</a>
       <a href="https://github.com/evejen7-star">GitHub</a>
