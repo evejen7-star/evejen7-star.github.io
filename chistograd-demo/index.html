@@ -1,0 +1,1668 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ЧистоГрад - уборка и химчистка в Волгограде и Волжском (демо-редизайн)</title>
+<meta name="description" content="Уборка и химчистка для квартир, домов и офисов в Волгограде и Волжском: генеральная уборка, уборка после ремонта, химчистка мебели и ковров, мойка окон. Цены, калькулятор стоимости, телефон +7 (8442) 50-03-08. Демонстрационный редизайн.">
+<meta name="theme-color" content="#087069">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='9' fill='%23087069'/%3E%3Cpath d='M18 7l2.4 6.6 6.6 2.4-6.6 2.4L18 25l-2.4-6.6L9 16l6.6-2.4z' fill='%23fff'/%3E%3Cpath d='M26 22c1.6 1.8 2.6 3.2 2.6 4.3a2.6 2.6 0 0 1-5.2 0c0-1.1 1-2.5 2.6-4.3z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root {
+  color-scheme: light;
+
+  /* поверхности */
+  --bg:          #F3FAF9;
+  --surface:     #FFFFFF;
+  --tint:        #DFF3F0;
+  --tint-press:  #C7E8E3;
+
+  /* текст */
+  --text:        #0E2B2F;
+  --muted:       #4A666B;
+
+  /* бренд (стекло) */
+  --brand:       #087069;
+  --brand-dark:  #054B47;
+  --brand-bright:#19B5A5;
+
+  /* акцент (губка) */
+  --accent:       #FFC933;
+  --accent-hover: #FFB400;
+  --accent-press: #F2A600;
+
+  /* служебные */
+  --note-bg:     #FFF4CC;
+  --line:        #CFE3E1;
+  --field:       #6F8F92;
+  --on-dark:       #FFFFFF;
+  --on-dark-muted: #BFE3DF;
+  --disabled-bg:   #E3ECEB;
+  --disabled-text: #567075;
+  --disabled-line: #B7CDCB;
+  --disabled-dark-text: #9CC4C0;
+  --smudge:        #C5D8D5;
+  --shadow-soft:   rgba(14, 43, 47, .25);
+  --hover-dark:    rgba(255, 255, 255, .12);
+  --press-dark:    rgba(255, 255, 255, .2);
+  --line-dark:     rgba(255, 255, 255, .2);
+
+  /* форма */
+  --r:      12px;
+  --r-pill: 999px;
+  --ring:   3px solid var(--brand);
+
+  /* отступы */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px;
+  --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px;
+
+  /* шрифты */
+  --font-head: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --gutter: 16px;
+  --anchor: 112px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 clamp(1rem, .96rem + .2vw, 1.0625rem)/1.55 var(--font-body);
+  padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  overflow-x: hidden;
+}
+img, svg { max-width: 100%; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: var(--brand); }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+.nowrap { white-space: nowrap; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+:focus-visible { outline: var(--ring); outline-offset: 3px; }
+.on-dark :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.skip {
+  position: absolute; left: 16px; top: -100px; z-index: 200;
+  background: var(--surface); color: var(--text); padding: 12px 16px;
+  border-radius: var(--r); border: 2px solid var(--text); font-weight: 600;
+}
+.skip:focus { top: 8px; }
+.demo-bar { background: var(--brand-dark); color: var(--on-dark); padding: 8px 16px; text-align: center; font-size: 0.875rem; line-height: 1.4; }
+
+/* иконки */
+.ic {
+  width: 20px; height: 20px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+.ic-14 { width: 14px; height: 14px; }
+.ic-18 { width: 18px; height: 18px; }
+.ic-22 { width: 22px; height: 22px; }
+.ic-28 { width: 28px; height: 28px; }
+.ic-32 { width: 32px; height: 32px; }
+.ic-40 { width: 40px; height: 40px; }
+.ic-star { fill: var(--accent); stroke: var(--text); stroke-width: 1.5; width: 28px; height: 28px; flex: none; }
+
+/* типографика */
+h1, h2, h3 { font-family: var(--font-head); color: var(--text); }
+h1 {
+  font-weight: 700; font-size: clamp(1.75rem, 1.1rem + 2.4vw, 2.75rem);
+  line-height: 1.12; letter-spacing: -.01em; max-width: 20em;
+}
+h2 { font-weight: 700; font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); line-height: 1.15; }
+h3 { font-weight: 600; font-size: clamp(1.125rem, 1rem + .5vw, 1.375rem); line-height: 1.25; }
+.lead {
+  font-size: clamp(1.0625rem, 1rem + .3vw, 1.25rem); line-height: 1.5;
+  max-width: 58ch; margin-top: 12px;
+}
+p { max-width: 62ch; }
+.small { font-size: .875rem; line-height: 1.45; }
+.fine { font-size: .8125rem; line-height: 1.45; color: var(--muted); }
+.mark {
+  background: linear-gradient(transparent 60%, var(--accent) 60%);
+  padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.num { font-family: var(--font-head); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* раскладка */
+.container { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: var(--gutter); }
+.sec { padding-block: 48px; scroll-margin-top: var(--anchor); }
+.sec-head { margin-bottom: var(--s6); }
+.sec-surface { background: var(--surface); }
+.sec-bg { background: var(--bg); }
+.sec-tint { background: var(--tint); }
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 20px;
+}
+
+/* кнопки */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 52px; padding: 0 24px; border-radius: var(--r);
+  font: 600 1rem/1.2 var(--font-head); text-decoration: none; text-align: center;
+  border: 2px solid transparent; cursor: pointer;
+  transition: background-color .15s ease-out, transform .15s ease-out, box-shadow .15s ease-out, border-color .15s ease-out, color .15s ease-out;
+}
+.btn-lg { min-height: 56px; }
+.btn-sm { min-height: 44px; padding: 0 16px; }
+.btn-block { width: 100%; }
+.btn-primary { background: var(--accent); color: var(--text); border-color: var(--text); box-shadow: 0 3px 0 var(--text); }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 0 var(--text); }
+.btn-primary:active { background: var(--accent-press); transform: translateY(2px); box-shadow: 0 1px 0 var(--text); }
+.btn-outline { background: var(--surface); color: var(--brand); border-color: var(--brand); }
+.btn-outline:hover { background: var(--tint); color: var(--brand-dark); border-color: var(--brand-dark); }
+.btn-outline:active { background: var(--tint-press); }
+.btn-ghost-dark { background: transparent; color: var(--on-dark); border-color: var(--on-dark); }
+.btn-ghost-dark:hover { background: var(--hover-dark); }
+.btn-ghost-dark:active { background: var(--press-dark); }
+.btn[aria-disabled="true"] {
+  background: var(--disabled-bg); color: var(--disabled-text); border-color: var(--disabled-line);
+  box-shadow: none; transform: none; cursor: not-allowed;
+}
+.btn-ghost-dark[aria-disabled="true"] {
+  background: transparent; color: var(--disabled-dark-text); border-color: var(--line-dark);
+}
+.link-btn {
+  background: none; border: 0; padding: 0 8px; min-height: 44px;
+  color: var(--brand); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px;
+  font-weight: 500;
+}
+.link-btn:hover { color: var(--brand-dark); }
+.link-btn:active { color: var(--text); }
+.on-dark .link-btn { color: var(--on-dark); }
+.on-dark .link-btn:hover { text-decoration-color: var(--accent); color: var(--on-dark); }
+.link-btn[aria-disabled="true"] { color: var(--disabled-dark-text); cursor: not-allowed; text-decoration: none; }
+
+/* плашка-примечание */
+.note {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: var(--note-bg); color: var(--text); font-size: .875rem; line-height: 1.45;
+  padding: 12px 16px; border-radius: var(--r); border-left: 4px solid var(--accent-hover);
+  max-width: none;
+}
+.note .ic { margin-top: 1px; }
+
+/* бейдж и рейтинг */
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--tint); color: var(--brand-dark);
+  font: 500 .875rem/1.3 var(--font-head); padding: 6px 12px; border-radius: var(--r-pill);
+}
+.badge .ic { color: var(--brand); }
+.rating {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--surface); border: 2px solid var(--text); border-radius: var(--r);
+  padding: 8px 16px; min-height: 56px;
+}
+.rating-num { font: 700 1.75rem/1 var(--font-head); }
+.rating-txt { display: flex; flex-direction: column; font-size: .875rem; line-height: 1.25; }
+.rating-txt b { font-weight: 600; }
+.rating-txt span { color: var(--muted); }
+
+/* пузырьки */
+.bubble {
+  display: block; width: var(--d, 24px); aspect-ratio: 1; border: 2px solid var(--brand-bright);
+  border-radius: 50%; background: radial-gradient(circle at 30% 30%, var(--surface) 0 12%, var(--hover-dark) 13% 100%);
+  pointer-events: none;
+}
+
+/* список с каплями */
+.drop-list li { position: relative; padding-left: 20px; }
+.drop-list li + li { margin-top: 8px; }
+.drop-list li::before {
+  content: ""; position: absolute; left: 1px; top: .6em; width: 8px; height: 8px;
+  background: var(--brand-bright); border-radius: 0 50% 50% 50%; transform: rotate(45deg);
+}
+
+/* шапка */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.hdr {
+  display: grid; grid-template-columns: 1fr auto;
+  grid-template-areas: "logo cta" "nav nav";
+  align-items: center; column-gap: 12px;
+}
+.logo {
+  grid-area: logo; display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--text); min-height: 56px;
+}
+.logo-mark { width: 32px; height: 32px; flex: none; }
+.logo-bg { fill: var(--brand); }
+.logo-w { fill: var(--on-dark); }
+.logo-word { font: 700 1.375rem/1.1 var(--font-head); display: block; }
+.logo-sub { font-size: .75rem; line-height: 1.2; color: var(--muted); display: block; }
+.hdr-call { grid-area: cta; }
+.btn-num { display: none; }
+.nav {
+  grid-area: nav; display: flex; gap: 8px; align-items: center;
+  overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none;
+  margin-inline: calc(var(--gutter) * -1); padding: 4px var(--gutter) 8px; min-height: 48px;
+  -webkit-mask-image: linear-gradient(to right, var(--text) 85%, transparent);
+          mask-image: linear-gradient(to right, var(--text) 85%, transparent);
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  flex: none; scroll-snap-align: start; display: inline-flex; align-items: center;
+  min-height: 40px; padding: 0 14px; border-radius: var(--r-pill);
+  background: var(--bg); border: 1px solid var(--line);
+  color: var(--text); text-decoration: none; font: 500 .9375rem/1.2 var(--font-body);
+}
+.nav a[aria-current="true"] { background: var(--brand); border-color: var(--brand); color: var(--on-dark); }
+
+/* hero */
+.hero { background: var(--bg); padding: 16px 0 32px; scroll-margin-top: var(--anchor); }
+.hero-grid { display: flex; flex-direction: column; align-items: flex-start; }
+.hero-main, .hero-art { display: contents; }
+.hero .badge { order: 1; }
+.hero h1 { order: 2; margin-top: 16px; }
+.hero-actions { order: 3; display: flex; flex-direction: column; gap: 12px; width: 100%; margin-top: 24px; }
+.hero .rating { order: 4; margin-top: 16px; width: 100%; }
+.hero .lead { order: 5; margin-top: 24px; font-size: 1rem; }
+.hero-prices { order: 6; display: grid; gap: 12px; width: 100%; margin-top: 24px; }
+.hero-min { order: 7; margin-top: 16px; }
+.hero-svg { order: 8; display: block; width: 100%; height: 200px; margin-top: 24px; border-radius: var(--r); }
+.tag {
+  position: relative; background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 16px 20px 16px 36px;
+  display: grid; grid-template-columns: minmax(96px, auto) 1fr; gap: 12px; align-items: center;
+}
+.tag::before {
+  content: ""; position: absolute; top: 12px; left: 12px; width: 10px; height: 10px;
+  border-radius: 50%; border: 2px solid var(--text); background: var(--bg);
+}
+.tag-num { font: 700 1.75rem/1.2 var(--font-head); white-space: nowrap; }
+.tag-cap { font-size: .875rem; line-height: 1.4; color: var(--muted); }
+
+/* услуги */
+.svc-grid { display: grid; gap: 16px; }
+.svc { display: flex; flex-direction: column; height: 100%; }
+.svc-head { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.tile {
+  width: 44px; height: 44px; flex: none; display: grid; place-items: center;
+  background: var(--tint); color: var(--brand); border-radius: var(--r);
+}
+.svc .drop-list { margin-bottom: 16px; }
+.svc-note { color: var(--muted); font-size: .9375rem; margin-bottom: 16px; }
+.svc .drop-list + .svc-note { margin-top: 0; }
+.svc-price {
+  border-top: 1px solid var(--line); padding-top: 16px; margin-top: auto;
+  font: 600 1.0625rem/1.4 var(--font-head);
+}
+.svc .btn { margin-top: 16px; align-self: flex-start; }
+.svc-calm { background: var(--tint); }
+.process-head { margin-bottom: 32px; }
+
+/* цены */
+.price-grid { display: grid; gap: 16px; }
+.price-grid + .price-grid { margin-top: 16px; }
+.price-card { padding: 0; overflow: hidden; }
+.price-head { padding: 20px 20px 16px; }
+.price-head .note { margin-top: 12px; }
+.ptable { width: 100%; border-collapse: collapse; font-size: .9375rem; }
+.ptable th, .ptable td { padding: 12px; border-top: 1px solid var(--line); height: 48px; vertical-align: middle; }
+.ptable tbody th { text-align: left; font-weight: 500; }
+.ptable td { text-align: right; white-space: nowrap; font: 600 1rem/1.3 var(--font-head); font-variant-numeric: tabular-nums; }
+.ptable thead th {
+  background: var(--tint); font: 600 .8125rem/1.3 var(--font-body); text-align: right; height: auto; border-top: 0;
+}
+.ptable thead th:first-child { text-align: left; }
+.ptable-w tbody th { width: 44%; }
+.big { font: 700 clamp(2.5rem, 2rem + 2.5vw, 4rem)/1 var(--font-head); display: inline-block; margin: 16px 0 8px; }
+.big small { font-size: .4em; font-weight: 700; }
+.price-card-pad { padding: 20px; }
+.price-card-pad hr { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+.price-card-pad h3 + p { margin-top: 8px; }
+.deal-list { margin: 16px 0 24px; display: grid; gap: 8px 24px; }
+
+/* калькулятор */
+.calc-grid { display: grid; gap: 24px; }
+.tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
+.tab {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; text-align: center;
+  min-height: 56px; padding: 8px 6px; border-radius: var(--r);
+  background: var(--surface); color: var(--text); border: 2px solid var(--line);
+  font: 600 .9375rem/1.15 var(--font-head);
+  transition: background-color .15s ease-out, border-color .15s ease-out;
+}
+.tab:hover { background: var(--tint); border-color: var(--brand); }
+.tab:active { background: var(--tint-press); }
+.tab[aria-selected="true"] { background: var(--brand); border-color: var(--brand); color: var(--on-dark); }
+.tab[aria-selected="true"]:active { background: var(--brand-dark); }
+.tab[aria-selected="true"]:focus-visible { outline-color: var(--text); }
+.tab-ic { display: none; }
+.tab-ck { display: none; }
+.tab[aria-selected="true"] .tab-ck { display: block; }
+.calc-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.panel-pad { padding: 16px; }
+.panel-title { padding: 16px 16px 8px; }
+.field-label { font: 600 1rem/1.3 var(--font-head); display: block; }
+.panel-foot { padding: 16px; }
+.rows { border-bottom: 1px solid var(--line); }
+.row {
+  display: grid; align-items: center; column-gap: 16px; row-gap: 2px;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "title title" "meta stepper" "sum stepper" "hint hint";
+  padding: 12px 16px; min-height: 64px; border-top: 1px solid var(--line);
+  transition: background-color .12s ease-out;
+}
+.row:first-child { border-top: 1px solid var(--line); }
+.row.is-active { background: var(--tint); box-shadow: inset 4px 0 0 var(--brand); }
+.row-title { grid-area: title; font-weight: 500; font-size: 1rem; }
+.row-meta { grid-area: meta; font-size: .875rem; color: var(--muted); }
+.row-sum { grid-area: sum; font: 600 1rem/1.3 var(--font-head); font-variant-numeric: tabular-nums; min-height: 1.3em; }
+.row-ctrl { grid-area: stepper; justify-self: end; }
+.row-hint { grid-area: hint; font-size: .8125rem; line-height: 1.45; color: var(--muted); padding-top: 4px; max-width: none; }
+.row.is-active .row-meta, .row.is-active .row-hint { color: var(--brand-dark); }
+.stepper {
+  display: inline-flex; border: 2px solid var(--field); border-radius: var(--r); overflow: hidden; background: var(--surface);
+}
+.stepper:hover { border-color: var(--brand); }
+.stepper:focus-within { border-color: var(--brand); outline: var(--ring); outline-offset: 2px; }
+.stepper-btn {
+  width: 44px; height: 44px; flex: none; display: grid; place-items: center;
+  border: 0; background: var(--surface); color: var(--text); padding: 0;
+  transition: background-color .15s ease-out;
+}
+.stepper-btn:hover { background: var(--tint); }
+.stepper-btn:active { background: var(--tint-press); }
+.stepper-btn[aria-disabled="true"] { background: var(--disabled-bg); color: var(--disabled-text); cursor: not-allowed; }
+.stepper-btn:focus-visible { outline-offset: -3px; }
+.stepper input, .area input {
+  min-width: 0; width: 64px; height: 44px; flex: none; border: 0; text-align: center; background: var(--surface);
+  font: 600 1.125rem/1 var(--font-head); padding: 0; border-radius: 0; color: var(--text);
+}
+.stepper input:focus, .area input:focus { outline: none; }
+.area {
+  display: inline-flex; align-items: center; width: 140px; height: 44px; padding-right: 12px;
+  border: 2px solid var(--field); border-radius: var(--r); background: var(--surface);
+}
+.area:hover { border-color: var(--brand); }
+.area:focus-within { border-color: var(--brand); outline: var(--ring); outline-offset: 2px; }
+.area input { text-align: right; padding-right: 6px; width: 100%; height: 40px; flex: 1 1 auto; }
+.area span { color: var(--muted); font-size: .9375rem; }
+.mode { display: grid; gap: 8px; padding: 8px 16px 0; }
+.pill { position: relative; display: block; }
+.pill input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; width: 100%; height: 100%; }
+.pill span {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 44px; padding: 0 20px; border-radius: var(--r-pill);
+  border: 2px solid var(--field); background: var(--surface); font: 500 1rem/1.2 var(--font-head);
+  transition: background-color .15s ease-out, border-color .15s ease-out;
+}
+.pill span .ic { display: none; }
+.pill:hover span { background: var(--tint); }
+.pill input:active + span { background: var(--tint-press); }
+.pill input:checked + span { background: var(--tint); border-color: var(--brand); color: var(--brand-dark); font-weight: 600; }
+.pill input:checked + span .ic { display: block; }
+.pill input:focus-visible + span { outline: var(--ring); outline-offset: 3px; }
+.mode-hint { padding: 8px 16px 12px; }
+.formula { padding: 8px 16px 0; }
+.formula-live { font: 600 1.125rem/1.4 var(--font-head); padding: 4px 16px 16px; font-variant-numeric: tabular-nums; }
+.check-list { padding: 0 16px 16px; display: grid; gap: 8px; }
+.check-list li { display: flex; gap: 10px; align-items: flex-start; font-size: .9375rem; }
+.check-list .ic { color: var(--brand); margin-top: 2px; }
+.check-list p { max-width: none; }
+
+/* результат */
+.result {
+  position: relative; overflow: hidden; background: var(--brand-dark); color: var(--on-dark);
+  border-radius: var(--r); padding: 20px;
+}
+.result .bubble { position: absolute; }
+.result .b1 { --d: 56px; top: 14px; right: 16px; }
+.result .b2 { --d: 28px; top: 62px; right: 62px; }
+.result .b3 { --d: 16px; top: 18px; right: 84px; }
+.result-label { color: var(--on-dark-muted); font-size: .9375rem; padding-right: 80px; max-width: none; }
+.result-value {
+  font: 700 clamp(2.25rem, 1.8rem + 2vw, 3.25rem)/1.1 var(--font-head);
+  margin-top: 8px; font-variant-numeric: tabular-nums;
+}
+.result-value .from { font-size: .5em; font-weight: 600; margin-right: 6px; }
+.result-empty { margin-top: 8px; text-align: center; padding: 8px 0 4px; }
+.result-empty .ic { color: var(--on-dark-muted); display: block; margin: 0 auto 8px; }
+.result-empty p { font-size: 1.125rem; color: var(--on-dark); max-width: none; }
+.result .note { margin-top: 12px; }
+.result-explain { font-size: .8125rem; line-height: 1.45; color: var(--on-dark-muted); margin-top: 12px; max-width: none; }
+.result-actions { display: grid; gap: 12px; margin-top: 20px; }
+.result-reset { text-align: center; margin-top: 8px; }
+.result [hidden] { display: none !important; }
+.result-reset .link-btn { min-width: 44px; }
+.minibar-wrap { position: sticky; bottom: 0; height: 0; z-index: 40; display: none; }
+.js .minibar-wrap { display: block; }
+.minibar {
+  position: absolute; left: 0; right: 0; bottom: 0; min-height: 64px;
+  padding: 8px var(--gutter) calc(8px + env(safe-area-inset-bottom));
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--surface); border-top: 2px solid var(--text);
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .15s ease-out, transform .15s ease-out, visibility .15s;
+}
+.minibar.is-on { opacity: 1; visibility: visible; transform: none; }
+.minibar-label { font-size: .75rem; line-height: 1.2; color: var(--muted); display: block; }
+.minibar-value { font: 700 1.375rem/1.2 var(--font-head); font-variant-numeric: tabular-nums; display: block; }
+
+/* шаги */
+.steps { counter-reset: step; }
+.steps li { position: relative; padding-left: 56px; padding-bottom: 40px; counter-increment: step; }
+.steps li:last-child { padding-bottom: 0; }
+.steps li::before {
+  content: ""; position: absolute; left: 10px; top: 4px; width: 20px; height: 20px;
+  background: var(--accent); border: 2px solid var(--text); border-radius: 50%;
+}
+.steps li::after {
+  content: ""; position: absolute; left: 19px; top: 28px; bottom: 0; width: 2px; background: var(--brand);
+}
+.steps li:last-child::after { display: none; }
+.steps h3 + p { margin-top: 8px; }
+.steps .btn { margin-top: 16px; width: 100%; }
+
+/* почему */
+.why-grid { display: grid; gap: 32px; }
+.why-item { border-top: 1px solid var(--line); padding-top: 24px; }
+.why-head { display: flex; align-items: center; gap: 16px; }
+.why-head .ic { color: var(--brand); }
+.why-item p { margin-top: 12px; }
+.why-panel {
+  margin-top: 40px; background: var(--tint); border-radius: var(--r); padding: 20px;
+  display: flex; flex-direction: column; gap: 16px; align-items: stretch;
+}
+.why-panel .rating { width: 100%; }
+
+/* для кого */
+.aud-grid { display: grid; gap: 16px; }
+.aud { display: flex; flex-direction: column; height: 100%; }
+.aud-head { display: flex; align-items: center; gap: 16px; }
+.aud-ill { width: 72px; height: 72px; flex: none; color: var(--brand); }
+.aud p { margin: 16px 0 24px; }
+.aud .btn { margin-top: auto; width: 100%; }
+.aud-calm { background: var(--tint); }
+.ill-s { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ill-f { fill: var(--tint); }
+.aud-calm .ill-f { fill: var(--surface); }
+
+/* контакты */
+.contact-grid { display: grid; gap: 16px; }
+.contact-card { padding: 20px; }
+.cl-row { padding: 12px 0; border-top: 1px solid var(--line); }
+.cl-row:first-child { border-top: 0; padding-top: 0; }
+.cl-row dt { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: .875rem; color: var(--muted); }
+.cl-row dt .ic { color: var(--brand); }
+.cl-row dd { font: 500 1.125rem/1.35 var(--font-head); margin-top: 4px; }
+.cl-row a { color: var(--text); text-decoration: none; display: flex; align-items: center; min-height: 48px; }
+.cl-row a:hover { color: var(--brand); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.contact-card .rating { margin-top: 20px; }
+.contact-panel {
+  background: var(--tint); border-radius: var(--r); padding: 20px; display: flex; flex-direction: column; gap: 12px;
+  order: -1;
+}
+.contact-ill { position: relative; width: 96px; height: 96px; color: var(--brand); margin-bottom: 8px; }
+.contact-ill .ic { width: 96px; height: 96px; stroke-width: 1.5; }
+.contact-ill .bubble { position: absolute; }
+.contact-ill .b1 { --d: 22px; right: -14px; top: 0; }
+.contact-ill .b2 { --d: 12px; right: -22px; top: 30px; }
+
+/* подвал */
+.footer { background: var(--brand-dark); color: var(--on-dark); padding: 48px 0; }
+.footer a { color: var(--on-dark); }
+.footer a:hover { text-decoration-color: var(--accent); }
+.footer-title { font: 600 1.375rem/1.25 var(--font-head); }
+.footer-grid { display: grid; gap: 32px; }
+.footer address { font-style: normal; margin-top: 16px; display: grid; gap: 4px; }
+.footer address a { display: flex; align-items: center; min-height: 48px; text-underline-offset: 3px; }
+.footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.footer-links a { display: flex; align-items: center; min-height: 48px; text-underline-offset: 3px; }
+.footer-demo {
+  margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line-dark);
+  font-size: .8125rem; line-height: 1.45; color: var(--on-dark-muted); max-width: 70ch;
+}
+
+/* плавающая кнопка */
+.fab {
+  position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom));
+  max-width: 480px; margin-inline: auto; height: 56px; z-index: 50;
+  box-shadow: 0 3px 0 var(--text), 0 8px 24px var(--shadow-soft);
+  transition: opacity .15s ease-out, transform .15s ease-out, visibility .15s, background-color .15s ease-out;
+}
+.fab:hover { box-shadow: 0 4px 0 var(--text), 0 8px 24px var(--shadow-soft); }
+.fab:active { box-shadow: 0 1px 0 var(--text), 0 8px 24px var(--shadow-soft); }
+.fab.is-hidden { opacity: 0; visibility: hidden; transform: translateY(8px); }
+
+/* иллюстрация hero: единственное движение */
+.drops-anim { animation: dropsIn .3s ease-out .7s both; }
+@keyframes dropsIn { from { opacity: 0; } to { opacity: 1; } }
+.s-text { stroke: var(--text); }
+.f-tint { fill: var(--tint); }
+.f-surface { fill: var(--surface); }
+.f-bg { fill: var(--bg); }
+.f-brand-dark { fill: var(--brand-dark); }
+.f-accent { fill: var(--accent); }
+.f-bright { fill: var(--brand-bright); }
+.f-smudge { fill: var(--smudge); }
+.s-bright { stroke: var(--brand-bright); }
+
+/* планшет и выше */
+@media (min-width: 480px) {
+  .tab { font-size: 1rem; padding: 8px 10px; }
+  .tab-ic { display: block; }
+}
+@media (min-width: 768px) {
+  :root { --gutter: 24px; }
+  body { padding-bottom: 0; }
+  .fab { display: none; }
+  .minibar-wrap { display: none !important; }
+  .sec { padding-block: 64px; }
+  .sec-head { margin-bottom: 48px; }
+  .card { padding: 24px; }
+  .svc-grid, .why-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .why-grid { gap: 40px; }
+  .hero { padding: 40px 0 64px; }
+  .hero-actions { flex-direction: row; width: auto; }
+  .hero .rating { width: auto; }
+  .hero-prices { grid-template-columns: repeat(3, 1fr); }
+  .tag { grid-template-columns: 1fr; gap: 6px; }
+  .tag-num { font-size: 2rem; }
+  .mode { grid-template-columns: auto auto; justify-content: start; }
+  .row {
+    grid-template-columns: 1fr auto 96px; column-gap: 16px;
+    grid-template-areas: "title stepper sum" "meta stepper sum" "hint hint hint";
+  }
+  .row-sum { text-align: right; }
+  .row-ctrl { justify-self: auto; }
+  .row.is-active .row-sum { color: var(--text); }
+  .price-head { padding: 24px 24px 16px; }
+  .ptable th, .ptable td { padding: 12px 16px; }
+  .price-card-pad { padding: 24px; }
+  .deal-list { grid-template-columns: 1fr 1fr; }
+  .why-panel { flex-direction: row; justify-content: space-between; align-items: center; padding: 24px 32px; }
+  .why-panel .rating { width: auto; }
+  .aud-ill { width: 96px; height: 96px; }
+  .contact-card { padding: 24px; }
+  .contact-panel { padding: 32px; }
+  .footer { padding: 64px 0; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .steps .btn { width: auto; }
+  .result { padding: 24px; }
+  .btn-block-m { width: auto; }
+}
+@media (max-width: 767px) {
+  .svc .btn, .aud .btn, .hero-actions .btn, .contact-panel .btn, .why-panel .btn, .price-card-pad .btn { width: 100%; }
+  .svc { padding: 20px; }
+  .tab { padding: 8px 6px; }
+  .big { font-size: 2.5rem; }
+}
+@media (min-width: 1024px) {
+  .sec { padding-block: 96px; }
+  .hero { padding-bottom: 64px; }
+  .process-grid { display: grid; grid-template-columns: 4fr 8fr; gap: 24px 48px; align-items: start; }
+  .process-head { position: sticky; top: 104px; margin-bottom: 0; }
+  .price-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .price-grid + .price-grid { margin-top: 24px; }
+  .price-grid-top { align-items: start; }
+  .aud-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .aud-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .aud-ill { width: 96px; height: 96px; }
+  .calc-grid { grid-template-columns: 8fr 4fr; gap: 24px; align-items: start; }
+  .result { position: sticky; top: 96px; }
+  .contact-grid { grid-template-columns: 7fr 5fr; gap: 24px; align-items: start; }
+  .contact-panel { order: 0; }
+  .cl-row { display: grid; grid-template-columns: 160px 1fr; align-items: center; gap: 16px; }
+  .cl-row dd { margin-top: 0; font-size: 1.25rem; }
+  .why-head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .footer-grid { grid-template-columns: 6fr 4fr; gap: 24px; }
+  .footer-links { grid-template-columns: 1fr; }
+  .footer-demo { margin-top: 40px; }
+  .hero-grid { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: 24px; align-items: center; }
+  .hero-main { display: block; grid-column: 1 / 8; grid-row: 1; }
+  .hero-art { display: block; position: relative; grid-column: 8 / 13; grid-row: 1; }
+  .hero .badge, .hero h1, .hero-actions, .hero .lead { order: 0; }
+  .hero h1 { margin-top: 20px; }
+  .hero .lead { margin-top: 20px; font-size: clamp(1.0625rem, 1rem + .3vw, 1.25rem); }
+  .hero-actions { margin-top: 32px; }
+  .hero-actions .btn { font-size: 1.0625rem; }
+  .hero-svg { height: auto; margin-top: 0; width: 100%; border-radius: 0; }
+  .hero .rating { position: absolute; left: -24px; bottom: 8px; margin-top: 0; }
+  .hero-prices { grid-column: 1 / -1; grid-row: 2; margin-top: 48px; gap: 24px; }
+  .hero-min { grid-column: 1 / -1; grid-row: 3; }
+}
+@media (min-width: 1100px) {
+  :root { --anchor: 88px; }
+  .hdr {
+    grid-template-columns: auto 1fr auto; grid-template-areas: "logo nav cta"; height: 72px; column-gap: 24px;
+  }
+  .logo { min-height: 72px; }
+  .logo-mark { width: 36px; height: 36px; }
+  .logo-word { font-size: 1.5rem; }
+  .nav {
+    justify-content: center; overflow: visible; margin: 0; padding: 0; min-height: 0; gap: 0;
+    -webkit-mask-image: none; mask-image: none;
+  }
+  .nav a {
+    background: transparent; border: 0; border-bottom: 3px solid transparent; border-radius: 0;
+    min-height: 44px; padding: 0 10px; font-size: .9375rem;
+  }
+  .nav a:hover { color: var(--brand); border-bottom-color: var(--brand); }
+  .nav a[aria-current="true"] { background: transparent; color: var(--text); font-weight: 600; border-bottom-color: var(--brand); }
+}
+@media (min-width: 1180px) {
+  .btn-num { display: inline; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Перейти к содержимому</a>
+<div class="demo-bar">Демо-редизайн сайта chistograd34.com. Это пример, а не официальный сайт компании.</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+    <symbol id="i-drop-check" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="m9.5 14 2 2 3.5-3.5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M3 12h18"/></symbol>
+    <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"/><path d="M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3z"/><path d="M5 18v2M19 18v2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5L15.5 10"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v5"/><path d="M12 8h.01"/></symbol>
+    <symbol id="i-spray" viewBox="0 0 24 24"><path d="M7 11h8a1 1 0 0 1 1 1v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8a1 1 0 0 1 1-1z"/><path d="M9 11V7h6"/><path d="M15 7V4h3l2 1.5V7z"/><path d="M21 10h.01M21 13h.01"/></symbol>
+    <symbol id="i-carpet" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="1"/><rect x="7" y="9" width="10" height="6"/><path d="M4 9H2M4 12H2M4 15H2M20 9h2M20 12h2M20 15h2"/></symbol>
+    <symbol id="i-mattress" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="3"/><path d="M9 9.5v5M12 9.5v5M15 9.5v5" stroke-dasharray="2 2"/></symbol>
+    <symbol id="i-seat" viewBox="0 0 24 24"><path d="M9 3h4a2 2 0 0 1 2 2v3H7V5a2 2 0 0 1 2-2z"/><path d="M7 8h8l1 8H6z"/><path d="M6 16h14a1 1 0 0 1 1 1v3H6z"/></symbol>
+    <symbol id="i-equip" viewBox="0 0 24 24"><path d="M5 14a5 5 0 0 1 10 0v4H5z"/><path d="M7 21h.01M13 21h.01"/><path d="M15 14h2a3 3 0 0 0 3-3V4"/><path d="M18 4h4"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></symbol>
+    <symbol id="i-visit" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><path d="m8.5 10 2.5 2.5L15.5 8"/></symbol>
+    <symbol id="i-squeegee" viewBox="0 0 24 24"><rect x="8" y="3" width="8" height="5" rx="1"/><path d="M12 8v3"/><path d="M3 11h18v3H3z"/><path d="M6 18v.01M12 20v.01M18 18v.01"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="container hdr">
+    <a class="logo" href="#top">
+      <svg class="logo-mark" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+        <rect class="logo-bg" width="36" height="36" rx="9"/>
+        <path class="logo-w" transform="translate(1.5 2) scale(1.35)" d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>
+        <path class="logo-w" d="M26 22c1.6 1.8 2.6 3.2 2.6 4.3a2.6 2.6 0 0 1-5.2 0c0-1.1 1-2.5 2.6-4.3z"/>
+      </svg>
+      <span>
+        <span class="logo-word">ЧистоГрад</span>
+        <span class="logo-sub">клининг, Волгоград и Волжский</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Разделы страницы">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#calculator">Калькулятор</a>
+      <a href="#process">Как работаем</a>
+      <a href="#why">Почему мы</a>
+      <a href="#audience">Для кого</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn btn-primary btn-sm hdr-call" href="tel:+78442500308" aria-label="Позвонить в ЧистоГрад по номеру +7 (8442) 50-03-08">
+      <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span>Позвонить<span class="btn-num">: <span class="nowrap">+7 (8442) 50-03-08</span></span></span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1. Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-main">
+      <p class="badge">
+        <svg class="ic ic-18" aria-hidden="true"><use href="#i-drop"/></svg>
+        Клининговая компания, Волгоград и Волжский
+      </p>
+      <h1 id="hero-title">Уборка и химчистка для квартир, домов и офисов в Волгограде и Волжском</h1>
+      <p class="lead">Генеральная уборка и уборка после ремонта, химчистка мебели и матрасов на дому, химчистка ковров, мойка окон, витрин и фасадов. Генеральная уборка - 2000&nbsp;руб за рабочий день одного сотрудника, расходные материалы и оборудование включены. Выезд бригадира для оценки сложных работ - бесплатно.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" id="hero-call" href="tel:+78442500308">
+          <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>
+          <span>Позвонить: <span class="nowrap">+7 (8442) 50-03-08</span></span>
+        </a>
+        <a class="btn btn-outline btn-lg" href="#calculator">Рассчитать стоимость</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="rating">
+        <svg class="ic-star" aria-hidden="true"><use href="#i-star"/></svg>
+        <span class="rating-num">5,0</span>
+        <span class="rating-txt"><b>на Яндекс Картах</b><span>68 оценок</span></span>
+      </div>
+      <svg class="hero-svg" viewBox="0 0 480 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Иллюстрация: окно, наполовину вымытое ракелем">
+        <defs>
+          <clipPath id="glassClip"><rect x="52" y="36" width="376" height="296" rx="4"/></clipPath>
+          <clipPath id="cleanClip"><rect id="reveal" x="240" y="-200" width="600" height="800" transform="rotate(22 240 184)"><animate attributeName="x" from="490" to="240" dur="0.9s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.2 0.6 0.3 1"/></rect></clipPath>
+        </defs>
+        <rect x="40" y="24" width="400" height="320" rx="12" class="f-tint s-text" stroke-width="3"/>
+        <g clip-path="url(#glassClip)">
+          <rect x="52" y="36" width="376" height="296" class="f-bg"/>
+          <g class="f-smudge" opacity=".85">
+            <ellipse cx="110" cy="280" rx="52" ry="22" transform="rotate(-18 110 280)"/>
+            <ellipse cx="150" cy="215" rx="40" ry="14" transform="rotate(12 150 215)"/>
+            <ellipse cx="96" cy="160" rx="30" ry="20" transform="rotate(-25 96 160)"/>
+            <ellipse cx="190" cy="110" rx="46" ry="16" transform="rotate(20 190 110)"/>
+            <ellipse cx="120" cy="70" rx="34" ry="12" transform="rotate(-8 120 70)"/>
+            <ellipse cx="215" cy="305" rx="30" ry="12" transform="rotate(10 215 305)"/>
+            <circle cx="160" cy="260" r="4"/><circle cx="76" cy="230" r="3"/><circle cx="205" cy="170" r="3"/><circle cx="140" cy="130" r="2.5"/><circle cx="82" cy="100" r="3"/>
+          </g>
+          <g clip-path="url(#cleanClip)">
+            <rect x="52" y="36" width="376" height="296" class="f-surface"/>
+            <rect x="52" y="36" width="376" height="296" class="f-bright" opacity=".22"/>
+            <polygon class="f-surface" opacity=".7" points="350,36 386,36 266,332 230,332"/>
+            <polygon class="f-surface" opacity=".4" points="400,36 414,36 294,332 280,332"/>
+          </g>
+        </g>
+        <path d="M240 24v320" class="s-text" stroke-width="3" fill="none"/>
+        <rect x="24" y="344" width="432" height="16" rx="8" class="f-brand-dark"/>
+        <g transform="rotate(22 240 184)">
+          <g>
+            <animateTransform attributeName="transform" type="translate" from="250 0" to="0 0" dur="0.9s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.2 0.6 0.3 1"/>
+            <rect x="248" y="170" width="96" height="28" rx="14" class="f-accent s-text" stroke-width="3"/>
+            <rect x="232" y="162" width="16" height="44" rx="4" class="f-brand-dark s-text" stroke-width="2"/>
+            <line x1="240" y1="24" x2="240" y2="344" class="s-text" stroke-width="5" stroke-linecap="round"/>
+          </g>
+        </g>
+        <g class="drops-anim f-bright s-text" stroke-width="1.5">
+          <path transform="translate(168 286) scale(.8)" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>
+          <path transform="translate(146 302) scale(.7)" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>
+          <path transform="translate(184 304) scale(.6)" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>
+        </g>
+        <path transform="translate(372 66) scale(2.2)" d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" class="f-accent s-text" stroke-width=".9" stroke-linejoin="round"/>
+        <g class="s-bright" fill="none" stroke-width="2">
+          <circle cx="452" cy="96" r="16" class="f-surface" fill-opacity=".6" style="fill:var(--surface)"/>
+          <circle cx="462" cy="150" r="9" style="fill:var(--surface)" fill-opacity=".6"/>
+          <circle cx="446" cy="212" r="22" style="fill:var(--surface)" fill-opacity=".6"/>
+          <circle cx="466" cy="280" r="11" style="fill:var(--surface)" fill-opacity=".6"/>
+          <circle cx="452" cy="328" r="14" style="fill:var(--surface)" fill-opacity=".6"/>
+          <g stroke-width="1.5" stroke-linecap="round">
+            <path d="M443.2 95.2A9.6 9.6 0 0 1 451.2 87.2"/>
+            <path d="M457 149.5A5.4 5.4 0 0 1 461.5 145"/>
+            <path d="M433.9 210.9A13.2 13.2 0 0 1 444.9 199.9"/>
+            <path d="M459.9 279.5A6.6 6.6 0 0 1 465.5 273.9"/>
+            <path d="M444.3 327.3A8.4 8.4 0 0 1 451.3 320.3"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <ul class="hero-prices" aria-label="Три факта о ценах">
+      <li class="tag"><span class="tag-num"><span class="mark">100&nbsp;руб</span></span><span class="tag-cap">мойка одной стандартной створки окна (после ремонта - 200&nbsp;руб)</span></li>
+      <li class="tag"><span class="tag-num"><span class="mark">1000&nbsp;руб</span></span><span class="tag-cap">химчистка 2-местного дивана</span></li>
+      <li class="tag"><span class="tag-num"><span class="mark">2000&nbsp;руб</span></span><span class="tag-cap">рабочий день одного сотрудника на генеральной уборке</span></li>
+    </ul>
+    <p class="fine hero-min">Минимальный заказ на химчистку и мойку окон - 1000&nbsp;руб.</p>
+  </div>
+</section>
+
+<!-- 2. Услуги -->
+<section class="sec sec-surface" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="services-title">Что мы делаем</h2>
+      <p class="lead">Четыре направления: уборка, химчистка, окна и фасады, сложные случаи. Работаем в квартирах, домах, коттеджах, офисах и магазинах.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="card svc">
+        <div class="svc-head"><span class="tile"><svg class="ic ic-28" aria-hidden="true"><use href="#i-spray"/></svg></span><h3>Уборка</h3></div>
+        <ul class="drop-list">
+          <li>Генеральная уборка</li>
+          <li>Уборка после ремонта</li>
+          <li>Влажная уборка кухонной техники</li>
+          <li>Мойка радиаторов и труб</li>
+          <li>Уход за твёрдыми напольными покрытиями: линолеум, камень, плитка, паркет</li>
+          <li>Обработка полов защитным воском</li>
+          <li>Промышленный клининг в удобное для вас время</li>
+        </ul>
+        <p class="svc-price">Генеральная уборка - <span class="mark">2000&nbsp;руб</span> за рабочий день одного сотрудника</p>
+        <a class="btn btn-outline" href="#prices">Посмотреть цены на уборку</a>
+      </article>
+      <article class="card svc">
+        <div class="svc-head"><span class="tile"><svg class="ic ic-28" aria-hidden="true"><use href="#i-sofa"/></svg></span><h3>Химчистка</h3></div>
+        <ul class="drop-list">
+          <li>Мягкая мебель: диваны, кресла, стулья, табуреты</li>
+          <li>Матрасы</li>
+          <li>Ковры и ковровые покрытия</li>
+          <li>Салон легкового автомобиля</li>
+        </ul>
+        <p class="svc-note">Мебель и матрасы чистим на дому у заказчика. Перед работой тестируем стойкость красителей обивки.</p>
+        <p class="svc-price">Диван 2-местный - <span class="mark">1000&nbsp;руб</span>, ковры - <span class="mark">100&nbsp;руб/м2</span></p>
+        <a class="btn btn-outline" href="#calculator">Посчитать химчистку</a>
+      </article>
+      <article class="card svc">
+        <div class="svc-head"><span class="tile"><svg class="ic ic-28" aria-hidden="true"><use href="#i-window"/></svg></span><h3>Окна и фасады</h3></div>
+        <ul class="drop-list">
+          <li>Мойка окон в квартирах, домах и офисах</li>
+          <li>Мойка витрин</li>
+          <li>Мойка фасадов, в том числе методом промышленного альпинизма</li>
+        </ul>
+        <p class="svc-note">С мойки окон квартир, витрин и бутиков мы начинали, затем расширили список услуг.</p>
+        <p class="svc-price">Одна стандартная створка - <span class="mark">100&nbsp;руб</span>, витрины - от <span class="mark">20&nbsp;руб/м2</span></p>
+        <a class="btn btn-outline" href="#calculator">Посчитать мойку окон</a>
+      </article>
+      <article class="card svc svc-calm">
+        <div class="svc-head"><span class="tile" style="background:var(--surface)"><svg class="ic ic-28" aria-hidden="true"><use href="#i-shield"/></svg></span><h3>Сложные случаи</h3></div>
+        <ul class="drop-list">
+          <li>Уборка после пожара</li>
+          <li>Уборка после потопа и прорыва канализации</li>
+          <li>Уборка после смерти человека</li>
+          <li>Удаление запахов (озонация)</li>
+        </ul>
+        <p class="svc-note">Бригадир выезжает на оценку бесплатно.</p>
+        <p class="svc-price">Цена по договорённости</p>
+        <a class="btn btn-primary" href="tel:+78442500308"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить и обсудить</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Цены -->
+<section class="sec sec-bg" id="prices" aria-labelledby="prices-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="prices-title">Цены</h2>
+      <p class="lead">Цены с сайта компании. В генеральной уборке расходные материалы, чистящие средства и оборудование включены в цену.</p>
+    </div>
+
+    <div class="price-grid price-grid-top">
+      <div class="card price-card">
+        <div class="price-head">
+          <h3>Химчистка</h3>
+          <p class="note"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Минимальный заказ - 1000&nbsp;руб. Если сумма получается меньше, она пересчитывается до 1000&nbsp;руб.</span></p>
+        </div>
+        <table class="ptable">
+          <caption class="sr-only">Цены на химчистку</caption>
+          <thead class="sr-only"><tr><th scope="col">Позиция</th><th scope="col">Цена</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Табурет</th><td>100&nbsp;руб</td></tr>
+            <tr><th scope="row">Офисный стул или кресло</th><td>200&nbsp;руб</td></tr>
+            <tr><th scope="row">Кресло</th><td>400&nbsp;руб</td></tr>
+            <tr><th scope="row">Диван 2-местный</th><td>1000&nbsp;руб</td></tr>
+            <tr><th scope="row">Диван 3-местный</th><td>1200&nbsp;руб</td></tr>
+            <tr><th scope="row">Диван угловой малый</th><td>1600&nbsp;руб</td></tr>
+            <tr><th scope="row">Диван угловой</th><td>2000&nbsp;руб</td></tr>
+            <tr><th scope="row">Диван угловой нестандартный</th><td>от 2400&nbsp;руб</td></tr>
+            <tr><th scope="row">Матрац детский (со всех сторон)</th><td>1000&nbsp;руб</td></tr>
+            <tr><th scope="row">Матрац 2-местный</th><td>1500&nbsp;руб</td></tr>
+            <tr><th scope="row">Ковры и ковровые покрытия</th><td>100&nbsp;руб/м2</td></tr>
+            <tr><th scope="row">Салон легкового автомобиля</th><td>от 2500&nbsp;руб</td></tr>
+            <tr><th scope="row">Доп. спальное место в диване</th><td>400&nbsp;руб</td></tr>
+            <tr><th scope="row">Подушки</th><td>100&nbsp;руб/шт</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card price-card">
+        <div class="price-head">
+          <h3>Мойка окон</h3>
+          <p class="note"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Минимальный заказ - 1000&nbsp;руб.</span></p>
+        </div>
+        <table class="ptable ptable-w">
+          <caption class="sr-only">Цены на мойку окон</caption>
+          <thead><tr><th scope="col">Позиция</th><th scope="col">Обычные загрязнения</th><th scope="col">После ремонта</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Одна створка стандартная</th><td>100&nbsp;руб</td><td>200&nbsp;руб</td></tr>
+            <tr><th scope="row">Одна створка большая</th><td>150&nbsp;руб</td><td>200&nbsp;руб</td></tr>
+            <tr><th scope="row">Две створки</th><td>200&nbsp;руб</td><td>400&nbsp;руб</td></tr>
+            <tr><th scope="row">Три створки</th><td>300&nbsp;руб</td><td>600&nbsp;руб</td></tr>
+            <tr><th scope="row">Две створки с фрамугой</th><td>300&nbsp;руб</td><td>600&nbsp;руб</td></tr>
+            <tr><th scope="row">Три створки с фрамугой</th><td>400&nbsp;руб</td><td>800&nbsp;руб</td></tr>
+            <tr><th scope="row">Две створки и дверь</th><td>350&nbsp;руб</td><td>700&nbsp;руб</td></tr>
+            <tr><th scope="row">Дверь и окно</th><td>300&nbsp;руб</td><td>600&nbsp;руб</td></tr>
+            <tr><th scope="row">Мойка витрин</th><td colspan="2">от 20&nbsp;руб/м2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="price-grid">
+      <div class="card price-card-pad">
+        <h3>Генеральная уборка</h3>
+        <p class="big"><span class="mark">2000&nbsp;<small>руб</small></span></p>
+        <p>за рабочий день одного сотрудника (не более 9 часов). Расходные материалы, чистящие средства и оборудование включены.</p>
+        <hr>
+        <h3>Уборка после ремонта</h3>
+        <p>Цена оговаривается на месте. Выезд бригадира для оценки - бесплатно.</p>
+      </div>
+      <div class="card price-card-pad" style="display:flex;flex-direction:column">
+        <h3>Цена по договорённости</h3>
+        <ul class="drop-list deal-list">
+          <li>Уборка после пожара</li>
+          <li>Уборка после смерти человека</li>
+          <li>Последствия затоплений</li>
+          <li>Прорыв канализации</li>
+          <li>Озонация</li>
+          <li>Обработка полов воском</li>
+        </ul>
+        <div style="margin-top:auto"><a class="btn btn-primary btn-block-m" href="tel:+78442500308"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить и обсудить стоимость</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Калькулятор -->
+<section class="sec sec-tint" id="calculator" aria-labelledby="calc-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="calc-title">Калькулятор стоимости</h2>
+      <p class="lead">Выберите услугу и укажите количество. Расчёт идёт по ценам из раздела «Цены» с учётом минимального заказа 1000&nbsp;руб.</p>
+    </div>
+    <div class="calc-grid">
+      <div class="calc-main">
+        <div class="tabs" role="tablist" aria-label="Услуга для расчёта">
+          <button type="button" class="tab" role="tab" id="tab-clean" aria-controls="panel-clean" aria-selected="true" data-tab="clean">
+            <svg class="ic tab-ck" aria-hidden="true"><use href="#i-check"/></svg><svg class="ic tab-ic" aria-hidden="true"><use href="#i-sofa"/></svg><span>Химчистка</span>
+          </button>
+          <button type="button" class="tab" role="tab" id="tab-windows" aria-controls="panel-windows" aria-selected="false" tabindex="-1" data-tab="windows">
+            <svg class="ic tab-ck" aria-hidden="true"><use href="#i-check"/></svg><svg class="ic tab-ic" aria-hidden="true"><use href="#i-window"/></svg><span>Мойка окон</span>
+          </button>
+          <button type="button" class="tab" role="tab" id="tab-general" aria-controls="panel-general" aria-selected="false" tabindex="-1" data-tab="general">
+            <svg class="ic tab-ck" aria-hidden="true"><use href="#i-check"/></svg><svg class="ic tab-ic" aria-hidden="true"><use href="#i-spray"/></svg><span>Генеральная уборка</span>
+          </button>
+        </div>
+
+        <div class="calc-card">
+          <div role="tabpanel" id="panel-clean" aria-labelledby="tab-clean">
+            <h3 class="panel-title">Что почистить</h3>
+            <div class="rows" id="rows-clean"></div>
+            <div class="panel-foot"><p class="note"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Минимальный заказ на химчистку - 1000&nbsp;руб.</span></p></div>
+          </div>
+
+          <div role="tabpanel" id="panel-windows" aria-labelledby="tab-windows" hidden>
+            <div class="panel-pad" style="padding-bottom:0"><span class="field-label" id="wmode-label">Состояние окон</span></div>
+            <div class="mode" role="radiogroup" aria-labelledby="wmode-label">
+              <label class="pill"><input type="radio" name="wmode" value="normal" checked><span><svg class="ic ic-18" aria-hidden="true"><use href="#i-check"/></svg>Обычные загрязнения</span></label>
+              <label class="pill"><input type="radio" name="wmode" value="repair"><span><svg class="ic ic-18" aria-hidden="true"><use href="#i-check"/></svg>После ремонта</span></label>
+            </div>
+            <p class="fine mode-hint">Для окон после ремонта цена выше (см. таблицу цен).</p>
+            <div class="rows" id="rows-windows"></div>
+            <div class="panel-foot"><p class="note"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Минимальный заказ на мойку окон - 1000&nbsp;руб.</span></p></div>
+          </div>
+
+          <div role="tabpanel" id="panel-general" aria-labelledby="tab-general" hidden>
+            <h3 class="panel-title">Генеральная уборка</h3>
+            <div class="rows" id="rows-general"></div>
+            <p class="fine formula">Формула: 2000&nbsp;руб x сотрудники x рабочие дни</p>
+            <p class="formula-live" id="gen-formula"></p>
+            <ul class="check-list">
+              <li><svg class="ic ic-18" aria-hidden="true"><use href="#i-check"/></svg><p>Один рабочий день одного сотрудника - не более 9 часов.</p></li>
+              <li><svg class="ic ic-18" aria-hidden="true"><use href="#i-check"/></svg><p>Расходные материалы, чистящие средства и оборудование включены в цену.</p></li>
+              <li><svg class="ic ic-18" aria-hidden="true"><use href="#i-check"/></svg><p>Не знаете, сколько сотрудников и дней нужно? Позвоните: для сложных работ бригадир выезжает на оценку бесплатно.</p></li>
+            </ul>
+          </div>
+        </div>
+        <noscript><p class="note" style="margin-top:16px"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Для калькулятора нужен JavaScript. Цены есть в разделе «Цены» выше.</span></p></noscript>
+      </div>
+
+      <aside class="result on-dark" id="result" aria-label="Результат расчёта">
+        <span class="bubble b1" aria-hidden="true"></span><span class="bubble b2" aria-hidden="true"></span><span class="bubble b3" aria-hidden="true"></span>
+        <p class="result-label">Ориентировочная стоимость</p>
+        <div id="res-live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+        <p class="result-value" id="res-value" hidden></p>
+        <div class="result-empty" id="res-empty">
+          <svg class="ic ic-32" aria-hidden="true"><use href="#i-drop"/></svg>
+          <p>Выберите позиции, чтобы увидеть стоимость.</p>
+        </div>
+        <p class="note" id="res-note" hidden><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Сумма по позициям меньше 1000&nbsp;руб, поэтому применён минимальный заказ - 1000&nbsp;руб.</span></p>
+        <p class="result-explain" id="res-explain" hidden>Итог ориентировочный. Для позиций «от» это минимальная сумма, точную стоимость уточняйте по телефону.</p>
+        <div class="result-actions">
+          <a class="btn btn-primary btn-lg" id="btn-call" href="tel:+78442500308"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить и заказать за эту сумму</a>
+          <a class="btn btn-ghost-dark" id="btn-mail" href="mailto:vlg-034@yandex.ru?subject=%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D1%80%D0%B0%D1%81%D1%87%D1%91%D1%82%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Написать на e-mail</a>
+        </div>
+        <div class="result-reset"><button type="button" class="link-btn" id="btn-reset">Сбросить расчёт</button></div>
+      </aside>
+    </div>
+  </div>
+  <div class="minibar-wrap">
+    <div class="minibar" id="minibar">
+      <div><span class="minibar-label">Ориентировочная стоимость</span><span class="minibar-value" id="mini-value">Выберите позиции</span></div>
+      <a class="btn btn-primary btn-sm" href="tel:+78442500308" aria-label="Позвонить в ЧистоГрад по номеру +7 (8442) 50-03-08"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Как проходит работа -->
+<section class="sec sec-surface" id="process" aria-labelledby="process-title">
+  <div class="container">
+    <div class="process-grid">
+      <div class="sec-head process-head">
+        <h2 id="process-title">Как мы работаем</h2>
+        <p class="lead">С мебелью, окнами, генеральной уборкой и сложными заказами.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Как связаться</h3>
+          <p>Позвоните по одному из трёх номеров или напишите на vlg-034@yandex.ru.</p>
+          <a class="btn btn-primary" href="tel:+78442500308"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>Позвонить: <span class="nowrap">+7 (8442) 50-03-08</span></span></a>
+        </li>
+        <li>
+          <h3>Оценка сложных работ</h3>
+          <p>Если работа сложная (например, уборка после ремонта или после пожара), к вам выезжает бригадир и оценивает объём на месте. Выезд для оценки - бесплатно. Цену по таким работам определяют на месте или по договорённости.</p>
+        </li>
+        <li>
+          <h3>Уборка</h3>
+          <p>Сотрудники, прошедшие специальное обучение, работают профессиональными чистящими средствами и оборудованием: вапоризаторами, роторными машинами, моющими пылесосами. В генеральной уборке материалы и оборудование входят в цену.</p>
+        </li>
+        <li>
+          <h3>Химчистка на дому</h3>
+          <p>Мягкую мебель и матрасы чистим у вас дома, везти ничего не нужно. Перед работой тестируем стойкость красителей обивки. После чистки составы полностью удаляются.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Почему -->
+<section class="sec sec-bg" id="why" aria-labelledby="why-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="why-title">Почему «ЧистоГрад»</h2>
+      <p class="lead">Чем работаем, кто работает и как защищаем вашу мебель.</p>
+    </div>
+    <div class="why-grid">
+      <article class="why-item">
+        <div class="why-head"><svg class="ic ic-40" aria-hidden="true"><use href="#i-equip"/></svg><h3>Профессиональное оборудование</h3></div>
+        <p>Вапоризаторы, роторные машины, моющие пылесосы. Профессиональные чистящие средства. Для генеральной уборки всё это включено в цену 2000&nbsp;руб за рабочий день.</p>
+      </article>
+      <article class="why-item">
+        <div class="why-head"><svg class="ic ic-40" aria-hidden="true"><use href="#i-cap"/></svg><h3>Обученные сотрудники</h3></div>
+        <p>Сотрудники прошли специальное обучение.</p>
+      </article>
+      <article class="why-item">
+        <div class="why-head"><svg class="ic ic-40" aria-hidden="true"><use href="#i-shield"/></svg><h3>Безопасные средства</h3></div>
+        <p>Средства, которыми мы чистим, безопасны для здоровья. Составы после химчистки полностью удаляются.</p>
+      </article>
+      <article class="why-item">
+        <div class="why-head"><svg class="ic ic-40" aria-hidden="true"><use href="#i-drop-check"/></svg><h3>Тест красителей обивки</h3></div>
+        <p>Перед химчисткой проверяем стойкость красителей обивки вашей мебели, и только потом начинаем работу.</p>
+      </article>
+      <article class="why-item">
+        <div class="why-head"><svg class="ic ic-40" aria-hidden="true"><use href="#i-visit"/></svg><h3>Бесплатный выезд на оценку</h3></div>
+        <p>Для сложных работ бригадир приезжает и оценивает объём бесплатно.</p>
+      </article>
+      <article class="why-item">
+        <div class="why-head"><svg class="ic ic-40" aria-hidden="true"><use href="#i-squeegee"/></svg><h3>Опыт с мойки окон</h3></div>
+        <p>Начинали с мытья окон квартир, витрин и бутиков, затем расширили услуги.</p>
+      </article>
+    </div>
+    <div class="why-panel">
+      <div class="rating">
+        <svg class="ic-star" aria-hidden="true"><use href="#i-star"/></svg>
+        <span class="rating-num">5,0</span>
+        <span class="rating-txt"><b>на Яндекс Картах</b><span>68 оценок</span></span>
+      </div>
+      <a class="btn btn-primary btn-lg" href="tel:+78442500308"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>Позвонить: <span class="nowrap">+7 (8442) 50-03-08</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Для кого -->
+<section class="sec sec-surface" id="audience" aria-labelledby="aud-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="aud-title">Для кого мы работаем</h2>
+      <p class="lead">Для жителей Волгограда и Волжского, для бизнеса и для тех, кто оказался в трудной ситуации.</p>
+    </div>
+    <div class="aud-grid">
+      <article class="card aud">
+        <div class="aud-head">
+          <svg class="aud-ill" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <path class="ill-s" d="M10 44 48 14l38 30"/>
+            <path class="ill-s" d="M18 40v42h60V40"/>
+            <rect class="ill-s ill-f" x="26" y="48" width="24" height="18" rx="2"/>
+            <path class="ill-s" d="M38 48v18M26 57h24"/>
+            <path class="ill-s" d="M54 76v-9a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v9z"/>
+            <path class="ill-s" d="M52 72a3 3 0 0 1 6 0M70 72a3 3 0 0 1 6 0"/>
+          </svg>
+          <h3>Частным клиентам</h3>
+        </div>
+        <p>Генеральная уборка, уборка после ремонта, химчистка дивана, ковра и матраса, мойка окон. Работаем в квартирах, домах и коттеджах Волгограда и Волжского.</p>
+        <a class="btn btn-outline" href="#calculator">Посчитать стоимость</a>
+      </article>
+      <article class="card aud">
+        <div class="aud-head">
+          <svg class="aud-ill" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <path class="ill-s ill-f" d="M14 22h68l6 16H8z"/>
+            <path class="ill-s" d="M30 22 26 38M48 22v16M66 22l4 16"/>
+            <path class="ill-s" d="M14 38v44h68V38"/>
+            <rect class="ill-s ill-f" x="20" y="48" width="28" height="22" rx="2"/>
+            <rect class="ill-s ill-f" x="58" y="48" width="18" height="34" rx="2"/>
+            <path class="ill-s" d="M72 66v.01"/>
+          </svg>
+          <h3>Офисам, магазинам, бутикам</h3>
+        </div>
+        <p>Мойка витрин и фасадов, в том числе методом промышленного альпинизма, поддерживающая уборка. Промышленный клининг - в удобное для вас время.</p>
+        <a class="btn btn-primary" href="tel:+78442500308"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить по уборке для бизнеса</a>
+      </article>
+      <article class="card aud aud-calm">
+        <div class="aud-head">
+          <svg class="aud-ill" viewBox="0 0 96 96" aria-hidden="true" focusable="false">
+            <path class="ill-s ill-f" d="M10 52a38 34 0 0 1 76 0z"/>
+            <path class="ill-s" d="M48 18v8M48 52c-8-8-10-22-8-30M48 52c8-8 10-22 8-30M48 52v26a6 6 0 0 1-12 0"/>
+          </svg>
+          <h3>Когда случилась беда</h3>
+        </div>
+        <p>Уборка после пожара, потопа, прорыва канализации, после смерти человека, удаление запахов. Бригадир приедет на оценку бесплатно, цену обсудим по договорённости.</p>
+        <a class="btn btn-primary" href="tel:+78442500308"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить и обсудить спокойно</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Контакты -->
+<section class="sec sec-bg" id="contacts" aria-labelledby="contacts-title">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="contacts-title">Контакты</h2>
+      <p class="lead">Позвоните или напишите на e-mail. Работаем в Волгограде и Волжском.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="card contact-card">
+        <dl>
+          <div class="cl-row"><dt><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Адрес</dt><dd>400005, г. Волгоград, ул. Коммунистическая, д. 64</dd></div>
+          <div class="cl-row"><dt><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Телефоны</dt><dd>
+            <a href="tel:+78442500308">+7 (8442) 50-03-08</a>
+            <a href="tel:+78442980490">+7 (8442) 98-04-90</a>
+            <a href="tel:+79610778528">+7 (961) 077-85-28</a>
+          </dd></div>
+          <div class="cl-row"><dt><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>E-mail</dt><dd><a href="mailto:vlg-034@yandex.ru">vlg-034@yandex.ru</a></dd></div>
+          <div class="cl-row"><dt><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>График работы</dt><dd>до 20:00 (по данным Яндекс Карт)</dd></div>
+        </dl>
+        <div class="rating">
+          <svg class="ic-star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="rating-num">5,0</span>
+          <span class="rating-txt"><b>на Яндекс Картах</b><span>68 оценок</span></span>
+        </div>
+      </div>
+      <div class="contact-panel">
+        <div class="contact-ill" aria-hidden="true">
+          <svg class="ic"><use href="#i-phone"/></svg>
+          <span class="bubble b1"></span><span class="bubble b2"></span>
+        </div>
+        <a class="btn btn-primary btn-lg" href="tel:+78442500308"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>Позвонить: <span class="nowrap">+7 (8442) 50-03-08</span></span></a>
+        <a class="btn btn-outline btn-lg" href="mailto:vlg-034@yandex.ru"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Написать на e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer on-dark">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-title">Клининговая компания «ЧистоГрад»</p>
+        <p>Уборка и химчистка в Волгограде и Волжском</p>
+        <address>
+          <span>400005, г. Волгоград, ул. Коммунистическая, д. 64</span>
+          <a href="tel:+78442500308">+7 (8442) 50-03-08</a>
+          <a href="tel:+78442980490">+7 (8442) 98-04-90</a>
+          <a href="tel:+79610778528">+7 (961) 077-85-28</a>
+          <a href="mailto:vlg-034@yandex.ru">vlg-034@yandex.ru</a>
+          <span>График: до 20:00 (Яндекс Карты)</span>
+        </address>
+      </div>
+      <nav class="footer-links" aria-label="Ссылки в подвале">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#process">Как работаем</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+    <p class="footer-demo">Демонстрационный редизайн. Не является официальным сайтом компании. Факты и цены взяты с сайта chistograd34.com и Яндекс Карт на 15.10.2026.</p>
+  </div>
+</footer>
+
+<a class="btn btn-primary fab is-hidden" id="fab" href="tel:+78442500308" aria-label="Позвонить в ЧистоГрад по номеру +7 (8442) 50-03-08">
+  <svg class="ic ic-22" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить
+</a>
+
+<script>
+/* ===== Ядро калькулятора: чистые функции без DOM (проверяются в node, см. calc-test.js) ===== */
+/* CALC-CORE-START */
+var MIN_ORDER = 1000;
+var GENERAL_DAY = 2000;
+var NBSP = ' ';
+
+var CLEAN_ITEMS = [
+  { id: 'stool',       name: 'Табурет',                           price: 100,  unit: 'шт' },
+  { id: 'office',      name: 'Офисный стул или кресло',           price: 200,  unit: 'шт' },
+  { id: 'armchair',    name: 'Кресло',                            price: 400,  unit: 'шт' },
+  { id: 'sofa2',       name: 'Диван 2-местный',                   price: 1000, unit: 'шт' },
+  { id: 'sofa3',       name: 'Диван 3-местный',                   price: 1200, unit: 'шт' },
+  { id: 'sofaCornerS', name: 'Диван угловой малый',               price: 1600, unit: 'шт' },
+  { id: 'sofaCorner',  name: 'Диван угловой',                     price: 2000, unit: 'шт' },
+  { id: 'sofaCornerN', name: 'Диван угловой нестандартный',       price: 2400, unit: 'шт', from: true,
+    hint: 'Цена «от» - это минимум, итоговая сумма может быть выше.' },
+  { id: 'mattressKid', name: 'Матрац детский (со всех сторон)',   price: 1000, unit: 'шт',
+    hint: 'Чистим со всех сторон.' },
+  { id: 'mattress2',   name: 'Матрац 2-местный',                  price: 1500, unit: 'шт' },
+  { id: 'extraBed',    name: 'Доп. спальное место в диване',      price: 400,  unit: 'шт' },
+  { id: 'pillow',      name: 'Подушки',                           price: 100,  unit: 'шт' },
+  { id: 'carpet',      name: 'Ковры и ковровые покрытия',         price: 100,  unit: 'м2', area: true,
+    hint: 'Введите площадь в квадратных метрах. Цена - 100 руб за 1 м2.' },
+  { id: 'carSalon',    name: 'Салон легкового автомобиля',        price: 2500, unit: 'шт', from: true,
+    hint: 'Цена «от» - это минимум, итоговая сумма может быть выше.' }
+];
+
+var WINDOW_ITEMS = [
+  { id: 'w1',  name: 'Одна створка стандартная', normal: 100, repair: 200, unit: 'шт' },
+  { id: 'w1b', name: 'Одна створка большая',     normal: 150, repair: 200, unit: 'шт' },
+  { id: 'w2',  name: 'Две створки',              normal: 200, repair: 400, unit: 'шт' },
+  { id: 'w3',  name: 'Три створки',              normal: 300, repair: 600, unit: 'шт' },
+  { id: 'w2f', name: 'Две створки с фрамугой',   normal: 300, repair: 600, unit: 'шт' },
+  { id: 'w3f', name: 'Три створки с фрамугой',   normal: 400, repair: 800, unit: 'шт' },
+  { id: 'w2d', name: 'Две створки и дверь',      normal: 350, repair: 700, unit: 'шт' },
+  { id: 'wd',  name: 'Дверь и окно',             normal: 300, repair: 600, unit: 'шт' },
+  { id: 'showcase', name: 'Мойка витрин',        normal: 20,  repair: 20,  unit: 'м2', area: true, from: true,
+    hint: 'Цена «от» - это минимум. Цена за витрины после ремонта на сайте компании не указана, поэтому считаем по одной цене.' }
+];
+
+function toNum(v) {
+  var n = parseFloat(String(v).replace(',', '.'));
+  return isFinite(n) && n > 0 ? n : 0;
+}
+
+function clampInt(v, min, max) {
+  var n = Math.floor(toNum(v));
+  if (n < min) n = min;
+  if (n > max) n = max;
+  return n;
+}
+
+function itemPrice(item, mode) {
+  if (item.normal !== undefined) return mode === 'repair' ? item.repair : item.normal;
+  return item.price;
+}
+
+function formatNum(n) {
+  var s = String(n);
+  if (s.length >= 5) s = s.replace(/\B(?=(\d{3})+(?!\d))/g, NBSP);
+  return s;
+}
+
+function formatRub(n) {
+  return formatNum(n) + NBSP + 'руб';
+}
+
+function computeCalc(tab, S) {
+  var lines = [], raw = 0, hasFrom = false, i, it, q, p, sum, items;
+  if (tab === 'general') {
+    var staff = clampInt(S.general.staff, 1, 99);
+    var days = clampInt(S.general.days, 1, 99);
+    raw = GENERAL_DAY * staff * days;
+    return {
+      tab: tab, empty: false, raw: raw, total: raw, minApplied: false, hasFrom: false,
+      staff: staff, days: days,
+      lines: [{ id: 'general', name: 'Генеральная уборка', qty: staff * days, price: GENERAL_DAY, sum: raw, from: false, unit: 'раб. дн.' }]
+    };
+  }
+  items = tab === 'clean' ? CLEAN_ITEMS : WINDOW_ITEMS;
+  var mode = S.mode === 'repair' ? 'repair' : 'normal';
+  for (i = 0; i < items.length; i++) {
+    it = items[i];
+    q = toNum(S[tab][it.id]);
+    if (it.area) { q = Math.min(q, 9999); } else { q = Math.min(Math.floor(q), 99); }
+    if (q > 0) {
+      p = itemPrice(it, mode);
+      sum = Math.round(p * q);
+      raw += sum;
+      if (it.from) hasFrom = true;
+      lines.push({ id: it.id, name: it.name, qty: q, price: p, sum: sum, from: !!it.from, unit: it.unit });
+    }
+  }
+  var empty = lines.length === 0;
+  var minApplied = !empty && raw < MIN_ORDER;
+  return {
+    tab: tab, empty: empty, raw: raw, hasFrom: hasFrom, minApplied: minApplied,
+    total: empty ? 0 : Math.max(raw, MIN_ORDER), lines: lines
+  };
+}
+
+function resultText(r) {
+  if (r.empty) return '';
+  return (r.hasFrom ? 'от ' : '') + formatRub(r.total);
+}
+
+var MAIL_ADDR = 'vlg-034@yandex.ru';
+var MAIL_SUBJECT = 'Заявка на расчёт стоимости';
+var TAB_TITLES = { clean: 'Химчистка', windows: 'Мойка окон', general: 'Генеральная уборка' };
+
+function buildMailHref(r, S) {
+  var out = [], i, l;
+  out.push('Услуга: ' + TAB_TITLES[r.tab]);
+  if (r.tab === 'windows') out.push('Состояние окон: ' + (S.mode === 'repair' ? 'после ремонта' : 'обычные загрязнения'));
+  out.push('');
+  if (r.tab === 'general') {
+    out.push('Сотрудников: ' + r.staff);
+    out.push('Рабочих дней: ' + r.days);
+    out.push('Расчёт: ' + GENERAL_DAY + ' руб x ' + r.staff + ' x ' + r.days + ' = ' + formatRub(r.total).replace(/ /g, ' '));
+  } else {
+    for (i = 0; i < r.lines.length; i++) {
+      l = r.lines[i];
+      out.push(l.name + ': ' + l.qty + ' x ' + (l.from ? 'от ' : '') + l.price + ' = ' + (l.from ? 'от ' : '') + l.sum + ' руб');
+    }
+  }
+  out.push('');
+  out.push('Итого (ориентировочно): ' + resultText(r).replace(/ /g, ' '));
+  if (r.minApplied) out.push('Применён минимальный заказ - ' + MIN_ORDER + ' руб.');
+  return 'mailto:' + MAIL_ADDR + '?subject=' + encodeURIComponent(MAIL_SUBJECT) + '&body=' + encodeURIComponent(out.join('\n'));
+}
+/* CALC-CORE-END */
+</script>
+<script>
+(function () {
+  'use strict';
+
+  /* отключаем SMIL-анимацию hero при prefers-reduced-motion: сразу конечное состояние */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) {
+    var anims = document.querySelectorAll('animate, animateTransform');
+    for (var a = 0; a < anims.length; a++) anims[a].parentNode.removeChild(anims[a]);
+  }
+
+  /* ---------- состояние ---------- */
+  var S = { clean: {}, windows: {}, mode: 'normal', general: { staff: 1, days: 1 } };
+  var active = 'clean';
+  var refs = { clean: {}, windows: {}, general: {} };
+
+  function el(tag, cls) { var e = document.createElement(tag); if (cls) e.className = cls; return e; }
+  function icon(id, cls) {
+    return '<svg class="ic' + (cls ? ' ' + cls : '') + '" aria-hidden="true"><use href="#' + id + '"/></svg>';
+  }
+
+  /* ---------- построение строк ---------- */
+  function makeStepper(label, min, max, getVal, setVal) {
+    var wrap = el('div', 'stepper');
+    var minus = el('button', 'stepper-btn'); minus.type = 'button';
+    minus.innerHTML = icon('i-minus'); minus.setAttribute('aria-label', label + ', уменьшить');
+    var input = el('input'); input.type = 'text'; input.setAttribute('inputmode', 'numeric'); input.pattern = '[0-9]*';
+    input.setAttribute('aria-label', label + ', количество'); input.autocomplete = 'off'; input.value = String(getVal());
+    var plus = el('button', 'stepper-btn'); plus.type = 'button';
+    plus.innerHTML = icon('i-plus'); plus.setAttribute('aria-label', label + ', увеличить');
+    wrap.appendChild(minus); wrap.appendChild(input); wrap.appendChild(plus);
+
+    function step(d) {
+      var v = Math.max(min, Math.min(max, Math.floor(toNum(getVal())) + d));
+      if (d < 0 && Math.floor(toNum(getVal())) <= min) return;
+      setVal(v); input.value = String(v); update();
+    }
+    minus.addEventListener('click', function () { step(-1); });
+    plus.addEventListener('click', function () { step(1); });
+    input.addEventListener('input', function () {
+      var v = input.value.replace(/\D/g, '').slice(0, 2);
+      if (v !== input.value) input.value = v;
+      setVal(v === '' ? 0 : parseInt(v, 10));
+      update();
+    });
+    input.addEventListener('blur', function () {
+      var n = Math.floor(toNum(getVal()));
+      if (n < min) n = min;
+      setVal(n); input.value = String(n); update();
+    });
+    return { wrap: wrap, input: input, minus: minus, plus: plus, min: min, getVal: getVal };
+  }
+
+  function makeArea(label, getVal, setVal) {
+    var wrap = el('div', 'area');
+    var input = el('input'); input.type = 'text'; input.setAttribute('inputmode', 'decimal');
+    input.setAttribute('aria-label', label + ', площадь, м2'); input.autocomplete = 'off'; input.value = String(getVal());
+    var suffix = el('span'); suffix.textContent = 'м2';
+    wrap.appendChild(input); wrap.appendChild(suffix);
+    input.addEventListener('input', function () {
+      var raw = input.value.replace(/[^0-9.,]/g, '');
+      var m = raw.match(/^(\d{0,4})([.,]?)(\d{0,2})/);
+      var cleaned = m ? m[1] + m[2] + m[3] : '';
+      if (cleaned !== input.value) input.value = cleaned;
+      setVal(toNum(cleaned));
+      update();
+    });
+    input.addEventListener('blur', function () {
+      var n = toNum(input.value);
+      if (n > 9999) n = 9999;
+      setVal(n); input.value = String(n).replace('.', ','); update();
+    });
+    return { wrap: wrap, input: input };
+  }
+
+  function makeRow(tab, item) {
+    var row = el('div', 'row');
+    var title = el('span', 'row-title'); title.textContent = item.name;
+    var meta = el('span', 'row-meta');
+    var sum = el('span', 'row-sum');
+    var ctrl;
+    function getVal() { return S[tab][item.id] || 0; }
+    function setVal(v) { S[tab][item.id] = v; }
+    if (item.area) ctrl = makeArea(item.name, getVal, setVal);
+    else ctrl = makeStepper(item.name, 0, 99, getVal, setVal);
+    ctrl.wrap.classList.add('row-ctrl');
+    row.appendChild(title); row.appendChild(meta); row.appendChild(ctrl.wrap); row.appendChild(sum);
+    if (item.hint) { var h = el('p', 'row-hint'); h.textContent = item.hint; row.appendChild(h); }
+    refs[tab][item.id] = { row: row, meta: meta, sum: sum, ctrl: ctrl, item: item };
+    return row;
+  }
+
+  function priceLabel(item) {
+    var p = itemPrice(item, S.mode);
+    return (item.from ? 'от ' : '') + p + NBSP + 'руб / ' + item.unit;
+  }
+
+  function buildAll() {
+    var box = document.getElementById('rows-clean'), i;
+    for (i = 0; i < CLEAN_ITEMS.length; i++) box.appendChild(makeRow('clean', CLEAN_ITEMS[i]));
+    box = document.getElementById('rows-windows');
+    for (i = 0; i < WINDOW_ITEMS.length; i++) box.appendChild(makeRow('windows', WINDOW_ITEMS[i]));
+
+    box = document.getElementById('rows-general');
+    var defs = [
+      { key: 'staff', label: 'Количество сотрудников' },
+      { key: 'days',  label: 'Количество рабочих дней' }
+    ];
+    defs.forEach(function (d) {
+      var row = el('div', 'row');
+      var title = el('span', 'row-title'); title.textContent = d.label;
+      var st = makeStepper(d.label, 1, 99, function () { return S.general[d.key]; }, function (v) { S.general[d.key] = v; });
+      st.wrap.classList.add('row-ctrl');
+      row.appendChild(title); row.appendChild(st.wrap);
+      row.style.gridTemplateAreas = '"title stepper"';
+      row.style.gridTemplateColumns = '1fr auto';
+      refs.general[d.key] = { row: row, ctrl: st };
+      box.appendChild(row);
+    });
+  }
+
+  /* ---------- отрисовка ---------- */
+  var elValue = document.getElementById('res-value');
+  var elEmpty = document.getElementById('res-empty');
+  var elNote = document.getElementById('res-note');
+  var elExplain = document.getElementById('res-explain');
+  var btnCall = document.getElementById('btn-call');
+  var btnMail = document.getElementById('btn-mail');
+  var btnReset = document.getElementById('btn-reset');
+  var elLive = document.getElementById('res-live');
+  var elMini = document.getElementById('mini-value');
+  var elFormula = document.getElementById('gen-formula');
+
+  function setDisabled(node, on) {
+    if (on) node.setAttribute('aria-disabled', 'true'); else node.removeAttribute('aria-disabled');
+  }
+
+  function refreshRows(tab, r) {
+    var map = {}, i, id, ref, q;
+    for (i = 0; i < r.lines.length; i++) map[r.lines[i].id] = r.lines[i];
+    for (id in refs[tab]) {
+      ref = refs[tab][id];
+      if (tab === 'general') {
+        setDisabled(ref.ctrl.minus, Math.floor(toNum(S.general[id])) <= 1);
+        continue;
+      }
+      var line = map[id];
+      ref.meta.textContent = priceLabel(ref.item);
+      ref.row.classList.toggle('is-active', !!line);
+      ref.sum.textContent = line ? (line.from ? 'от ' : '') + formatRub(line.sum) : '';
+      if (ref.ctrl.minus) setDisabled(ref.ctrl.minus, !(toNum(S[tab][id]) > 0));
+    }
+  }
+
+  var liveTimer = null;
+  function announce(text) {
+    clearTimeout(liveTimer);
+    liveTimer = setTimeout(function () { elLive.textContent = text; }, 300);
+  }
+
+  function update() {
+    var r = computeCalc(active, S);
+    refreshRows('clean', computeCalc('clean', S));
+    refreshRows('windows', computeCalc('windows', S));
+    refreshRows('general', r.tab === 'general' ? r : computeCalc('general', S));
+
+    var g = computeCalc('general', S);
+    elFormula.textContent = GENERAL_DAY + NBSP + 'руб x ' + g.staff + ' x ' + g.days + ' = ' + formatRub(g.total);
+
+    if (r.empty) {
+      elValue.hidden = true; elNote.hidden = true; elExplain.hidden = true; elEmpty.hidden = false;
+      setDisabled(btnCall, true); setDisabled(btnMail, true); btnMail.removeAttribute('href');
+      setDisabled(btnReset, true);
+      elMini.textContent = 'Выберите позиции';
+      announce('Выберите позиции, чтобы увидеть стоимость.');
+    } else {
+      elEmpty.hidden = true; elValue.hidden = false; elExplain.hidden = false;
+      elValue.innerHTML = '';
+      if (r.hasFrom) { var f = el('span', 'from'); f.textContent = 'от'; elValue.appendChild(f); }
+      elValue.appendChild(document.createTextNode(formatRub(r.total)));
+      elNote.hidden = !r.minApplied;
+      setDisabled(btnCall, false); setDisabled(btnMail, false); setDisabled(btnReset, false);
+      btnMail.setAttribute('href', buildMailHref(r, S));
+      elMini.textContent = resultText(r);
+      announce('Ориентировочная стоимость: ' + resultText(r) + '.' + (r.minApplied ? ' Применён минимальный заказ.' : ''));
+    }
+  }
+
+  /* гасим клики по отключённым ссылкам и кнопкам */
+  [btnCall, btnMail, btnReset].forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      if (b.getAttribute('aria-disabled') === 'true') e.preventDefault();
+    });
+  });
+
+  /* ---------- вкладки ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function selectTab(name, focus) {
+    active = name;
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-tab') === name;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById('panel-' + t.getAttribute('data-tab')).hidden = !on;
+      if (on && focus) t.focus();
+    });
+    update();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { selectTab(t.getAttribute('data-tab'), false); });
+    t.addEventListener('keydown', function (e) {
+      var n = -1;
+      if (e.key === 'ArrowRight') n = (i + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') n = 0;
+      else if (e.key === 'End') n = tabs.length - 1;
+      if (n >= 0) { e.preventDefault(); selectTab(tabs[n].getAttribute('data-tab'), true); }
+    });
+  });
+
+  /* переключатель состояния окон */
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="wmode"]'), function (r) {
+    r.addEventListener('change', function () { if (r.checked) { S.mode = r.value; update(); } });
+  });
+
+  /* сброс активной вкладки */
+  btnReset.addEventListener('click', function () {
+    if (btnReset.getAttribute('aria-disabled') === 'true') return;
+    var id, first = null;
+    if (active === 'general') {
+      S.general.staff = 1; S.general.days = 1;
+      refs.general.staff.ctrl.input.value = '1'; refs.general.days.ctrl.input.value = '1';
+      first = refs.general.staff.ctrl.input;
+    } else {
+      S[active] = {};
+      for (id in refs[active]) {
+        refs[active][id].ctrl.input.value = '0';
+        if (!first) first = refs[active][id].ctrl.input;
+      }
+    }
+    update();
+    if (first) first.focus();
+  });
+
+  buildAll();
+  update();
+
+  /* ---------- scrollspy и плавающие элементы ---------- */
+  var nav = document.getElementById('nav');
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  function setCurrent(id) {
+    links.forEach(function (a) {
+      var on = a.getAttribute('href') === '#' + id;
+      if (on) {
+        if (a.getAttribute('aria-current') !== 'true') {
+          a.setAttribute('aria-current', 'true');
+          if (nav.scrollWidth > nav.clientWidth + 2) {
+            nav.scrollTo({ left: Math.max(0, a.offsetLeft - 16), behavior: reduce ? 'auto' : 'smooth' });
+          }
+        }
+      } else a.removeAttribute('aria-current');
+    });
+  }
+
+  var fab = document.getElementById('fab');
+  var minibar = document.getElementById('minibar');
+  var vis = { hero: false, calc: false, result: false };
+  function syncFloat() {
+    fab.classList.toggle('is-hidden', vis.hero || vis.calc);
+    minibar.classList.toggle('is-on', vis.calc && !vis.result);
+  }
+
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) setCurrent(en.target.id); });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    ['services', 'prices', 'calculator', 'process', 'why', 'audience', 'contacts'].forEach(function (id) {
+      var s = document.getElementById(id); if (s) spy.observe(s);
+    });
+    var hero = document.getElementById('hero-call');
+    new IntersectionObserver(function (e) { vis.hero = e[0].isIntersecting; syncFloat(); }).observe(hero);
+    new IntersectionObserver(function (e) { vis.calc = e[0].isIntersecting; syncFloat(); }).observe(document.getElementById('calculator'));
+    new IntersectionObserver(function (e) { vis.result = e[0].isIntersecting; syncFloat(); }).observe(document.getElementById('result'));
+  }
+})();
+</script>
+</body>
+</html>
