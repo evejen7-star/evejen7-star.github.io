@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ТортСоло - десерты и торты на заказ в Волгограде (демо-редизайн)</title>
+<meta name="description" content="Кафе-кондитерская «ТортСоло» в Волгограде: десерты и торты на заказ из натуральных ингредиентов, доставка по городу, кофе с собой. Меню, заявка на торт, телефон +7 (995) 300-68-00. Демонстрационный редизайн.">
+<meta name="theme-color" content="#F7F8F0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Cpath d='M3 12H27C27 17 21 19 15 19C9 19 3 17 3 12Z' fill='%23E0345A' stroke='%232B1824' stroke-width='1.5' stroke-linejoin='round'/%3E%3Crect x='2' y='9' width='26' height='3' rx='1.5' fill='%238FBF5F' stroke='%232B1824' stroke-width='1.5'/%3E%3Cpath d='M3 9C3 3 9 1 15 1C21 1 27 3 27 9Z' fill='%23E0345A' stroke='%232B1824' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+
+  /* поверхности */
+  --bg:         #F7F8F0;
+  --surface:    #FFFFFF;
+  --tint:       #ECF1DD;
+  --pistachio:  #DCE7BF;
+
+  /* текст */
+  --text:       #2B1824;
+  --muted:      #66535E;
+
+  /* действие (малина) */
+  --accent:       #C8143E;
+  --accent-hover: #A30F31;
+  --accent-press: #860C28;
+  --on-accent:    #FFFFFF;
+  --on-accent-2:  #FFEEF1;
+
+  /* служебные */
+  --line:       #DDE3CC;
+  --field:      #8A7380;
+  --note-bg:    #FFF0C2;
+  --note-line:  #E8A30C;
+  --ok:         #2E6B34;
+  --error:      #A30F31;
+  --error-bg:   #FFF0F2;
+  --disabled-bg:   #E6E9DA;
+  --disabled-text: #5F5058;
+
+  /* вкусы: только иллюстрации и значки */
+  --mango:       #FFC02E;
+  --art-panel:   #E3EDC8;
+  --art-sun:     #FFD36B;
+
+  --f-malina:     #E0345A;
+  --f-klubnika:   #F4788E;
+  --f-vishnya:    #A5122F;
+  --f-grapefruit: #FF8F7C;
+  --f-mango:      #FFC02E;
+  --f-orange:     #FF8A1F;
+  --f-marakuya:   #F2711C;
+  --f-lime:       #9FD13B;
+  --f-blueberry:  #4B5DB8;
+  --f-currant:    #45233F;
+  --f-pistachio:  #8FBF5F;
+  --f-pear:       #CFE08A;
+  --f-coffee:     #7A4A2E;
+  --f-caramel:    #D98B2B;
+  --f-chocolate:  #4A2C1E;
+  --f-coconut:    #F4EFE3;
+  --f-vanilla:    #F9E3A3;
+  --f-cream:      #FFF4DC;
+  --f-walnut:     #B08A63;
+  --f-dorblue:    #9DB5C9;
+  --f-earlgrey:   #8C9AA8;
+
+  /* форма */
+  --r-card: 20px;
+  --r-field: 12px;
+  --r-pill: 999px;
+  --ring: 3px solid var(--text);
+
+  /* отступы */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px;
+  --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px;
+
+  /* шрифты */
+  --font-head: "Unbounded", "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --gutter: 16px;
+  --anchor: 112px;
+  --sec-y: 56px;
+  --head-gap: 32px;
+  --pad-card: 20px;
+}
+@media (min-width: 768px) { :root { --gutter: 24px; --sec-y: 64px; --head-gap: 40px; --pad-card: 32px; } }
+@media (min-width: 1024px) { :root { --sec-y: 96px; --head-gap: 48px; } }
+@media (min-width: 1100px) { :root { --anchor: 96px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 clamp(1rem, .95rem + .2vw, 1.0625rem)/1.6 var(--font-body);
+}
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img, svg { max-width: 100%; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }
+.nowrap { white-space: nowrap; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+:focus-visible { outline: var(--ring); outline-offset: 3px; }
+.band :focus-visible { outline: 3px solid #fff; }
+.band .order-card :focus-visible { outline-color: var(--text); }
+main:focus { outline: none; }
+.skip {
+  position: absolute; left: 16px; top: -100px; z-index: 200;
+  background: var(--surface); padding: 12px 16px; border-radius: var(--r-field);
+  border: 2px solid var(--text); font-weight: 600;
+}
+.skip:focus { top: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- иконки и иллюстрации ---------- */
+.ic { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ic-18 { width: 18px; height: 18px; }
+.ic-24 { width: 24px; height: 24px; }
+.ic-32 { width: 32px; height: 32px; }
+.ic-star { fill: var(--mango); stroke: var(--text); stroke-width: 1.5; width: 32px; height: 32px; flex: none; }
+.mk { width: 30px; height: 20px; flex: none; }
+.il { display: block; }
+
+/* внутренности спрайта */
+.o  { stroke: var(--text); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.o2 { stroke: var(--text); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.o15 { stroke: var(--text); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+.nf { fill: none; }
+.fa { fill: var(--a, #E0345A); }
+.fb { fill: var(--b, #F4EFE3); }
+.fc { fill: var(--c, #FFF4DC); }
+.fm { fill: var(--f-malina); }
+.fp { fill: var(--f-pistachio); }
+.fcr { fill: var(--f-cream); }
+.fcoc { fill: var(--f-coconut); }
+.fw { fill: #fff; }
+.fwl { fill: var(--f-walnut); }
+.sh { fill: rgba(43, 24, 36, .14); }
+.bl { stroke: #fff; stroke-width: 3.5; opacity: .7; fill: none; stroke-linecap: round; }
+.dots { fill: #fff; }
+.feet { stroke: var(--text); stroke-width: 2; opacity: .5; fill: none; stroke-linecap: round; }
+.fold { stroke: var(--text); stroke-width: 1.6; fill: none; stroke-linecap: round; }
+.steam { stroke: var(--text); stroke-width: 2; fill: none; stroke-linecap: round; }
+
+/* появление десертов на витрине */
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.dz { animation: rise .4s ease-out both; animation-delay: calc(var(--i, 0) * 90ms); }
+.shelf-m .dz { animation-delay: 0ms; }
+
+/* ---------- типографика ---------- */
+h1, h2 { font-family: var(--font-head); }
+h1 { font-weight: 600; font-size: clamp(1.625rem, 1.1rem + 1.9vw, 2.25rem); line-height: 1.18; letter-spacing: -.015em; text-wrap: balance; }
+h2 { font-weight: 500; font-size: clamp(1.375rem, 1rem + 1.5vw, 2rem); line-height: 1.2; letter-spacing: -.01em; text-wrap: balance; }
+h3 { font-weight: 700; font-size: clamp(1.125rem, 1rem + .4vw, 1.375rem); line-height: 1.3; }
+.lead { font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); line-height: 1.55; max-width: 56ch; }
+.txt { max-width: 62ch; }
+.small { font-size: .9375rem; line-height: 1.5; }
+.note { font-size: .8125rem; line-height: 1.45; color: var(--muted); }
+.muted { color: var(--muted); }
+.price-num { font-family: var(--font-head); font-weight: 500; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tel-link { white-space: nowrap; }
+
+.link {
+  color: var(--text); text-decoration: underline; text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px; text-underline-offset: 4px;
+  display: inline-block; padding-block: 10px; font-weight: 600;
+  transition: color .15s ease-out;
+}
+.link:hover { color: var(--accent-hover); }
+.link:active { color: var(--accent-press); }
+p .link { padding-block: 0; display: inline; font-weight: 600; }
+
+/* ---------- каркас ---------- */
+.wrap { max-width: 1200px; margin-inline: auto; padding-inline: var(--gutter); }
+.sec { padding-block: var(--sec-y); }
+section[id] { scroll-margin-top: var(--anchor); }
+.bg-surface { background: var(--surface); }
+.bg-tint { background: var(--tint); }
+.sec-head { margin-bottom: var(--head-gap); }
+.sec-head h2 + .lead { margin-top: 12px; }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+.g12 { display: grid; gap: 16px; }
+@media (min-width: 768px) { .g12 { gap: 24px; } }
+@media (min-width: 1024px) {
+  .g12 { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .c4 { grid-column: span 4; } .c5 { grid-column: span 5; } .c6 { grid-column: span 6; }
+  .c7 { grid-column: span 7; } .c8 { grid-column: span 8; } .c12 { grid-column: span 12; }
+}
+.card {
+  background: var(--surface); border: 1.5px solid var(--line);
+  border-radius: var(--r-card); padding: var(--pad-card);
+}
+.ph { /* заглушка: данных нет, уточните у кондитера */
+  position: relative; background: var(--tint); border: 2px dashed var(--field);
+  border-radius: var(--r-card); padding: var(--pad-card);
+}
+.ph > * + * { margin-top: 16px; }
+.ph-q {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border: 2px solid var(--text); border-radius: 50%;
+  font: 700 16px/1 var(--font-body); background: var(--surface);
+}
+.btns { display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 768px) { .btns.btns-row { flex-direction: row; flex-wrap: wrap; } }
+.btns .btn { width: 100%; }
+@media (min-width: 768px) { .btns.btns-row .btn { width: auto; } }
+
+/* ---------- кнопки ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 12px 24px;
+  border: 2px solid transparent; border-radius: var(--r-pill);
+  font: 600 1rem/1.2 var(--font-body); text-decoration: none; text-align: center;
+  cursor: pointer;
+  transition: background-color .15s ease-out, border-color .15s ease-out, transform .15s ease-out, color .15s ease-out;
+}
+.btn-lg { min-height: 56px; }
+.btn-sm { min-height: 44px; padding: 10px 20px; }
+.btn .arr { transition: transform .15s ease-out; }
+.btn:hover .arr { transform: translateX(3px); }
+.btn:active { transform: translateY(1px); }
+.btn-p { background: var(--accent); color: var(--on-accent); }
+.btn-p:hover { background: var(--accent-hover); }
+.btn-p:active { background: var(--accent-press); }
+.btn-s { background: var(--surface); color: var(--text); border-color: var(--text); }
+.btn-s:hover { background: var(--tint); }
+.btn-s:active { background: var(--pistachio); }
+.btn[aria-disabled="true"] { background: var(--disabled-bg); color: var(--disabled-text); cursor: not-allowed; transform: none; }
+.btn-s[aria-disabled="true"] { border-color: #C8CAB8; }
+
+/* ---------- плашка демо ---------- */
+.demo-bar { background: var(--note-bg); border-bottom: 1px solid var(--note-line); padding: 8px 0; font-size: .8125rem; line-height: 1.45; }
+
+/* ---------- шапка ---------- */
+.hdr { position: sticky; top: 0; z-index: 100; background: var(--surface); border-bottom: 1px solid var(--line); }
+.hdr-in {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "logo cta" "nav nav";
+  align-items: center; column-gap: 12px;
+}
+.logo { grid-area: logo; display: flex; align-items: center; gap: 8px; min-height: 52px; text-decoration: none; min-width: 0; }
+.logo .mk { width: 30px; height: 20px; --a: var(--f-malina); --b: var(--f-pistachio); }
+.hdr-cta { padding-inline: 16px; }
+.logo-w { font: 600 20px/1 var(--font-head); letter-spacing: -.01em; display: block; }
+.logo-s { font-size: 12px; line-height: 1.2; color: var(--muted); display: block; margin-top: 3px; }
+@media (max-width: 359px) { .logo-s { display: none; } }
+.hdr-cta { grid-area: cta; }
+.hdr-tel { grid-area: tel; display: none; }
+.nav { grid-area: nav; min-width: 0; }
+.nav ul {
+  display: flex; gap: 8px; overflow-x: auto; padding: 0 0 8px; scroll-snap-type: x proximity; scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, #000 88%, transparent); mask-image: linear-gradient(to right, #000 88%, transparent);
+  padding-right: 24px;
+}
+.nav ul::-webkit-scrollbar { display: none; }
+.nav a {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; white-space: nowrap;
+  scroll-snap-align: start;
+  border: 1px solid var(--line); border-radius: var(--r-pill); background: var(--surface);
+  font: 500 .9375rem/1 var(--font-body); text-decoration: none;
+  transition: background-color .15s ease-out, color .15s ease-out;
+}
+.nav a:active { background: var(--pistachio); }
+.nav a[aria-current="true"] { background: var(--text); color: #fff; border-color: var(--text); }
+.hdr-tel { align-items: center; justify-content: center; gap: 8px; min-width: 44px; min-height: 44px; border-radius: var(--r-pill); text-decoration: none; font: 600 15px/1 var(--font-body); white-space: nowrap; transition: color .15s ease-out; }
+.hdr-tel:hover { color: var(--accent-hover); }
+.hdr-tel .tel-t { display: none; }
+
+@media (min-width: 1100px) {
+  .hdr-in { grid-template-columns: auto minmax(0, 1fr) auto auto; grid-template-areas: "logo nav tel cta"; height: 72px; column-gap: 8px; }
+  .logo { min-height: 44px; gap: 10px; }
+  .logo .mk { width: 36px; height: 24px; }
+  .hdr-cta { padding-inline: 20px; }
+  .logo-w { font-size: 22px; }
+  .logo-s { font-size: 12px; }
+  .nav ul { justify-content: center; gap: 0; overflow: visible; padding: 0; -webkit-mask-image: none; mask-image: none; }
+  .nav a {
+    min-height: 44px; padding: 8px 5px; border: 0; border-radius: 0; background: none; font-size: .875rem;
+    border-bottom: 2px solid transparent; box-shadow: none;
+  }
+  .nav a:hover { color: var(--accent-hover); border-bottom-color: currentColor; background: none; }
+  .nav a[aria-current="true"] { background: none; color: var(--text); font-weight: 600; border-bottom: 3px solid var(--accent); }
+  .hdr-tel { display: inline-flex; border: 2px solid var(--line); width: 44px; padding: 0; }
+  .hdr-tel .ic { width: 20px; height: 20px; }
+}
+@media (min-width: 1100px) and (max-width: 1159px) { .logo-s { display: none; } }
+@media (min-width: 1160px) { .nav a { padding-inline: 7px; } }
+@media (min-width: 1240px) {
+  .logo-s { font-size: 12px; }
+  .hdr-in { column-gap: 12px; }
+}
+@media (min-width: 1360px) {
+  .hdr-tel { border: 0; width: auto; padding: 0 8px; }
+  .hdr-tel .tel-t { display: inline; }
+}
+
+/* ---------- hero ---------- */
+.hero { padding-block: 16px 32px; }
+.hero-grid { display: grid; gap: 16px; }
+.shelf-m { border-radius: var(--r-card); overflow: hidden; }
+.shelf-m svg, .shelf-d svg { display: block; width: 100%; height: auto; }
+.shelf-d { display: none; border-radius: 28px; overflow: hidden; }
+.hero-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: .875rem; line-height: 1.4; }
+.eyebrow .mk { --a: var(--f-malina); --b: var(--f-pistachio); }
+.hero-copy .lead-more { display: none; }
+.hero-cta { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+.hero-cta .btn { width: 100%; }
+.rate { margin-top: 8px; }
+.rate-badge {
+  display: inline-flex; align-items: center; gap: 12px; background: var(--surface);
+  border: 2px solid var(--text); border-radius: 16px; padding: 12px 16px; max-width: 100%;
+}
+.rate-num { font: 600 28px/1 var(--font-head); }
+.rate-t { display: flex; flex-direction: column; gap: 2px; font-size: .875rem; line-height: 1.3; }
+.rate-t b { font-weight: 600; }
+.rate-t span { color: var(--muted); }
+.rate .note { margin-top: 8px; }
+.who { display: grid; gap: 8px; margin-top: 8px; }
+.who li { display: flex; align-items: center; gap: 12px; background: var(--tint); border-radius: var(--r-card); padding: 12px 16px; font-weight: 600; line-height: 1.35; }
+.who svg { width: 40px; height: 40px; flex: none; }
+@media (min-width: 768px) {
+  .hero { padding-block: 32px 48px; }
+  .shelf-m { display: none; }
+  .shelf-d { display: block; max-width: 520px; }
+  .hero-copy { order: 1; }
+  .hero-art { order: 2; }
+  .rate { order: 3; }
+  .hero-cta { flex-direction: row; flex-wrap: wrap; width: auto; }
+  .hero-cta .btn { width: auto; }
+  .hero-copy .lead { order: 3; }
+  .hero-copy .lead-more { display: inline; }
+  .hero-cta { order: 4; }
+  .who { order: 5; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+  .eyebrow { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-pill); padding: 8px 16px 8px 12px; font-size: .9375rem; }
+  .who li { padding: 16px 20px; gap: 16px; }
+  .who svg { width: 48px; height: 48px; }
+}
+@media (min-width: 1024px) {
+  .hero { padding-block: 32px 64px; }
+  .hero-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 24px; row-gap: 0;
+    grid-template-areas: "copy art" "copy rate";
+  }
+  .hero-copy { grid-area: copy; padding-right: 24px; }
+  .hero-art { grid-area: art; }
+  .rate { grid-area: rate; margin: -42px 0 0 -24px; position: relative; z-index: 1; padding-bottom: 0; }
+  .shelf-d { max-width: none; }
+  .who { grid-column: 1 / -1; margin-top: 48px; }
+  .hero-copy { gap: 16px; }
+  .hero-cta { margin-top: 12px; }
+}
+@media (min-width: 1024px) and (max-height: 760px) {
+  .hero { padding-block-start: 24px; }
+}
+
+/* ---------- о кондитерской ---------- */
+.motto {
+  font: 500 clamp(1.25rem, 1rem + 1.1vw, 1.75rem)/1.3 var(--font-head);
+  border-left: 5px solid var(--mango); padding-left: 20px; max-width: 28ch;
+}
+@media (min-width: 1024px) { .motto { border-left-width: 6px; } }
+.about-top { display: grid; gap: 24px; align-items: start; }
+.about-top .stack { gap: 24px; }
+@media (min-width: 1024px) { .about-top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; } }
+.tintcard { background: var(--tint); border-radius: var(--r-card); padding: var(--pad-card); }
+.tintcard > * + * { margin-top: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 6px 14px;
+  background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--r-pill);
+  font: 500 .9375rem/1.2 var(--font-body);
+}
+.chip:has(.mk) { padding-left: 10px; }
+.chef { margin-top: 48px; display: grid; gap: 24px; }
+.chef-photo { display: flex; gap: 16px; align-items: flex-start; }
+.arch {
+  width: 112px; height: 128px; flex: none; background: var(--pistachio); border: 2.5px solid var(--text);
+  border-radius: 999px 999px 20px 20px; display: flex; align-items: center; justify-content: center;
+  font: 600 32px/1 var(--font-head);
+}
+.chef-body > * + * { margin-top: 16px; }
+.facts { display: grid; gap: 12px; margin-top: 24px; }
+.facts li { background: var(--tint); border-radius: var(--r-card); padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.fact-big { font: 600 clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem)/1 var(--font-head); }
+.facts li span { font-weight: 600; line-height: 1.35; }
+.amen-wrap { margin-top: 48px; }
+.amen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 20px; }
+.amen li { background: var(--tint); border-radius: var(--r-card); padding: 20px; display: flex; flex-direction: column; gap: 12px; font: 600 .9375rem/1.3 var(--font-body); }
+.amen li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.amen-wrap .btn { margin-top: 24px; width: 100%; }
+@media (min-width: 768px) {
+  .chef { margin-top: 64px; }
+  .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .amen { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .amen li:last-child:nth-child(odd) { grid-column: auto; }
+  .amen-wrap { margin-top: 64px; }
+  .amen-wrap .btn { width: auto; }
+}
+@media (min-width: 1024px) {
+  .chef { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+  .chef-photo { grid-column: span 4; flex-direction: column; gap: 12px; }
+  .arch { width: 280px; height: 320px; font-size: 72px; max-width: 100%; }
+  .chef-body { grid-column: 5 / -1; }
+  .amen { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+/* ---------- меню ---------- */
+.warn {
+  display: flex; gap: 12px; align-items: flex-start; background: var(--note-bg);
+  border-left: 4px solid var(--note-line); border-radius: var(--r-card); padding: 16px 20px; font-size: .9375rem; line-height: 1.5;
+}
+.warn .ic { width: 24px; height: 24px; margin-top: 0; }
+.menu-top { margin-top: 24px; }
+.menu-grid { display: grid; gap: 16px; align-items: start; }
+.menu-card { padding: var(--pad-card); }
+.menu-list-card { padding: 8px 16px; }
+.menu-list-card > * + * { margin-top: 0; }
+.menu-list-card .card-h { padding: 16px 0 8px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.menu-list-card .card-h svg { width: 64px; height: 53px; flex: none; }
+.menu-list > li + li { border-top: 1px solid var(--line); }
+.row {
+  display: grid; grid-template-columns: 8px minmax(0, 1fr) auto; column-gap: 16px; row-gap: 2px;
+  grid-template-areas: "tag name price" "tag comp comp" "tag weight weight";
+  padding: 16px 0; align-items: center;
+}
+.tag { grid-area: tag; align-self: center; width: 8px; height: 44px; border: 1.5px solid var(--text); border-radius: 4px; position: relative; overflow: hidden; }
+.tag::before, .tag::after { content: ""; position: absolute; left: 0; right: 0; }
+.tag::before { top: 0; height: 50%; background: var(--t1); }
+.tag::after { bottom: 0; height: 50%; background: var(--t2); }
+.row .nm { grid-area: name; font-weight: 600; font-size: 1.0625rem; line-height: 1.3; }
+.row .comp { grid-area: comp; font-size: .9375rem; line-height: 1.5; color: var(--muted); }
+.row .wt { grid-area: weight; font-size: .9375rem; color: var(--muted); }
+.row .price { grid-area: price; font-size: 1.0625rem; line-height: 1.2; text-align: right; }
+.ph-card { order: 5; }
+.ph-card h3 { margin-top: 0; }
+.ph-card .ph-ill { width: 120px; height: 127px; }
+.ph-card .btns { margin-top: 20px; }
+.big-card { display: grid; gap: 12px 16px; grid-template-columns: auto minmax(0, 1fr); align-items: center; }
+.big-card .il { width: 72px; height: 60px; }
+.big-card .sub { grid-column: 1 / -1; }
+.big-card .sub > * + * { margin-top: 12px; }
+.big-price { font: 600 clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem)/1 var(--font-head); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.big-price small { font: 500 .4em/1 var(--font-body); font-size: .4em; }
+.big-price .unit { font: 500 .4em/1 var(--font-body); margin-left: 4px; }
+.big-wt { font-size: .9375rem; color: var(--muted); margin-top: 6px; }
+.flavors-t { font-size: .9375rem; font-weight: 600; color: var(--muted); }
+.drink { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.drink .il { width: 56px; height: 47px; }
+.drink h3 { flex: 1 1 auto; }
+.drink-p { font-size: 1.0625rem; }
+.menu-note { margin-top: 24px; max-width: 70ch; }
+@media (min-width: 768px) {
+  .menu-list-card { padding: 8px 32px; }
+  .big-card .il { width: 96px; height: 80px; }
+}
+@media (min-width: 1024px) {
+  .menu-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+  .menu-list-card { grid-column: span 8; }
+  .ph-card { order: 0; grid-column: span 4; position: sticky; top: 112px; }
+  .menu-grid .half { grid-column: span 6; }
+  .menu-grid .full { grid-column: 1 / -1; }
+  .row {
+    grid-template-columns: 8px minmax(0, 1fr) 72px 112px; column-gap: 16px;
+    grid-template-areas: "tag name weight price" "tag comp weight price";
+  }
+  .row .wt { text-align: right; }
+}
+
+/* ---------- заказ (малиновая полоса) ---------- */
+.band { background: var(--accent); color: var(--on-accent); padding-block: var(--sec-y); }
+.band h2 { color: #fff; }
+.band .lead { color: var(--on-accent-2); }
+.order-grid { display: grid; gap: 24px; grid-template-areas: "head" "card" "steps"; align-items: start; }
+.order-head { grid-area: head; }
+.order-head .lead { margin-top: 12px; font-size: 1.0625rem; }
+.order-steps { grid-area: steps; }
+.order-card { grid-area: card; position: relative; background: var(--surface); color: var(--text); border-radius: var(--r-card); padding: var(--pad-card); }
+.order-card .deco { display: none; }
+@media (min-width: 1024px) {
+  .order-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "head card" "steps card"; column-gap: 48px; row-gap: 40px; grid-template-rows: auto 1fr; }
+  .order-head .lead { font-size: 1.125rem; }
+  .order-card .deco { display: block; position: absolute; top: -34px; right: 24px; width: 64px; height: 53px; }
+}
+.steps-h { font: 700 1.125rem/1.3 var(--font-body); color: #fff; margin-bottom: 20px; }
+.steps { counter-reset: s; }
+.steps li { position: relative; padding-left: 56px; padding-bottom: 24px; min-height: 40px; font-size: 1rem; line-height: 1.5; color: #fff; display: flex; align-items: center; }
+.steps li:last-child { padding-bottom: 0; }
+.steps li::before {
+  counter-increment: s; content: counter(s);
+  position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; background: #fff; color: var(--accent);
+  font: 600 18px/40px var(--font-head); text-align: center;
+}
+.steps li:not(:last-child)::after { content: ""; position: absolute; left: 19px; top: 40px; bottom: 0; border-left: 2px solid rgba(255, 255, 255, .55); }
+.steps li { align-items: flex-start; padding-top: 8px; }
+.steps li:not(:last-child) { min-height: 64px; }
+
+.form-grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+.fld { min-width: 0; }
+.field { min-width: 0; }
+@media (min-width: 768px) { .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .form-grid .wide { grid-column: 1 / -1; } }
+.fld { display: flex; flex-direction: column; }
+.fld label { display: flex; justify-content: space-between; gap: 12px; font: 600 .9375rem/1.3 var(--font-body); margin-bottom: 8px; }
+.fld .opt { font-weight: 400; color: var(--muted); }
+.field {
+  width: 100%; min-height: 52px; padding: 0 16px; background: var(--surface); color: var(--text);
+  border: 2px solid var(--field); border-radius: var(--r-field); font: 400 1.0625rem/1.4 var(--font-body);
+  transition: border-color .15s ease-out, background-color .15s ease-out;
+}
+textarea.field { padding: 14px 16px; min-height: 112px; resize: vertical; display: block; }
+.field::placeholder { color: var(--muted); opacity: 1; }
+.field:hover { border-color: var(--text); }
+.field:focus { border-color: var(--text); outline: 3px solid var(--text); outline-offset: 2px; }
+select.field { appearance: none; -webkit-appearance: none; padding-right: 44px; cursor: pointer; }
+.sel { position: relative; }
+.sel .ic { position: absolute; right: 14px; top: 16px; pointer-events: none; }
+input[type="date"].field { padding-right: 12px; }
+.hint { font-size: .875rem; line-height: 1.4; color: var(--muted); margin-top: 6px; }
+.err { display: flex; gap: 6px; align-items: flex-start; margin-top: 6px; font: 600 .875rem/1.35 var(--font-body); color: var(--error); animation: fadein .15s ease-out; }
+.err[hidden] { display: none; }
+.err .ic { margin-top: 0; }
+.fld.has-err .field { border-color: var(--error); background: var(--error-bg); }
+@keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+.msg-box { min-height: 24px; margin-top: 20px; }
+.msg {
+  display: flex; gap: 10px; align-items: flex-start; padding: 12px 16px; border-radius: 12px; font-size: .9375rem; line-height: 1.45;
+  animation: fadein .15s ease-out;
+}
+.msg .ic { margin-top: 1px; }
+.msg.is-err { background: var(--error-bg); border-left: 4px solid var(--error); }
+.msg.is-err .ic { color: var(--error); }
+.msg.is-ok { background: var(--tint); border-left: 4px solid var(--ok); }
+.msg.is-ok .ic { color: var(--ok); }
+.form-btns { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.form-btns .btn { width: 100%; }
+.form-tail { margin-top: 8px; }
+.fallback { margin-top: 12px; }
+.fallback[hidden] { display: none; }
+.fallback textarea { width: 100%; min-height: 150px; padding: 12px; border: 2px solid var(--field); border-radius: var(--r-field); font: 400 1rem/1.5 var(--font-body); background: var(--surface); }
+
+/* ---------- заглушка набора, доставка ---------- */
+.gift-grid, .deliv-grid { display: grid; gap: 24px; align-items: start; }
+.quote {
+  font: 500 clamp(1.25rem, 1rem + 1vw, 1.375rem)/1.35 var(--font-head);
+  border-left: 5px solid var(--mango); padding-left: 20px; margin-block: 16px 20px;
+}
+.gift-grid .stack, .deliv-grid .stack { gap: 20px; }
+.ph .il.gift { width: 160px; height: 120px; }
+@media (min-width: 768px) { .ph .il.gift { width: 220px; height: 165px; } }
+.pickup { display: flex; flex-direction: column; gap: 12px; }
+.pickup .il { width: 72px; height: 72px; }
+.pickup-addr { font: 500 clamp(1.125rem, 1rem + .8vw, 1.5rem)/1.3 var(--font-head); }
+@media (min-width: 1024px) {
+  .gift-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+  .deliv-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 48px; }
+}
+
+/* ---------- вопросы ---------- */
+.faq { display: grid; gap: 0 48px; }
+@media (min-width: 1024px) { .faq { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; } }
+.faq details { border-top: 1px solid var(--line); padding: 4px 0; }
+.faq details:first-child { border-top: 0; }
+.faq > div + div details:first-child { border-top: 1px solid var(--line); }
+@media (min-width: 1024px) { .faq > div + div details:first-child { border-top: 0; } }
+.faq summary {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; list-style: none; cursor: pointer;
+  min-height: 44px; padding: 14px 0; font: 700 1.125rem/1.3 var(--font-body);
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .ic { margin-top: 2px; transition: transform .15s ease-out; }
+.faq details[open] summary .ic { transform: rotate(180deg); }
+.faq summary:hover { color: var(--accent-hover); }
+.faq .ans { padding: 0 36px 18px 0; }
+.faq-btns { margin-top: 32px; }
+
+/* ---------- контакты ---------- */
+.contacts-grid { display: grid; gap: 16px; align-items: start; }
+.cpanel { background: var(--tint); border-radius: var(--r-card); padding: var(--pad-card); display: flex; flex-direction: column; gap: 12px; order: -1; }
+.cpanel .il { width: 96px; height: 80px; margin-bottom: 4px; }
+.cpanel .btn { width: 100%; }
+.dl { display: flex; flex-direction: column; }
+.dl-row { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); }
+.dl-row:first-child { border-top: 0; padding-top: 0; }
+.dl-row:last-child { padding-bottom: 0; }
+.dl-row .ic { margin-top: 2px; }
+.dl dt { font-size: .875rem; color: var(--muted); line-height: 1.4; }
+.dl dd { margin-top: 2px; }
+.dl-val { font: 500 clamp(1.125rem, 1rem + .8vw, 1.5rem)/1.3 var(--font-head); }
+.dl a.dl-val { display: inline-block; min-height: 48px; padding-block: 6px; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 5px; transition: color .15s ease-out; }
+.dl a.dl-val:hover { color: var(--accent-hover); }
+.dl .note { margin-top: 4px; }
+.dl .rate { margin-top: 8px; }
+@media (min-width: 1024px) {
+  .contacts-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px; }
+  .cpanel { order: 0; }
+  .cpanel .btn { min-height: 56px; }
+}
+
+/* ---------- подвал ---------- */
+.foot { background: var(--pistachio); border-top: 2px solid var(--text); padding-block: 48px calc(88px + env(safe-area-inset-bottom)); }
+.foot-grid { display: grid; gap: 24px; }
+.foot-name { font: 500 20px/1.3 var(--font-head); }
+.foot-info { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.foot-info p { line-height: 1.5; }
+.foot-tel { display: inline-flex; align-items: center; min-height: 48px; font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.foot-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; }
+.foot-links a { display: flex; align-items: center; min-height: 44px; text-decoration: none; font-weight: 500; }
+.foot-links a:hover { text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.foot-demo { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(43, 24, 36, .25); font-size: .8125rem; line-height: 1.5; max-width: 70ch; }
+@media (min-width: 768px) { .foot { padding-block: 64px; } .foot-demo { margin-top: 40px; } }
+.foot-demo { padding-bottom: 0; }
+@media (min-width: 1024px) {
+  .foot-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+  .foot-main { grid-column: span 6; }
+  .foot-links { grid-column: 8 / -1; grid-template-columns: 1fr; align-content: start; }
+}
+
+/* ---------- плавающая кнопка ---------- */
+.float-call {
+  position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); max-width: 480px; margin-inline: auto;
+  height: 56px; z-index: 50; display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: var(--text); color: #fff; border-radius: var(--r-pill); text-decoration: none; font: 600 1rem/1 var(--font-body);
+  box-shadow: 0 8px 24px rgba(43, 24, 36, .22);
+  transition: opacity .15s ease-out, visibility .15s ease-out, background-color .15s ease-out;
+}
+.float-call .ic { width: 22px; height: 22px; }
+.float-call:hover { background: #4A3541; }
+.float-call:active { background: #1C0F17; }
+.float-call:focus-visible { outline: 3px solid var(--mango); outline-offset: 3px; }
+.float-call.is-hidden { opacity: 0; visibility: hidden; }
+@media (min-width: 768px) { .float-call { display: none; } }
+</style>
+</head>
+<body id="top">
+
+<!-- ====== Спрайт: значок-макаронс, иллюстрации и иконки ====== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="clip-mochi"><path d="M18 72C14 50 34 32 60 32C86 32 106 50 102 72Z"/></clipPath>
+    <clipPath id="clip-glass"><path d="M14 40H86L79 134Q78.5 140 72 140H28Q21.5 140 21 134Z"/></clipPath>
+    <clipPath id="clip-cf"><path d="M16 46H108V92H16Z"/></clipPath>
+    <clipPath id="clip-cs"><path d="M108 46L132 34V80L108 92Z"/></clipPath>
+    <clipPath id="clip-box"><rect x="6" y="6" width="148" height="108" rx="14"/></clipPath>
+    <g id="glaze-low">
+      <rect x="22" y="96" width="116" height="12" rx="6"/>
+      <rect x="32" y="100" width="8" height="18" rx="4"/>
+      <rect x="58" y="100" width="8" height="12" rx="4"/>
+      <rect x="84" y="100" width="8" height="22" rx="4"/>
+      <rect x="110" y="100" width="8" height="14" rx="4"/>
+      <rect x="127" y="100" width="8" height="10" rx="4"/>
+    </g>
+    <g id="glaze-up">
+      <rect x="44" y="54" width="72" height="12" rx="6"/>
+      <rect x="52" y="58" width="8" height="16" rx="4"/>
+      <rect x="76" y="58" width="8" height="22" rx="4"/>
+      <rect x="100" y="58" width="8" height="14" rx="4"/>
+    </g>
+  </defs>
+
+  <!-- значок-макаронс 30x20 -->
+  <symbol id="mk" viewBox="0 0 30 20">
+    <path class="o15 fa" d="M3 12H27C27 17 21 19 15 19C9 19 3 17 3 12Z"/>
+    <rect class="o15 fb" x="2" y="9" width="26" height="3" rx="1.5"/>
+    <path class="o15 fa" d="M3 9C3 3 9 1 15 1C21 1 27 3 27 9Z"/>
+    <circle cx="10" cy="5.5" r="2" style="fill:var(--c,transparent)"/>
+  </symbol>
+
+  <!-- макаронс -->
+  <symbol id="mac" viewBox="0 0 120 100">
+    <path class="o fa" d="M14 66H106C106 83 88 92 60 92C32 92 14 83 14 66Z"/>
+    <rect class="o fb" x="16" y="52" width="88" height="15" rx="7.5"/>
+    <path class="o fa" d="M14 52C14 22 34 10 60 10C86 10 106 22 106 52Z"/>
+    <path class="feet" d="M24 45v6M33 45v6M42 45v6M51 45v6M60 45v6M69 45v6M78 45v6M87 45v6M96 45v6"/>
+    <path class="bl" d="M27 38C28 27 37 20 48 17"/>
+  </symbol>
+
+  <!-- моти в формочке -->
+  <symbol id="mochi" viewBox="0 0 120 100">
+    <ellipse class="sh" cx="60" cy="95" rx="46" ry="4"/>
+    <g class="dots" opacity=".9"><circle cx="14" cy="84" r="1.8"/><circle cx="24" cy="96" r="1.8"/><circle cx="104" cy="82" r="1.8"/><circle cx="96" cy="96" r="1.8"/><circle cx="60" cy="98" r="1.8"/><circle cx="36" cy="100" r="1.8"/></g>
+    <path class="o fa" d="M18 72C14 50 34 32 60 32C86 32 106 50 102 72Z"/>
+    <g clip-path="url(#clip-mochi)">
+      <circle class="o fb" cx="82" cy="48" r="15"/>
+      <g class="dots"><circle cx="76" cy="50" r="2"/><circle cx="86" cy="42" r="2"/><circle cx="88" cy="54" r="2"/></g>
+    </g>
+    <path class="o fw" d="M26 68L33 93H87L94 68Z"/>
+    <path class="fold" d="M42 70L44 91M56 70V91M70 70L68 91M82 70L80 91"/>
+    <path class="bl" d="M30 52C34 44 42 40 50 38"/>
+  </symbol>
+
+  <!-- трайфл -->
+  <symbol id="trifle" viewBox="0 0 100 150">
+    <ellipse class="sh" cx="50" cy="143" rx="36" ry="4"/>
+    <g clip-path="url(#clip-glass)">
+      <rect class="fc" x="0" y="40" width="100" height="100"/>
+      <path class="fa" d="M0 62Q12 56 25 62T50 62T75 62T100 62V72Q88 66 75 72T50 72T25 72T0 72Z"/>
+      <path class="fb" d="M0 96Q12 90 25 96T50 96T75 96T100 96V114H0Z"/>
+      <circle cx="36" cy="103" r="5.5" fill="#7D0C22"/><circle cx="56" cy="101" r="5.5" fill="#7D0C22"/><circle cx="70" cy="105" r="5.5" fill="#7D0C22"/>
+      <circle class="dots" cx="34" cy="101" r="1.5"/><circle class="dots" cx="54" cy="99" r="1.5"/><circle class="dots" cx="68" cy="103" r="1.5"/>
+      <path class="fa" d="M0 118Q12 112 25 118T50 118T75 118T100 118V140H0Z"/>
+    </g>
+    <path class="o nf" d="M14 40H86L79 134Q78.5 140 72 140H28Q21.5 140 21 134Z"/>
+    <path class="bl" d="M24 52L28 128"/>
+    <path class="o fc" d="M20 40C20 24 40 16 50 28C60 14 82 24 80 40Z"/>
+    <path class="o2 nf" d="M50 10C52 4 58 2 62 3"/>
+    <circle class="o2" cx="50" cy="16" r="7" fill="var(--f-vishnya)"/>
+    <rect class="o15 fp" x="32" y="30" width="5" height="3"/><rect class="o15 fp" x="62" y="28" width="5" height="3"/><rect class="o15 fp" x="70" y="34" width="5" height="3"/>
+  </symbol>
+
+  <!-- разрез торта -->
+  <symbol id="slice" viewBox="0 0 150 120">
+    <ellipse class="o fw" cx="72" cy="104" rx="64" ry="9"/>
+    <g clip-path="url(#clip-cf)">
+      <rect class="fa" x="16" y="46" width="92" height="46"/>
+      <path class="fcr" d="M16 58Q30 54 46 58T78 58T108 58V66Q94 70 78 66T46 66T16 66Z"/>
+      <path class="fcr" d="M16 76Q30 72 46 76T78 76T108 76V84Q94 88 78 84T46 84T16 84Z"/>
+      <circle class="fwl" cx="24" cy="51" r="1.5"/><circle class="fwl" cx="40" cy="53" r="1.5"/><circle class="fwl" cx="58" cy="50" r="1.5"/><circle class="fwl" cx="76" cy="53" r="1.5"/><circle class="fwl" cx="94" cy="51" r="1.5"/>
+    </g>
+    <path class="o nf" d="M16 46H108V92H16Z"/>
+    <g clip-path="url(#clip-cs)">
+      <rect class="fa" x="108" y="34" width="24" height="58"/>
+      <path class="fcr" d="M108 58L132 46V54L108 66Z"/>
+      <path class="fcr" d="M108 76L132 64V72L108 84Z"/>
+      <rect x="108" y="30" width="24" height="64" fill="rgba(43,24,36,.16)"/>
+    </g>
+    <path class="o nf" d="M108 46L132 34V80L108 92Z"/>
+    <path class="o fcr" d="M16 46L40 34H132L108 46Z"/>
+    <path class="o2 fp" d="M110 40C112 33 120 31 124 33C122 40 116 43 110 40Z"/>
+    <path class="o15 nf" d="M110 40L120 35"/>
+    <g><circle class="o2 fm" cx="60" cy="40" r="6"/><circle class="o2 fm" cx="80" cy="38" r="6"/><circle class="o2 fm" cx="98" cy="41" r="6"/>
+    <g class="dots"><circle cx="58" cy="39" r="1.2"/><circle cx="62" cy="41" r="1.2"/><circle cx="60" cy="37" r="1.2"/><circle cx="78" cy="37" r="1.2"/><circle cx="82" cy="39" r="1.2"/><circle cx="80" cy="35" r="1.2"/><circle cx="96" cy="40" r="1.2"/><circle cx="100" cy="42" r="1.2"/><circle cx="98" cy="38" r="1.2"/></g></g>
+    <path class="bl" d="M24 54V84"/>
+  </symbol>
+
+  <!-- торт целиком -->
+  <symbol id="cake" viewBox="0 0 160 170">
+    <ellipse class="o fw" cx="80" cy="152" rx="64" ry="10"/>
+    <path class="o fw" d="M70 158H90L94 168H66Z"/>
+    <rect class="o fcr" x="22" y="96" width="116" height="52" rx="10"/>
+    <use href="#glaze-low" style="fill:var(--f-malina);stroke:var(--text);stroke-width:4;stroke-linejoin:round"/>
+    <use href="#glaze-low" style="fill:var(--f-malina)"/>
+    <g class="o15 fw"><circle cx="30" cy="145" r="3"/><circle cx="44" cy="145" r="3"/><circle cx="58" cy="145" r="3"/><circle cx="72" cy="145" r="3"/><circle cx="86" cy="145" r="3"/><circle cx="100" cy="145" r="3"/><circle cx="114" cy="145" r="3"/><circle cx="128" cy="145" r="3"/></g>
+    <rect class="o fcr" x="44" y="54" width="72" height="44" rx="10"/>
+    <use href="#glaze-up" style="fill:var(--f-malina);stroke:var(--text);stroke-width:4;stroke-linejoin:round"/>
+    <use href="#glaze-up" style="fill:var(--f-malina)"/>
+    <path class="o2 fp" d="M58 54C58 47 64 44 69 46C68 52 64 55 58 54Z"/>
+    <path class="o2 fp" d="M102 54C102 47 96 44 91 46C92 52 96 55 102 54Z"/>
+    <circle class="o2 fm" cx="50" cy="50" r="7"/><circle class="o2 fm" cx="110" cy="50" r="7"/>
+    <g class="dots"><circle cx="48" cy="49" r="1.2"/><circle cx="52" cy="51" r="1.2"/><circle cx="108" cy="49" r="1.2"/><circle cx="112" cy="51" r="1.2"/></g>
+    <use href="#mac" x="53" y="9" width="54" height="45" style="--a:var(--f-pistachio);--b:var(--f-coconut)"/>
+  </symbol>
+
+  <!-- подарочный набор сверху -->
+  <symbol id="gift" viewBox="0 0 160 120">
+    <rect class="o fcoc" x="6" y="6" width="148" height="108" rx="14"/>
+    <g clip-path="url(#clip-box)"><rect x="6" y="100" width="148" height="14" fill="var(--f-malina)"/></g>
+    <path class="o2 nf" d="M6 100H154"/>
+    <rect class="o2" x="16" y="16" width="128" height="84" rx="8" fill="var(--tint)"/>
+    <g>
+      <circle class="o2 fw" cx="42" cy="42" r="17"/><circle class="o2 fw" cx="80" cy="42" r="17"/><circle class="o2 fw" cx="118" cy="42" r="17"/>
+      <circle class="o2 fw" cx="42" cy="78" r="17"/><circle class="o2 fw" cx="80" cy="78" r="17"/><circle class="o2 fw" cx="118" cy="78" r="17"/>
+      <circle class="o2" cx="42" cy="42" r="14" style="fill:var(--f-malina)"/><circle cx="42" cy="42" r="9" fill="rgba(43,24,36,.14)"/>
+      <circle class="o2" cx="80" cy="42" r="14" style="fill:var(--f-coconut)"/><g class="dots"><circle cx="75" cy="40" r="1.8"/><circle cx="84" cy="37" r="1.8"/><circle cx="83" cy="46" r="1.8"/><circle cx="76" cy="47" r="1.8"/></g>
+      <circle class="o2" cx="118" cy="42" r="14" style="fill:var(--f-mango)"/><circle cx="118" cy="42" r="9" fill="rgba(43,24,36,.14)"/>
+      <circle class="o2" cx="42" cy="78" r="14" style="fill:var(--f-coconut)"/><g class="dots"><circle cx="37" cy="76" r="1.8"/><circle cx="46" cy="73" r="1.8"/><circle cx="45" cy="82" r="1.8"/><circle cx="38" cy="83" r="1.8"/></g>
+      <circle class="o2" cx="80" cy="78" r="14" style="fill:var(--f-pistachio)"/><circle cx="80" cy="78" r="9" fill="rgba(43,24,36,.14)"/>
+      <circle class="o2" cx="118" cy="78" r="14" style="fill:var(--f-coconut)"/><g class="dots"><circle cx="113" cy="76" r="1.8"/><circle cx="122" cy="73" r="1.8"/><circle cx="121" cy="82" r="1.8"/><circle cx="114" cy="83" r="1.8"/></g>
+    </g>
+  </symbol>
+
+  <!-- коробка с ручкой -->
+  <symbol id="bag" viewBox="0 0 100 100">
+    <ellipse class="sh" cx="50" cy="93" rx="32" ry="4"/>
+    <path class="o2 nf" d="M36 38C36 14 64 14 64 38"/>
+    <path class="o fcoc" d="M18 38H82L78 90H22Z"/>
+    <use href="#mk" x="32" y="52" width="36" height="24" style="--a:var(--f-malina);--b:var(--f-pistachio)"/>
+  </symbol>
+
+  <!-- чашка капучино -->
+  <symbol id="cup" viewBox="0 0 120 100">
+    <ellipse class="o fw" cx="56" cy="88" rx="44" ry="7"/>
+    <path class="o2 nf" d="M88 42H98C106 42 106 62 96 62H86"/>
+    <path class="o fw" d="M24 34H88V58C88 76 76 84 56 84C36 84 24 76 24 58Z"/>
+    <ellipse class="o" cx="56" cy="34" rx="32" ry="7" style="fill:var(--f-coffee)"/>
+    <ellipse class="fcr" cx="56" cy="34" rx="22" ry="4"/>
+    <path class="steam" d="M48 22C44 16 52 12 48 6M64 22C60 16 68 12 64 6"/>
+  </symbol>
+
+  <!-- иконки 24x24 -->
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1.2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 8h12l-1.2 12a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8z"/><path d="M5 8V6.5A1.5 1.5 0 0 1 6.5 5h11A1.5 1.5 0 0 1 19 6.5V8"/><path d="M7 13.5h10"/><path d="M10 5V3h4v2"/></symbol>
+  <symbol id="i-delivery" viewBox="0 0 24 24"><path d="M10 8l6-3 6 3v8l-6 3-6-3z"/><path d="M10 8l6 3 6-3M16 11v8"/><path d="M2 10h4M1 14h5M3 18h3"/></symbol>
+  <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="5.5" cy="11" r="2"/><circle cx="9.5" cy="6.5" r="2"/><circle cx="14.5" cy="6.5" r="2"/><circle cx="18.5" cy="11" r="2"/><path d="M12 12c-3 0-5.5 3-5.5 5.5 0 2 1.5 2.5 3 2.2 1-.2 1.7-.5 2.5-.5s1.5.3 2.5.5c1.5.3 3-.2 3-2.2C17.5 15 15 12 12 12z"/></symbol>
+  <symbol id="i-candle" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M4.5 21v-6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v6"/><path d="M4.5 17c2 1.4 3.5 1.4 5.5 0s3.5-1.4 5.5 0 3.5 1.4 4.5 0"/><path d="M12 13V9"/><path d="M12 3c1.2 1.3 1.4 2.6 0 3.6-1.4-1-1.2-2.3 0-3.6z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></symbol>
+</svg>
+
+<a class="skip" href="#main">К содержанию</a>
+
+<!-- 0. Плашка демо -->
+<div class="demo-bar">
+  <div class="wrap">Демо-редизайн сайта tortsolo.ru. Это пример, а не официальный сайт кондитерской.</div>
+</div>
+
+<!-- 1. Шапка -->
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="#top" aria-label="ТортСоло, кафе-кондитерская, Волгоград - в начало страницы">
+      <svg class="mk" aria-hidden="true"><use href="#mk"/></svg>
+      <span><span class="logo-w">ТортСоло</span><span class="logo-s">кафе-кондитерская, Волгоград</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Разделы страницы">
+      <ul>
+        <li><a href="#about">О кондитерской</a></li>
+        <li><a href="#menu">Меню</a></li>
+        <li><a href="#order">Заказ торта</a></li>
+        <li><a href="#gifts">Подарочные наборы</a></li>
+        <li><a href="#delivery">Доставка</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+    <a class="hdr-tel" href="tel:+79953006800" aria-label="Позвонить: +7 (995) 300-68-00">
+      <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span class="tel-t">+7 (995) 300-68-00</span>
+    </a>
+    <a class="btn btn-p btn-sm hdr-cta" href="#order" data-product="cake">Заказать торт</a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<!-- 2. Hero -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-art">
+        <!-- полка для телефона -->
+        <div class="shelf-m">
+          <svg viewBox="0 0 343 120" role="img" aria-label="Иллюстрация: макаронс, разрез медовика, трайфл и моти на полке">
+            <rect width="343" height="120" fill="var(--art-panel)"/>
+            <circle cx="171" cy="70" r="70" fill="var(--art-sun)"/>
+            <path d="M16 106H327" stroke="var(--text)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M24 114H319" stroke="var(--text)" stroke-width="3" stroke-linecap="round" opacity=".25"/>
+            <g class="dz"><use href="#mac" x="24" y="55" width="66" height="55" transform="rotate(-8 57 82)" style="--a:var(--f-malina);--b:var(--f-pistachio)"/></g>
+            <g class="dz"><use href="#slice" x="88" y="23" width="110" height="88" style="--a:var(--f-caramel)"/></g>
+            <g class="dz"><use href="#trifle" x="196" y="5" width="72" height="108" style="--a:var(--f-pistachio);--b:var(--f-vishnya);--c:var(--f-cream)"/></g>
+            <g class="dz"><use href="#mochi" x="268" y="58" width="62" height="52" style="--a:var(--f-coconut);--b:var(--f-malina)"/></g>
+          </svg>
+        </div>
+        <!-- витрина для планшета и десктопа -->
+        <div class="shelf-d">
+          <svg viewBox="0 0 560 460" role="img" aria-label="Иллюстрация: макаронс, разрез медовика, трайфл и моти на полке">
+            <rect width="560" height="460" rx="28" fill="var(--art-panel)"/>
+            <circle cx="300" cy="220" r="140" fill="var(--art-sun)"/>
+            <g fill="#fff"><circle cx="210" cy="130" r="3"/><circle cx="260" cy="96" r="3"/><circle cx="330" cy="104" r="3"/><circle cx="390" cy="140" r="3"/><circle cx="420" cy="200" r="3"/><circle cx="198" cy="190" r="3"/></g>
+            <rect x="16" y="392" width="528" height="20" rx="10" fill="#fff" stroke="var(--text)" stroke-width="3"/>
+            <path d="M40 428H520" stroke="var(--text)" stroke-width="3" stroke-linecap="round" opacity=".25"/>
+            <!-- мята -->
+            <g class="o2 fp"><path d="M84 124C88 108 104 100 112 104C110 118 98 128 84 124Z"/><path d="M488 146C492 130 508 122 516 126C514 140 502 150 488 146Z"/></g>
+            <path class="o15 nf" d="M86 123L108 106M490 145L512 128"/>
+            <g class="dz" style="--i:0">
+              <use href="#mac" x="30" y="292" width="120" height="100" style="--a:var(--f-malina);--b:var(--f-pistachio)"/>
+              <use href="#mac" x="40" y="226" width="120" height="100" transform="rotate(-8 100 276)" style="--a:var(--f-pistachio);--b:var(--f-coconut)"/>
+              <use href="#mac" x="26" y="160" width="120" height="100" transform="rotate(6 86 210)" style="--a:var(--f-mango);--b:var(--f-marakuya)"/>
+            </g>
+            <g class="dz" style="--i:1"><use href="#slice" x="138" y="240" width="200" height="160" style="--a:var(--f-caramel)"/></g>
+            <g class="dz" style="--i:2"><use href="#trifle" x="338" y="210" width="130" height="195" style="--a:var(--f-pistachio);--b:var(--f-vishnya);--c:var(--f-cream)"/></g>
+            <g class="dz" style="--i:3"><use href="#mochi" x="452" y="315" width="100" height="83" style="--a:var(--f-coconut);--b:var(--f-malina)"/></g>
+            <!-- ягоды на полке -->
+            <g class="o2 fm"><circle cx="130" cy="381" r="9"/><circle cx="322" cy="383" r="9"/><circle cx="440" cy="385" r="9"/></g>
+            <g fill="#fff"><circle cx="128" cy="380" r="1.5"/><circle cx="133" cy="383" r="1.5"/><circle cx="131" cy="377" r="1.5"/><circle cx="320" cy="382" r="1.5"/><circle cx="325" cy="385" r="1.5"/><circle cx="323" cy="379" r="1.5"/><circle cx="438" cy="384" r="1.5"/><circle cx="443" cy="387" r="1.5"/><circle cx="441" cy="381" r="1.5"/></g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><svg class="mk" aria-hidden="true"><use href="#mk"/></svg><span>Кафе-кондитерская, Волгоград, ул. Циолковского, 29</span></p>
+        <h1 id="h1">Десерты и торты на заказ в Волгограде - из натуральных ингредиентов, с доставкой по городу</h1>
+        <p class="lead">Кафе-кондитерская «ТортСоло»: меренговый рулет, медовик, трайфлы, моти и макаронс, кофе с собой.<span class="lead-more"> Дизайнерские торты на заказ делает шеф-кондитер Анастасия Коваль, в профессии больше 15 лет.</span></p>
+        <div class="hero-cta" id="hero-cta">
+          <a class="btn btn-p btn-lg" href="#order" data-product="cake">Заказать торт <svg class="ic arr" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-s btn-lg" href="tel:+79953006800"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>Позвонить: <span class="nowrap">+7 (995) 300-68-00</span></span></a>
+        </div>
+      </div>
+
+      <div class="rate">
+        <div class="rate-badge">
+          <svg class="ic ic-star" aria-hidden="true"><use href="#i-star"/></svg>
+          <span class="rate-num">5,0</span>
+          <span class="rate-t"><b>на Яндекс Картах, 262 оценки</b><span>Награда «Хорошее место 2026»</span></span>
+        </div>
+        <p class="note">По данным карточки на Яндекс Картах: 165 отзывов.</p>
+      </div>
+
+      <ul class="who">
+        <li><svg aria-hidden="true"><use href="#cake"/></svg><span>Торт на день рождения, свадьбу или праздник</span></li>
+        <li><svg aria-hidden="true"><use href="#gift"/></svg><span>Подарочный набор десертов для близких</span></li>
+        <li><svg aria-hidden="true"><use href="#cup"/></svg><span>Кофе и десерт с собой, можно с собакой</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 3. О кондитерской -->
+<section class="sec bg-surface" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="about-top">
+      <div class="stack">
+        <div>
+          <h2 id="about-h">О кондитерской «ТортСоло»</h2>
+          <p class="lead" style="margin-top:12px">Кофейня-кондитерская на ул. Циолковского, 29. Торты на заказ, десерты в зале и с собой.</p>
+        </div>
+        <p class="motto">«ТортСоло - когда действительно по любви!»</p>
+      </div>
+      <div class="stack">
+        <p class="txt">Эксклюзивные десерты и торты. Главное для кондитерской: «чтобы ваш торт был исключительно вкусным и, конечно, красивым».</p>
+        <div class="tintcard">
+          <h3>Из чего делаем</h3>
+          <p>В десертах только натуральные ингредиенты.</p>
+          <ul class="chips">
+            <li class="chip">бельгийский шоколад</li>
+            <li class="chip">швейцарский шоколад</li>
+            <li class="chip">настоящие ягоды</li>
+            <li class="chip">натуральные молочные продукты</li>
+            <li class="chip">сливочное масло</li>
+            <li class="chip">сливки</li>
+            <li class="chip">молоко</li>
+            <li class="chip">яйца</li>
+            <li class="chip">миндальная мука</li>
+            <li class="chip">пюре из ягод и фруктов</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="chef">
+      <div class="chef-photo">
+        <div class="arch" role="img" aria-label="Заглушка вместо фото: инициалы АК">АК</div>
+        <p class="note">Фото шеф-кондитера будет заменено после согласования с кондитерской.</p>
+      </div>
+      <div class="chef-body">
+        <h3>Шеф-кондитер Анастасия Коваль</h3>
+        <p class="txt">В профессии больше 15 лет. Готовит по сложным рецептам, делает дизайнерские торты на заказ и десерты мировых столиц в авторском исполнении. Обучает мастеров со всей России.</p>
+        <ul class="facts">
+          <li><span class="fact-big">15+</span><span>лет в профессии</span></li>
+          <li><svg class="ic ic-32" aria-hidden="true"><use href="#i-candle"/></svg><span>Дизайнерские торты на заказ</span></li>
+          <li><svg class="ic ic-32" aria-hidden="true"><use href="#i-globe"/></svg><span>Десерты мировых столиц в авторском исполнении</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="amen-wrap">
+      <h3>Что есть в кафе (по данным карточки на Яндекс Картах)</h3>
+      <ul class="amen">
+        <li><svg class="ic ic-32" aria-hidden="true"><use href="#i-cup"/></svg>Кофе с собой</li>
+        <li><svg class="ic ic-32" aria-hidden="true"><use href="#i-bag"/></svg>Еда навынос</li>
+        <li><svg class="ic ic-32" aria-hidden="true"><use href="#i-delivery"/></svg>Доставка еды</li>
+        <li><svg class="ic ic-32" aria-hidden="true"><use href="#i-paw"/></svg>Можно с собакой</li>
+        <li><svg class="ic ic-32" aria-hidden="true"><use href="#i-tag"/></svg>Цены средние</li>
+      </ul>
+      <a class="btn btn-s" href="#menu">Смотреть меню и цены</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Меню и цены -->
+<section class="sec" id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <h2 id="menu-h">Меню и цены</h2>
+      <p class="lead">Цены и граммовки - по данным карточки на Яндекс Картах.</p>
+      <div class="warn menu-top" role="note">
+        <svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>
+        <p>В карточке цены помечены как давно не обновлявшиеся. Перед заказом уточните актуальную цену по телефону <a class="tel-link link" href="tel:+79953006800">+7 (995) 300-68-00</a>.</p>
+      </div>
+    </div>
+
+    <div class="menu-grid" style="margin-top:24px">
+      <div class="card menu-list-card">
+        <div class="card-h">
+          <h3>Рулет и порционные десерты</h3>
+          <svg class="il" aria-hidden="true"><use href="#slice"/></svg>
+        </div>
+        <ul class="menu-list">
+          <li class="row"><span class="tag" style="--t1:var(--f-malina);--t2:var(--f-vanilla)"></span><span class="nm">Меренговый рулет</span><span class="comp">Крем из маскарпоне и сливочного сыра, ягодная начинка</span><span class="wt">500&nbsp;г</span><span class="price price-num">1000&nbsp;руб</span></li>
+          <li class="row"><span class="tag" style="--t1:var(--f-malina);--t2:var(--f-vanilla)"></span><span class="nm">Меренговый рулет, порция</span><span class="comp">Крем из маскарпоне и сливочного сыра, ягодная начинка</span><span class="wt">120&nbsp;г</span><span class="price price-num">270&nbsp;руб</span></li>
+          <li class="row"><span class="tag" style="--t1:var(--f-caramel);--t2:var(--f-malina)"></span><span class="nm">Медовик с ягодами</span><span class="comp">Карамелизированные медовые коржи, сметанный крем, ягодная начинка</span><span class="wt">120&nbsp;г</span><span class="price price-num">200&nbsp;руб</span></li>
+          <li class="row"><span class="tag" style="--t1:var(--f-vishnya);--t2:var(--f-pistachio)"></span><span class="nm">Трайфл вишня/фисташка</span><span class="comp">Фисташковый бисквит, вишнёвая начинка, крем с маскарпоне</span><span class="wt">150&nbsp;г</span><span class="price price-num">300&nbsp;руб</span></li>
+          <li class="row"><span class="tag" style="--t1:var(--f-chocolate);--t2:var(--f-coconut)"></span><span class="nm">Трайфл шоколад/орео</span><span class="comp">Шоколадный бисквит, крем с маскарпоне, печенье орео</span><span class="wt">150&nbsp;г</span><span class="price price-num">300&nbsp;руб</span></li>
+          <li class="row"><span class="tag" style="--t1:var(--f-vanilla);--t2:var(--f-chocolate)"></span><span class="nm">Птичье молоко</span><span class="comp">Ванильный бисквит, хрустящий слой, суфле</span><span class="wt">100&nbsp;г</span><span class="price price-num">200&nbsp;руб</span></li>
+          <li class="row"><span class="tag" style="--t1:var(--f-walnut);--t2:var(--f-vanilla)"></span><span class="nm">Торт «Киевский»</span><span class="comp">Дакуаз с фундуком и кешью, заварной крем «Шарлотт»</span><span class="wt">120&nbsp;г</span><span class="price price-num">260&nbsp;руб</span></li>
+        </ul>
+      </div>
+
+      <div class="ph ph-card" id="cake-ph">
+        <span class="ph-q" aria-hidden="true">?</span>
+        <svg class="il ph-ill" aria-hidden="true"><use href="#cake"/></svg>
+        <h3>Торты на заказ</h3>
+        <p>Цена по запросу, уточните у кондитера. Цена зависит от того, какой торт вы хотите, поэтому назвать её без заявки нельзя. Опишите торт в форме ниже или позвоните.</p>
+        <div class="btns">
+          <a class="btn btn-p" href="#order" data-product="cake">Заказать торт</a>
+          <a class="btn btn-s" href="tel:+79953006800"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить и уточнить цену</a>
+        </div>
+      </div>
+
+      <div class="card menu-card half big-card">
+        <svg class="il" aria-hidden="true"><use href="#mochi"/></svg>
+        <div>
+          <h3>Моти</h3>
+          <p class="big-price" style="margin-top:8px">160<span class="unit">&nbsp;руб</span></p>
+          <p class="big-wt">40&nbsp;г</p>
+        </div>
+        <div class="sub">
+          <p class="flavors-t">7 вкусов</p>
+          <ul class="chips">
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-malina);--b:var(--f-coconut)"><use href="#mk"/></svg>малина/кокос</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-klubnika);--b:var(--f-vanilla)"><use href="#mk"/></svg>клубника/ваниль</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-mango);--b:var(--f-marakuya)"><use href="#mk"/></svg>манго/маракуйя</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-lime);--b:var(--f-blueberry)"><use href="#mk"/></svg>лайм/черника</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-grapefruit);--b:var(--f-currant)"><use href="#mk"/></svg>грейпфрут/чёрная смородина</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-coffee);--b:var(--f-caramel)"><use href="#mk"/></svg>кофе/карамель</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-pear);--b:var(--f-dorblue);--c:var(--f-walnut)"><use href="#mk"/></svg>груша/дор блю/грецкий орех</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card menu-card half big-card">
+        <svg class="il" aria-hidden="true"><use href="#mac"/></svg>
+        <div>
+          <h3>Макаронс</h3>
+          <p class="big-price" style="margin-top:8px">180<span class="unit">&nbsp;руб</span></p>
+        </div>
+        <div class="sub">
+          <p class="flavors-t">6 вкусов</p>
+          <ul class="chips">
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-currant);--b:var(--f-orange)"><use href="#mk"/></svg>чёрная смородина/апельсин</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-vishnya);--b:var(--f-vanilla)"><use href="#mk"/></svg>вишня/ваниль</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-pistachio);--b:var(--f-chocolate)"><use href="#mk"/></svg>дубайский</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-mango);--b:var(--f-marakuya)"><use href="#mk"/></svg>манго/маракуйя</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-klubnika);--b:var(--f-earlgrey)"><use href="#mk"/></svg>клубника/эрл грей</li>
+            <li class="chip"><svg class="mk" aria-hidden="true" style="--a:var(--f-malina);--b:var(--f-pistachio)"><use href="#mk"/></svg>малина/фисташка</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card menu-card full drink">
+        <svg class="il" aria-hidden="true"><use href="#cup"/></svg>
+        <h3>Напитки</h3>
+        <p class="drink-p"><span>Капучино - </span><span class="price-num">от&nbsp;170&nbsp;руб</span></p>
+      </div>
+    </div>
+
+    <p class="note menu-note">Вес и цена указаны так, как в карточке Яндекс Карт. За какое количество штук указана цена на моти и макаронс, карточка не уточняет - спросите у кондитера.</p>
+  </div>
+</section>
+
+<!-- 5. Заказать торт -->
+<section class="band" id="order" aria-labelledby="order-h">
+  <div class="wrap">
+    <div class="order-grid">
+      <div class="order-head">
+        <h2 id="order-h">Заказать торт</h2>
+        <p class="lead">Заполните форму: что нужно, на какую дату, на сколько человек, как вас зовут и как с вами связаться. Из них соберётся готовое сообщение в Telegram кондитерской.</p>
+      </div>
+
+      <form class="order-card" id="order-form" novalidate aria-label="Заявка на торт">
+        <svg class="deco il" aria-hidden="true"><use href="#mac" style="--a:var(--f-malina);--b:var(--f-pistachio)"/></svg>
+        <div class="form-grid">
+          <div class="fld wide" data-f="what">
+            <label for="f-what">Что заказать</label>
+            <div class="sel">
+              <select class="field" id="f-what" name="what" required aria-describedby="e-what">
+                <option value="" selected disabled>Выберите</option>
+                <option>Торт на заказ</option>
+                <option>Меренговый рулет</option>
+                <option>Десерты из меню</option>
+                <option>Подарочный набор</option>
+                <option>Другое</option>
+              </select>
+              <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg>
+            </div>
+            <p class="err" id="e-what" hidden><svg class="ic ic-18" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+
+          <div class="fld wide" data-f="note">
+            <label for="f-note">Опишите, что хотите <span class="opt">необязательно</span></label>
+            <textarea class="field" id="f-note" name="note" rows="3" placeholder="Например: торт на день рождения, вкус, оформление, пожелания"></textarea>
+          </div>
+
+          <div class="fld" data-f="date">
+            <label for="f-date">На какую дату</label>
+            <input class="field" id="f-date" name="date" type="date" required aria-describedby="h-date e-date">
+            <p class="hint" id="h-date">Укажите желаемую дату. Получится ли к этому дню, уточните у кондитера.</p>
+            <p class="err" id="e-date" hidden><svg class="ic ic-18" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+
+          <div class="fld" data-f="count">
+            <label for="f-count">На сколько человек</label>
+            <input class="field" id="f-count" name="count" type="number" min="1" step="1" inputmode="numeric" placeholder="Например, 10" required aria-describedby="e-count">
+            <p class="err" id="e-count" hidden><svg class="ic ic-18" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+
+          <div class="fld" data-f="name">
+            <label for="f-name">Как вас зовут</label>
+            <input class="field" id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+            <p class="err" id="e-name" hidden><svg class="ic ic-18" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+
+          <div class="fld" data-f="contact">
+            <label for="f-contact">Как с вами связаться</label>
+            <input class="field" id="f-contact" name="contact" type="text" autocomplete="off" placeholder="Телефон или ник в Telegram" required aria-describedby="e-contact">
+            <p class="err" id="e-contact" hidden><svg class="ic ic-18" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+        </div>
+
+        <div class="msg-box" id="msg-box" role="status" aria-live="polite"></div>
+
+        <div class="form-btns">
+          <button class="btn btn-p btn-lg" type="submit" id="btn-send"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg>Отправить заявку в Telegram</button>
+          <button class="btn btn-s" type="button" id="btn-copy"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>Скопировать текст заявки</button>
+          <a class="link" href="tel:+79953006800">Или позвоните: <span class="nowrap">+7 (995) 300-68-00</span></a>
+        </div>
+
+        <div class="fallback" id="fallback" hidden>
+          <label class="small" for="fallback-text" style="display:block;margin-bottom:6px;font-weight:600">Текст заявки - выделите и скопируйте вручную</label>
+          <textarea id="fallback-text" readonly></textarea>
+        </div>
+
+        <p class="note form-tail">Это сообщение в Telegram, а не автоматический заказ. Цену и сроки уточняйте у кондитера в переписке.</p>
+      </form>
+
+      <div class="order-steps">
+        <p class="steps-h">Как это работает</p>
+        <ol class="steps">
+          <li>Заполняете форму - это 5 коротких полей.</li>
+          <li>Нажимаете «Отправить заявку в Telegram» и отправляете сообщение в чат кондитерской.</li>
+          <li>Кондитер называет цену и сроки.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Подарочные наборы -->
+<section class="sec bg-surface" id="gifts" aria-labelledby="gifts-h">
+  <div class="wrap">
+    <div class="gift-grid">
+      <div class="stack">
+        <h2 id="gifts-h">Подарочные наборы</h2>
+        <p class="quote">«Порадуйте своих близких эксклюзивными десертами».</p>
+        <p class="txt">Подарочные наборы десертов есть на сайте кондитерской. Состав и цену уточняйте у кондитера.</p>
+        <div class="btns btns-row">
+          <a class="btn btn-p" href="#order" data-product="gift">Заказать подарочный набор</a>
+          <a class="btn btn-s" href="https://t.me/tort_solo" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg>Написать в Telegram</a>
+        </div>
+      </div>
+      <div class="ph">
+        <span class="ph-q" aria-hidden="true">?</span>
+        <svg class="il gift" aria-hidden="true"><use href="#gift"/></svg>
+        <h3>Состав и цена - у кондитера</h3>
+        <p>Какие десерты войдут в набор и сколько он стоит, расскажет кондитер. Позвоните или напишите в Telegram.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Доставка -->
+<section class="sec bg-tint" id="delivery" aria-labelledby="delivery-h">
+  <div class="wrap">
+    <div class="deliv-grid">
+      <div class="stack">
+        <div>
+          <h2 id="delivery-h">Доставка по Волгограду</h2>
+          <p class="lead" style="margin-top:12px">На сайте кондитерской указана доставка по Волгограду. В карточке на Яндекс Картах отмечена доставка еды.</p>
+        </div>
+        <div class="ph">
+          <span class="ph-q" aria-hidden="true">?</span>
+          <p>Условия доставки, зоны, стоимость и сроки подскажет кондитер: позвоните или напишите в Telegram.</p>
+        </div>
+        <div class="btns btns-row">
+          <a class="btn btn-p" href="tel:+79953006800"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>Уточнить доставку по телефону: <span class="nowrap">+7 (995) 300-68-00</span></span></a>
+          <a class="btn btn-s" href="https://t.me/tort_solo" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg>Написать в Telegram</a>
+        </div>
+      </div>
+      <div class="card pickup">
+        <svg class="il" aria-hidden="true"><use href="#bag"/></svg>
+        <h3>Еда и кофе навынос</h3>
+        <p class="pickup-addr">Кафе работает на ул. Циолковского, 29</p>
+        <p>Десерты и кофе можно взять с собой. Торт на заказ забрать самому или с доставкой - уточните при заявке.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Вопросы -->
+<section class="sec bg-surface" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="faq-h">Вопросы и ответы</h2>
+      <p class="lead">Коротко о заказе, доставке, наборах и режиме работы.</p>
+    </div>
+    <div class="faq">
+      <div>
+        <details open><summary>Сколько стоит торт на заказ?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Цена зависит от торта, поэтому её называют после заявки. Опишите торт в форме или позвоните по номеру <a class="tel-link link" href="tel:+79953006800">+7 (995) 300-68-00</a>.</p></details>
+        <details open><summary>За сколько дней нужно заказывать торт?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Сроки обсуждаются при заявке. Если нужна конкретная дата, напишите её в форме или позвоните.</p></details>
+        <details open><summary>Есть ли доставка?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Да, по Волгограду. Условия, зоны и стоимость подскажут по телефону или в Telegram.</p></details>
+        <details open><summary>Из чего сделаны десерты?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Только натуральные ингредиенты: бельгийский и швейцарский шоколад, настоящие ягоды, натуральные молочные продукты, сливочное масло, сливки, молоко, яйца, миндальную муку, пюре из ягод и фруктов.</p></details>
+        <details open><summary>Актуальны ли цены в меню?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Цены в меню взяты из карточки на Яндекс Картах, где они помечены как давно не обновлявшиеся. Перед заказом уточняйте актуальную цену.</p></details>
+      </div>
+      <div>
+        <details open><summary>Можно ли взять десерт и кофе с собой?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Да. В карточке на Яндекс Картах отмечены: еда навынос и кофе с собой.</p></details>
+        <details open><summary>Можно ли прийти с собакой?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Да, в карточке на Яндекс Картах отмечено: можно с собакой.</p></details>
+        <details open><summary>До скольки вы работаете?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Ежедневно с 09:00 до 21:00. Перед визитом вечером лучше позвонить и уточнить.</p></details>
+        <details open><summary>Что входит в подарочный набор и сколько он стоит?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Подарочные наборы десертов есть. Состав и цену подскажет кондитер при заказе.</p></details>
+        <details open><summary>Можно ли заказать торт на свадьбу или другой праздник?<svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg></summary><p class="ans">Кондитерская делает дизайнерские торты на заказ. Подходит ли конкретный торт под ваш праздник и вашу дату, уточняйте у кондитера: опишите задачу в форме заказа.</p></details>
+      </div>
+    </div>
+    <div class="btns btns-row faq-btns">
+      <a class="btn btn-p" href="#order" data-product="cake">Заказать торт</a>
+      <a class="btn btn-s" href="tel:+79953006800"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>Позвонить: <span class="nowrap">+7 (995) 300-68-00</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Контакты -->
+<section class="sec" id="contacts" aria-labelledby="contacts-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="contacts-h">Контакты</h2>
+      <p class="lead">Позвоните, напишите в Telegram или приходите в кафе на ул. Циолковского, 29.</p>
+    </div>
+    <div class="contacts-grid">
+      <div class="card">
+        <dl class="dl">
+          <div class="dl-row"><svg class="ic ic-24" aria-hidden="true"><use href="#i-pin"/></svg><div><dt>Адрес</dt><dd class="dl-val">Волгоград, ул. им. Циолковского, 29</dd></div></div>
+          <div class="dl-row"><svg class="ic ic-24" aria-hidden="true"><use href="#i-phone"/></svg><div><dt>Телефон</dt><dd><a class="dl-val tel-link" href="tel:+79953006800">+7 (995) 300-68-00</a></dd></div></div>
+          <div class="dl-row"><svg class="ic ic-24" aria-hidden="true"><use href="#i-send"/></svg><div><dt>Telegram</dt><dd><a class="dl-val" href="https://t.me/tort_solo" target="_blank" rel="noopener">t.me/tort_solo</a></dd></div></div>
+          <div class="dl-row"><svg class="ic ic-24" aria-hidden="true"><use href="#i-clock"/></svg><div><dt>Часы работы</dt><dd class="dl-val">ежедневно с 09:00 до 21:00</dd><dd class="note">Перед визитом вечером лучше позвонить и уточнить.</dd></div></div>
+          <div class="dl-row"><svg class="ic ic-24" aria-hidden="true"><use href="#i-star"/></svg><div><dt>Рейтинг</dt><dd>
+            <div class="rate"><div class="rate-badge"><svg class="ic ic-star" aria-hidden="true"><use href="#i-star"/></svg><span class="rate-num">5,0</span><span class="rate-t"><b>на Яндекс Картах, 262 оценки</b><span>Награда «Хорошее место 2026»</span></span></div></div>
+          </dd></div></div>
+        </dl>
+      </div>
+      <div class="cpanel">
+        <svg class="il" aria-hidden="true"><use href="#cup"/></svg>
+        <a class="btn btn-p btn-lg" href="tel:+79953006800"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span>Позвонить: <span class="nowrap">+7 (995) 300-68-00</span></span></a>
+        <a class="btn btn-s btn-lg" href="https://t.me/tort_solo" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg>Написать в Telegram</a>
+        <a class="btn btn-s btn-lg" href="#order" data-product="cake">Заказать торт</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- 11. Подвал -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-main">
+        <p class="foot-name">Кафе-кондитерская «ТортСоло»</p>
+        <div class="foot-info">
+          <p>Десерты и торты на заказ, Волгоград</p>
+          <p>ТортСоло - когда действительно по любви!</p>
+          <p>Волгоград, ул. им. Циолковского, 29</p>
+          <p><a class="foot-tel tel-link" href="tel:+79953006800">+7 (995) 300-68-00</a></p>
+          <p><a class="foot-tel" href="https://t.me/tort_solo" target="_blank" rel="noopener">t.me/tort_solo</a></p>
+          <p>ежедневно с 09:00 до 21:00</p>
+        </div>
+      </div>
+      <nav class="foot-links" aria-label="Разделы в подвале">
+        <a href="#about">О кондитерской</a>
+        <a href="#menu">Меню</a>
+        <a href="#order">Заказ торта</a>
+        <a href="#gifts">Подарочные наборы</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+    <p class="foot-demo">Демо-редизайн сайта tortsolo.ru. Это пример, а не официальный сайт кондитерской. Факты и цены взяты с сайта tortsolo.ru и из карточки Яндекс Карт на 15.10.2026. Цены в меню могут быть неактуальны.</p>
+  </div>
+</footer>
+
+<!-- 10. Плавающая кнопка (телефон) -->
+<a class="float-call is-hidden" id="float-call" href="tel:+79953006800" aria-label="Позвонить в ТортСоло по номеру +7 (995) 300-68-00">
+  <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить
+</a>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- предзаполнение списка по кнопкам ---------- */
+  var what = $('#f-what');
+  $$('[data-product]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var p = a.getAttribute('data-product');
+      if (p === 'gift') { what.value = 'Подарочный набор'; }
+      else if (p === 'cake' && !what.value) { what.value = 'Торт на заказ'; }
+      if (submitted) { validateField('what'); }
+    });
+  });
+
+  /* ---------- форма ---------- */
+  var form = $('#order-form');
+  var box = $('#msg-box');
+  var submitted = false;
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function todayStr() {
+    var d = new Date();
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
+  var dateEl = $('#f-date');
+  dateEl.min = todayStr();
+
+  var rules = {
+    what: function (v) { return v ? '' : 'Выберите, что заказать'; },
+    date: function (v) {
+      if (!v) return 'Укажите дату';
+      if (v < todayStr()) return 'Дата уже прошла';
+      return '';
+    },
+    count: function (v) {
+      var n = Number(v);
+      return (v === '' || !isFinite(n) || n < 1 || Math.floor(n) !== n) ? 'Укажите число от 1' : '';
+    },
+    name: function (v) { return v.trim() ? '' : 'Введите имя'; },
+    contact: function (v) { return v.trim() ? '' : 'Укажите телефон или ник в Telegram'; }
+  };
+  var order = ['what', 'date', 'count', 'name', 'contact'];
+
+  function el(key) { return $('#f-' + key); }
+
+  function setError(key, text) {
+    var input = el(key);
+    var wrap = input.closest('.fld');
+    var err = $('#e-' + key);
+    if (text) {
+      wrap.classList.add('has-err');
+      input.setAttribute('aria-invalid', 'true');
+      $('span', err).textContent = text;
+      err.hidden = false;
+    } else {
+      wrap.classList.remove('has-err');
+      input.removeAttribute('aria-invalid');
+      err.hidden = true;
+    }
+  }
+  function validateField(key) {
+    var msg = rules[key](el(key).value);
+    setError(key, msg);
+    return !msg;
+  }
+  function validateAll() {
+    var firstBad = null;
+    order.forEach(function (k) {
+      if (!validateField(k) && !firstBad) firstBad = k;
+    });
+    return firstBad;
+  }
+
+  function showMsg(kind, text) {
+    var icon = kind === 'err' ? '#i-alert' : '#i-check';
+    box.innerHTML = '';
+    var m = document.createElement('div');
+    m.className = 'msg ' + (kind === 'err' ? 'is-err' : 'is-ok');
+    m.innerHTML = '<svg class="ic" aria-hidden="true"><use href="' + icon + '"/></svg><span></span>';
+    $('span', m).textContent = text;
+    box.appendChild(m);
+  }
+  function clearMsg() { box.innerHTML = ''; }
+
+  function fmtDate(v) {
+    var p = v.split('-');
+    return p.length === 3 ? p[2] + '.' + p[1] + '.' + p[0] : v;
+  }
+  function buildText() {
+    var lines = [];
+    lines.push('Здравствуйте! Хочу заказать: ' + what.value + '.');
+    var note = $('#f-note').value.trim();
+    if (note) lines.push('Пожелания: ' + note + '.');
+    lines.push('Дата: ' + fmtDate(dateEl.value) + '.');
+    lines.push('Количество человек: ' + el('count').value + '.');
+    lines.push('Меня зовут ' + el('name').value.trim() + ', связаться: ' + el('contact').value.trim() + '.');
+    return lines.join('\n');
+  }
+  function tgUrl(text) { return 'https://t.me/tort_solo?text=' + encodeURIComponent(text); }
+
+  function check() {
+    submitted = true;
+    var bad = validateAll();
+    if (bad) {
+      showMsg('err', 'Заполните обязательные поля: что заказать, дату, количество человек, имя и контакт.');
+      el(bad).focus();
+      return false;
+    }
+    return true;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!check()) return;
+    var url = tgUrl(buildText());
+    form.setAttribute('data-tg-url', url);
+    showMsg('ok', 'Открываем Telegram с готовым сообщением. Нажмите «Отправить» в Telegram, иначе заявка не уйдёт.');
+    var w = null;
+    try { w = window.open(url, '_blank'); } catch (err) { w = null; }
+    if (w) { try { w.opener = null; } catch (err2) {} }
+    else { window.location.href = url; }
+  });
+
+  /* копирование: clipboard API, запасной вариант execCommand, затем ручное копирование */
+  var fb = $('#fallback'), fbText = $('#fallback-text');
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.top = '0'; ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function copyDone() {
+    fb.hidden = true;
+    showMsg('ok', 'Текст скопирован. Вставьте его в чат с кондитерской в Telegram.');
+  }
+  function copyManual(text) {
+    fbText.value = text;
+    fb.hidden = false;
+    showMsg('err', 'Не удалось скопировать автоматически. Выделите текст ниже и скопируйте вручную.');
+    fbText.focus(); fbText.select();
+  }
+  $('#btn-copy').addEventListener('click', function () {
+    if (!check()) return;
+    var text = buildText();
+    var done = false;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(copyDone, function () {
+          if (legacyCopy(text)) copyDone(); else copyManual(text);
+        });
+        done = true;
+      }
+    } catch (e) { done = false; }
+    if (!done) { if (legacyCopy(text)) copyDone(); else copyManual(text); }
+  });
+
+  /* после первого нажатия - проверка на лету */
+  order.forEach(function (k) {
+    var i = el(k);
+    var handler = function () {
+      if (!submitted) return;
+      validateField(k);
+      var allOk = order.every(function (kk) { return !rules[kk](el(kk).value); });
+      var cur = $('.msg.is-err', box);
+      if (allOk && cur) clearMsg();
+    };
+    i.addEventListener('input', handler);
+    i.addEventListener('change', handler);
+    i.addEventListener('blur', function () { if (submitted) validateField(k); });
+  });
+
+  /* ---------- scrollspy и чипы ---------- */
+  var nav = $('#nav');
+  var links = $$('a', nav);
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+
+  function setActive(id) {
+    links.forEach(function (a) {
+      if (map[id] === a) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    var a = map[id];
+    var list = nav.firstElementChild;
+    if (a && list.scrollWidth > list.clientWidth + 2) {
+      var left = a.offsetLeft - (list.clientWidth - a.offsetWidth) / 2;
+      try { list.scrollTo({ left: left, behavior: reduce ? 'auto' : 'smooth' }); } catch (e) { list.scrollLeft = left; }
+    }
+  }
+
+  if ('IntersectionObserver' in window) {
+    var ids = ['about', 'menu', 'order', 'gifts', 'delivery', 'faq', 'contacts'];
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) setActive(en.target.id);
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    ids.forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+    var heroSec = $('.hero');
+    new IntersectionObserver(function (e) { if (e[0].isIntersecting) setActive(''); }, { rootMargin: '-40% 0px -55% 0px' }).observe(heroSec);
+
+    /* плавающая кнопка прячется, пока видны кнопки hero или форма */
+    var vis = { hero: false, order: false };
+    var fl = $('#float-call');
+    var sync = function () { fl.classList.toggle('is-hidden', vis.hero || vis.order); };
+    new IntersectionObserver(function (e) { vis.hero = e[0].isIntersecting; sync(); }).observe($('#hero-cta'));
+    new IntersectionObserver(function (e) { vis.order = e[0].isIntersecting; sync(); }).observe($('#order'));
+  }
+})();
+</script>
+</body>
+</html>
