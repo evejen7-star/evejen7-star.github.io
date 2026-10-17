@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ателье ГалСей в Волгограде: ремонт и пошив одежды, штор, сумок, обуви</title>
+<meta name="description" content="Ателье ГалСей, пр. Героев Сталинграда, 9 (цоколь), Красноармейский район. Прайс на ремонт одежды, джинсов, курток. Пн-пт 9:30-18:00, сб 10:00-14:00.">
+<meta name="theme-color" content="#F5F6FA">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='16' fill='%23fff' stroke='%23151B38' stroke-width='2'/%3E%3Ccircle cx='18' cy='18' r='11' fill='none' stroke='%23151B38' stroke-width='1.25'/%3E%3Cpath d='M13 13L23 23M23 13L13 23' stroke='%23C4271B' stroke-width='2' stroke-linecap='round'/%3E%3Cg fill='%23151B38'%3E%3Ccircle cx='13' cy='13' r='2.4'/%3E%3Ccircle cx='23' cy='13' r='2.4'/%3E%3Ccircle cx='13' cy='23' r='2.4'/%3E%3Ccircle cx='23' cy='23' r='2.4'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,700;0,800;1,500&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+
+  /* поверхности */
+  --bg:        #F5F6FA;
+  --surface:   #FFFFFF;
+  --tint:      #E8ECF6;
+  --line:      #D3D9EC;
+  --line-strong: #AEB6D0;
+  --leader:    #7E87A8;
+
+  /* текст */
+  --text:      #151B38;
+  --muted:     #4A5272;
+
+  /* действие (красная нитка) */
+  --accent:       #C4271B;
+  --accent-dark:  #A11E14;
+  --accent-press: #7F170F;
+  --on-accent:    #FFFFFF;
+
+  /* служебное для демо (сантиметровая лента) */
+  --tape:      #FFD23F;
+  --note-bg:   #FFF1BF;
+
+  /* чернильные кнопки */
+  --ink-hover: #2A3260;
+  --ink-press: #0D1128;
+
+  /* формы и состояния */
+  --field:     #6B7494;
+  --ok:        #1E6B3A;
+  --ok-bg:     #E5F4EA;
+  --error:     #A11E14;
+  --error-bg:  #FDECEA;
+  --disabled-bg:   #E3E6EF;
+  --disabled-text: #555C78;
+
+  /* форма */
+  --r-s: 6px;
+  --r-m: 12px;
+  --r-pill: 999px;
+  --ring: 3px solid var(--text);
+
+  /* отступы */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px; --s9: 96px;
+
+  --font-head: "Alegreya", Georgia, "Times New Roman", serif;
+  --font-body: "Golos Text", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --sec-pad: 56px;
+  --head-gap: 32px;
+  --pad-x: 16px;
+  --anchor: 120px;
+}
+@media (min-width: 768px) { :root { --sec-pad: 72px; --head-gap: 48px; --pad-x: 24px; } }
+@media (min-width: 960px) { :root { --sec-pad: 96px; --anchor: 104px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  line-height: 1.6;
+}
+img, svg { max-width: 100%; }
+h1, h2, h3, p, ul, ol, figure, blockquote { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+a { color: inherit; }
+:focus-visible { outline: var(--ring); outline-offset: 2px; }
+
+section[id], [id^="gruppa-"], #top { scroll-margin-top: var(--anchor); }
+
+.container { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: var(--pad-x); }
+
+h1, h2, h3, .logo-name, .big-num, .quote, .fact b, .addr, .brand-foot { font-family: var(--font-head); font-variant-numeric: lining-nums; }
+h1 { font-weight: 800; font-size: clamp(2rem, 1.4rem + 2.6vw, 3.5rem); line-height: 1.08; text-wrap: balance; }
+h2 { font-weight: 800; font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem); line-height: 1.12; text-wrap: balance; }
+h3 { font-weight: 700; font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem); line-height: 1.2; }
+.lead { font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.25rem); line-height: 1.55; max-width: 62ch; }
+.small { font-size: 0.9375rem; line-height: 1.5; }
+.tiny { font-size: 0.8125rem; line-height: 1.45; }
+.muted { color: var(--muted); }
+.nowrap { white-space: nowrap; }
+
+.ic { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.ic--24 { width: 24px; height: 24px; }
+.ic--28 { width: 28px; height: 28px; }
+
+.skip {
+  position: absolute; left: 16px; top: -100px; z-index: 300;
+  background: var(--text); color: #fff; padding: 12px 18px; border-radius: var(--r-s); font-weight: 600;
+}
+.skip:focus { top: 8px; }
+
+/* ---------- кнопки ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  border-radius: var(--r-s); border: 2px solid transparent;
+  font: 600 1.0625rem/1.2 var(--font-body); text-decoration: none; text-align: center;
+  padding: 12px 24px; min-height: 48px; cursor: pointer;
+  transition: background-color .15s ease-out, border-color .15s ease-out, color .15s ease-out, transform .15s ease-out;
+}
+.btn--lg { min-height: 56px; }
+.btn--sm { min-height: 44px; padding: 8px 16px; }
+.btn:focus-visible { outline: var(--ring); outline-offset: 3px; }
+.btn--primary { background: var(--accent); color: var(--on-accent); }
+.btn--primary:hover { background: var(--accent-dark); }
+.btn--primary:active { background: var(--accent-press); transform: translateY(1px); }
+.btn--outline { background: var(--surface); color: var(--text); border-color: var(--text); }
+.btn--outline:hover { background: var(--tint); }
+.btn--outline:active { background: var(--line); }
+.btn--soft { background: var(--surface); color: var(--text); border: 1.5px solid var(--line-strong); }
+.btn--soft:hover { background: var(--tint); border-color: var(--text); }
+.btn--soft:active { background: var(--line); }
+.btn--ink { background: var(--text); color: #fff; }
+.btn--ink:hover { background: var(--ink-hover); }
+.btn--ink:active { background: var(--ink-press); transform: translateY(1px); }
+.btn[aria-disabled="true"] { background: var(--disabled-bg); color: var(--disabled-text); border-color: transparent; cursor: not-allowed; transform: none; }
+.btn .spin { display: none; width: 18px; height: 18px; border-radius: 50%; border: 2.5px solid currentColor; border-right-color: transparent; animation: spin .8s linear infinite; }
+.btn.is-loading .spin { display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* бегущий перелив: светлая полоса пробегает по кнопке раз в 3,6 с */
+.btn { position: relative; overflow: hidden; }
+.btn::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 45%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,.34) 50%, transparent 100%);
+  transform: translateX(-130%) skewX(-18deg); pointer-events: none;
+  animation: shine 3.6s ease-in-out infinite;
+}
+.btn--outline::after, .btn--soft::after {
+  background: linear-gradient(105deg, transparent 0%, rgba(196,39,27,.14) 50%, transparent 100%);
+}
+.btn--ink::after { background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,.22) 50%, transparent 100%); }
+.btn[aria-disabled="true"]::after, .btn.is-loading::after { animation: none; display: none; }
+@keyframes shine { 0%, 55% { transform: translateX(-130%) skewX(-18deg); } 100% { transform: translateX(330%) skewX(-18deg); } }
+
+.link {
+  color: var(--text); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px;
+}
+.link:hover { color: var(--accent-dark); text-decoration-thickness: 3px; }
+.link:active { color: var(--accent-press); }
+.link-ask {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 600;
+  color: var(--accent); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px;
+}
+.link-ask .ic { width: 16px; height: 16px; transition: transform .15s ease-out; }
+.link-ask:hover { color: var(--accent-dark); }
+.link-ask:hover .ic { transform: translateX(3px); }
+.link-ask:active { color: var(--accent-press); }
+
+/* ---------- плашка демо и лента ---------- */
+.demo-bar { position: relative; background: var(--tape); color: var(--text); font-size: 0.8125rem; line-height: 1.4; padding: 10px 0 18px; }
+.demo-bar::after, .demo-foot::before {
+  content: ""; position: absolute; left: 0; right: 0; height: 11px; pointer-events: none;
+  background-image:
+    repeating-linear-gradient(90deg, var(--text) 0 1.5px, transparent 1.5px 8px),
+    repeating-linear-gradient(90deg, var(--text) 0 2px, transparent 2px 40px);
+  background-size: 100% 6px, 100% 11px;
+  background-repeat: no-repeat;
+}
+.demo-bar::after { bottom: 0; background-position: left bottom; }
+.demo-foot::before { top: 0; background-position: left top; }
+.demo-bar .short { display: inline; }
+.demo-bar .long { display: none; }
+.demo-bar a, .demo-foot a.link { font-weight: 600; }
+@media (min-width: 640px) {
+  .demo-bar { font-size: 0.875rem; }
+  .demo-bar .short { display: none; }
+  .demo-bar .long { display: inline; }
+}
+
+/* ---------- шапка ---------- */
+.site-header { position: sticky; top: 0; z-index: 100; background: var(--surface); border-bottom: 1px solid var(--line); }
+.hdr {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 56px 48px;
+  grid-template-areas: "logo call" "menu menu"; align-items: center; column-gap: 12px;
+}
+.logo { grid-area: logo; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; min-height: 44px; min-width: 0; }
+.logo svg { width: 32px; height: 32px; flex: none; }
+.logo-text { display: flex; flex-direction: column; min-width: 0; }
+.logo-name { font-weight: 800; font-size: 1.625rem; line-height: 1; }
+.logo-sub { font-size: 0.75rem; color: var(--muted); line-height: 1.2; margin-top: 2px; }
+.logo:hover .logo-name { text-decoration: underline; text-decoration-thickness: 2px; }
+.hdr-call { grid-area: call; }
+.menu {
+  grid-area: menu; display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity;
+  padding: 4px 0; -webkit-mask-image: linear-gradient(to right, #000 88%, transparent); mask-image: linear-gradient(to right, #000 88%, transparent);
+}
+.menu::-webkit-scrollbar { display: none; }
+.menu a {
+  flex: none; scroll-snap-align: start; display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px;
+  border-radius: var(--r-pill); background: var(--surface); border: 1px solid var(--line-strong);
+  font-size: 0.9375rem; font-weight: 500; text-decoration: none; white-space: nowrap;
+  transition: background-color .15s ease-out, color .15s ease-out;
+}
+.menu a:hover { background: var(--tint); }
+.menu a:active { background: var(--line); }
+.menu a[aria-current="true"] { background: var(--text); color: #fff; border-color: var(--text); }
+@media (max-width: 359px) { .logo-sub { display: none; } }
+@media (min-width: 960px) {
+  .hdr { grid-template-columns: auto 1fr auto; grid-template-rows: 76px; grid-template-areas: "logo menu call"; column-gap: 16px; }
+  .logo svg { width: 36px; height: 36px; }
+  .logo-name { font-size: 1.75rem; }
+  .menu { justify-content: center; overflow: visible; -webkit-mask-image: none; mask-image: none; gap: 2px; padding: 0; }
+  .menu a { border: 0; background: transparent; border-radius: 0; padding: 10px 12px; min-height: 44px; border-bottom: 3px solid transparent; }
+  .menu a:hover { background: transparent; color: var(--accent-dark); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  .menu a[aria-current="true"] { background: transparent; color: var(--text); font-weight: 600; border-bottom-color: var(--text); }
+}
+@media (min-width: 960px) and (max-width: 1099px) { .menu a { padding-inline: 8px; } }
+
+/* ---------- hero ---------- */
+.hero { padding: 24px 0 40px; }
+.hero-grid { display: grid; gap: 24px; }
+.kicker { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 0.9375rem; margin-bottom: 16px; }
+.hero h1 { margin-bottom: 16px; }
+.hero .lead { margin-bottom: 24px; }
+.hero-btns { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.hero-hours { display: flex; align-items: center; gap: 8px; font-weight: 500; font-size: 0.9375rem; }
+.art { display: block; width: 100%; height: auto; border-radius: var(--r-m); }
+.art--desk { display: none; }
+.art--ribbon { margin-top: 8px; }
+.hero-art { min-width: 0; }
+@media (min-width: 640px) {
+  .hero-btns { flex-direction: row; flex-wrap: wrap; }
+}
+@media (min-width: 768px) {
+  .art--desk { display: block; max-width: 480px; }
+  .art--ribbon { display: none; }
+  .hero { padding: 40px 0 56px; }
+  .kicker { font-size: 1rem; }
+  .hero-hours { font-size: 1rem; }
+}
+@media (min-width: 960px) {
+  .hero { padding: 48px 0 64px; }
+  .hero-grid { grid-template-columns: 7fr 5fr; gap: 24px; align-items: start; }
+  .hero-art { display: flex; justify-content: flex-end; }
+}
+
+.thread { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.2s ease-out .2s forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+/* общие классы иллюстраций */
+.o { stroke: var(--text); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.o2 { stroke: var(--text); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.fw { fill: #fff; }
+.fn { fill: none; }
+.fa { fill: var(--accent); }
+.fx { fill: var(--text); }
+.ft { fill: var(--tape); }
+.sa { stroke: var(--accent); stroke-width: 3; stroke-linecap: round; fill: none; }
+.p-bg { fill: var(--tint); }
+.p-ln { stroke: #fff; stroke-width: 1.5; fill: none; }
+
+/* ---------- полоса фактов ---------- */
+.facts { background: var(--surface); border-block: 1px solid var(--line); padding: 32px 0; }
+.facts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+.fact b { display: block; font-weight: 800; font-size: clamp(1.625rem, 1.2rem + 1.6vw, 2.25rem); line-height: 1.05; text-wrap: balance; margin-bottom: 6px; }
+.fact span { display: block; font-size: 0.875rem; color: var(--muted); line-height: 1.5; }
+.fact:nth-child(even) { border-left: 2px dashed var(--line-strong); padding-left: 16px; }
+.fact:nth-child(n+3) { border-top: 1px solid var(--line); padding-top: 24px; }
+@media (min-width: 960px) {
+  .facts-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .fact { padding-left: 24px; }
+  .fact:first-child { padding-left: 0; }
+  .fact:nth-child(n) { border-top: 0; padding-top: 0; }
+  .fact:nth-child(n+2) { border-left: 2px dashed var(--line-strong); padding-left: 24px; }
+  .fact span { font-size: 0.9375rem; }
+}
+
+/* ---------- секции ---------- */
+.sec { padding: var(--sec-pad) 0; }
+.sec--bg { background: var(--bg); }
+.sec--surface { background: var(--surface); }
+.sec-head { margin-bottom: var(--head-gap); }
+.sec-head h2 { margin-bottom: 12px; }
+
+/* заметка для демо */
+.note {
+  display: flex; gap: 12px; align-items: flex-start; background: var(--note-bg); border-radius: var(--r-m);
+  padding: 14px 18px; border-left: 4px solid var(--text); font-size: 0.875rem; line-height: 1.5;
+}
+.note .ic { width: 22px; height: 22px; margin-top: 1px; }
+.note--top { margin-top: 24px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.chips a {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: var(--r-pill);
+  background: var(--surface); border: 1px solid var(--line-strong); font-size: 0.9375rem; font-weight: 500; text-decoration: none;
+  transition: background-color .15s ease-out;
+}
+.chips a:hover { background: var(--tint); }
+.chips a:active { background: var(--line); }
+
+/* карточки групп */
+.groups { display: grid; gap: 16px; }
+.card { background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--r-m); padding: 20px; align-self: start; min-width: 0; }
+.card-head { display: flex; gap: 14px; align-items: center; margin-bottom: 16px; }
+.tile { flex: none; width: 44px; height: 44px; border-radius: var(--r-s); background: var(--tint); display: grid; place-items: center; }
+.tile .ic { width: 26px; height: 26px; }
+.card-head p { color: var(--muted); font-size: 0.9375rem; line-height: 1.45; margin-top: 2px; }
+.pl li {
+  display: flex; align-items: flex-end; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line);
+}
+.pl li:first-child { border-top: 0; padding-top: 0; }
+@supports (align-items: last baseline) { .pl li { align-items: last baseline; } }
+.pl .nm { flex: 0 1 auto; min-width: 0; font-size: 1rem; line-height: 1.4; }
+.leader { flex: 1 1 24px; min-width: 24px; height: 2px; margin-bottom: 6px; background-image: repeating-linear-gradient(90deg, var(--leader) 0 6px, transparent 6px 11px); align-self: flex-end; }
+.pr { flex: none; font-weight: 700; font-size: 1.125rem; line-height: 1.3; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pr .from { font-weight: 500; font-size: 0.9375rem; color: var(--muted); }
+.pr--ask { font-weight: 500; font-size: 0.9375rem; color: var(--muted); white-space: normal; text-align: right; min-width: 90px; }
+.pl li.ask { justify-content: flex-end; padding-block: 4px 0; border-top: 0; }
+.card-note { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9375rem; }
+.groups-cta { margin-top: 32px; }
+.groups-cta .btn { width: 100%; }
+@media (min-width: 768px) {
+  .groups { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .groups-cta { margin-top: 48px; }
+  .groups-cta .btn { width: auto; }
+  .card { padding: 28px; }
+  .tile { width: 48px; height: 48px; }
+  .tile .ic { width: 28px; height: 28px; }
+  .pl .nm { font-size: 1.0625rem; }
+}
+@media (min-width: 960px) {
+  .groups { grid-template-rows: repeat(4, auto); }
+  .g1 { grid-column: 1; grid-row: 1 / span 2; }
+  .g3 { grid-column: 1; grid-row: 3 / span 2; }
+  .g2 { grid-column: 2; grid-row: 1; }
+  .g4 { grid-column: 2; grid-row: 2; }
+  .g5 { grid-column: 2; grid-row: 3; }
+  .g6 { grid-column: 2; grid-row: 4; }
+  .pr--ask { white-space: nowrap; }
+}
+
+/* ---------- заглушки данных ---------- */
+.paper {
+  background-color: var(--tint);
+  background-image:
+    linear-gradient(#fff 2.5px, transparent 2.5px),
+    linear-gradient(90deg, #fff 2.5px, transparent 2.5px),
+    linear-gradient(#fff 1.5px, transparent 1.5px),
+    linear-gradient(90deg, #fff 1.5px, transparent 1.5px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+}
+.ph {
+  position: relative; border: 2px dashed var(--field); border-radius: var(--r-m);
+  display: flex; align-items: center; padding: 20px 14px 14px; min-width: 0;
+}
+.ph-scissors {
+  position: absolute; top: -13px; left: 16px; background: var(--tint); border-radius: var(--r-s);
+  padding: 2px 6px; display: grid; place-items: center; line-height: 0;
+}
+.ph-in { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.ph-in .ic--cat { width: 32px; height: 32px; }
+.ph-in strong { font-size: 0.875rem; font-weight: 600; line-height: 1.4; }
+.ph-in span { font-size: 0.8125rem; color: var(--muted); line-height: 1.4; }
+.ph-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ph-grid .ph { min-height: 188px; }
+.ph-cap { margin-top: 16px; color: var(--muted); font-size: 0.875rem; }
+@media (max-width: 359px) { .ph-grid { grid-template-columns: 1fr; } }
+@media (min-width: 768px) {
+  .ph-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .ph-grid .ph { min-height: 0; aspect-ratio: 4 / 3; padding: 24px; }
+  .ph-in { gap: 8px; }
+  .ph-in .ic--cat { width: 36px; height: 36px; }
+  .ph-in strong { font-size: 0.9375rem; }
+  .ph-cap { margin-top: 24px; font-size: 0.9375rem; }
+}
+@media (min-width: 768px) and (max-width: 959px) { .ph-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- О мастере ---------- */
+.master { display: grid; gap: 32px; }
+.master .info { min-width: 0; }
+.master h3 { margin-bottom: 4px; }
+.role { font-weight: 500; font-size: 1rem; color: var(--muted); margin-bottom: 16px; }
+.years { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; }
+.big-num { font-weight: 800; font-size: clamp(3.5rem, 2.5rem + 4vw, 5.5rem); line-height: 1; }
+.years span { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); }
+.master p.text { margin-bottom: 12px; max-width: 62ch; }
+.ph--master { aspect-ratio: 4 / 3; justify-content: center; }
+.ph--master .ph-in strong { font-size: 0.9375rem; }
+.review { border-left: 3px solid var(--text); padding-left: 16px; }
+.quote { font-style: italic; font-weight: 500; font-size: clamp(1.375rem, 1.1rem + 1.2vw, 1.875rem); line-height: 1.3; }
+.review cite { display: block; margin-top: 12px; font-style: normal; font-size: 0.875rem; color: var(--muted); }
+@media (min-width: 960px) {
+  .master { grid-template-columns: 5fr 7fr; column-gap: 48px; row-gap: 40px; align-items: start; }
+  .master .photo { grid-column: 1; grid-row: 1 / span 2; }
+  .master .info { grid-column: 2; grid-row: 1; }
+  .master .review { grid-column: 2; grid-row: 2; border-left-width: 4px; padding-left: 24px; }
+  .ph--master { aspect-ratio: 4 / 5; }
+}
+
+/* ---------- Как найти ---------- */
+.where { display: grid; gap: 32px; }
+.where > * { min-width: 0; }
+.addr { font-weight: 700; font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem); line-height: 1.15; margin-bottom: 16px; }
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: var(--r-s); background: var(--tint); font-weight: 600; font-size: 0.875rem; }
+.badge .ic { width: 18px; height: 18px; }
+.ph--entry { padding: 24px 16px 16px; margin-bottom: 24px; }
+.ph--entry .ph-in { flex-direction: row; gap: 12px; align-items: flex-start; }
+.ph--entry strong { font-size: 1rem; }
+.ph--entry span { font-size: 0.875rem; }
+.h4 { font-family: var(--font-body); font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+.hours { margin-bottom: 24px; }
+.hours li { display: flex; align-items: flex-end; gap: 12px; padding: 8px 0; }
+@supports (align-items: last baseline) { .hours li { align-items: last baseline; } }
+.hours .nm { min-width: 0; }
+.hours .t { flex: 0 1 auto; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+.hours .t .tn { white-space: nowrap; }
+.pay { display: flex; gap: 10px; align-items: center; margin-bottom: 24px; font-size: 1rem; }
+.btn-row { display: flex; flex-direction: column; gap: 12px; }
+.map-label { font-weight: 600; font-size: 1rem; margin-bottom: 12px; }
+.map-frame { display: block; width: 100%; height: 300px; border: 1.5px solid var(--line); border-radius: var(--r-m); background: var(--tint); }
+.map-btns { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+.map-fallback { margin-top: 12px; font-size: 0.875rem; color: var(--muted); line-height: 1.5; }
+.entry { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 24px; padding: 16px; background: var(--tint); border-radius: var(--r-m); }
+.entry .ic { margin-top: 2px; }
+.entry strong { display: block; font-size: 1rem; line-height: 1.4; }
+.photos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 32px; }
+.photos figure, .strip figure { margin: 0; min-width: 0; }
+.photos img, .strip img, .gallery img { display: block; width: 100%; height: auto; border-radius: var(--r-m); border: 1.5px solid var(--line); background: var(--tint); }
+.photos figcaption, .strip figcaption, .gal-cap { margin-top: 8px; font-size: 0.8125rem; line-height: 1.45; color: var(--muted); }
+.strip { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 12px; margin-top: 40px; align-items: start; }
+.strip .wide { grid-column: 1 / -1; }
+.gallery { column-count: 1; column-gap: 24px; }
+.gallery figure { margin: 0 0 16px; break-inside: avoid; }
+.gal-cap { margin-top: 8px; font-size: 0.875rem; }
+@media (min-width: 480px) { .gallery { column-count: 2; column-gap: 16px; } }
+@media (min-width: 640px) {
+  .btn-row { flex-direction: row; flex-wrap: wrap; }
+  .map-btns { flex-direction: row; flex-wrap: wrap; }
+}
+.where .photos { grid-column: 1 / -1; margin-top: 0; }
+@media (min-width: 768px) {
+  .map-frame { height: 360px; }
+  .photos { gap: 24px; grid-template-columns: repeat(2, minmax(0, 320px)); }
+  .strip { grid-template-columns: 2fr 1fr 1fr; gap: 24px; margin-top: 48px; }
+  .strip .wide { grid-column: auto; }
+  .gallery { column-gap: 24px; }
+  .gallery figure { margin-bottom: 24px; }
+  .gal-cap { font-size: 0.9375rem; }
+}
+@media (min-width: 960px) {
+  .where { grid-template-columns: 5fr 7fr; column-gap: 48px; align-items: start; }
+  .gallery { column-count: 3; }
+}
+
+/* ---------- Заявка ---------- */
+.sec--tint { background: var(--tint); }
+.req { display: grid; gap: 32px; }
+.req > * { min-width: 0; }
+.steps { counter-reset: st; display: grid; gap: 12px; margin-top: 24px; }
+.steps li { counter-increment: st; position: relative; padding-left: 44px; min-height: 32px; font-size: 0.9375rem; line-height: 1.5; }
+.steps li::before {
+  content: counter(st); position: absolute; left: 0; top: -2px; width: 32px; height: 32px; border-radius: 50%;
+  border: 2px solid var(--text); background: var(--surface); display: grid; place-items: center;
+  font-family: var(--font-head); font-weight: 800; font-size: 1rem; line-height: 1;
+}
+.steps--note li::before { background: var(--note-bg); }
+.form-card {
+  background: var(--surface); border: 2px solid var(--text); border-radius: var(--r-m); padding: 20px;
+  box-shadow: 5px 5px 0 var(--accent); margin-right: 5px;
+}
+.f-grid { display: grid; gap: 16px; }
+.field { min-width: 0; }
+.field label, .field .lab { display: block; font-weight: 600; font-size: 0.9375rem; line-height: 1.3; margin-bottom: 8px; }
+.field input, .field select, .field textarea {
+  display: block; width: 100%; height: 52px; border-radius: var(--r-s); border: 2px solid var(--field); background: var(--surface);
+  color: var(--text); font: 400 1.0625rem/1.4 var(--font-body); padding: 0 16px; appearance: none; -webkit-appearance: none;
+  transition: border-color .15s ease-out;
+}
+.field textarea { height: auto; min-height: 120px; padding: 12px 16px; resize: vertical; }
+.field input::placeholder, .field textarea::placeholder { color: var(--muted); opacity: 1; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--text); }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--text); outline: 3px solid var(--text); outline-offset: 2px; }
+.field [aria-invalid="true"] { border-color: var(--error); background: var(--error-bg); }
+.field input:disabled, .field select:disabled, .field textarea:disabled { background: var(--disabled-bg); color: var(--disabled-text); cursor: not-allowed; border-color: var(--line-strong); }
+.sel { position: relative; }
+.sel select { padding-right: 44px; cursor: pointer; }
+.sel select:required:invalid { color: var(--muted); }
+.sel .ic { position: absolute; right: 12px; top: 16px; pointer-events: none; }
+.hint { margin-top: 6px; font-size: 0.875rem; color: var(--muted); line-height: 1.4; }
+.err { display: flex; gap: 8px; align-items: flex-start; margin-top: 6px; font-size: 0.875rem; font-weight: 600; line-height: 1.4; color: var(--error); animation: fadeup .15s ease-out; }
+.err .ic { width: 18px; height: 18px; margin-top: 1px; }
+@keyframes fadeup { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.alert {
+  display: flex; gap: 12px; background: var(--error-bg); border-left: 4px solid var(--error); padding: 14px 16px;
+  margin-bottom: 20px; border-radius: 0 var(--r-s) var(--r-s) 0; animation: fadeup .15s ease-out;
+}
+.alert:focus { outline: var(--ring); outline-offset: 2px; }
+.alert > .ic { color: var(--error); width: 20px; height: 20px; margin-top: 2px; }
+.alert p { font-weight: 600; font-size: 1rem; line-height: 1.4; }
+.alert ul { margin-top: 6px; display: grid; gap: 2px; }
+.alert ul a { color: var(--error); font-size: 0.9375rem; display: inline-block; padding-block: 4px; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.alert ul a:hover { color: var(--accent-press); }
+.submit { margin-top: 20px; width: 100%; }
+.consent { margin-top: 12px; font-size: 0.8125rem; color: var(--muted); line-height: 1.5; }
+.success { border-left: 4px solid var(--ok); padding-left: 16px; animation: fadeup .15s ease-out; }
+.success .mark { width: 56px; height: 56px; border-radius: 50%; background: var(--ok-bg); color: var(--ok); display: grid; place-items: center; margin-bottom: 16px; }
+.success .mark .ic { width: 28px; height: 28px; stroke-width: 2; }
+.success h3 { margin-bottom: 12px; }
+.success h3:focus { outline: none; }
+.success p.text { font-size: 1.0625rem; margin-bottom: 16px; }
+.success .note { margin-bottom: 20px; font-size: 0.8125rem; }
+@media (min-width: 640px) {
+  .f-grid { grid-template-columns: 1fr 1fr; }
+  .f-grid .full { grid-column: 1 / -1; }
+}
+@media (min-width: 768px) {
+  .form-card { padding: 32px; box-shadow: 8px 8px 0 var(--accent); margin-right: 8px; }
+  .steps li { padding-left: 56px; min-height: 40px; font-size: 1.0625rem; }
+  .steps li::before { width: 40px; height: 40px; font-size: 1.25rem; top: -4px; }
+  .steps { gap: 24px; }
+  .steps li:not(:last-child)::after { content: ""; position: absolute; left: 19px; top: 38px; bottom: -22px; border-left: 2px dashed var(--line-strong); }
+}
+@media (min-width: 960px) {
+  .req { grid-template-columns: 5fr 7fr; column-gap: 48px; align-items: start; }
+}
+
+/* ---------- Правки по демо ---------- */
+.fix { position: relative; background: var(--note-bg); padding: calc(var(--sec-pad) + 8px) 0; }
+.fix::before, .fix::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 11px; pointer-events: none;
+  background-image:
+    repeating-linear-gradient(90deg, var(--text) 0 1.5px, transparent 1.5px 8px),
+    repeating-linear-gradient(90deg, var(--text) 0 2px, transparent 2px 40px);
+  background-size: 100% 6px, 100% 11px; background-repeat: no-repeat;
+}
+.fix::before { top: 0; background-position: left top; }
+.fix::after { bottom: 0; background-position: left bottom; }
+.fix-grid { display: grid; gap: 32px; }
+.fix-grid > * { min-width: 0; }
+.tag { display: inline-block; background: var(--text); color: #fff; font-weight: 600; font-size: 0.875rem; padding: 6px 12px; border-radius: var(--r-s); margin-bottom: 16px; line-height: 1.35; }
+.fix h2 { margin-bottom: 12px; }
+.fix .lead { margin-bottom: 24px; }
+.terms { font-weight: 600; font-size: 0.9375rem; margin-top: 24px; }
+.need { margin-top: 32px; }
+.need h3 { margin-bottom: 12px; }
+.need li { position: relative; padding-left: 32px; margin-bottom: 8px; font-size: 1.0625rem; line-height: 1.45; }
+.need li::before { content: ""; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border: 1.75px solid var(--text); border-radius: 4px; }
+.ev-card { background: var(--surface); border: 2px solid var(--text); border-radius: var(--r-m); padding: 20px; }
+.ev-card h3 { margin-bottom: 16px; }
+.ev-data { display: grid; gap: 12px; margin-bottom: 12px; }
+.ev-data li { display: flex; gap: 12px; align-items: center; font-weight: 600; font-size: 1.0625rem; min-width: 0; overflow-wrap: anywhere; }
+.ev-data a { text-decoration: none; }
+.ev-data a:hover { text-decoration: underline; }
+.ev-time { color: var(--muted); font-size: 0.9375rem; margin-bottom: 20px; }
+.ev-btns { display: grid; gap: 12px; }
+@media (min-width: 640px) { .ev-btns { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 768px) { .ev-card { padding: 28px; } }
+@media (min-width: 960px) {
+  .fix-grid { grid-template-columns: 6fr 6fr; column-gap: 48px; align-items: start; }
+}
+
+/* ---------- подвал ---------- */
+.footer { background: var(--tint); border-top: 2px solid var(--text); padding: 48px 0 0; }
+.foot-grid { display: grid; gap: 28px; }
+.brand-foot { font-weight: 800; font-size: 1.5rem; line-height: 1.1; margin-bottom: 8px; }
+.footer h2.col-title { font-family: var(--font-body); font-weight: 700; font-size: 1rem; line-height: 1.3; margin-bottom: 10px; }
+.footer li { margin-bottom: 6px; font-size: 0.9375rem; line-height: 1.5; }
+.foot-phone { font-size: 1.0625rem; font-weight: 600; }
+.foot-cta { margin-top: 12px; }
+.foot-menu { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line-strong); display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+.foot-menu a { display: inline-flex; align-items: center; min-height: 44px; font-size: 0.9375rem; }
+.demo-foot { position: relative; background: var(--tape); margin-top: 32px; padding: 24px 0 24px; font-size: 0.8125rem; line-height: 1.5; }
+.demo-foot .container { display: grid; gap: 8px; }
+.demo-foot .ev { display: flex; flex-direction: column; gap: 4px; font-weight: 600; }
+.demo-foot .ev a { display: inline-flex; align-items: center; min-height: 32px; }
+.demo-foot { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+@media (min-width: 640px) {
+  .foot-menu { display: flex; flex-wrap: wrap; gap: 0 24px; }
+  .demo-foot .ev { flex-direction: row; flex-wrap: wrap; gap: 4px 24px; }
+  .demo-foot { font-size: 0.875rem; }
+}
+@media (min-width: 768px) { .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; } .footer { padding-top: 64px; } .foot-menu { margin-top: 40px; } }
+@media (min-width: 960px) { .foot-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .thread { animation: none; stroke-dashoffset: 0; }
+  .btn, .menu a, .chips a, .field input, .field select, .field textarea, .link-ask .ic { transition: none; }
+  .btn:active, .btn--ink:active { transform: none; }
+  .link-ask:hover .ic { transform: none; }
+  .err, .alert, .success { animation: none; }
+  .btn .spin { animation: none; border-right-color: currentColor; }
+  .btn::after { animation: none; display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Общие определения: иконки, иллюстрации, сетка-бумага -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="paper" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" class="p-bg"/>
+      <path d="M0 0H24M0 0V24" class="p-ln"/>
+    </pattern>
+
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/></symbol>
+    <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></symbol>
+    <symbol id="i-pants" viewBox="0 0 24 24"><path d="M6 2h12l1 20h-5l-2-12-2 12H5z"/><path d="M6 6h12"/></symbol>
+    <symbol id="i-coat" viewBox="0 0 24 24"><path d="M9 2 3 6v16h6V9M15 2l6 4v16h-6V9"/><path d="M9 2c0 3 1.5 5 3 6 1.5-1 3-3 3-6M12 8v14"/></symbol>
+    <symbol id="i-curtain" viewBox="0 0 24 24"><path d="M2 4h20M4 4v16h6V4M14 4v16h6V4M7 4c-1 5-1 11 0 16M17 4c-1 5-1 11 0 16"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l1 13H4z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-boot" viewBox="0 0 24 24"><path d="M4 3h6v7l6 2.5c3 1 4 2.5 4 5V20H4z"/><path d="M4 17h16M10 6h3M10 9h3"/></symbol>
+    <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/></symbol>
+
+    <!-- пуговица (80x80, центр в 0,0) -->
+    <symbol id="ill-button" viewBox="-40 -40 80 80">
+      <circle r="34" class="o fw"/>
+      <circle r="24" class="o2 fn" style="stroke-width:1.5"/>
+      <path d="M-8 -8L8 8M8 -8L-8 8" class="sa"/>
+      <g class="fx"><circle cx="-8" cy="-8" r="4"/><circle cx="8" cy="-8" r="4"/><circle cx="-8" cy="8" r="4"/><circle cx="8" cy="8" r="4"/></g>
+    </symbol>
+
+    <!-- ножницы 100x100 -->
+    <symbol id="ill-scissors" viewBox="0 0 100 100">
+      <path d="M34 6L72 66" class="o" style="stroke-width:9"/>
+      <path d="M34 6L72 66" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M66 6L28 66" class="o" style="stroke-width:9"/>
+      <path d="M66 6L28 66" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="26" cy="80" r="13" class="o fa"/>
+      <circle cx="74" cy="80" r="13" class="o fa"/>
+      <circle cx="50" cy="38" r="3.5" class="fx"/>
+    </symbol>
+
+    <!-- лекало рукава -->
+    <symbol id="ill-sleeve" viewBox="108 40 268 340">
+      <path d="M118 372 L152 132 C168 70 238 44 296 86 C320 104 330 130 336 160 L366 372 Z" class="o fw" style="stroke-width:6"/>
+      <path d="M118 372 L152 132 C168 70 238 44 296 86 C320 104 330 130 336 160 L366 372 Z" transform="translate(240 230) scale(.9) translate(-240 -230)" class="sa" style="stroke-width:5" stroke-dasharray="14 10"/>
+      <path d="M240 150V330" class="o2 fn" style="stroke-width:4"/>
+    </symbol>
+
+    <symbol id="logo-mark" viewBox="0 0 36 36">
+      <circle cx="18" cy="18" r="16" fill="#fff" stroke="#151B38" stroke-width="2"/>
+      <circle cx="18" cy="18" r="11" fill="none" stroke="#151B38" stroke-width="1.25"/>
+      <path d="M13 13L23 23M23 13L13 23" stroke="#C4271B" stroke-width="2" stroke-linecap="round"/>
+      <g fill="#151B38"><circle cx="13" cy="13" r="2.4"/><circle cx="23" cy="13" r="2.4"/><circle cx="13" cy="23" r="2.4"/><circle cx="23" cy="23" r="2.4"/></g>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#content">Перейти к содержимому</a>
+
+<div class="demo-bar" id="top">
+  <div class="container">
+    <span class="long">Демо-версия. Это пример сайта для ателье «ГалСей», его сделал Евгений. Это не официальный сайт ателье.</span><span class="short">Демо-версия, сделано Евгением.</span>
+    <a class="link" href="#pravki">Правки по демо</a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container hdr">
+    <a class="logo" href="#top" aria-label="ГалСей, ателье, Волгоград. В начало страницы">
+      <svg viewBox="0 0 36 36" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <span class="logo-text"><span class="logo-name">ГалСей</span><span class="logo-sub">ателье, Волгоград</span></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Разделы">
+      <a href="#uslugi">Услуги и цены</a>
+      <a href="#foto">Фото работ</a>
+      <a href="#master">О мастере</a>
+      <a href="#kak-najti">Как найти</a>
+      <a href="#zayavka">Заявка</a>
+    </nav>
+    <a class="btn btn--primary btn--sm hdr-call" href="tel:+79093876000" data-call>
+      <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить
+    </a>
+  </div>
+</header>
+
+<main id="content">
+
+<!-- 3. Первый экран -->
+<section class="hero" aria-labelledby="h1">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="kicker"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Ателье в Красноармейском районе Волгограда</p>
+      <h1 id="h1">Ателье «ГалСей»: ремонт и пошив одежды, штор, сумок и обуви</h1>
+      <p class="lead">Подгоним брюки и джинсы, заменим молнию, сошьём шторы, починим сумку или обувь. Проспект Героев Сталинграда, 9, цокольный этаж.</p>
+      <div class="hero-btns">
+        <a class="btn btn--primary btn--lg" href="tel:+79093876000" data-call><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
+        <a class="btn btn--outline btn--lg" href="#zayavka">Оставить заявку</a>
+        <a class="btn btn--soft btn--lg" href="https://t.me/galsei" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg>Написать в Telegram</a>
+      </div>
+      <p class="hero-hours"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>Пн-пт 9:30-18:00, сб 10:00-14:00</p>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <!-- десктоп и планшет -->
+      <svg class="art art--desk" viewBox="0 0 480 440" focusable="false">
+        <rect width="480" height="440" rx="12" fill="url(#paper)"/>
+        <!-- лекало рукава -->
+        <path d="M118 372 L152 132 C168 70 238 44 296 86 C320 104 330 130 336 160 L366 372 Z" class="o fw"/>
+        <path d="M128 300h10M135 252h10M142 204h10" class="o2 fn"/>
+        <path d="M240 138V330M234 150l6-12 6 12M234 318l6 12 6-12" class="o2 fn"/>
+        <!-- строчка по контуру -->
+        <path d="M118 372 L152 132 C168 70 238 44 296 86 C320 104 330 130 336 160 L366 372 Z" transform="translate(240 230) scale(.92) translate(-240 -230)" class="sa" stroke-dasharray="9 7"/>
+        <!-- ножницы -->
+        <use href="#ill-scissors" x="40" y="290" width="104" height="104" transform="rotate(-18 92 342)"/>
+        <!-- лента -->
+        <path d="M330 36 C400 20 450 50 452 100 C454 150 440 175 424 200" class="o fn" style="stroke-width:28"/>
+        <path d="M330 36 C400 20 450 50 452 100 C454 150 440 175 424 200" fill="none" stroke="var(--tape)" stroke-width="23"/>
+        <path d="M330 36 C400 20 450 50 452 100 C454 150 440 175 424 200" fill="none" stroke="var(--text)" stroke-width="12" stroke-dasharray="2 10"/>
+        <!-- пуговица -->
+        <use href="#ill-button" x="352" y="286" width="80" height="80"/>
+        <!-- иголка и нитка -->
+        <line x1="92" y1="88" x2="184" y2="158" class="o fn" style="stroke-width:5"/>
+        <ellipse cx="92" cy="88" rx="4" ry="7" transform="rotate(-38 92 88)" class="o2 fw"/>
+        <path d="M96 90 C30 130 40 260 100 320 C115 335 125 345 134 356" pathLength="1" class="sa thread"/>
+      </svg>
+      <!-- телефон -->
+      <svg class="art art--ribbon" viewBox="0 0 343 120" focusable="false">
+        <rect width="343" height="120" rx="12" fill="url(#paper)"/>
+        <use href="#ill-button" x="86" y="12" width="48" height="48"/>
+        <use href="#ill-sleeve" x="162" y="6" width="46" height="58"/>
+        <use href="#ill-scissors" x="244" y="8" width="56" height="56"/>
+        <path d="M56 84H319" class="sa" stroke-dasharray="9 7"/>
+        <line x1="22" y1="58" x2="56" y2="84" class="o fn" style="stroke-width:4"/>
+        <ellipse cx="22" cy="58" rx="3" ry="5.5" transform="rotate(-38 22 58)" class="o2 fw"/>
+        <path d="M23 60 C6 80 10 108 36 108 C50 108 54 96 56 84" pathLength="1" class="sa thread"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="container facts-grid">
+    <div class="fact"><b>26 лет</b><span>стаж портного Сергея Борисовича Шакурского</span></div>
+    <div class="fact"><b>от&nbsp;80&nbsp;₽</b><span>обработка шва оверлоком, самая короткая позиция прайса</span></div>
+    <div class="fact"><b>Пн-Сб</b><span>пн-пт 9:30-18:00, сб 10:00-14:00</span></div>
+    <div class="fact"><b>Наличные и карта</b><span>оплата наличными или переводом на карту</span></div>
+  </div>
+</div>
+
+<!-- 4. Услуги и цены -->
+<section class="sec sec--bg" id="uslugi" aria-labelledby="h-uslugi">
+  <div class="container">
+    <div class="sec-head" style="margin-bottom:32px">
+      <h2 id="h-uslugi">Услуги и цены</h2>
+      <p class="lead">Прайс ателье по основным работам. Цена «от» - минимальная, итоговую стоимость мастер называет по вашей вещи. Если нужной работы в списке нет, позвоните или оставьте заявку.</p>
+      <p class="note note--top"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Цены взяты с карточки ателье на Zoon (обновлено 28.07.2026), владелец подтвердит их перед запуском.</span></p>
+      <nav class="chips" aria-label="Группы услуг">
+        <a href="#gruppa-odezhda">Одежда</a>
+        <a href="#gruppa-dzhinsy">Джинсы и брюки</a>
+        <a href="#gruppa-kurtki">Куртки и пальто</a>
+        <a href="#gruppa-shtory">Шторы и домашний текстиль</a>
+        <a href="#gruppa-sumki">Сумки и кожа</a>
+        <a href="#gruppa-obuv">Обувь</a>
+      </nav>
+    </div>
+
+    <div class="groups">
+      <!-- Группа 1 -->
+      <article class="card g1" id="gruppa-odezhda" aria-labelledby="h-g1">
+        <div class="card-head">
+          <span class="tile"><svg class="ic" aria-hidden="true"><use href="#i-shirt"/></svg></span>
+          <div><h3 id="h-g1">Одежда</h3><p>Ремонт и подгонка одежды, женское ателье, мелкий ремонт и фурнитура.</p></div>
+        </div>
+        <ul class="pl">
+          <li><span class="nm">Укоротить рукава</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;800&nbsp;₽</span></li>
+          <li><span class="nm">Проложить строчку</span><span class="leader" aria-hidden="true"></span><span class="pr">150&nbsp;₽</span></li>
+          <li><span class="nm">Ремонт кармана</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;500&nbsp;₽</span></li>
+          <li><span class="nm">Обработка шва оверлоком</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;80&nbsp;₽</span></li>
+          <li><span class="nm">Сборка и пришить погоны</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;450&nbsp;₽</span></li>
+          <li><span class="nm">Металлическая пуговица</span><span class="leader" aria-hidden="true"></span><span class="pr">150&nbsp;₽</span></li>
+          <li><span class="nm">Кнопка АЛЬФА/ОМЕГА, демонтаж и установка</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;200&nbsp;₽</span></li>
+          <li><span class="nm">Кнопка ДЕЛЬТА</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;250&nbsp;₽</span></li>
+          <li><span class="nm">Замена слайдера молнии (с учётом слайдера)</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;300&nbsp;₽</span></li>
+          <li><span class="nm">Обтяжка пуговиц</span><span class="leader" aria-hidden="true"></span><span class="pr pr--ask">цена по запросу</span></li>
+          <li class="ask"><a class="link-ask" href="#zayavka" data-service="Ремонт одежды" aria-label="Узнать цену: обтяжка пуговиц">Узнать цену<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+      </article>
+
+      <!-- Группа 2 -->
+      <article class="card g2" id="gruppa-dzhinsy" aria-labelledby="h-g2">
+        <div class="card-head">
+          <span class="tile"><svg class="ic" aria-hidden="true"><use href="#i-pants"/></svg></span>
+          <div><h3 id="h-g2">Джинсы и брюки</h3><p>Укоротим, ушьём, расширим, заменим молнию.</p></div>
+        </div>
+        <ul class="pl">
+          <li><span class="nm">Укоротить джинсы</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;500&nbsp;₽</span></li>
+          <li><span class="nm">Укоротить джинсы с сохранением оригинального шва</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;800&nbsp;₽</span></li>
+          <li><span class="nm">Забрать или выпустить брюки по среднему шву</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;500&nbsp;₽</span></li>
+          <li><span class="nm">Штуковка джинсов</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;350&nbsp;₽</span></li>
+          <li><span class="nm">Изменить ширину клёша</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;800&nbsp;₽</span></li>
+          <li><span class="nm">Замена молнии в джинсах (без стоимости молнии)</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;700&nbsp;₽</span></li>
+          <li><span class="nm">Перекрой джинсов и брюк</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;2500&nbsp;₽</span></li>
+        </ul>
+      </article>
+
+      <!-- Группа 3 -->
+      <article class="card g3" id="gruppa-kurtki" aria-labelledby="h-g3">
+        <div class="card-head">
+          <span class="tile"><svg class="ic" aria-hidden="true"><use href="#i-coat"/></svg></span>
+          <div><h3 id="h-g3">Куртки и пальто</h3><p>Ремонт курток, спортивной одежды и пальто.</p></div>
+        </div>
+        <ul class="pl">
+          <li><span class="nm">Ремонт борта пальто</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;1000&nbsp;₽</span></li>
+          <li><span class="nm">Замена молнии в куртке (за работу)</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;1000&nbsp;₽</span></li>
+          <li><span class="nm">Ремонт вырванной кнопки на полочке куртки</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;800&nbsp;₽</span></li>
+          <li><span class="nm">Изменить ширину куртки за счёт рельефов и боковых швов</span><span class="leader" aria-hidden="true"></span><span class="pr"><span class="from">от</span>&nbsp;2000&nbsp;₽</span></li>
+          <li><span class="nm">Ремонт спортивной одежды</span><span class="leader" aria-hidden="true"></span><span class="pr pr--ask">цена по запросу</span></li>
+          <li><span class="nm">Ремонт палаток</span><span class="leader" aria-hidden="true"></span><span class="pr pr--ask">цена по запросу</span></li>
+          <li class="ask"><a class="link-ask" href="#zayavka" data-service="Ремонт одежды" aria-label="Узнать цену: ремонт спортивной одежды и палаток">Узнать цену<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+      </article>
+
+      <!-- Группа 4 -->
+      <article class="card g4" id="gruppa-shtory" aria-labelledby="h-g4">
+        <div class="card-head">
+          <span class="tile"><svg class="ic" aria-hidden="true"><use href="#i-curtain"/></svg></span>
+          <div><h3 id="h-g4">Шторы и домашний текстиль</h3><p>Шторы и чехлы на стулья под ваши размеры.</p></div>
+        </div>
+        <ul class="pl">
+          <li><span class="nm">Пошив штор</span><span class="leader" aria-hidden="true"></span><span class="pr pr--ask">цена по запросу</span></li>
+          <li><span class="nm">Пошив чехлов на стулья</span><span class="leader" aria-hidden="true"></span><span class="pr pr--ask">цена по запросу</span></li>
+          <li class="ask"><a class="link-ask" href="#zayavka" data-service="Шторы" aria-label="Узнать цену: пошив штор и чехлов на стулья">Узнать цену<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+        <p class="card-note">Назвать цену можно только по вашему заказу. Позвоните или оставьте заявку, мастер посчитает.</p>
+      </article>
+
+      <!-- Группа 5 -->
+      <article class="card g5" id="gruppa-sumki" aria-labelledby="h-g5">
+        <div class="card-head">
+          <span class="tile"><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg></span>
+          <div><h3 id="h-g5">Сумки и кожа</h3><p>Починка сумок и кожаных изделий.</p></div>
+        </div>
+        <ul class="pl">
+          <li><span class="nm">Ремонт сумок</span><span class="leader" aria-hidden="true"></span><span class="pr pr--ask">цена по запросу</span></li>
+          <li><span class="nm">Ремонт кожаных изделий</span><span class="leader" aria-hidden="true"></span><span class="pr pr--ask">цена по запросу</span></li>
+          <li class="ask"><a class="link-ask" href="#zayavka" data-service="Сумки" aria-label="Узнать цену: ремонт сумок и кожаных изделий">Узнать цену<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+        <p class="card-note">Стоимость зависит от поломки. Пришлите описание в заявке или принесите вещь в ателье.</p>
+      </article>
+
+      <!-- Группа 6 -->
+      <article class="card g6" id="gruppa-obuv" aria-labelledby="h-g6">
+        <div class="card-head">
+          <span class="tile"><svg class="ic" aria-hidden="true"><use href="#i-boot"/></svg></span>
+          <div><h3 id="h-g6">Обувь</h3><p>Обувное ателье.</p></div>
+        </div>
+        <ul class="pl">
+          <li><span class="nm">Ремонт обуви</span><span class="leader" aria-hidden="true"></span><span class="pr pr--ask">цена по запросу</span></li>
+          <li class="ask"><a class="link-ask" href="#zayavka" data-service="Обувь" aria-label="Узнать цену: ремонт обуви">Узнать цену<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+        </ul>
+        <p class="card-note">Стоимость зависит от поломки. Пришлите описание в заявке или принесите обувь в ателье.</p>
+      </article>
+    </div>
+
+    <div class="groups-cta">
+      <a class="btn btn--primary btn--lg" href="#zayavka">Оставить заявку</a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Фото работ -->
+<section class="sec sec--surface" id="foto" aria-labelledby="h-foto">
+  <div class="container">
+    <div class="sec-head">
+      <h2 id="h-foto">Фото работ</h2>
+      <p class="lead">Работы ателье: фото до и после.</p>
+    </div>
+    <div class="gallery">
+      <figure><img src="img/rabota-01-dzhinsy-zaplatka.jpg" width="1280" height="1280" loading="lazy" decoding="async" alt="Светлые джинсы до и после ремонта: дырка на штанине заделана"></figure>
+      <figure><img src="img/rabota-02-dzhinsy-podshivka.jpg" width="1280" height="864" loading="lazy" decoding="async" alt="Тёмные детские джинсы до и после: дырка на колене закрыта нашивкой"></figure>
+      <figure><img src="img/rabota-03-bryuki-molniya.jpg" width="1280" height="1280" loading="lazy" decoding="async" alt="Синие брюки до и после: замена молнии в поясе"></figure>
+      <figure><img src="img/rabota-04-dzhinsy-molniya.jpg" width="1280" height="1280" loading="lazy" decoding="async" alt="Серые джинсы в три кадра: старая молния, замена и готовая работа"></figure>
+      <figure><img src="img/rabota-05-bryuki-kletka.jpg" width="1280" height="864" loading="lazy" decoding="async" alt="Клетчатая ткань до и после: замена молнии в поясе"></figure>
+      <figure><img src="img/rabota-06-bryuki-dlina.jpg" width="1280" height="864" loading="lazy" decoding="async" alt="Тёмные брюки до и после: длина изменена с 25 до 21,5"></figure>
+      <figure><img src="img/rabota-07-dzhinsy-poyas.jpg" width="1280" height="1280" loading="lazy" decoding="async" alt="Джинсы до и после: ремонт шлёвки на поясе"></figure>
+      <figure><img src="img/rabota-08-kozha-kurtka.jpg" width="1280" height="1280" loading="lazy" decoding="async" alt="Кожаная куртка в три кадра: порванный карман и результат ремонта"></figure>
+      <figure><img src="img/rabota-09-puhovik.jpg" width="1280" height="1280" loading="lazy" decoding="async" alt="Чёрная стёганая куртка до и после: установка кнопок"></figure>
+    </div>
+    <p class="gal-cap">Фото с карточки ателье на Zoon.</p>
+  </div>
+</section>
+
+<!-- 6. О мастере -->
+<section class="sec sec--bg" id="master" aria-labelledby="h-master">
+  <div class="container master">
+    <div class="info">
+      <h2 id="h-master" style="margin-bottom:20px">О мастере</h2>
+      <h3>Сергей Борисович Шакурский</h3>
+      <p class="role">Портной</p>
+      <p class="years"><span class="big-num">26</span><span>лет стажа</span></p>
+      <p class="text">Сергей Борисович Шакурский - портной со стажем 26 лет. В ателье «ГалСей» он ремонтирует и подгоняет одежду, шьёт шторы и чехлы на стулья, чинит сумки, кожаные изделия и обувь.</p>
+      <p class="tiny muted">Данные о стаже - с карточки ателье на Zoon.</p>
+    </div>
+    <div class="photo">
+      <div class="ph ph--master paper" role="img" aria-label="Пустое место под фото мастера">
+        <span class="ph-scissors" aria-hidden="true"><svg class="ic"><use href="#i-scissors"/></svg></span>
+        <div class="ph-in" aria-hidden="true" style="align-items:center;text-align:center"><svg class="ic" style="width:48px;height:48px"><use href="#i-person"/></svg><strong>Место для фото мастера. Фото добавит заказчик.</strong></div>
+      </div>
+    </div>
+    <figure class="review">
+      <blockquote class="quote">«Очень хорошее и качественное ателье! Хорошие специалисты и хозяева!»</blockquote>
+      <figcaption><cite>Отзыв с Zoon, март 2024</cite></figcaption>
+    </figure>
+  </div>
+  <div class="container strip">
+    <figure class="wide">
+      <img src="img/logo.jpg" width="800" height="343" loading="lazy" decoding="async" alt="Вывеска ателье: «ГалСей», швейная мастерская">
+      <figcaption>Вывеска ателье, фото с Zoon</figcaption>
+    </figure>
+    <figure>
+      <img src="img/vyveska.jpg" width="1118" height="1280" loading="lazy" decoding="async" alt="Вывеска на двери ателье: комната 6, часы работы с 9.30 до 18.00">
+      <figcaption>Вывеска на двери, фото с Zoon</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 7. Как найти -->
+<section class="sec sec--surface" id="kak-najti" aria-labelledby="h-where">
+  <div class="container where">
+    <div class="where-info">
+      <h2 id="h-where" style="margin-bottom:20px">Как найти ателье</h2>
+      <p class="addr">Волгоград, проспект Героев Сталинграда, 9</p>
+      <div class="badges">
+        <span class="badge"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Цокольный этаж</span>
+        <span class="badge"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Комната 6</span>
+        <span class="badge"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Красноармейский район</span>
+      </div>
+      <p class="entry"><svg class="ic ic--28" aria-hidden="true"><use href="#i-pin"/></svg><strong>Цокольный этаж, комната 6, жёлтая вывеска на двери</strong></p>
+      <h3 class="h4">Часы работы</h3>
+      <ul class="hours">
+        <li><span class="nm">Понедельник - пятница</span><span class="leader" aria-hidden="true"></span><span class="t"><span class="tn">9:30-18:00</span></span></li>
+        <li><span class="nm">Суббота</span><span class="leader" aria-hidden="true"></span><span class="t"><span class="tn">10:00-14:00</span> и до последнего клиента</span></li>
+      </ul>
+      <h3 class="h4">Оплата</h3>
+      <p class="pay"><svg class="ic ic--24" aria-hidden="true"><use href="#i-card"/></svg>Наличные или перевод на карту</p>
+      <div class="btn-row">
+        <a class="btn btn--primary btn--lg" href="tel:+79093876000" data-call><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить</a>
+        <a class="btn btn--outline btn--lg" href="#zayavka">Оставить заявку</a>
+      </div>
+    </div>
+    <div class="where-map">
+      <p class="map-label">Ателье «ГалСей», проспект Героев Сталинграда, 9, цоколь</p>
+      <iframe class="map-frame" title="Карта: ателье «ГалСей», проспект Героев Сталинграда, 9" src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%93%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D0%A1%D1%82%D0%B0%D0%BB%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%2C%209&amp;z=17" width="600" height="360" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="map-btns">
+        <a class="btn btn--outline" href="https://yandex.ru/maps/?text=%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%93%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D0%A1%D1%82%D0%B0%D0%BB%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%2C%209" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+        <a class="btn btn--soft" href="https://yandex.ru/maps/?rtext=~%D0%92%D0%BE%D0%BB%D0%B3%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%93%D0%B5%D1%80%D0%BE%D0%B5%D0%B2%20%D0%A1%D1%82%D0%B0%D0%BB%D0%B8%D0%BD%D0%B3%D1%80%D0%B0%D0%B4%D0%B0%2C%209&amp;rtt=auto" target="_blank" rel="noopener">Проложить маршрут</a>
+      </div>
+      <p class="map-fallback">Если карта не загрузилась: Волгоград, проспект Героев Сталинграда, 9, цокольный этаж, комната 6. Откройте адрес по ссылкам выше.</p>
+    </div>
+    <div class="photos">
+      <figure>
+        <img src="img/koridor.jpg" width="949" height="1280" loading="lazy" decoding="async" alt="Коридор цокольного этажа: жёлтая вывеска ателье на двери">
+        <figcaption>Коридор в цоколе, дверь ателье с жёлтой вывеской, фото с Zoon</figcaption>
+      </figure>
+      <figure>
+        <img src="img/dver.jpg" width="949" height="1280" loading="lazy" decoding="async" alt="Дверь ателье «ГалСей» с вывеской: комната 6, часы работы, список услуг">
+        <figcaption>Дверь ателье, комната 6, фото с Zoon</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Заявка -->
+<section class="sec sec--tint" id="zayavka" aria-labelledby="h-req">
+  <div class="container req">
+    <div class="req-info">
+      <h2 id="h-req" style="margin-bottom:12px">Оставить заявку</h2>
+      <p class="lead">Оставьте имя и телефон, мы перезвоним в рабочее время: пн-пт 9:30-18:00, сб 10:00-14:00.</p>
+      <ol class="steps">
+        <li>Вы оставляете заявку.</li>
+        <li>Заявка сразу приходит в ателье: на почту и в таблицу.</li>
+        <li>Вам перезванивают в рабочее время. Если вы написали вечером или ночью, заявка ждёт утра.</li>
+      </ol>
+    </div>
+
+    <div class="form-card" id="form-card">
+      <div id="form-alert" class="alert" role="alert" tabindex="-1" hidden>
+        <svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>
+        <div><p id="alert-title"></p><ul id="alert-list"></ul></div>
+      </div>
+
+      <form id="req-form" novalidate>
+        <div class="f-grid">
+          <div class="field">
+            <label for="f-name">Ваше имя</label>
+            <input id="f-name" name="name" type="text" autocomplete="given-name" placeholder="Например, Анна" required aria-describedby="err-name">
+            <p class="err" id="err-name" hidden><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Телефон</label>
+            <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required aria-describedby="err-phone">
+            <p class="err" id="err-phone" hidden><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+          <div class="field">
+            <label for="f-service">Что нужно</label>
+            <div class="sel">
+              <select id="f-service" name="service" required aria-describedby="err-service">
+                <option value="" disabled selected>Выберите из списка</option>
+                <option>Ремонт одежды</option>
+                <option>Пошив</option>
+                <option>Шторы</option>
+                <option>Сумки</option>
+                <option>Обувь</option>
+                <option>Другое</option>
+              </select>
+              <svg class="ic" aria-hidden="true"><use href="#i-chevron"/></svg>
+            </div>
+            <p class="err" id="err-service" hidden><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p>
+          </div>
+          <div class="field">
+            <label for="f-time">Удобное время звонка</label>
+            <input id="f-time" name="time" type="text" placeholder="Например, после 15:00 или в субботу утром">
+          </div>
+          <div class="field full">
+            <label for="f-details">Опишите вещь</label>
+            <textarea id="f-details" name="details" placeholder="Например: джинсы, укоротить на 5 см, шов оставить заводской" aria-describedby="hint-details"></textarea>
+            <p class="hint" id="hint-details">Необязательно. Чем точнее описание, тем быстрее вам назовут цену.</p>
+          </div>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label for="f-website">Не заполняйте это поле</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button class="btn btn--primary btn--lg submit" type="submit" id="submit-btn"><span class="spin" aria-hidden="true"></span><span id="submit-label">Отправить заявку</span></button>
+        <p class="consent">Нажимая «Отправить заявку», вы соглашаетесь на обработку персональных данных (имя и телефон). Мы используем их только чтобы перезвонить вам по этой заявке и не передаём третьим лицам.</p>
+      </form>
+
+      <div id="success" class="success" role="status" aria-live="polite" hidden>
+        <div class="mark" aria-hidden="true">
+          <svg class="ic" id="ic-ok"><use href="#i-check"/></svg>
+          <svg class="ic" id="ic-wait" hidden><use href="#i-clock"/></svg>
+        </div>
+        <div id="ok-work" hidden>
+          <h3 tabindex="-1">Заявка получена</h3>
+          <p class="text">Заявку получили, перезвоним в рабочее время (пн-пт 9:30-18:00, сб 10:00-14:00). Если вопрос срочный, позвоните: <a class="link nowrap" href="tel:+79093876000" data-phone-link>+7 (909) 387-60-00</a>.</p>
+        </div>
+        <div id="ok-wait" hidden>
+          <h3 tabindex="-1">Заявка получена и ждёт утра</h3>
+          <p class="text">Сейчас ателье закрыто. Ваша заявка сохранена, и мы перезвоним, когда ателье откроется: пн-пт 9:30-18:00, сб 10:00-14:00.</p>
+        </div>
+        <p class="note"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span>Это демо: заявка никуда не ушла, данные не сохранены. В рабочей версии заявка приходит ателье на почту и записывается в таблицу со статусом «новая».</span></p>
+        <button type="button" class="btn btn--outline" id="again-btn">Отправить ещё одну заявку</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Правки по демо -->
+<section class="fix" id="pravki" aria-labelledby="h-fix">
+  <div class="container fix-grid">
+    <div>
+      <span class="tag">Блок для владельца ателье, в рабочей версии его не будет</span>
+      <h2 id="h-fix">Правки по демо</h2>
+      <p class="lead">Посмотрите сайт и пришлите, что поправить: тексты, цены, порядок блоков, цвета, контакты. Я соберу все правки одним списком и покажу новую версию.</p>
+      <ol class="steps steps--note">
+        <li>Смотрите демо на телефоне и компьютере.</li>
+        <li>Пишете правки списком в МАХ, Telegram или на почту. Можно голосовым или звонком.</li>
+        <li>Новая версия будет до 1-2 дней после вашего списка.</li>
+      </ol>
+      <p class="terms">В работу включены 2 круга правок. Если понадобится больше, обсудим отдельно.</p>
+      <div class="need">
+        <h3>Что нужно от вас, чтобы сайт стал настоящим</h3>
+        <ul>
+          <li>ещё фото ваших работ (сейчас стоят фото с вашей карточки на Zoon)</li>
+          <li>подтверждение прайса</li>
+          <li>подтверждение номера телефона ателье (сейчас взят с вывески на двери) и ссылка на МАХ</li>
+          <li>почта, на которую присылать заявки</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ev-card">
+      <h3>Евгений, веб-разработчик</h3>
+      <ul class="ev-data">
+        <li><svg class="ic ic--24" aria-hidden="true"><use href="#i-phone"/></svg><span>Телефон и МАХ: <a class="nowrap" href="tel:+79270614295">+7 (927) 061-42-95</a></span></li>
+        <li><svg class="ic ic--24" aria-hidden="true"><use href="#i-send"/></svg><span>Telegram: <a href="https://t.me/EvgenyMordvintsev" target="_blank" rel="noopener">@EvgenyMordvintsev</a></span></li>
+        <li><svg class="ic ic--24" aria-hidden="true"><use href="#i-mail"/></svg><span>Почта: <a href="mailto:evejen7@gmail.com">evejen7@gmail.com</a></span></li>
+      </ul>
+      <p class="ev-time">Время ответа: в течение дня, с 9:00 до 20:00</p>
+      <div class="ev-btns">
+        <a class="btn btn--ink" href="tel:+79270614295"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>Позвонить Евгению</a>
+        <a class="btn btn--ink" id="max-btn" href="#" target="_blank" rel="noopener" hidden><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Написать в МАХ</a>
+        <a class="btn btn--ink" href="https://t.me/EvgenyMordvintsev" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg>Написать в Telegram</a>
+        <a class="btn btn--ink" href="mailto:evejen7@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Написать на почту</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 10. Подвал -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <p class="brand-foot">Ателье «ГалСей»</p>
+        <p class="small">Ремонт и пошив одежды, штор, сумок и обуви в Красноармейском районе Волгограда.</p>
+      </div>
+      <div>
+        <h2 class="col-title">Адрес и часы</h2>
+        <ul>
+          <li>Волгоград, проспект Героев Сталинграда, 9, цокольный этаж, комната 6</li>
+          <li>Пн-пт 9:30-18:00</li>
+          <li>Сб 10:00-14:00 и до последнего клиента</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="col-title">Связаться с ателье</h2>
+        <ul>
+          <li class="foot-phone">Телефон: <a class="link nowrap" href="tel:+79093876000" data-phone-link>+7 (909) 387-60-00</a></li>
+          <li>Telegram: <a class="link" href="https://t.me/galsei" target="_blank" rel="noopener">@galsei</a></li>
+          <li>МАХ: [МАХ ателье - уточнить]</li>
+        </ul>
+        <a class="btn btn--primary btn--sm foot-cta" href="#zayavka">Оставить заявку</a>
+      </div>
+      <div>
+        <h2 class="col-title">Оплата</h2>
+        <ul>
+          <li>Наличные</li>
+          <li>Перевод на карту</li>
+        </ul>
+      </div>
+    </div>
+    <nav class="foot-menu" aria-label="Меню подвала">
+      <a class="link" href="#uslugi">Услуги и цены</a>
+      <a class="link" href="#foto">Фото работ</a>
+      <a class="link" href="#master">О мастере</a>
+      <a class="link" href="#kak-najti">Как найти</a>
+      <a class="link" href="#zayavka">Заявка</a>
+    </nav>
+  </div>
+  <div class="demo-foot">
+    <div class="container">
+      <p>Демо-версия сайта для ателье «ГалСей». Сделал Евгений. Это не официальный сайт ателье, фото и цены проверит владелец.</p>
+      <p class="ev">
+        <a class="link" href="tel:+79270614295"><span class="nowrap">+7 (927) 061-42-95</span>&nbsp;(звонок и МАХ)</a>
+        <a class="link" href="https://t.me/EvgenyMordvintsev" target="_blank" rel="noopener">Telegram @EvgenyMordvintsev</a>
+        <a class="link" href="mailto:evejen7@gmail.com">evejen7@gmail.com</a>
+      </p>
+      <p><a class="link" href="#pravki">Правки по демо</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ===== Настройки (менять только здесь) ===== */
+  var WEBHOOK_URL = '';              // адрес webhook n8n; пусто, пока не подключён
+  var DEMO_MODE = true;              // true: заявка никуда не отправляется, показывается ответ клиенту
+  var RATE_LIMIT_SECONDS = 60;       // минимальный интервал между отправками с одного браузера
+  var ATELIER_PHONE = '+79093876000'; // телефон ателье: взят с вывески на фото, подтвердить у владельца; пусто: кнопки «Позвонить» ведут на форму
+  var ATELIER_PHONE_DISPLAY = '+7 (909) 387-60-00'; // как номер показан на странице
+  var EVGENY_MAX_URL = '';           // ссылка на чат МАХ Евгения; пусто: кнопка «Написать в МАХ» не выводится
+  /* ========================================== */
+
+  var PHONE_PLACEHOLDER = '[телефон ателье - уточнить]';
+  var RATE_KEY = 'galsej_last_submit';
+
+  var MSG = {
+    nameEmpty: 'Напишите, как к вам обращаться',
+    nameShort: 'Имя слишком короткое: минимум 2 буквы',
+    phoneEmpty: 'Укажите телефон, чтобы мы могли перезвонить',
+    phoneBad: 'Проверьте номер: нужно 11 цифр, например +7 (927) 000-00-00',
+    service: 'Выберите, что нужно сделать'
+  };
+
+  function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+
+  /* ----- склонение ----- */
+  function plural(n, forms) {
+    var a = Math.abs(n) % 100, b = a % 10;
+    if (a > 10 && a < 20) return forms[2];
+    if (b > 1 && b < 5) return forms[1];
+    if (b === 1) return forms[0];
+    return forms[2];
+  }
+
+  /* ----- телефон ателье и МАХ Евгения ----- */
+  var telHref = ATELIER_PHONE ? 'tel:' + ATELIER_PHONE.replace(/[^\d+]/g, '') : '';
+  if (telHref) {
+    $$('[data-call]').forEach(function (a) { a.setAttribute('href', telHref); });
+    $$('[data-phone-link]').forEach(function (a) {
+      a.setAttribute('href', telHref);
+      a.textContent = ATELIER_PHONE_DISPLAY || ATELIER_PHONE;
+    });
+  } else {
+    // номера нет: кнопки ведут на форму, вместо номера показывается заглушка
+    $$('[data-call]').forEach(function (a) { a.setAttribute('href', '#zayavka'); });
+    $$('[data-phone-link]').forEach(function (a) {
+      var span = document.createElement('span');
+      span.className = 'nowrap';
+      span.textContent = PHONE_PLACEHOLDER;
+      a.parentNode.replaceChild(span, a);
+    });
+  }
+  function phoneLabel() { return telHref ? (ATELIER_PHONE_DISPLAY || ATELIER_PHONE) : PHONE_PLACEHOLDER; }
+  if (EVGENY_MAX_URL) {
+    var maxBtn = $('#max-btn');
+    maxBtn.setAttribute('href', EVGENY_MAX_URL);
+    maxBtn.hidden = false;
+  }
+
+  /* ----- рабочее время (Волгоград, UTC+3) ----- */
+  function volgogradNow() {
+    var d = new Date(Date.now() + 3 * 3600 * 1000);
+    return { day: d.getUTCDay(), min: d.getUTCHours() * 60 + d.getUTCMinutes() };
+  }
+  function isWorkingNow() {
+    var t = volgogradNow();
+    if (t.day >= 1 && t.day <= 5) return t.min >= 9 * 60 + 30 && t.min < 18 * 60;
+    if (t.day === 6) return t.min >= 10 * 60 && t.min < 14 * 60;
+    return false; // воскресенье: для ответа «ждёт утра» считаем нерабочим
+  }
+
+  /* ----- лимит частоты ----- */
+  var memLast = 0;
+  function getLast() {
+    var v = 0;
+    try { v = parseInt(sessionStorage.getItem(RATE_KEY) || '0', 10) || 0; } catch (e) {}
+    return Math.max(v, memLast);
+  }
+  function setLast(ts) {
+    memLast = ts;
+    try { sessionStorage.setItem(RATE_KEY, String(ts)); } catch (e) {}
+  }
+
+  /* ----- форма ----- */
+  var form = $('#req-form');
+  var card = $('#form-card');
+  var alertBox = $('#form-alert');
+  var alertTitle = $('#alert-title');
+  var alertList = $('#alert-list');
+  var success = $('#success');
+  var submitBtn = $('#submit-btn');
+  var submitLabel = $('#submit-label');
+  var f = {
+    name: $('#f-name'), phone: $('#f-phone'), service: $('#f-service'),
+    time: $('#f-time'), details: $('#f-details'), website: $('#f-website')
+  };
+  var attempted = false;
+  var busy = false;
+
+  var validators = {
+    name: function (v) {
+      v = v.trim();
+      if (!v) return MSG.nameEmpty;
+      if (v.length < 2) return MSG.nameShort;
+      return '';
+    },
+    phone: function (v) {
+      if (!v.trim()) return MSG.phoneEmpty;
+      var d = v.replace(/\D/g, '');
+      if (d.length !== 11 || !/^[78]/.test(d)) return MSG.phoneBad;
+      return '';
+    },
+    service: function (v) { return v ? '' : MSG.service; }
+  };
+
+  function setFieldError(key, msg) {
+    var input = f[key], box = $('#err-' + key);
+    if (msg) {
+      input.setAttribute('aria-invalid', 'true');
+      box.querySelector('span').textContent = msg;
+      box.hidden = false;
+    } else {
+      input.removeAttribute('aria-invalid');
+      box.hidden = true;
+    }
+  }
+  function validateField(key) {
+    var msg = validators[key](f[key].value);
+    setFieldError(key, msg);
+    return msg;
+  }
+  function hideAlert() { alertBox.hidden = true; alertList.innerHTML = ''; alertList.hidden = false; }
+  function showAlert(title, items) {
+    alertTitle.textContent = title;
+    alertList.innerHTML = '';
+    if (items && items.length) {
+      alertList.hidden = false;
+      items.forEach(function (it) {
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = '#f-' + it.key;
+        a.textContent = it.msg;
+        a.addEventListener('click', function (e) { e.preventDefault(); f[it.key].focus(); });
+        li.appendChild(a);
+        alertList.appendChild(li);
+      });
+    } else {
+      alertList.hidden = true;
+    }
+    alertBox.hidden = false;
+    alertBox.focus();
+  }
+
+  ['name', 'phone', 'service'].forEach(function (key) {
+    var ev = key === 'service' ? 'change' : 'input';
+    f[key].addEventListener(ev, function () { if (attempted) validateField(key); });
+    f[key].addEventListener('blur', function () { if (attempted) validateField(key); });
+  });
+
+  function setBusy(on) {
+    busy = on;
+    submitBtn.classList.toggle('is-loading', on);
+    submitBtn.setAttribute('aria-disabled', on ? 'true' : 'false');
+    if (!on) submitBtn.removeAttribute('aria-disabled');
+    submitLabel.textContent = on ? 'Отправляем...' : 'Отправить заявку';
+    ['name', 'phone', 'service', 'time', 'details'].forEach(function (k) { f[k].disabled = on; });
+  }
+
+  function showSuccess(waits) {
+    card.style.minHeight = card.offsetHeight + 'px';
+    form.hidden = true;
+    hideAlert();
+    $('#ok-work').hidden = waits;
+    $('#ok-wait').hidden = !waits;
+    $('#ic-ok').hidden = waits;
+    $('#ic-wait').hidden = !waits;
+    success.hidden = false;
+    var h = $((waits ? '#ok-wait' : '#ok-work') + ' h3');
+    if (h) h.focus({ preventScroll: true });
+  }
+
+  function resetForm() {
+    form.reset();
+    attempted = false;
+    ['name', 'phone', 'service'].forEach(function (k) { setFieldError(k, ''); });
+    hideAlert();
+    success.hidden = true;
+    form.hidden = false;
+    card.style.minHeight = '';
+    f.name.focus({ preventScroll: true });
+  }
+  $('#again-btn').addEventListener('click', resetForm);
+
+  function sendToWebhook(payload) {
+    if (!WEBHOOK_URL) return Promise.reject(new Error('no-webhook'));
+    return fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (r) { if (!r.ok) throw new Error('http-' + r.status); });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (busy) return;
+
+    // honeypot: боты заполняют скрытое поле, притворяемся успехом и ничего не отправляем
+    if (f.website.value.trim() !== '') {
+      showSuccess(!isWorkingNow());
+      return;
+    }
+
+    attempted = true;
+    var errors = [];
+    ['name', 'phone', 'service'].forEach(function (k) {
+      var msg = validateField(k);
+      if (msg) errors.push({ key: k, msg: msg });
+    });
+    if (errors.length) {
+      showAlert('Исправьте ' + errors.length + ' ' + plural(errors.length, ['поле', 'поля', 'полей']) + ', чтобы отправить заявку', errors);
+      return;
+    }
+
+    // лимит частоты на клиенте
+    var wait = RATE_LIMIT_SECONDS - Math.floor((Date.now() - getLast()) / 1000);
+    if (getLast() && wait > 0) {
+      showAlert('Заявка уже отправлена. Следующую можно отправить через ' + wait + ' с', null);
+      return;
+    }
+    hideAlert();
+
+    var waits = !isWorkingNow();
+    var payload = {
+      name: f.name.value.trim(),
+      phone: f.phone.value.trim(),
+      service: f.service.value,
+      time: f.time.value.trim(),
+      details: f.details.value.trim(),
+      status: waits ? 'ждёт утра' : 'новая',
+      sentAt: new Date().toISOString(),
+      source: 'galsej-demo'
+    };
+
+    setBusy(true);
+    if (DEMO_MODE) {
+      setTimeout(function () {
+        setLast(Date.now());
+        setBusy(false);
+        showSuccess(waits);
+      }, 700);
+    } else {
+      sendToWebhook(payload).then(function () {
+        setLast(Date.now());
+        setBusy(false);
+        showSuccess(waits);
+      }).catch(function () {
+        setBusy(false);
+        showAlert('Не получилось отправить заявку. Позвоните нам: ' + phoneLabel(), null);
+      });
+    }
+  });
+
+  /* ----- «Узнать цену»: предзаполнение поля «Что нужно» ----- */
+  $$('[data-service]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var value = a.getAttribute('data-service');
+      if (form.hidden) resetForm();
+      var opt = $$('option', f.service).filter(function (o) { return o.value === value || o.textContent === value; })[0];
+      if (opt) {
+        f.service.value = opt.value;
+        if (attempted) validateField('service');
+      }
+      var target = $('#zayavka');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      var first = [f.name, f.phone, f.service].filter(function (el) { return !el.value.trim(); })[0] || f.name;
+      setTimeout(function () { first.focus({ preventScroll: true }); }, reduce ? 0 : 450);
+    });
+  });
+
+  /* ----- подсветка текущего раздела в меню ----- */
+  var menu = $('#menu');
+  var links = $$('a', menu);
+  var secs = links.map(function (a) { return $(a.getAttribute('href')); });
+  var ticking = false;
+  var current = null;
+  function updateSpy() {
+    ticking = false;
+    var line = window.innerWidth >= 960 ? 140 : 170;
+    var idx = -1;
+    secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top <= line) idx = i; });
+    if (idx === current) return;
+    current = idx;
+    links.forEach(function (a, i) {
+      if (i === idx) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+    if (idx > -1 && window.innerWidth < 960) {
+      var a = links[idx];
+      var left = a.offsetLeft - (menu.clientWidth - a.offsetWidth) / 2;
+      menu.scrollTo({ left: left, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    }
+  }
+  function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(updateSpy); } }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  updateSpy();
+})();
+</script>
+</body>
+</html>
