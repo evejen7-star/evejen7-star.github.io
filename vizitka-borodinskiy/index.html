@@ -13,8 +13,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200..500&amp;family=Prata&amp;subset=cyrillic&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Яндекс Метрика: визиты и нажатия на кнопки (цели в app.js). Вебвизор выключен -->
+  <script>
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=113829395', 'ym');
+
+    ym(113829395, 'init', {ssr:true, webvisor:false, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
 </head>
 <body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/113829395" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
   <!-- Липкая шапка: только десктоп (от 768 px) -->
   <header class="topbar">
@@ -110,6 +123,7 @@
     <footer class="foot">
       <p>Барбершоп «Бородинский», Волгоград, ул. Курчатова, 3, ТЦ «Космос», 2 этаж</p>
       <p>Это черновик страницы, подготовленный веб-разработчиком Евгением. Не является официальным сайтом заведения.</p>
+      <p>На странице считаются визиты и нажатия на кнопки (Яндекс Метрика), личные данные не собираются.</p>
 
       <!-- Контакты разработчика: блок можно убрать целиком одним фрагментом -->
       <div class="dev-contacts">
