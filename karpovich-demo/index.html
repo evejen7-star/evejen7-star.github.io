@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Авторское ателье Евгении Карпович - Волгоград</title>
+<meta name="description" content="Авторское ателье в Волгограде: пошив по меркам, подгонка и ремонт, перекрой и реставрация верхней одежды, работа с кожей и мехом. Ул. Пражская, 17.">
+<!-- Шрифты: Jost и Literata, кириллица (subset cyrillic) подгружается через unicode-range ответа Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&subset=cyrillic&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Спрайт иконок и силуэтов (линейные, один стиль) -->
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 0 0 6.5 6.5L16 14l4 1.5V19a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1Z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H10l-4 3.5V16H4V5Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9L3.5 9.7l5.9-.8L12 3.5Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s6-5.6 6-10.5a6 6 0 1 0-12 0C6 15.4 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.2"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="M20 11.5l-7.5 7.5a4.5 4.5 0 0 1-6.4-6.4l8-8a3 3 0 0 1 4.2 4.2l-8 8a1.5 1.5 0 0 1-2.1-2.1l7.4-7.4"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Перейти к содержимому</a>
+
+<!-- Плашка: пример для клиентки. Закрыть нельзя. -->
+<div class="demo-note" role="note">
+  <p class="container">Черновик сайта для Авторского ателье Евгении Карпович. Места в рамках ждут ваших ответов. Данные из открытых источников и от владелицы, фото и отзывы с её разрешения</p>
+</div>
+
+<!-- Служебная красная полоса для Евгения: счётчик заглушек. Скрыта (hidden), app.js показывает её только при ?check в адресе. -->
+<div class="todo-bar" id="todo-bar" role="status" hidden>
+  <p class="container"><strong>Заглушек: <span id="todo-count">17</span></strong> <span id="todo-detail" class="todo-bar__detail">(текст и ссылки: 16, карта: 1)</span> - служебная пометка, перед публикацией должно быть 0</p>
+</div>
+
+<header class="site-header">
+  <div class="container site-header__in">
+    <a class="brand" href="#top"><span>Авторское ателье</span> <span>Евгении Карпович</span></a>
+    <nav class="nav" aria-label="Основное меню">
+      <ul>
+        <li><a href="#uslugi">Услуги</a></li>
+        <li><a href="#raboty">Работы</a></li>
+        <li><a href="#otzyvy">Отзывы</a></li>
+        <li><a href="#tseny">Цены</a></li>
+        <li><a href="#kak-rabotaem">Как работаем</a></li>
+        <li><a href="#voprosy">Вопросы</a></li>
+        <li><a href="#kontakty">Контакты</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--main btn--sm" href="tel:+79880518110"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Позвонить</span></a>
+  </div>
+</header>
+
+<!-- Липкая строка кнопок-разделов для телефона и планшета (до 1079 px); на десктопе скрыта, там меню в шапке -->
+<nav class="subnav" id="subnav" aria-label="Разделы страницы">
+  <ul>
+    <li><a href="#uslugi">Услуги</a></li>
+    <li><a href="#raboty">Работы</a></li>
+    <li><a href="#otzyvy">Отзывы</a></li>
+    <li><a href="#tseny">Цены</a></li>
+    <li><a href="#kak-rabotaem">Как работаем</a></li>
+    <li><a href="#voprosy">Вопросы</a></li>
+    <li><a href="#kontakty">Контакты</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- Блок 1. Первый экран -->
+<section class="hero" aria-labelledby="h1">
+  <div class="container hero__grid">
+    <div class="hero__text">
+      <h1 id="h1">Авторское ателье в Волгограде: шьём одежду, переделываем пальто, куртки и шубы</h1>
+      <p class="lead hero__lead">Пошив по меркам, подгонка и ремонт, перекрой и реставрация верхней одежды, работа с кожей и мехом. Пошив занимает 3-6 недель. Ул. Пражская, 17.</p>
+      <div class="hero__actions">
+        <a class="btn btn--main" href="tel:+79880518110"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Позвонить <span class="nowrap">+7&nbsp;(988)&nbsp;051-81-10</span></span></a>
+        <a class="btn btn--alt" href="#kontakty-max" data-max><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Написать в МАХ</span></a>
+      </div>
+      <p class="rating"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span>5,0 на Яндекс Картах, 140 оценок. «Хорошее место» 2026</span></p>
+      <p class="hero__note">Доставка готового изделия «от двери к двери»</p>
+    </div>
+
+    <div class="hero__art">
+      <div class="frame">
+        <!-- Рамка-лекало, телефон: 4:3 -->
+        <svg class="frame__svg frame__svg--m" viewBox="0 0 500 375" aria-hidden="true" focusable="false">
+          <defs>
+            <mask id="sew-m" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="375">
+              <path class="sew-mask" pathLength="100" fill="none" stroke="#fff" stroke-width="6" d="M2 2 H436 L498 64 V373 H2 Z"/>
+            </mask>
+          </defs>
+          <path class="seam" mask="url(#sew-m)" fill="none" stroke-width="2" vector-effect="non-scaling-stroke" stroke-dasharray="8 6" d="M2 2 H436 L498 64 V373 H2 Z"/>
+          <path class="notch" d="M2 146 L12 152 L2 158 Z"/>
+          <path class="notch" d="M2 216 L12 222 L2 228 Z"/>
+        </svg>
+        <!-- Рамка-лекало, десктоп: 5:6 -->
+        <svg class="frame__svg frame__svg--d" viewBox="0 0 500 600" aria-hidden="true" focusable="false">
+          <defs>
+            <mask id="sew-d" maskUnits="userSpaceOnUse" x="0" y="0" width="500" height="600">
+              <path class="sew-mask" pathLength="100" fill="none" stroke="#fff" stroke-width="6" d="M2 2 H408 L498 92 V598 H2 Z"/>
+            </mask>
+          </defs>
+          <path class="seam" mask="url(#sew-d)" fill="none" stroke-width="2" vector-effect="non-scaling-stroke" stroke-dasharray="8 6" d="M2 2 H408 L498 92 V598 H2 Z"/>
+          <path class="notch" d="M2 244 L12 250 L2 256 Z"/>
+          <path class="notch" d="M2 344 L12 350 L2 356 Z"/>
+          <path class="notch" d="M244 598 L250 588 L256 598 Z"/>
+        </svg>
+        <div class="frame__photo">
+          <img src="img/kozha-mekh-kurtka.jpg" alt="Кожаная куртка с меховой отделкой" width="960" height="960" fetchpriority="high" loading="eager" decoding="async">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Блок 2. Что шьём и чиним -->
+<section class="sec sec--white" id="uslugi" aria-labelledby="h-uslugi">
+  <div class="container">
+    <h2 id="h-uslugi">Что шьём и чиним</h2>
+    <p class="lead sec__lead">Пошив, подгонка, ремонт, перекрой и реставрация верхней одежды, кожа и мех.</p>
+
+    <div class="services">
+      <article class="svc">
+        <h3>Пошив одежды</h3>
+        <p>Юбки, брюки, платья, блузки, пиджаки, пальто. Шьём по вашим меркам, срок 3-6 недель.</p>
+      </article>
+      <article class="svc">
+        <h3>Подгонка одежды</h3>
+        <p>Подгоним готовую вещь так, чтобы она села на вас.</p>
+      </article>
+      <article class="svc">
+        <h3>Ремонт одежды</h3>
+        <p>Починим вещь и приведём её в порядок.</p>
+      </article>
+      <article class="svc svc--tile">
+        <p class="chip">От&nbsp;30&nbsp;000&nbsp;₽</p>
+        <h3>Перекрой верхней одежды</h3>
+        <p>Изменим крой пальто, куртки или шубы.</p>
+      </article>
+      <article class="svc svc--tile">
+        <p class="chip">От&nbsp;30&nbsp;000&nbsp;₽ вместе с перекроем</p>
+        <h3>Реставрация верхней одежды</h3>
+        <p>Восстановим пальто, куртку или шубу.</p>
+      </article>
+      <article class="svc">
+        <h3>Работа с кожей</h3>
+        <p>Работаем с кожей: кожаная куртка, дублёнка с меховой отделкой.</p>
+      </article>
+      <article class="svc">
+        <h3>Работа с мехом</h3>
+        <p>Работаем с мехом: шубы, полушубки, меховой шарф.</p>
+      </article>
+      <article class="svc">
+        <h3>Биочистка меха</h3>
+        <p>Почистим меховое изделие. Срок 3-4 дня, цена от 5&nbsp;000&nbsp;₽.</p>
+      </article>
+    </div>
+
+    <div class="sec__cta">
+      <a class="btn btn--alt" href="#kontakty-max" data-max><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Спросить про свою вещь в МАХ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Блок 3. Наши работы -->
+<section class="sec sec--paper" id="raboty" aria-labelledby="h-raboty">
+  <div class="container">
+    <h2 id="h-raboty">Наши работы</h2>
+    <p class="lead sec__lead">Куртки, дублёнки, пальто, костюмы и другие изделия из мастерской. Не нашли свою вещь? Пришлите фото, подскажем.</p>
+
+    <!-- Три пары "до / после": квадратные коллажи показываем целиком, подписи "До" и "После" уже на снимках -->
+    <div class="pairs">
+      <figure class="work">
+        <img src="img/kozha-do-posle.jpg" alt="Кожаная куртка: ремонт до и после" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Кожаная куртка: ремонт до и после</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/dublenka-do-posle-1.jpg" alt="Дублёнка: переделка до и после" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Дублёнка: переделка до и после</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/dublenka-do-posle-2.jpg" alt="Дублёнка с меховой отделкой: до и после" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Дублёнка с меховой отделкой: до и после</figcaption>
+      </figure>
+    </div>
+
+    <div class="gal">
+      <figure class="work">
+        <img src="img/palto-dlinnoe.jpg" alt="Пальто" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Пальто</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/palto-kapyushon.jpg" alt="Пальто с капюшоном" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Пальто с капюшоном</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/palto-zhakkard.jpg" alt="Пальто из фактурной ткани" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Пальто из фактурной ткани</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/khalat-vyshivka.jpg" alt="Халат с вышивкой" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Халат с вышивкой</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/zhaket-belyj.jpg" alt="Белый жакет с отделкой" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Белый жакет с отделкой</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/kostyum-sinij.jpg" alt="Костюм: жакет и юбка" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Костюм: жакет и юбка</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/kostyum-sirenevyj.jpg" alt="Костюм: жакет и брюки" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Костюм: жакет и брюки</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/bluza-sharf.jpg" alt="Блуза с бантом" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Блуза с бантом</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/top-uzor.jpg" alt="Топ из ткани с узором и прозрачной вставкой" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Топ с узором и прозрачной вставкой</figcaption>
+      </figure>
+      <figure class="work">
+        <img src="img/kostyum-goroh.jpg" alt="Костюм: рубашка и брюки в горошек" width="960" height="960" loading="lazy" decoding="async">
+        <figcaption class="cap">Костюм: рубашка и брюки</figcaption>
+      </figure>
+    </div>
+
+    <div class="sec__cta sec__cta--note">
+      <a class="btn btn--alt" href="#kontakty-max" data-max><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Показать мою вещь мастеру</span></a>
+      <p class="small-note">Откроется МАХ: приложите фото и напишите, что хотите сделать.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы клиентов (публичные отзывы с Яндекс Карт, текст дословно, в том числе опечатка автора "тсани") -->
+<section class="sec sec--tint" id="otzyvy" aria-labelledby="h-otzyvy">
+  <div class="container">
+    <h2 id="h-otzyvy">Отзывы клиентов</h2>
+    <p class="lead sec__lead">Отзывы с Яндекс Карт, 2022-2024</p>
+
+    <div class="reviews">
+      <figure class="review">
+        <span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+        <blockquote><p>Прекрасное ателье, работа отличная. Мне нужно было срочно отпарить платье и сшить пояс, так как свой я забыла, назад уже не уехать. И все сделали за часа два, и на свадьбе я была в прекрасном наряде. Молодому человеку тоже надо было укоротить брюки, в тот же день и все сделано качественно и замечательно. Рекомендую!!!</p></blockquote>
+        <figcaption><cite>Олеся Морозова</cite> <time datetime="2023-08-25">25 августа 2023</time></figcaption>
+      </figure>
+
+      <figure class="review">
+        <span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+        <blockquote><p>Быстро, очень качественно и по приемлемой цене. Лучшее соотношение цены и качества, которое я встречала! Рекомендую!</p></blockquote>
+        <figcaption><cite>Света Света</cite> <time datetime="2022-07-25">25 июля 2022</time></figcaption>
+      </figure>
+
+      <figure class="review">
+        <span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+        <blockquote><p>Очень приятные девочки работают в ателье. Приветливые, аккуратные, хорошо знают свою работу. Ремонт выполнили на 5+. Посоветовала это ателье своим подружкам)</p></blockquote>
+        <figcaption><cite>Елена В</cite> <time datetime="2022-07-23">23 июля 2022</time></figcaption>
+      </figure>
+
+      <figure class="review">
+        <span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+        <blockquote><p>Очень понравилось в ателье,особенно Евгения,сразу приняла мой заказ,предложила,как лучше,я принесла ушить костюм из дорогой тсани и сложного кроя,боялась,чтобы не испортили,итог-костюм сидит идеально,еще пару вещей отдавала на мелкий ремонт,также аккуратно и быстро выполнена работа,буду еще обращаться.</p></blockquote>
+        <figcaption><cite>Инкогнито 4477</cite> <time datetime="2024-03-23">23 марта 2024</time></figcaption>
+      </figure>
+
+      <figure class="review">
+        <span class="stars" role="img" aria-label="Оценка 5 из 5"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg></span>
+        <blockquote><p>Очень довольна результатом!! У меня был необычный заказ, нужно было сшить специальную цирковую обувь ( для воздушной гимнастики) из натуральной кожи. В итоге швеи самостоятельно изготовили лекало и сшили все просто идеально по ноге с учётом всех моих просьб!! Быстро, качественно и цена приятная! Всем очень рекомендую!!))))</p></blockquote>
+        <figcaption><cite>Светлана Протовчанская</cite> <time datetime="2024-01-12">12 января 2024</time></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Блок 4. Цены -->
+<section class="sec sec--white" id="tseny" aria-labelledby="h-tseny">
+  <div class="container">
+    <h2 id="h-tseny">Цены</h2>
+    <p class="lead sec__lead lead--wide">Цены указаны «от». В таблицах цена на ткань и на кожу. Где указана одна цена, она в колонке «Ткань» <mark class="todo">[уточнить, к чему относится одна цена]</mark>.</p>
+
+    <div class="prices">
+      <div class="prices__tables">
+        <table class="ptable">
+          <caption><h3>Пошив</h3></caption>
+          <colgroup><col class="c-name"><col class="c-price"><col class="c-price"></colgroup>
+          <thead><tr><th scope="col">Изделие</th><th scope="col">Ткань, ₽</th><th scope="col">Кожа, ₽</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Юбка прямая, без подкладки</th><td data-label="Ткань">от&nbsp;5&nbsp;000</td><td data-label="Кожа">от&nbsp;7&nbsp;000</td></tr>
+            <tr><th scope="row">Юбка прямая, на подкладке</th><td data-label="Ткань">от&nbsp;7&nbsp;000</td><td data-label="Кожа">от&nbsp;10&nbsp;000</td></tr>
+            <tr><th scope="row">Юбка полусолнце или клёш</th><td data-label="Ткань">от&nbsp;6&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+            <tr><th scope="row">Юбка солнце или годе</th><td data-label="Ткань">от&nbsp;7&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+            <tr><th scope="row">Брюки женские</th><td data-label="Ткань">от&nbsp;10&nbsp;000</td><td data-label="Кожа">от&nbsp;15&nbsp;000</td></tr>
+            <tr><th scope="row">Брюки мужские</th><td data-label="Ткань">от&nbsp;15&nbsp;000</td><td data-label="Кожа">от&nbsp;20&nbsp;000</td></tr>
+            <tr><th scope="row">Майка или туника</th><td data-label="Ткань">от&nbsp;5&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+            <tr><th scope="row">Блузка или рубашка</th><td data-label="Ткань">от&nbsp;8&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+            <tr><th scope="row">Платье-футляр</th><td data-label="Ткань">от&nbsp;10&nbsp;000</td><td data-label="Кожа">от&nbsp;15&nbsp;000</td></tr>
+            <tr><th scope="row">Платье на подкладке</th><td data-label="Ткань">от&nbsp;12&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+            <tr><th scope="row">Платье вечернее</th><td data-label="Ткань">от&nbsp;20&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+            <tr><th scope="row">Пиджак женский</th><td data-label="Ткань">от&nbsp;15&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+            <tr><th scope="row">Пиджак мужской</th><td data-label="Ткань">от&nbsp;25&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+          </tbody>
+        </table>
+
+        <table class="ptable">
+          <caption><h3>Верхняя одежда и меха</h3></caption>
+          <colgroup><col class="c-name"><col class="c-price"><col class="c-price"></colgroup>
+          <thead><tr><th scope="col">Услуга</th><th scope="col">Ткань, ₽</th><th scope="col">Кожа, ₽</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Пальто осеннее</th><td data-label="Ткань">от&nbsp;20&nbsp;000</td><td data-label="Кожа"><span class="dash" aria-hidden="true">-</span><span class="sr-only">нет цены</span></td></tr>
+            <tr><th scope="row">Пальто зимнее, утеплённое</th><td data-label="Ткань">от&nbsp;25&nbsp;000</td><td data-label="Кожа">от&nbsp;40&nbsp;000</td></tr>
+            <tr><th scope="row">Куртка</th><td class="span" colspan="2" data-label="Ткань и кожа">цена по осмотру</td></tr>
+            <tr><th scope="row">Перекрой и реставрация верхней одежды</th><td class="span" colspan="2" data-label="Ткань и кожа">от&nbsp;30&nbsp;000</td></tr>
+            <tr><th scope="row">Биочистка меха</th><td class="span" colspan="2" data-label="Ткань и кожа">от 5&nbsp;000</td></tr>
+          </tbody>
+        </table>
+
+        <div class="repair">
+          <h3>Ремонт и подгонка</h3>
+          <p>Подгонка и ремонт одежды: <mark class="todo">[цены на ремонт и подгонку - уточнить]</mark></p>
+        </div>
+      </div>
+
+      <aside class="prices__aside" aria-label="Примечание к ценам">
+        <p>Цены указаны «от». Точную стоимость назовём по вашей вещи: позвоните или напишите в МАХ.</p>
+        <div class="stack">
+          <a class="btn btn--main" href="tel:+79880518110"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Узнать точную цену по телефону</span></a>
+          <a class="btn btn--alt" href="#kontakty-max" data-max><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Написать в МАХ</span></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- Блок 5. Как проходит работа -->
+<section class="sec sec--tint" id="kak-rabotaem" aria-labelledby="h-kak">
+  <div class="container">
+    <h2 id="h-kak">Как проходит пошив</h2>
+    <p class="lead sec__lead">Четыре шага от первой встречи до готовой вещи. Весь пошив занимает 3-6 недель.</p>
+
+    <ol class="steps">
+      <li><span class="step__n">1</span><h3>Мерки</h3><p>Снимаем мерки и обсуждаем, что вы хотите получить.</p></li>
+      <li><span class="step__n">2</span><h3>Лекала</h3><p>Делаем лекала по вашим меркам.</p></li>
+      <li><span class="step__n">3</span><h3>Примерки</h3><p>Вы примеряете изделие, мы вносим правки.</p></li>
+      <li><span class="step__n">4</span><h3>Готовое изделие</h3><p>Вы забираете готовую вещь.</p></li>
+    </ol>
+
+    <p class="tag tag--delivery"><strong>Доставка.</strong> Мы предоставляем возможность доставки готового изделия «от двери к двери», если вы лично не успеваете попасть в ателье и забрать ваши вещи самостоятельно. <mark class="todo">[условия доставки: районы и стоимость - уточнить]</mark></p>
+
+    <div class="sec__cta">
+      <a class="btn btn--main" href="#zayavka"><span>Договориться о мерках</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Блок 6. Вопросы и ответы -->
+<section class="sec sec--paper" id="voprosy" aria-labelledby="h-voprosy">
+  <div class="container faq">
+    <div class="faq__aside">
+      <h2 id="h-voprosy">Частые вопросы</h2>
+      <div class="faq__cta faq__cta--desk">
+        <a class="btn btn--alt" href="#kontakty-max" data-max><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Задать свой вопрос в МАХ</span></a>
+      </div>
+    </div>
+
+    <div class="faq__list">
+      <details open>
+        <summary><span class="faq__q">Сколько занимает пошив?</span><svg class="ic ic--plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg><svg class="ic ic--minus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></summary>
+        <p class="faq__a">Пошив занимает 3-6 недель. <mark class="todo">[срок для ремонта, подгонки и перекроя - уточнить]</mark></p>
+      </details>
+      <details>
+        <summary><span class="faq__q">Сколько это стоит?</span><svg class="ic ic--plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg><svg class="ic ic--minus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></summary>
+        <p class="faq__a">В прайсе выше цены «от»: например, юбка от&nbsp;5&nbsp;000&nbsp;₽, пальто осеннее от&nbsp;20&nbsp;000&nbsp;₽. Цену куртки назовём после осмотра. Перекрой и реставрация верхней одежды - от&nbsp;30&nbsp;000&nbsp;₽.</p>
+      </details>
+      <details>
+        <summary><span class="faq__q">Можно ли переделать старое пальто, куртку или шубу?</span><svg class="ic ic--plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg><svg class="ic ic--minus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></summary>
+        <p class="faq__a">Да, это наша работа: перекрой и реставрация верхней одежды, от&nbsp;30&nbsp;000&nbsp;₽. Пришлите фото в МАХ или приезжайте на Пражскую, 17, и мы посмотрим вашу вещь.</p>
+      </details>
+      <details>
+        <summary><span class="faq__q">Вы работаете с кожей и мехом?</span><svg class="ic ic--plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg><svg class="ic ic--minus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></summary>
+        <p class="faq__a">Да. В наших работах кожаная куртка, дублёнка с меховой отделкой, шубы, полушубки и меховой шарф. Мех также чистим: биочистка меха, срок 3-4 дня, цена от 5&nbsp;000&nbsp;₽.</p>
+      </details>
+      <details>
+        <summary><span class="faq__q">Можно ли получить готовое изделие с доставкой?</span><svg class="ic ic--plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg><svg class="ic ic--minus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></summary>
+        <p class="faq__a">Да. Мы предоставляем возможность доставки готового изделия «от двери к двери», если вы лично не успеваете попасть в ателье и забрать ваши вещи самостоятельно. <mark class="todo">[условия доставки: районы и стоимость - уточнить]</mark></p>
+      </details>
+      <details>
+        <summary><span class="faq__q">Как записаться?</span><svg class="ic ic--plus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-plus"/></svg><svg class="ic ic--minus" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-minus"/></svg></summary>
+        <p class="faq__a">Позвоните по номеру <a class="nowrap" href="tel:+79880518110">+7&nbsp;(988)&nbsp;051-81-10</a> или напишите в <a href="#kontakty-max" data-max>МАХ</a> на этот же номер. Можно оставить заявку в форме на этой странице.</p>
+      </details>
+    </div>
+
+    <div class="faq__cta faq__cta--mob">
+      <a class="btn btn--alt" href="#kontakty-max" data-max><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Задать свой вопрос в МАХ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Блок 7. Заявка -->
+<section class="sec sec--tint" id="zayavka" aria-labelledby="h-zayavka">
+  <div class="container lead-grid">
+    <div class="lead-grid__text">
+      <h2 id="h-zayavka">Оставьте заявку</h2>
+      <p class="lead sec__lead">Расскажите, что нужно сшить или исправить. Фото помогает, но не обязательно.</p>
+      <p class="body-text lead-grid__note">Ателье свяжется с вами. <mark class="todo">[срок ответа - уточнить]</mark> Если нужно быстрее, позвоните <a class="nowrap" href="tel:+79880518110">+7&nbsp;(988)&nbsp;051-81-10</a> или напишите в <a href="#kontakty-max" data-max>МАХ</a>.</p>
+    </div>
+
+    <!-- У полей нет атрибута name: даже без JS браузер ничего не сможет отправить -->
+    <form class="card form" id="lead-form" novalidate>
+      <div class="field">
+        <label class="field__label" for="f-name">Имя</label>
+        <input class="input" id="f-name" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="f-contact">Телефон или мессенджер</label>
+        <input class="input" id="f-contact" type="text" placeholder="+7 или ник в МАХ или VK" aria-required="true" data-error="Напишите телефон или ник в МАХ или VK, чтобы мы могли ответить">
+        <p class="field__error" id="f-contact-err" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-alert"/></svg><span></span></p>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="f-task">Что нужно сшить или исправить</label>
+        <textarea class="input input--area" id="f-task" rows="4" placeholder="Например: сузить рукава на пальто, сшить платье, перекроить шубу" aria-required="true" data-error="Опишите, что нужно сшить или исправить"></textarea>
+        <p class="field__error" id="f-task-err" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-alert"/></svg><span></span></p>
+      </div>
+
+      <div class="field field--file">
+        <span class="field__label" id="f-photo-lbl">Фото (по желанию)</span>
+        <div class="file">
+          <input class="file__input" id="f-photo" type="file" accept="image/*" aria-labelledby="f-photo-lbl f-photo-btn">
+          <label class="btn btn--alt file__btn" id="f-photo-btn" for="f-photo"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-clip"/></svg><span>Прикрепить фото</span></label>
+          <span class="file__name" id="f-photo-name"></span>
+        </div>
+      </div>
+
+      <p class="tag tag--sample"><strong>Это пример:</strong> данные никуда не уходят</p>
+
+      <button class="btn btn--main form__submit" type="submit"><span>Отправить заявку</span></button>
+
+      <div class="form__status" id="form-status" role="status" tabindex="-1">
+        <p class="tag" id="form-status-text" hidden>Это пример: заявка не отправлена и данные никуда не ушли. Позвоните <a class="nowrap" href="tel:+79880518110">+7&nbsp;(988)&nbsp;051-81-10</a> или напишите в <a href="#kontakty-max" data-max>МАХ</a></p>
+      </div>
+
+      <p class="consent">Отправляя заявку, вы соглашаетесь на обработку персональных данных. <mark class="todo">[ссылка на политику обработки данных - уточнить]</mark></p>
+
+      <!-- Для рабочего сайта (в примере не показывается): Заявка отправлена. Ателье свяжется с вами. [срок ответа - уточнить] -->
+    </form>
+  </div>
+</section>
+
+<!-- Блок 8. Как найти и контакты -->
+<section class="sec sec--white" id="kontakty" aria-labelledby="h-kontakty">
+  <div class="container find">
+    <div class="find__info">
+      <h2 id="h-kontakty">Как нас найти</h2>
+      <p class="addr">Волгоград, ул. Пражская, 17</p>
+      <p class="hours"><span class="hours__k">Часы работы</span> Пн-Пт 10:00-19:00, Сб 10:00-16:00, Вс выходной</p>
+
+      <ul class="contacts">
+        <li class="contacts__row">
+          <span class="contacts__k">Телефон</span>
+          <a class="contacts__v nowrap" href="tel:+79880518110">+7&nbsp;(988)&nbsp;051-81-10</a>
+          <a class="btn btn--main" href="tel:+79880518110"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Позвонить</span></a>
+        </li>
+        <li class="contacts__row" id="kontakty-max">
+          <span class="contacts__k">МАХ</span>
+          <span class="contacts__v"><span class="nowrap">+7&nbsp;(988)&nbsp;051-81-10</span> <mark class="todo" id="max-todo">[ссылка на МАХ - уточнить]</mark></span>
+          <a class="btn btn--alt" href="#kontakty-max" data-max><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Написать в МАХ</span></a>
+        </li>
+        <li class="contacts__row">
+          <span class="contacts__k">VK</span>
+          <a class="contacts__v nowrap" href="https://vk.com/vlg_atelie" target="_blank" rel="noopener">vk.com/vlg_atelie</a>
+          <a class="btn btn--alt" href="https://vk.com/vlg_atelie" target="_blank" rel="noopener"><span>Открыть страницу в VK</span></a>
+        </li>
+      </ul>
+
+      <p class="rating rating--contacts"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-star"/></svg><span>5,0 на Яндекс Картах, 140 оценок. «Хорошее место» 2026.</span></p>
+      <div class="find__btn">
+        <a class="btn btn--alt" href="https://yandex.ru/maps/org/avtorskoye_atelye_yevgenii_karpovich/119613365577/reviews/" target="_blank" rel="noopener"><span>Читать отзывы на Яндекс Картах</span></a>
+      </div>
+    </div>
+
+    <div class="find__map">
+      <div class="map">
+        <iframe src="https://yandex.ru/map-widget/v1/?ol=biz&amp;oid=119613365577&amp;z=16" title="Карта: Волгоград, ул. Пражская, 17" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="find__btn">
+        <a class="btn btn--alt" href="https://yandex.ru/maps/org/avtorskoye_atelye_yevgenii_karpovich/119613365577/" target="_blank" rel="noopener"><span>Построить маршрут</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Авторское ателье Евгении Карпович. Волгоград, ул. Пражская, 17.</p>
+  </div>
+</footer>
+
+<!-- Нижняя липкая панель, только на телефоне -->
+<div class="dock" aria-label="Быстрая связь">
+  <a class="btn btn--main" href="tel:+79880518110"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span>Позвонить</span></a>
+  <a class="btn btn--alt" href="#kontakty-max" data-max><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><use href="#i-chat"/></svg><span>Написать в МАХ</span></a>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
