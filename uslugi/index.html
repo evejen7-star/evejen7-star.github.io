@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Сайты и Telegram-боты для малого бизнеса - Евгений</title>
-<meta name="description" content="Сайты-визитки, лендинги и Telegram-боты записи, в том числе с ИИ, для салонов, барбершопов и мастерских. Цену называю до начала работы. Евгений, Волгоград.">
-<meta property="og:title" content="Сайты и Telegram-боты для малого бизнеса">
+<title>Евгений Мордвинцев - сайты и Telegram-боты для малого бизнеса</title>
+<meta name="description" content="Сайты-визитки, лендинги и Telegram-боты записи, в том числе с ИИ, для салонов, барбершопов и мастерских. Цену называю до начала работы. Евгений Мордвинцев, Волгоград.">
+<meta property="og:title" content="Евгений Мордвинцев - сайты и Telegram-боты для малого бизнеса">
 <meta property="og:description" content="Сайты-визитки, лендинги и боты записи, в том числе с ИИ. Цена называется до начала работы.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://evejen7-star.github.io/uslugi/og-image.png">
@@ -55,10 +55,10 @@ section[id] { scroll-margin-top: 112px; }
   border-bottom: 1px solid var(--line);
 }
 .top-row { display: flex; align-items: center; gap: 20px; min-height: 64px; }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; letter-spacing: -0.01em; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 17px; letter-spacing: -0.01em; white-space: nowrap; }
 .logo img { width: 36px; height: 36px; }
 .menu { display: flex; gap: 22px; margin-left: auto; }
-.menu a { color: var(--text); text-decoration: none; font-weight: 600; font-size: 15px; padding: 8px 0; flex: none; white-space: nowrap; }
+.menu a { color: var(--text); text-decoration: none; font-weight: 600; font-size: 14px; padding: 8px 0; flex: none; white-space: nowrap; }
 .menu a:hover { color: var(--accent); }
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
@@ -72,11 +72,13 @@ section[id] { scroll-margin-top: 112px; }
 .top .btn { min-height: 42px; padding: 0 18px; font-size: 15px; }
 
 /* первый экран */
-.hero { padding: 56px 0 72px; }
-.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
-.hero h1 { font-size: clamp(36px, 5.4vw, 62px); line-height: 1.06; letter-spacing: -0.025em; font-weight: 800; }
-.hero .lead { margin-top: 22px; font-size: 20px; color: var(--muted); max-width: 30em; }
-.hero-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
+.hero { padding: 40px 0 56px; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+.eyebrow { margin-bottom: 16px; font-size: 14px; font-weight: 700; letter-spacing: .02em; color: var(--accent-deep); }
+.hero h1 { font-size: clamp(34px, 4.6vw, 56px); line-height: 1.06; letter-spacing: -0.025em; font-weight: 800; }
+.hero h1 span { color: var(--accent); }
+.hero .lead { margin-top: 18px; font-size: 19px; color: var(--muted); max-width: 30em; }
+.hero-actions { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 12px; }
 .hero-phone { margin-top: 16px; color: var(--muted); }
 .hero-phone a { font-weight: 700; }
 
@@ -117,10 +119,9 @@ section[id] { scroll-margin-top: 112px; }
 .chat.play .bubble { animation: pop .45s ease-out both; animation-delay: calc(var(--i) * .7s + .2s); }
 @keyframes pop { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
-.try { margin: 0 0 18px; display: flex; align-items: center; justify-content: center; gap: 16px; }
-.qr { width: 120px; height: 120px; padding: 6px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
-.try .btn { min-height: 44px; padding: 0 20px; font-size: 15px; }
-.try-name { margin-top: 6px; font-size: 13.5px; color: var(--muted); text-align: center; }
+.bot-title { margin: 0 0 12px; font-size: 15px; font-weight: 800; letter-spacing: .01em; text-align: center; }
+.bot-title span { display: block; margin-top: 2px; font-size: 13.5px; font-weight: 500; color: var(--muted); }
+.bot-link { margin-top: 12px; font-size: 13.5px; color: var(--muted); text-align: center; }
 
 /* общие блоки */
 .block { padding: 72px 0; border-top: 1px solid var(--line); }
@@ -140,6 +141,12 @@ section[id] { scroll-margin-top: 112px; }
 .examples li { position: relative; padding-left: 22px; color: var(--text); }
 .examples li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .tag { display: inline-block; margin-left: 10px; padding: 2px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-deep); font-size: 13px; font-weight: 700; vertical-align: 3px; letter-spacing: 0; }
+.shots { margin: 18px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 340px)); gap: 20px; }
+.shot { display: block; text-decoration: none; color: var(--text); }
+.shot img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+.shot span { display: block; margin-top: 8px; font-size: 14.5px; color: var(--muted); }
+.shot:hover span { color: var(--accent); }
+.shots-note { margin-top: 10px; font-size: 14px; color: var(--muted); }
 .price-note { margin-top: 28px; padding: 18px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); max-width: 46em; }
 .price-note p + p { margin-top: 6px; }
 
@@ -164,15 +171,6 @@ section[id] { scroll-margin-top: 112px; }
 .pay-step b { display: block; font-size: 44px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; color: var(--accent); }
 .pay-step h4 { margin: 12px 0 0; font-size: 18px; font-weight: 800; }
 .pay-step p { margin-top: 4px; color: var(--muted); font-size: 15.5px; }
-
-/* примеры */
-.works { margin-top: 40px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.work { text-decoration: none; color: var(--text); display: block; }
-.work img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border: 1px solid var(--line); border-radius: var(--radius); }
-.work h3 { margin-top: 14px; font-size: 18px; font-weight: 800; }
-.work p { margin-top: 2px; font-size: 15px; color: var(--muted); }
-.work:hover h3 { color: var(--accent); }
-.works-note { margin-top: 24px; color: var(--muted); font-size: 15px; }
 
 /* вопросы */
 .faq { margin-top: 36px; max-width: 46em; border-top: 1px solid var(--line); }
@@ -199,15 +197,17 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .phone-slot { height: auto; }
   .phone { position: static; }
-  .works { grid-template-columns: 1fr; gap: 32px; }
+  .shots { grid-template-columns: minmax(0, 1fr); }
   .pay-grid { grid-template-columns: 1fr; border-bottom: 0; }
   .pay-step, .pay-step + .pay-step { padding: 20px 0; border-left: 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 86px 1fr; column-gap: 12px; }
   .pay-step b { grid-row: 1 / 3; font-size: 38px; align-self: center; }
   .pay-step h4 { margin-top: 0; }
 }
 @media (max-width: 720px) {
-  .top-row { flex-wrap: wrap; row-gap: 0; padding-top: 8px; }
-  .top .btn { margin-left: auto; }
+  .top-row { flex-wrap: wrap; row-gap: 0; column-gap: 10px; padding-top: 8px; }
+  .logo { font-size: 16px; gap: 8px; }
+  .logo img { width: 32px; height: 32px; }
+  .top .btn { margin-left: auto; min-height: 38px; padding: 0 16px; font-size: 14px; }
   .menu { order: 3; width: 100%; margin-left: 0; gap: 16px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
   .menu::-webkit-scrollbar { display: none; }
   .menu a { padding: 11px 0; }
@@ -222,14 +222,14 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
-  .hero { padding: 36px 0 52px; }
-  .hero .lead { font-size: 18px; }
+  .hero { padding: 24px 0 40px; }
+  .hero-grid { gap: 28px; }
+  .hero .lead { font-size: 17px; margin-top: 14px; }
+  .eyebrow { font-size: 13px; margin-bottom: 12px; }
+  .hero-actions { margin-top: 20px; }
   .block { padding: 52px 0; }
   .hero-actions .btn { width: 100%; }
-  .qr { display: none; }
-  .try .btn { width: 100%; }
-  .try { flex-direction: column; align-items: stretch; }
-  .contact-grid .btn { width: 100%; }
+    .contact-grid .btn { width: 100%; }
 }
 </style>
 <noscript><style>.phone-slot{height:auto}.phone{position:static}.phone-panel{max-height:none;opacity:1;visibility:visible;padding:14px 14px 18px}.phone-bar{cursor:default}</style></noscript>
@@ -238,14 +238,13 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
 
 <header class="top" id="top">
   <div class="wrap top-row">
-    <a class="logo" href="#top" aria-label="Евгений, на начало страницы">
+    <a class="logo" href="#top" aria-label="Евгений Мордвинцев, на начало страницы">
       <img src="logo-em-blue.svg" alt="" width="36" height="36">
-      <span>Евгений</span>
+      <span>Евгений Мордвинцев</span>
     </a>
     <nav class="menu" aria-label="Разделы">
       <a href="#uslugi">Услуги</a>
       <a href="#process">Как работаю</a>
-      <a href="#primery">Примеры</a>
       <a href="#voprosy">Вопросы</a>
     </nav>
     <a class="btn" href="https://max.ru/u/f9LHodD0cOJlgyi0z-loVVJ7wJbhJo31HEsPKKguMUpJdih_rbHpH--YYzg" rel="noopener">Написать</a>
@@ -257,8 +256,9 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>Сайты и Telegram-боты для малого бизнеса</h1>
-      <p class="lead">Делаю всё сам, от текста до запуска, для салонов, барбершопов, мастерских и другого малого бизнеса. Цену называю до начала работы, а домен и хостинг оформляются на вас.</p>
+      <p class="eyebrow">Веб-разработчик из Волгограда</p>
+      <h1>Сайты и <span>боты</span> для малого бизнеса</h1>
+      <p class="lead">Сайт-визитка, лендинг или Telegram-бот для салона, барбершопа, мастерской. Текст, дизайн, запуск и передача доступов: с одним человеком, без посредников. Цену называю до начала работы.</p>
       <div class="hero-actions">
         <a class="btn" href="#uslugi">Услуги и цены</a>
         <a class="btn btn-line" href="https://max.ru/u/f9LHodD0cOJlgyi0z-loVVJ7wJbhJo31HEsPKKguMUpJdih_rbHpH--YYzg" rel="noopener">Написать в МАХ</a>
@@ -266,13 +266,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
       <p class="hero-phone">Или позвоните: <a href="tel:+79270614295">+7 (927) 061-42-95</a>, или напишите в <a href="https://t.me/EvgenyMordvintsev">Telegram</a></p>
     </div>
     <div class="phone-wrap">
-      <div class="try">
-        <img class="qr" src="demo-bot-qr.svg" alt="QR-код бота" width="120" height="120">
-        <div>
-          <a class="btn btn-line" href="https://t.me/demo_studio_admin_bot" rel="noopener">Попробовать бота</a>
-          <p class="try-name">@demo_studio_admin_bot</p>
-        </div>
-      </div>
+      <p class="bot-title">Пример: бот для записи клиентов<span>Так выглядит переписка. Нажмите на карточку.</span></p>
       <div class="phone-slot">
         <div class="phone" id="demo-phone">
           <button class="phone-bar" type="button" aria-expanded="false" aria-controls="demo-chat">
@@ -297,6 +291,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
           </div>
         </div>
       </div>
+      <p class="bot-link"><a href="https://t.me/demo_studio_admin_bot" rel="noopener">Открыть этого бота в Telegram</a>. Если Telegram у вас не открывается, напишите мне в <a href="https://max.ru/u/f9LHodD0cOJlgyi0z-loVVJ7wJbhJo31HEsPKKguMUpJdih_rbHpH--YYzg" rel="noopener">МАХ</a>.</p>
     </div>
   </div>
 </section>
@@ -310,14 +305,21 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
       <article class="row">
         <div class="row-head"><h3>Сайт-визитка</h3><span class="dots"></span><span class="price">от 8 000 ₽</span></div>
         <p>Одна страница: чем вы занимаетесь, услуги с ценами, график, карта и кнопки связи. Хорошо открывается с телефона.</p>
+        <ul class="shots">
+          <li><a class="shot" href="../beauty-lab/"><img src="img/beauty-lab.jpg" alt="Первый экран сайта салона красоты Beauty Lab" width="960" height="600"><span>Салон красоты: услуги, мастера, запись. Смотреть пример</span></a></li>
+        </ul>
       </article>
       <article class="row">
         <div class="row-head"><h3>Лендинг: страница под одну услугу</h3><span class="dots"></span><span class="price">от 15 000 ₽</span></div>
         <p>Продающая страница под одну услугу или рекламу: несколько блоков, вопросы и ответы, форма заявки. В отличие от визитки, ведёт человека к одному действию: записаться или позвонить.</p>
+        <ul class="shots">
+          <li><a class="shot" href="../evacuator24/"><img src="../assets/thumbs/evacuator24.png" alt="Первый экран лендинга службы эвакуации" width="640" height="400"><span>Эвакуатор: цены и вызов в один шаг. Смотреть пример</span></a></li>
+          <li><a class="shot" href="../flower-shop-case/"><img src="../assets/thumbs/flower-shop-case.png" alt="Первый экран страницы кейса цветочного магазина" width="640" height="400"><span>Кейс цветочного магазина: результат и заявка на аудит. Смотреть пример</span></a></li>
+        </ul>
       </article>
       <article class="row">
         <div class="row-head"><h3>Бот записи в Telegram</h3><span class="dots"></span><span class="price">от 20 000 ₽</span></div>
-        <p>Меню, цены и форма записи. Заявка попадает в вашу Google Таблицу, а вам приходит уведомление в Telegram. <a href="https://t.me/demo_studio_admin_bot" rel="noopener">Попробовать на моём боте</a></p>
+        <p>Меню, цены и форма записи. Заявка попадает в вашу Google Таблицу, а вам приходит уведомление в Telegram. <a href="#top">Посмотреть пример переписки</a> вверху страницы.</p>
       </article>
       <article class="row">
         <div class="row-head"><h3>ИИ-администратор в Telegram<span class="tag">демо готовится</span></h3><span class="dots"></span><span class="price">от 30 000 ₽</span></div>
@@ -328,6 +330,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
         <p>Правки цен и текстов, проверка, что всё работает, замена ключей и доступов.</p>
       </article>
     </div>
+
+    <p class="shots-note">Это учебные и демонстрационные работы, контакты в них вымышленные. <a href="../">Смотреть все работы</a></p>
 
     <div class="price-note">
       <p>Оплата частями: 50% в начале, 25% после эскиза, 25% после запуска. <a href="#oplata">Как оплатить</a></p>
@@ -390,30 +394,6 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
   </div>
 </section>
 
-<section class="block" id="primery">
-  <div class="wrap">
-    <h2>Примеры работ</h2>
-    <div class="works">
-      <a class="work" href="../beauty-lab/">
-        <img src="../assets/thumbs/beauty-lab.png" alt="Лендинг салона красоты Beauty Lab" width="640" height="400" loading="lazy">
-        <h3>Салон красоты</h3>
-        <p>Услуги, мастера и запись</p>
-      </a>
-      <a class="work" href="../evacuator24/">
-        <img src="../assets/thumbs/evacuator24.png" alt="Лендинг службы эвакуации Эвакуатор24" width="640" height="400" loading="lazy">
-        <h3>Эвакуатор</h3>
-        <p>Цены и вызов в один шаг</p>
-      </a>
-      <a class="work" href="../flower-shop-case/">
-        <img src="../assets/thumbs/flower-shop-case.png" alt="Кейс сайта цветочного магазина" width="640" height="400" loading="lazy">
-        <h3>Цветочный магазин</h3>
-        <p>Каталог и заказ</p>
-      </a>
-    </div>
-    <p class="works-note">Это учебные и демонстрационные работы, контакты в них вымышленные. <a href="../">Смотреть все работы</a></p>
-  </div>
-</section>
-
 <section class="block" id="voprosy">
   <div class="wrap">
     <h2>Частые вопросы</h2>
@@ -472,7 +452,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
 
 <footer>
   <div class="wrap">
-    <span>Евгений, веб-разработчик, Волгоград. Самозанятый</span>
+    <span>Мордвинцев Евгений Юрьевич, веб-разработчик, Волгоград. Самозанятый</span>
     <span>2026</span>
   </div>
 </footer>
