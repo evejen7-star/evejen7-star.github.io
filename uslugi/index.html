@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Евгений Мордвинцев - сайты и автоматизация рутинных задач для малого бизнеса</title>
-<meta name="description" content="Сайты-визитки, лендинги и автоматизация рутинных задач: приём заявок, запись, уведомления, чат-боты, в том числе с ИИ. Цену называю до начала работы. Евгений Мордвинцев, Волгоград.">
+<meta name="description" content="Сайты-визитки, лендинги и автоматизация рутинных задач: приём заявок, запись, уведомления, чат-боты. Цену называю до начала работы. Евгений Мордвинцев, Волгоград.">
 <meta property="og:title" content="Евгений Мордвинцев - сайты и автоматизация рутинных задач">
-<meta property="og:description" content="Сайты и автоматизация рутинных задач для малого бизнеса: заявки, запись, чат-боты, в том числе с ИИ. Цена называется до начала работы.">
+<meta property="og:description" content="Сайты и автоматизация рутинных задач для малого бизнеса: заявки, запись, чат-боты. Цена называется до начала работы.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://evejen7-star.github.io/uslugi/og-image.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -129,9 +129,8 @@ section[id] { scroll-margin-top: 112px; }
 .block .intro { margin-top: 14px; color: var(--muted); max-width: 36em; }
 
 /* прайс */
-.price-list { margin-top: 40px; display: grid; gap: 0; }
-.row { padding: 26px 0; border-bottom: 1px solid var(--line); }
-.row:first-child { border-top: 1px solid var(--line); }
+.price-list { margin-top: 28px; display: grid; gap: 0; }
+.row { padding: 22px 0; }
 .row-head { display: flex; align-items: baseline; gap: 14px; }
 .row-head h3 { font-size: 24px; letter-spacing: -0.015em; font-weight: 800; flex: none; }
 .dots { flex: 1; min-width: 20px; border-bottom: 2px dotted #c9c5ba; transform: translateY(-5px); }
@@ -165,16 +164,14 @@ section[id] { scroll-margin-top: 112px; }
 .pay { margin-top: 64px; scroll-margin-top: 112px; }
 .pay h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; }
 .pay-intro { margin-top: 10px; color: var(--muted); max-width: 40em; }
-.pay-grid { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.pay-step { padding: 24px 24px 26px 0; }
-.pay-step + .pay-step { padding-left: 24px; border-left: 1px solid var(--line); }
+.pay-grid { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 24px; }
+.pay-step { padding: 8px 0; }
 .pay-step b { display: block; font-size: 44px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; color: var(--accent); }
 .pay-step h4 { margin: 12px 0 0; font-size: 18px; font-weight: 800; }
 .pay-step p { margin-top: 4px; color: var(--muted); font-size: 15.5px; }
 
 /* вопросы */
-.faq { margin-top: 36px; max-width: 46em; border-top: 1px solid var(--line); }
-.faq details { border-bottom: 1px solid var(--line); }
+.faq { margin-top: 24px; max-width: 46em; }
 .faq summary {
   list-style: none; cursor: pointer; padding: 20px 40px 20px 0; position: relative;
   font-weight: 700; font-size: 18px;
@@ -198,8 +195,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
   .phone-slot { height: auto; }
   .phone { position: static; }
   .shots { grid-template-columns: minmax(0, 1fr); }
-  .pay-grid { grid-template-columns: 1fr; border-bottom: 0; }
-  .pay-step, .pay-step + .pay-step { padding: 20px 0; border-left: 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 86px 1fr; column-gap: 12px; }
+  .pay-grid { grid-template-columns: 1fr; gap: 0; }
+  .pay-step { padding: 14px 0; display: grid; grid-template-columns: 86px 1fr; column-gap: 12px; }
   .pay-step b { grid-row: 1 / 3; font-size: 38px; align-self: center; }
   .pay-step h4 { margin-top: 0; }
 }
@@ -222,11 +219,15 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
-  .hero { padding: 24px 0 40px; }
+  .hero { padding: 16px 0 36px; }
   .hero-grid { gap: 28px; }
-  .hero .lead { font-size: 17px; margin-top: 14px; }
-  .eyebrow { font-size: 13px; margin-bottom: 12px; }
-  .hero-actions { margin-top: 20px; }
+  .hero h1 { font-size: 28px; }
+  .hero .lead { font-size: 16px; line-height: 1.5; margin-top: 12px; }
+  .eyebrow { font-size: 13px; margin-bottom: 10px; }
+  .hero-actions { margin-top: 16px; gap: 10px; }
+  .hero-actions .btn { min-height: 46px; }
+  .hero-phone { margin-top: 12px; font-size: 15px; }
+  footer .wrap { gap: 14px 24px; }
   .block { padding: 52px 0; }
   .hero-actions .btn { width: 100%; }
     .contact-grid .btn { width: 100%; }
@@ -258,12 +259,12 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
     <div>
       <p class="eyebrow">Веб-разработчик из Волгограда</p>
       <h1>Сайты и <span>автоматизация рутинных задач</span> для малого бизнеса</h1>
-      <p class="lead">Сайт-визитка или лендинг, а ещё чат-бот, который принимает заявки и записи и сам ведёт таблицу. Для салона, барбершопа, мастерской. Всё делает один человек, без посредников. Цену называю до начала работы.</p>
+      <p class="lead">Клиенты записываются сами, а заявки приходят вам и сами попадают в таблицу: через сайт-визитку, лендинг или чат-бота. Для салона, барбершопа, мастерской. Всё делает один человек, без посредников. Цену называю до начала работы.</p>
       <div class="hero-actions">
         <a class="btn" href="#uslugi">Услуги и цены</a>
         <a class="btn btn-line" href="https://max.ru/u/f9LHodD0cOJlgyi0z-loVVJ7wJbhJo31HEsPKKguMUpJdih_rbHpH--YYzg" rel="noopener">Написать в МАХ</a>
       </div>
-      <p class="hero-phone">Или позвоните: <a href="tel:+79270614295">+7 (927) 061-42-95</a>, или напишите в <a href="https://t.me/EvgenyMordvintsev">Telegram</a></p>
+      <p class="hero-phone">Или позвоните: <a href="tel:+79270614295">+7 (927) 061-42-95</a>, или напишите в <a href="https://t.me/EvgenyMordvintsev?text=Здравствуйте!%20Хочу%20узнать%20про%20сайт%20или%20бота%20для%20моего%20бизнеса.">Telegram</a></p>
     </div>
     <div class="phone-wrap">
       <p class="bot-title">Пример: бот для записи клиентов<span>Так выглядит переписка. Нажмите на карточку.</span></p>
@@ -321,10 +322,13 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
         <div class="row-head"><h3>Автоматизация записи: бот в Telegram</h3><span class="dots"></span><span class="price">от 20 000 ₽</span></div>
         <p>Меню, цены и форма записи. Заявка попадает в вашу Google Таблицу, а вам приходит уведомление в Telegram. <a href="#top">Посмотреть пример переписки</a> вверху страницы.</p>
       </article>
+      <!-- Скрыто до готовности демо (отзыв 31.10): ИИ-администратор в Telegram, от 30 000 ₽
       <article class="row">
         <div class="row-head"><h3>ИИ-администратор в Telegram<span class="tag">демо готовится</span></h3><span class="dots"></span><span class="price">от 30 000 ₽</span></div>
         <p>Отвечает клиентам своими словами по вашему прайсу и графику, принимает запись, а если не знает ответа, передаёт вопрос вам. Работа ИИ оплачивается отдельно, по вашему доступу к ИИ-сервису: расход зависит от числа диалогов, я помогу оформить доступ и покажу, где смотреть траты.</p>
       </article>
+      -->
+
       <article class="row">
         <div class="row-head"><h3>Сопровождение (по желанию)</h3><span class="dots"></span><span class="price">от 5 000 ₽ в месяц</span></div>
         <p>Правки цен и текстов, проверка, что всё работает, замена ключей и доступов.</p>
@@ -414,6 +418,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
         <summary>Как проходит оплата?</summary>
         <p>Тремя этапами, по ссылке на оплату, которую я присылаю в Telegram. Подробности в разделе «Как оплатить». Я работаю как самозанятый и после каждой оплаты присылаю чек. Платёжных форм на этом сайте нет.</p>
       </details>
+      <!-- Скрыто вместе с ИИ-администратором, вернуть при его запуске:
       <details>
         <summary>Кто платит за ИИ в боте?</summary>
         <p>Вы, по своему доступу к ИИ-сервису (ключу). Расход зависит от числа диалогов, я помогу оформить доступ и покажу, где смотреть траты.</p>
@@ -422,6 +427,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
         <summary>Бот может ошибиться?</summary>
         <p>Может, как любой помощник. Поэтому я настраиваю его отвечать по вашему прайсу и правилам, а когда ответа нет, он передаёт вопрос вам.</p>
       </details>
+      -->
       <details>
         <summary>Вы работаете только в Волгограде?</summary>
         <p>Работаю дистанционно с клиентами из любого города. В Волгограде можно встретиться лично.</p>
@@ -436,12 +442,12 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
     <p class="intro">Напишите в МАХ или Telegram, либо позвоните. Отвечу, как только увижу сообщение.</p>
     <div class="contact-grid">
       <a class="btn" href="https://max.ru/u/f9LHodD0cOJlgyi0z-loVVJ7wJbhJo31HEsPKKguMUpJdih_rbHpH--YYzg" rel="noopener">Написать в МАХ</a>
-      <a class="btn btn-line" href="https://t.me/EvgenyMordvintsev">Написать в Telegram</a>
+      <a class="btn btn-line" href="https://t.me/EvgenyMordvintsev?text=Здравствуйте!%20Хочу%20узнать%20про%20сайт%20или%20бота%20для%20моего%20бизнеса.">Написать в Telegram</a>
       <a class="btn btn-line" href="tel:+79270614295">Позвонить</a>
     </div>
     <div class="contact-list">
       <p>МАХ: <a href="https://max.ru/u/f9LHodD0cOJlgyi0z-loVVJ7wJbhJo31HEsPKKguMUpJdih_rbHpH--YYzg" rel="noopener">написать Евгению</a></p>
-      <p>Telegram: <a href="https://t.me/EvgenyMordvintsev">@EvgenyMordvintsev</a></p>
+      <p>Telegram: <a href="https://t.me/EvgenyMordvintsev?text=Здравствуйте!%20Хочу%20узнать%20про%20сайт%20или%20бота%20для%20моего%20бизнеса.">@EvgenyMordvintsev</a></p>
       <p>Телефон: <a href="tel:+79270614295">+7 (927) 061-42-95</a></p>
       <p>Почта: <a href="mailto:evejen7@gmail.com">evejen7@gmail.com</a></p>
     </div>
@@ -452,9 +458,8 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
 
 <footer>
   <div class="wrap">
-    <span>Мордвинцев Евгений Юрьевич, веб-разработчик, Волгоград. Самозанятый, ИНН 344810246250</span>
+    <span>Мордвинцев Евгений Юрьевич<br>Веб-разработчик<br>Самозанятый, ИНН 344810246250</span>
     <a href="privacy.html">Политика обработки персональных данных</a>
-    <span>2026</span>
   </div>
 </footer>
 
