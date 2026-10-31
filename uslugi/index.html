@@ -140,15 +140,17 @@ section[id] { scroll-margin-top: 112px; }
 .examples li { position: relative; padding-left: 22px; color: var(--text); }
 .examples li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .tag { display: inline-block; margin-left: 10px; padding: 2px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-deep); font-size: 13px; font-weight: 700; vertical-align: 3px; letter-spacing: 0; }
-.shots { margin: 18px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 340px)); gap: 20px; }
+.shots { margin: 18px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.shots.split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
 .shot { display: block; text-decoration: none; color: var(--text); }
 .shot img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
 .shot span { display: block; margin-top: 8px; font-size: 14.5px; color: var(--muted); }
 .shot:hover span { color: var(--accent); }
-.shots .side { align-self: start; padding-top: 4px; }
-.side h4 { font-size: 18px; font-weight: 800; letter-spacing: -0.01em; }
-.side .examples { margin-top: 12px; }
-.side p { margin-top: 14px; font-size: 14.5px; }
+.shots .side { align-self: center; }
+.side h4 { font-size: 22px; font-weight: 800; letter-spacing: -0.015em; }
+.side .examples { margin-top: 16px; gap: 12px; max-width: none; }
+.side .examples li { font-size: 17px; }
+.side p { margin-top: 18px; font-size: 15.5px; }
 .shots-note { margin-top: 10px; font-size: 14px; color: var(--muted); }
 .price-note { margin-top: 28px; padding: 18px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); max-width: 46em; }
 .price-note p + p { margin-top: 6px; }
@@ -198,7 +200,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .phone-slot { height: auto; }
   .phone { position: static; }
-  .shots { grid-template-columns: minmax(0, 1fr); }
+  .shots, .shots.split { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .pay-grid { grid-template-columns: 1fr; gap: 0; }
   .pay-step { padding: 14px 0; display: grid; grid-template-columns: 86px 1fr; column-gap: 12px; }
   .pay-step b { grid-row: 1 / 3; font-size: 38px; align-self: center; }
@@ -310,7 +312,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
       <article class="row">
         <div class="row-head"><h3>Сайт-визитка</h3><span class="dots"></span><span class="price">от 8 000 ₽</span></div>
         <p>Одна страница о вашем деле: услуги с ценами, график, карта и кнопки связи. Нужна, когда клиенты находят вас на карте или в соцсетях, а посмотреть цены и записаться негде.</p>
-        <ul class="shots">
+        <ul class="shots split">
           <li><a class="shot" href="../beauty-lab/"><img src="img/beauty-lab.jpg" alt="Первый экран сайта салона красоты Beauty Lab" width="960" height="600"><span>Салон красоты: услуги, мастера, запись. Смотреть пример</span></a></li>
           <li class="side">
             <h4>Какие проблемы снимает</h4>
