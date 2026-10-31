@@ -145,6 +145,10 @@ section[id] { scroll-margin-top: 112px; }
 .shot img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
 .shot span { display: block; margin-top: 8px; font-size: 14.5px; color: var(--muted); }
 .shot:hover span { color: var(--accent); }
+.shots .side { align-self: start; padding-top: 4px; }
+.side h4 { font-size: 18px; font-weight: 800; letter-spacing: -0.01em; }
+.side .examples { margin-top: 12px; }
+.side p { margin-top: 14px; font-size: 14.5px; }
 .shots-note { margin-top: 10px; font-size: 14px; color: var(--muted); }
 .price-note { margin-top: 28px; padding: 18px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--text); max-width: 46em; }
 .price-note p + p { margin-top: 6px; }
@@ -305,9 +309,19 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
     <div class="price-list">
       <article class="row">
         <div class="row-head"><h3>Сайт-визитка</h3><span class="dots"></span><span class="price">от 8 000 ₽</span></div>
-        <p>Одна страница: чем вы занимаетесь, услуги с ценами, график, карта и кнопки связи. Хорошо открывается с телефона.</p>
+        <p>Одна страница о вашем деле: услуги с ценами, график, карта и кнопки связи. Нужна, когда клиенты находят вас на карте или в соцсетях, а посмотреть цены и записаться негде.</p>
         <ul class="shots">
           <li><a class="shot" href="../beauty-lab/"><img src="img/beauty-lab.jpg" alt="Первый экран сайта салона красоты Beauty Lab" width="960" height="600"><span>Салон красоты: услуги, мастера, запись. Смотреть пример</span></a></li>
+          <li class="side">
+            <h4>Какие проблемы снимает</h4>
+            <ul class="examples">
+              <li>Клиент не видит цен и стесняется спросить: всё написано на странице</li>
+              <li>Вы по сто раз отвечаете про график и адрес: ответ уже на странице, с картой</li>
+              <li>Неудобно звонить: можно написать в МАХ или Telegram</li>
+              <li>Нет ссылки, которую дать клиенту: одна ссылка для карты, соцсетей и визитки</li>
+            </ul>
+            <p>Подойдёт салону, барбершопу, мастерской и другим местным услугам.</p>
+          </li>
         </ul>
       </article>
       <article class="row">
