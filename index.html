@@ -61,6 +61,15 @@
     margin: 18px 0 16px;
   }
   .hero p { font-size: 18px; color: var(--muted); margin: 0; }
+  .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 24px; }
+  .hero-cta .cta {
+    display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px;
+    border-radius: 999px; background: var(--accent); color: #fff; border: 2px solid var(--accent);
+    font-weight: 700; font-size: 16px; text-decoration: none; white-space: nowrap;
+  }
+  .hero-cta .cta:hover { background: #364fc7; border-color: #364fc7; }
+  .hero-cta .cta:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .hero-cta span { color: var(--muted); font-size: 15px; }
   .facts { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 30px; }
   .facts b { display: block; font-size: 26px; letter-spacing: -0.02em; }
   .facts span { color: var(--muted); font-size: 14px; }
@@ -115,6 +124,10 @@
     <span class="eyebrow">Фронтенд-разработчик · лендинги</span>
     <h1>Одностраничные сайты, в которых всё работает по-настоящему</h1>
     <p>Привет, я Евгений. Учусь фронтенд-разработке и собираю лендинги для малого бизнеса: адаптивная вёрстка, рабочие калькуляторы, онлайн-запись и формы - без конструкторов и «декоративных» кнопок.</p>
+    <div class="hero-cta">
+      <a class="cta" href="uslugi/">Услуги и цены</a>
+      <span>Сайты, чат-боты и автоматизация заявок для малого бизнеса</span>
+    </div>
     <div class="facts">
       <div><b>9</b><span>проектов</span></div>
       <div><b>HTML · CSS · JS</b><span>без конструкторов</span></div>
@@ -225,7 +238,7 @@
 
   <footer>
     <span>© 2026 Евгений · evejen7-star</span>
-    <a href="https://github.com/evejen7-star">github.com/evejen7-star</a>
+    <span><a href="uslugi/">Услуги и цены</a> · <a href="https://github.com/evejen7-star">github.com/evejen7-star</a></span>
   </footer>
 </div>
 </body>
