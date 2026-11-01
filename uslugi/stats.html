@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Статистика сайта - Евгений Мордвинцев</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --muted: #5f6368;
+  --line: #e6e3dc;
+  --accent: #3b5bdb;
+  --accent-soft: #e8edff;
+  --accent-deep: #364fc7;
+  --danger: #b42318;
+  --font: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.5; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+h1, h2, p { margin: 0; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+main { padding: 36px 0 64px; }
+h1 { font-size: clamp(26px, 4.5vw, 36px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.12; }
+.sub { margin-top: 6px; color: var(--muted); font-size: 15px; }
+h2 { margin-top: 36px; font-size: 20px; font-weight: 800; }
+.login { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; max-width: 460px; }
+.login input { flex: 1 1 220px; min-height: 48px; font: inherit; padding: 0 14px; border: 1.5px solid #cfcbc0; border-radius: 12px; background: var(--surface); }
+.btn { min-height: 48px; padding: 0 24px; border-radius: 999px; font: 700 16px/1 var(--font); background: var(--accent); color: #fff; border: 2px solid var(--accent); cursor: pointer; }
+.btn.line { background: transparent; color: var(--accent); }
+.err { margin-top: 12px; color: var(--danger); }
+.kpis { margin-top: 24px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+.kpi span { display: block; font-size: 14px; color: var(--muted); }
+.kpi b { display: block; margin-top: 4px; font-size: 32px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; }
+.kpi small { display: block; margin-top: 2px; color: var(--muted); font-size: 14px; }
+.chart { margin-top: 14px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.bars { display: grid; grid-template-columns: repeat(30, minmax(0, 1fr)); gap: 3px; align-items: end; height: 150px; }
+.bar { background: var(--accent); border-radius: 4px 4px 0 0; min-height: 2px; }
+.bar.zero { background: var(--line); }
+.axis { display: flex; justify-content: space-between; margin-top: 8px; font-size: 13px; color: var(--muted); }
+.legend { margin-top: 10px; font-size: 14px; color: var(--muted); }
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+.box { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+.box h3 { margin: 0 0 8px; font-size: 16px; font-weight: 800; }
+.box ul { list-style: none; margin: 0; padding: 0; font-size: 15px; }
+.box li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-top: 1px solid var(--line); }
+.box li:first-child { border-top: 0; }
+.box li span:first-child { overflow-wrap: anywhere; }
+.box li b { flex: none; }
+.empty { color: var(--muted); font-size: 15px; }
+.tools { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; font-size: 15px; color: var(--muted); }
+@media (max-width: 760px) {
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cols { grid-template-columns: 1fr; }
+  body { font-size: 16px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="wrap">
+    <h1>Статистика сайта</h1>
+    <p class="sub" id="sub">Закрытая страница. Данные считаются на вашем сервере автоматизации.</p>
+
+    <form class="login" id="login" hidden>
+      <input type="password" id="key" aria-label="Ключ доступа" placeholder="Ключ доступа" autocomplete="off">
+      <button class="btn" type="submit">Показать</button>
+    </form>
+    <p class="err" id="err" role="alert"></p>
+
+    <div id="out" hidden>
+      <div class="kpis" id="kpis"></div>
+
+      <h2>Последние 30 дней</h2>
+      <div class="chart">
+        <div class="bars" id="bars" role="img" aria-label="Посетители по дням за 30 дней"></div>
+        <div class="axis"><span id="ax-from"></span><span id="ax-to"></span></div>
+        <p class="legend">Высота столбика - число уникальных посетителей за день. Наведите курсор на столбик, чтобы увидеть цифры.</p>
+      </div>
+
+      <div class="cols">
+        <div class="box"><h3>Откуда пришли</h3><ul id="refs"></ul></div>
+        <div class="box"><h3>Какие страницы</h3><ul id="pages"></ul></div>
+        <div class="box"><h3>С чего заходят</h3><ul id="devs"></ul></div>
+      </div>
+    </div>
+
+    <div class="tools">
+      <span id="mine-state"></span>
+      <button class="btn line" type="button" id="mine">Не считать мои визиты в этом браузере</button>
+      <button class="btn line" type="button" id="logout" hidden>Выйти</button>
+    </div>
+  </div>
+</main>
+
+<script>
+(function () {
+  var API = 'https://lostrethiblekree.beget.app/webhook/site-stats';
+  var form = document.getElementById('login');
+  var errEl = document.getElementById('err');
+  var out = document.getElementById('out');
+  var logout = document.getElementById('logout');
+
+  function store(k, v) {
+    try {
+      if (v === undefined) return localStorage.getItem(k);
+      if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v);
+    } catch (e) {}
+    return null;
+  }
+  function el(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+  function fmt(n) { return Number(n).toLocaleString('ru-RU'); }
+
+  function kpi(label, d) {
+    var box = el('div', 'kpi');
+    box.appendChild(el('span', null, label));
+    box.appendChild(el('b', null, fmt(d.visitors)));
+    box.appendChild(el('small', null, 'просмотров: ' + fmt(d.views)));
+    return box;
+  }
+  function list(id, items, empty) {
+    var ul = document.getElementById(id);
+    ul.textContent = '';
+    if (!items.length) { var li = el('li'); li.appendChild(el('span', 'empty', empty)); ul.appendChild(li); return; }
+    items.forEach(function (it) {
+      var li = el('li');
+      li.appendChild(el('span', null, it.name));
+      li.appendChild(el('b', null, fmt(it.count)));
+      ul.appendChild(li);
+    });
+  }
+  function dayLabel(d) { return d.slice(8, 10) + '.' + d.slice(5, 7); }
+
+  function render(d) {
+    var k = document.getElementById('kpis');
+    k.textContent = '';
+    k.appendChild(kpi('Сегодня, посетителей', d.today));
+    k.appendChild(kpi('7 дней', d.week));
+    k.appendChild(kpi('30 дней', d.month));
+    k.appendChild(kpi('За всё время', d.total));
+
+    var bars = document.getElementById('bars');
+    bars.textContent = '';
+    var max = Math.max.apply(null, d.days.map(function (x) { return x.visitors; }).concat([1]));
+    d.days.forEach(function (x) {
+      var b = el('div', 'bar' + (x.visitors ? '' : ' zero'));
+      b.style.height = Math.max(2, Math.round(x.visitors / max * 100)) + '%';
+      b.title = dayLabel(x.day) + ': ' + x.visitors + ' посетителей, ' + x.views + ' просмотров';
+      bars.appendChild(b);
+    });
+    document.getElementById('ax-from').textContent = dayLabel(d.days[0].day);
+    document.getElementById('ax-to').textContent = dayLabel(d.days[d.days.length - 1].day);
+
+    list('refs', d.refs, 'Пока нет данных');
+    list('pages', d.pages, 'Пока нет данных');
+    var dv = [];
+    if (d.devices.mobile) dv.push({ name: 'Телефон', count: d.devices.mobile });
+    if (d.devices.desktop) dv.push({ name: 'Компьютер', count: d.devices.desktop });
+    list('devs', dv, 'Пока нет данных');
+    out.hidden = false;
+  }
+
+  function load(key) {
+    errEl.textContent = '';
+    fetch(API + '?key=' + encodeURIComponent(key)).then(function (r) {
+      if (r.status === 401) throw new Error('bad');
+      if (!r.ok) throw new Error('srv');
+      return r.json();
+    }).then(function (d) {
+      store('em_stats_key', key);
+      form.hidden = true;
+      logout.hidden = false;
+      render(d);
+    }).catch(function (e) {
+      out.hidden = true;
+      form.hidden = false;
+      if (e.message === 'bad') { store('em_stats_key', null); errEl.textContent = 'Ключ не подошёл.'; }
+      else errEl.textContent = 'Не получилось загрузить данные. Проверьте, что воркфлоу в n8n включён.';
+    });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = document.getElementById('key').value.trim();
+    if (v) load(v);
+  });
+  logout.addEventListener('click', function () { store('em_stats_key', null); location.hash = ''; location.reload(); });
+
+  var mineBtn = document.getElementById('mine');
+  var mineState = document.getElementById('mine-state');
+  function showMine() {
+    var on = !!store('em_nocount');
+    mineState.textContent = on ? 'Ваши визиты в этом браузере не считаются.' : 'Ваши визиты в этом браузере считаются.';
+    mineBtn.textContent = on ? 'Снова считать мои визиты' : 'Не считать мои визиты в этом браузере';
+  }
+  mineBtn.addEventListener('click', function () { store('em_nocount', store('em_nocount') ? null : '1'); showMine(); });
+  showMine();
+
+  var key = '';
+  if (location.hash.length > 1) {
+    key = decodeURIComponent(location.hash.slice(1));
+    try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  } else key = store('em_stats_key') || '';
+  if (key) load(key); else form.hidden = false;
+})();
+</script>
+</body>
+</html>

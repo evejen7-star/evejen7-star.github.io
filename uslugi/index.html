@@ -29,6 +29,7 @@
   --gutter: 20px;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 body {
@@ -175,6 +176,15 @@ section[id] { scroll-margin-top: 112px; }
 .pay-step b { display: block; font-size: 44px; line-height: 1; font-weight: 800; letter-spacing: -0.03em; color: var(--accent); }
 .pay-step h4 { margin: 12px 0 0; font-size: 18px; font-weight: 800; }
 .pay-step p { margin-top: 4px; color: var(--muted); font-size: 15.5px; }
+
+/* отзывы (блок виден, только когда есть опубликованные) */
+.reviews { margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+.review { padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); display: flex; flex-direction: column; gap: 12px; }
+.review .stars { font-size: 22px; line-height: 1; letter-spacing: 2px; color: #e8a317; }
+.review p { color: var(--text); overflow-wrap: anywhere; white-space: pre-line; }
+.review .who { margin-top: auto; display: flex; flex-direction: column; font-size: 15px; }
+.review .who span { color: var(--muted); }
+.reviews-note { margin-top: 20px; color: var(--muted); font-size: 15px; }
 
 /* вопросы */
 .faq { margin-top: 24px; max-width: 46em; }
@@ -414,6 +424,14 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
   </div>
 </section>
 
+<section class="block" id="otzyvy" hidden>
+  <div class="wrap">
+    <h2>Отзывы клиентов</h2>
+    <div class="reviews" id="reviews-list"></div>
+    <p class="reviews-note">Работали вместе? <a href="otzyv.html">Оставить отзыв</a></p>
+  </div>
+</section>
+
 <section class="block" id="voprosy">
   <div class="wrap">
     <h2>Частые вопросы</h2>
@@ -479,6 +497,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
   </div>
 </footer>
 
+<script src="site.js"></script>
 <script>
 (function () {
   var phone = document.getElementById('demo-phone');

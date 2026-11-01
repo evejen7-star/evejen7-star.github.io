@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Оставить отзыв - Евгений Мордвинцев</title>
+<meta name="description" content="Страница для клиентов: оставьте отзыв о работе Евгения Мордвинцева.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --muted: #5f6368;
+  --line: #e6e3dc;
+  --accent: #3b5bdb;
+  --accent-soft: #e8edff;
+  --accent-deep: #364fc7;
+  --danger: #b42318;
+  --font: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font); font-size: 17px; line-height: 1.55; }
+a { color: var(--accent); }
+a:hover { color: var(--accent-deep); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+h1, h2, p { margin: 0; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 0 20px; }
+.top { border-bottom: 1px solid var(--line); background: rgba(247, 246, 242, .94); }
+.top .wrap { display: flex; align-items: center; gap: 12px; min-height: 64px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 16px; white-space: nowrap; }
+.logo img { width: 32px; height: 32px; }
+.back { margin-left: auto; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
+main { padding: 44px 0 64px; }
+h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.12; letter-spacing: -0.02em; font-weight: 800; }
+.lead { margin-top: 14px; color: var(--muted); }
+form { margin-top: 32px; padding: 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; display: grid; gap: 22px; }
+.field { display: grid; gap: 6px; }
+.field > label, legend { font-weight: 700; font-size: 16px; padding: 0; }
+.opt { font-weight: 500; color: var(--muted); }
+input[type="text"], textarea {
+  width: 100%; font: inherit; color: var(--text); background: var(--bg);
+  border: 1.5px solid #cfcbc0; border-radius: 12px; padding: 12px 14px;
+}
+input[type="text"] { min-height: 48px; }
+textarea { min-height: 150px; resize: vertical; line-height: 1.5; }
+input[type="text"]:focus, textarea:focus { outline: 3px solid var(--accent-soft); border-color: var(--accent); }
+.hint { font-size: 14px; color: var(--muted); }
+fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+.rate { display: flex; gap: 6px; margin-top: 8px; }
+.rate input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.rate label { cursor: pointer; font-size: 38px; line-height: 1; color: #cfcbc0; padding: 4px 6px; border-radius: 10px; }
+.rate label.on { color: #e8a317; }
+.rate input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 2px; }
+.rate-note { margin-top: 4px; min-height: 1.5em; font-size: 14px; color: var(--muted); }
+.consent { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; font-size: 15px; color: var(--muted); }
+.consent input { width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--accent); }
+.consent label { font-weight: 500; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border-radius: 999px;
+  font: 700 17px/1 var(--font); background: var(--accent); color: #fff; border: 2px solid var(--accent); cursor: pointer;
+}
+.btn:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
+.btn[disabled] { opacity: .6; cursor: default; }
+.status { min-height: 1.5em; font-size: 15px; }
+.status.err { color: var(--danger); }
+.thanks { margin-top: 32px; padding: 30px 26px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
+.thanks h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; }
+.thanks p { margin-top: 10px; color: var(--muted); }
+.thanks .btn { margin-top: 20px; }
+footer { padding: 24px 0 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  main { padding: 28px 0 48px; }
+  form { padding: 20px 16px; }
+  .btn { width: 100%; }
+  .rate label { font-size: 42px; padding: 4px 5px; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="Евгений Мордвинцев, на главную">
+      <img src="logo-em-blue.svg" alt="" width="32" height="32">
+      <span>Евгений Мордвинцев</span>
+    </a>
+    <a class="back" href="./">На главную</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Как прошла наша работа?</h1>
+    <p class="lead">Если мы работали вместе, расскажите в паре предложений, как всё было. Отзыв помогает следующим клиентам решиться, а мне - понять, что улучшить.</p>
+
+    <form id="review-form" novalidate>
+      <div class="field">
+        <label for="f-name">Как вас зовут</label>
+        <input id="f-name" name="name" type="text" maxlength="60" autocomplete="name" required>
+      </div>
+
+      <div class="field">
+        <label for="f-biz">Ваш бизнес или проект <span class="opt">(необязательно)</span></label>
+        <input id="f-biz" name="business" type="text" maxlength="80" placeholder="Например, салон красоты">
+      </div>
+
+      <fieldset class="field">
+        <legend>Ваша оценка</legend>
+        <div class="rate" id="rate">
+          <input type="radio" name="rating" id="r1" value="1"><label for="r1" title="1 из 5" aria-label="1 из 5">&#9733;</label>
+          <input type="radio" name="rating" id="r2" value="2"><label for="r2" title="2 из 5" aria-label="2 из 5">&#9733;</label>
+          <input type="radio" name="rating" id="r3" value="3"><label for="r3" title="3 из 5" aria-label="3 из 5">&#9733;</label>
+          <input type="radio" name="rating" id="r4" value="4"><label for="r4" title="4 из 5" aria-label="4 из 5">&#9733;</label>
+          <input type="radio" name="rating" id="r5" value="5"><label for="r5" title="5 из 5" aria-label="5 из 5">&#9733;</label>
+        </div>
+        <p class="rate-note" id="rate-note" aria-live="polite"></p>
+      </fieldset>
+
+      <div class="field">
+        <label for="f-text">Ваш отзыв</label>
+        <textarea id="f-text" name="text" maxlength="1500" required placeholder="Что вам было нужно, что получилось, что понравилось, а что можно сделать лучше"></textarea>
+        <p class="hint">Можно коротко: достаточно двух-трёх предложений.</p>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="f-site">Сайт</label>
+        <input id="f-site" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="consent">
+        <input id="f-consent" name="consent" type="checkbox" required>
+        <label for="f-consent">Согласен на публикацию отзыва на сайте вместе с именем и названием бизнеса, которые указал выше. Что я делаю с данными - в <a href="privacy.html" target="_blank" rel="noopener">политике обработки персональных данных</a>.</label>
+      </div>
+
+      <div>
+        <button class="btn" type="submit" id="send">Отправить отзыв</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+
+    <div class="thanks" id="thanks" hidden tabindex="-1">
+      <h2>Спасибо за отзыв!</h2>
+      <p>Он у меня. Я прочитаю его и добавлю на сайт после проверки.</p>
+      <a class="btn" href="./">Вернуться на сайт</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Мордвинцев Евгений Юрьевич, веб-разработчик, Волгоград. <a href="./">На главную</a></div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+(function () {
+  var form = document.getElementById('review-form');
+  var statusEl = document.getElementById('status');
+  var btn = document.getElementById('send');
+  var thanks = document.getElementById('thanks');
+  var note = document.getElementById('rate-note');
+  var labels = document.querySelectorAll('#rate label');
+  var inputs = document.querySelectorAll('#rate input');
+  var notes = ['Плохо', 'Так себе', 'Нормально', 'Хорошо', 'Отлично'];
+  var opened = Date.now();
+
+  function showRating() {
+    var v = 0;
+    for (var i = 0; i < inputs.length; i++) if (inputs[i].checked) v = Number(inputs[i].value);
+    for (var j = 0; j < labels.length; j++) labels[j].classList.toggle('on', j < v);
+    note.textContent = v ? notes[v - 1] : '';
+  }
+  for (var k = 0; k < inputs.length; k++) inputs[k].addEventListener('change', showRating);
+  form.addEventListener('input', function () { if (statusEl.className.indexOf('err') !== -1) { statusEl.className = 'status'; statusEl.textContent = ''; } });
+
+  function fail(msg, el) {
+    statusEl.className = 'status err';
+    statusEl.textContent = msg;
+    if (el) el.focus();
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var text = form.text.value.trim();
+    var rating = 0;
+    for (var i = 0; i < inputs.length; i++) if (inputs[i].checked) rating = Number(inputs[i].value);
+    if (!name) return fail('Напишите, как вас зовут.', form.name);
+    if (!rating) return fail('Поставьте оценку: нажмите на звезду.', inputs[0]);
+    if (text.length < 10) return fail('Напишите отзыв хотя бы в паре предложений.', form.text);
+    if (!form.consent.checked) return fail('Отметьте согласие на публикацию отзыва.', form.consent);
+
+    btn.disabled = true;
+    statusEl.className = 'status';
+    statusEl.textContent = 'Отправляю...';
+    var api = (window.EMSite && window.EMSite.api) || 'https://lostrethiblekree.beget.app/webhook/';
+    fetch(api + 'site-review', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name, business: form.business.value.trim(), rating: rating, text: text,
+        consent: true, hp: form.website.value, t: Date.now() - opened, page: 'otzyv'
+      })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok && d.ok !== false, d: d }; });
+    }).then(function (res) {
+      if (!res.ok) { btn.disabled = false; return fail(res.d.error || 'Не получилось отправить. Попробуйте ещё раз.'); }
+      statusEl.textContent = '';
+      form.hidden = true;
+      thanks.hidden = false;
+      thanks.focus();
+    }).catch(function () {
+      btn.disabled = false;
+      fail('Не получилось отправить. Проверьте интернет и попробуйте ещё раз, либо напишите мне в МАХ или Telegram.');
+    });
+  });
+})();
+</script>
+</body>
+</html>
