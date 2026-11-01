@@ -177,6 +177,26 @@ section[id] { scroll-margin-top: 112px; }
 .pay-step h4 { margin: 12px 0 0; font-size: 18px; font-weight: 800; }
 .pay-step p { margin-top: 4px; color: var(--muted); font-size: 15.5px; }
 
+/* схема работы бота */
+.flow { margin: 26px 0 0; max-width: 52em; }
+.flow-row { display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr) 56px minmax(0, 1.1fr); align-items: center; }
+.flow-step { display: flex; align-items: center; gap: 12px; position: relative; }
+.flow-ico { flex: none; width: 48px; height: 48px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-deep); display: grid; place-items: center; }
+.flow-ico svg { width: 24px; height: 24px; }
+.flow-bot .flow-ico { background: var(--accent); color: #fff; font-size: 19px; font-weight: 800; }
+.flow-step b { display: block; font-size: 15.5px; line-height: 1.25; font-weight: 800; }
+.flow-step small { display: block; margin-top: 3px; font-size: 14px; line-height: 1.35; color: var(--muted); }
+.flow-link { margin: 0 10px; border-top: 2px dotted #c9c5ba; }
+.flow-out { display: grid; gap: 22px; padding-left: 22px; border-left: 2px dotted #c9c5ba; }
+.flow-out .flow-step::before { content: ""; position: absolute; left: -22px; top: 50%; width: 22px; border-top: 2px dotted #c9c5ba; transform: translateY(-1px); }
+.flow figcaption { margin-top: 16px; font-size: 14px; color: var(--muted); }
+@media (max-width: 760px) {
+  .flow-row { grid-template-columns: minmax(0, 1fr); }
+  .flow-link { width: 0; height: 26px; margin: 0 0 0 23px; border-top: 0; border-left: 2px dotted #c9c5ba; }
+  .flow-out { padding-left: 0; border-left: 0; gap: 18px; }
+  .flow-out .flow-step::before { display: none; }
+}
+
 /* отзывы (блок виден, только когда есть опубликованные) */
 .reviews { margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
 .review { padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); display: flex; flex-direction: column; gap: 12px; }
@@ -345,8 +365,33 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
         </ul>
       </article>
       <article class="row">
-        <div class="row-head"><h3>Автоматизация записи: бот в Telegram</h3><span class="dots"></span><span class="price">от 20 000 ₽</span></div>
-        <p>Меню, цены и форма записи. Заявка попадает в вашу Google Таблицу, а вам приходит уведомление в Telegram. <a href="#top">Посмотреть пример переписки</a> вверху страницы.</p>
+        <div class="row-head"><h3>Автоматизация записи: бот в МАХ и Telegram</h3><span class="dots"></span><span class="price">от 20 000 ₽</span></div>
+        <p>Меню, цены и форма записи. Заявка попадает в вашу Google Таблицу, а вам приходит уведомление в мессенджер. <a href="#top">Посмотреть пример переписки</a> вверху страницы.</p>
+        <figure class="flow">
+          <div class="flow-row">
+            <div class="flow-step">
+              <span class="flow-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>
+              <span><b>Клиент пишет боту</b><small>В МАХ или Telegram, нажимает «Оставить заявку»</small></span>
+            </div>
+            <span class="flow-link" aria-hidden="true"></span>
+            <div class="flow-step flow-bot">
+              <span class="flow-ico" aria-hidden="true">Е</span>
+              <span><b>Бот ведёт по шагам</b><small>Меню, цены и три вопроса: имя, что нужно, контакт</small></span>
+            </div>
+            <span class="flow-link" aria-hidden="true"></span>
+            <div class="flow-out">
+              <div class="flow-step">
+                <span class="flow-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M4 15h16M10 4v16"/></svg></span>
+                <span><b>Строка в вашей таблице</b><small>По желанию: дата, имя, что нужно, контакт</small></span>
+              </div>
+              <div class="flow-step">
+                <span class="flow-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16v-5a6 6 0 1 0-12 0v5l-2 2h16l-2-2z"/><path d="M10 21h4"/></svg></span>
+                <span><b>Сообщение вам</b><small>Уведомление в МАХ или Telegram сразу</small></span>
+              </div>
+            </div>
+          </div>
+          <figcaption>Что происходит, когда клиент оставляет заявку. Вы ничего не делаете, пока заявка не придёт.</figcaption>
+        </figure>
       </article>
       <!-- Скрыто до готовности демо (отзыв 31.10): ИИ-администратор в Telegram, от 30 000 ₽
       <article class="row">
@@ -438,7 +483,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: cente
     <div class="faq">
       <details>
         <summary>Что нужно от меня, чтобы начать?</summary>
-        <p>Рассказать о бизнесе и прислать то, что есть: прайс, фото, график, адрес. Если чего-то нет, подскажу, как собрать.</p>
+        <p>Рассказать о бизнесе и прислать то, что есть: прайс, фото, график, адрес. Если чего-то нет, подскажу, как собрать. Если нужен учёт заявок в таблице, вы создаёте свою Google Таблицу и открываете мне доступ к ней, я подскажу, как это сделать. Таблица и данные ваших клиентов остаются у вас.</p>
       </details>
       <details>
         <summary>Сайт и бот будут моими?</summary>
